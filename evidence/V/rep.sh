@@ -6,4 +6,5 @@ run selftest_v2 0 $PY $D/code/atk_selftest_v2.py _run/selftest_v2.json
 cmpl expected/$D/logs/selftest_v2.log _run/selftest_v2.out
 run literal 0 $PY $D/code/atk_runs_v2.py literal _run/p503_literal_sub.json F_toy_m2 2 2 4 E:0,RF:0,RP:0
 cmpsel expected/$D/logs/p503_literal_m2w2.log _run/literal.out "'oracle': 'E:0'" "'oracle': 'RF:0'" "'oracle': 'RP:0'"
+run m3_sample 0 $PY sum_m3_sample.py expected/c5/attack/results/ATK_SUMMARY.json
 finish

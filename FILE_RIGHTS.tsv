@@ -5,7 +5,7 @@ CITATION.cff	citation metadata	MIT	generated from the metadata source	licence sp
 EVIDENCE_COVERAGE.tsv	package metadata / tool	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 FILE_RIGHTS.tsv	package metadata / tool	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 LICENSE	licence text (MIT)	MIT	standard MIT licence text with the author's copyright line	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
-LICENSE-CC-BY-4.0.txt	licence text (CC BY 4.0 legal code)	CC-BY-4.0	Creative Commons legal code, unmodified	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+LICENSE-CC-BY-4.0.txt	licence notice (CC BY 4.0): the author's notice applying CC BY 4.0 to the prose, with a link to the legal code	CC-BY-4.0	author's notice; full legal code at https://creativecommons.org/licenses/by/4.0/legalcode	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 PUBLIC_SET.txt	package metadata / tool	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 README.md	reader document	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 REPRODUCE.md	reader document	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
@@ -31,6 +31,7 @@ evidence/G_Minv/c8/r1/code/gcore.py	finite-check script (historical, byte-identi
 evidence/G_Minv/c8/r1/code/t1_verify.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 evidence/G_Minv/c8/r1/code/t2_analyze.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 evidence/G_Minv/c8/r1/code/t3_extra.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/check_recorded_witnesses.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 evidence/G_Minv/expected/c8/r1/audit_results/a_adv_m3.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 evidence/G_Minv/expected/c8/r1/audit_results/a_adv_m3.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 evidence/G_Minv/expected/c8/r1/audit_results/a_adv_m5.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
@@ -149,6 +150,7 @@ evidence/V/expected/c5/attack/results/p503_rand_RP_pd_h0_m3w3.json	recorded outp
 evidence/V/expected/c5/attack/results/p503_true_pd_h0_m3w3.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 evidence/V/expected/c5/attack/results/p503_true_toy_m2w2.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 evidence/V/rep.sh	evidence helper (written for the evidence set)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/sum_m3_sample.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 evidence/V3/MANIFEST.tsv	evidence manifest	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 evidence/V3/README.md	reader document (evidence row)	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 evidence/V3/c1/code/codes.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
@@ -199,6 +201,7 @@ evidence/_tools/README.md	reader document (evidence row)	CC-BY-4.0	author, writt
 evidence/_tools/cmp_json.py	evidence helper (written for the evidence set)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 evidence/_tools/cmp_lines.py	evidence helper (written for the evidence set)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 evidence/_tools/rep_lib.sh	evidence helper (written for the evidence set)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/_tools/test_cmp_json.py	evidence helper (written for the evidence set)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 evidence/cost_F_ha3/MANIFEST.tsv	evidence manifest	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 evidence/cost_F_ha3/README.md	reader document (evidence row)	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 evidence/cost_F_ha3/c4/pd/data/F_pd_inv_m5.npy	input data of a finite check	MIT	author, written with AI assistance (author's own computed tables)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
@@ -303,6 +306,9 @@ evidence/repair_d0/expected/c6/pd/logs/pd6_cert.exit	recorded output of a finite
 evidence/repair_d0/expected/c6/pd/logs/pd6_cert.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 evidence/repair_d0/expected/c6/pd/results/pd6_cert.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 evidence/repair_d0/rep.sh	evidence helper (written for the evidence set)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/selftest/MANIFEST.tsv	evidence manifest	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/selftest/README.md	reader document (evidence row)	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/selftest/rep.sh	evidence helper (written for the evidence set)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 evidence/theta/MANIFEST.tsv	evidence manifest	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 evidence/theta/README.md	reader document (evidence row)	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 evidence/theta/code/c3c4c5.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
@@ -404,15 +410,15 @@ paper/abstract_v1.tex	paper source	CC-BY-4.0	author, written with AI assistance	
 paper/app_A_mixing_v2.tex	paper source	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 paper/bib_v2.tex	paper source	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 paper/macros_v1.tex	paper source	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
-paper/main_v14.pdf	paper PDF (public build)	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
-paper/main_v14.tex	paper source	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+paper/main_v15.pdf	paper PDF (public build)	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+paper/main_v15.tex	paper source	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 paper/sec_1_intro_v6.tex	paper source	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 paper/sec_2_setup_v4.tex	paper source	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 paper/sec_3_differential_v3.tex	paper source	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 paper/sec_4_repair_v6.tex	paper source	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 paper/sec_5_composition_v4.tex	paper source	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 paper/sec_6_mixing_v5.tex	paper source	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
-paper/sec_7_verification_v11.tex	paper source	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+paper/sec_7_verification_v12.tex	paper source	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 paper/sec_8_limits_v4.tex	paper source	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 run_all_representatives.sh	package metadata / tool	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
 tools/check_blueprint.py	package metadata / tool	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected

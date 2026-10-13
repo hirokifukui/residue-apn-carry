@@ -38,5 +38,6 @@ expected/c8/r1/audit_results/a_adv_m5_long.time	a51ee627b09ab566095627613a2afbbc
 expected/c8/r1/audit_results/a_adv_m5pd.log	8e2c9852a26973f28fb8641f5a4cb7809ccef03249471208f24eba0a57755b00	1249	w/c8/r1/audit_results/a_adv_m5pd.log	expected
 expected/c8/r1/audit_results/a_adv_m5pd.json	27c7157ec0cc9d764dee06cabf7c01f67c9863ab2ec871d6d13f63e26fb0c435	1394	w/c8/r1/audit_results/a_adv_m5pd.json	expected
 expected/c8/r1/audit_results/a_adv_m5_run1_exit1.log (WITHHELD: contains a build-host path; not compared by rep.sh)	37fb46ed50201b806c9c2ee08f2f455b27046ba0799fcdce688ed8598c426bc9	260	w/c8/r1/audit_results/a_adv_m5_run1_exit1.log	withheld
-README.md	c466479e4d1d2fb71d2873bb49b83c89259bf4c5df16747ee559249125041d5d	2567	NEW (written for the evidence set)	new
-rep.sh	9f8aa4cbd559c6dabbdabf693e54bba1bcce6c6c9968af4c742d651d33d26b1d	1078	NEW (written for the evidence set)	new
+README.md	a5582baa5a1e58a378d1814899ea169839de81941458d307764decd5ef0ca876	3371	NEW (written for the evidence set; changed in 1.0.1)	new
+rep.sh	200b8afe718a15b790ac2abecd3d3195cd3a56ca6baa412089e530f1872c5086	1683	NEW (written for the evidence set; changed in 1.0.1)	new
+check_recorded_witnesses.py	b8e8a93f024e00e6213e72ff369b92eebdb81053692dd7617ee3a3a0cedb1016	3505	NEW (added in 1.0.1)	new

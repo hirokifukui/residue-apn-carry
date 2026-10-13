@@ -1,6 +1,6 @@
 Creative Commons Attribution 4.0 International (CC BY 4.0)
 
-Prose written by Hiroki Fukui in this package (ResidueAPN) is licensed under the
+Prose written by Hiroki Fukui in this package (residue-apn-carry) is licensed under the
 Creative Commons Attribution 4.0 International License. The licence of every
 file is stated in the `licence` column of FILE_RIGHTS.tsv; that column is
 authoritative. The CC BY 4.0 files are the author's documents with the
@@ -11,8 +11,8 @@ extensions .tex, .md and .pdf, in particular:
 - README.md, TRUST.md, REPRODUCE.md and the other Markdown documents of the author
 
 You are free to share and adapt this material for any purpose, provided you
-give appropriate credit (Hiroki Fukui, ResidueAPN; the archive identifiers are
-given in README.md and CITATION.cff once they have been assigned), link to the
+give appropriate credit (Hiroki Fukui, residue-apn-carry; the archive identifiers
+are given in README.md and CITATION.cff), link to the
 licence, and indicate if changes were made. Full legal code:
 https://creativecommons.org/licenses/by/4.0/legalcode
 

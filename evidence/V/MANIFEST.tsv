@@ -40,5 +40,6 @@ expected/c5/attack/results/p503_rand_RP_pd_h0_m3w3.json	5fbf6498be3f0af37c4ec615
 expected/c5/attack/results/p503_true_pd_h0_m3w3.json	7e37102ae8a5f928a519f3870402288445fb233d9a4dfbcd25d253b58ce6b939	5014	w/c5/attack/results/p503_true_pd_h0_m3w3.json	expected
 expected/c5/attack/logs/atk_summary_v2.log	6fc87c248f5f9e760a401291e2282b0b41f4fa1199c9d427fdf1b1d51a0460b1	6001	w/c5/attack/logs/atk_summary_v2.log	expected
 expected/c5/attack/results/ATK_SUMMARY.json	106209f4f7a3aff14d77d5474735d1343f5057b378eca60896433950c03734ce	64178	w/c5/attack/results/ATK_SUMMARY.json	expected
-README.md	ef5455ca41a6691d94f0b8af618d1ae3b7455442fd842324e2652565f65ab6a5	2026	NEW (written for the evidence set)	new
-rep.sh	de78d7df82be1c83cdc0a05a1eb86ae3da3813a9ce908e214307e0b2e7d875d8	532	NEW (written for the evidence set)	new
+README.md	cc6d7b77ceeb16d2705b1a3b48ba74e50c5ba051e24e6f0f8d4a512e99e62a79	2609	NEW (written for the evidence set; changed in 1.0.1)	new
+rep.sh	5ec6f388056f67fc736e837254675120496967406c619e0f47e6c94563ece495	613	NEW (written for the evidence set; changed in 1.0.1)	new
+sum_m3_sample.py	ae62c1842702a3491f87e056b135efea3a8efc02b2bc2c343db9e74f86a5b5d6	1010	NEW (added in 1.0.1)	new

@@ -1,6 +1,6 @@
 # Carry-aware differential bounds and certified correction of local zero sums
 
-Hiroki Fukui. Version 1.0.0, 2026-10-13.
+Hiroki Fukui. Version 1.0.1, 2026-10-13.
 
 ## Results
 
@@ -8,9 +8,9 @@ We study a two-digit coordinate model of maps on the Galois ring GR(4,m), with q
 
 ## Paper
 
-- PDF: `paper/main_v14.pdf` (public named build, 43 pages).
-- Sources: `paper/` (`main_v14.tex` and the files it inputs; build with three pdflatex runs, see `REPRODUCE.md`).
-- Zenodo paper record, version DOI: https://doi.org/10.5281/zenodo.23330909.
+- PDF: `paper/main_v15.pdf` (public named build, 43 pages).
+- Sources: `paper/` (`main_v15.tex` and the files it inputs; build with three pdflatex runs, see `REPRODUCE.md`).
+- Zenodo paper record, version DOI: https://doi.org/10.5281/zenodo.23333044.
 - Zenodo paper record, concept DOI (all versions): https://doi.org/10.5281/zenodo.23330908.
 
 ## Verification
@@ -23,9 +23,9 @@ We study a two-digit coordinate model of maps on the Galois ring GR(4,m), with q
 ## Citation
 
 See `CITATION.cff`.
-- This source archive, version DOI: https://doi.org/10.5281/zenodo.23330907.
+- This source archive, version DOI: https://doi.org/10.5281/zenodo.23333039.
 - This source archive, concept DOI (all versions): https://doi.org/10.5281/zenodo.23330906.
-- Repository: https://github.com/hirokifukui/residue-apn-carry (tag v1.0.0).
+- Repository: https://github.com/hirokifukui/residue-apn-carry (tag v1.0.1).
 
 Related earlier papers by the same author (cited works, not earlier versions of this one):
 - Optimal reduced representatives of quadratic APN permutations in odd dimension, https://doi.org/10.5281/zenodo.23053113.

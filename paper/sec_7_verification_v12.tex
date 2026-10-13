@@ -1,3 +1,6 @@
+% sec_7_verification_v12.tex = v11 with the wording of Lean verification changed to "checked in Lean" / "checked by the Lean kernel" (5 places)
+% and the m = 3, m = 5 entries of the adversarial search in Table tab:finite2 stated as the largest observed floating-point
+% values (0.46287, 0.06390) instead of the bound "<= 0.46" (which the recorded maximum 0.46286958505344594 exceeds).
 % sec_7_verification_v11.tex = v10 with the middle column of the three Lean tables 0.41 -> 0.40\textwidth
 % (anonymous iacrtrans build: three 1.05pt overfull boxes); no change of content.
 % v10 = v9 + \clearpage at the end so that Tables 4-9 are placed after Section 7
@@ -7,7 +10,7 @@
 \section{Finite calibration, formalization and cost: the actual scope}\label{sec:verif}
 
 The theorems of Sections~\ref{sec:diff}--\ref{sec:mixing} are proved on paper. This section records
-which parts were additionally checked on finite instances, which parts are machine-checked in Lean,
+which parts were additionally checked on finite instances, which parts are checked by the Lean kernel,
 and what was measured about cost. A finite check is a calibration, not a proof of a general statement.
 
 \subsection{Finite calibration}
@@ -34,7 +37,7 @@ statement & instances & result\\
 \midrule
 Theorem~\ref{thm:R1} & $m=3,5,7$ (20 tables; numerical norms) & every block below its bound; $\|M_\cZ\|^2=(q/2-1)/q^2$ exactly\\
 Proposition~\ref{prop:Zexact} & independent code, $m=3,5$; $d_0$ and $1\oplus K_0(x/\rho)$ ($\rho=7,11$); $h\in\{0,a^3,\text{random}\}$; 15 tables & integer Walsh of the $\cZ$ rows $=x_s$; Gram $q^2[s=t]$ exactly; SVD norm and exact Rayleigh quotient of the witness $=(q/2-1)/q^2$\\
-Theorem~\ref{thm:G}, Proposition~\ref{prop:Minv} & two independent implementations; $m=3$: 16, $m=5$: 21 tables; adversarial $h$ (hill climbing); $\mathsf M$ for $p=x^{-1}$, $m=3,\dots,11$ & $g=\Psi\Sigma$ entrywise; closed form of $\mathcal B^0_z$ exact; $\|M_\cG\|^2q/\mathsf M\le0.46$ ($m=3$), $\le0.064$ ($m=5$); $\mathsf M\le5$ for $d_0$ type\\
+Theorem~\ref{thm:G}, Proposition~\ref{prop:Minv} & two independent implementations; $m=3$: 16, $m=5$: 21 tables; adversarial $h$ (hill climbing); $\mathsf M$ for $p=x^{-1}$, $m=3,\dots,11$ & $g=\Psi\Sigma$ entrywise; closed form of $\mathcal B^0_z$ exact; largest observed $\|M_\cG\|^2q/\mathsf M$ (floating point): $0.46287$ ($m=3$), $0.06390$ ($m=5$); $\mathsf M\le5$ for $d_0$ type\\
 Theorem~\ref{thm:steps}, Corollary~\ref{cor:inv13} & every elementary inequality for $m=5,\dots,61$ (outward rational square roots); start lemma for $m=3$, all $4095$ two-word inputs, $M=[[1,1],[1,t]]$ & all hold; $\max\|\pi_2\|_\infty=0.00464<1/64$ ($q=8$ calibrates the start lemma only)\\
 Example~\ref{ex:quant}, Proposition~\ref{prop:mc} & $m=3$: all $64$ carry-mask keys and all $512\cdot8$ linear $(L,\mu)$; $m=5$: $g_d$ for $\rho=1$ and $\rho=7$ & $\ell(h)=0$, no carry-mask key vanishes, $(L,\mu)=((3,0,0),0)$ vanishes ($64$ linear pairs in all); quadratic rank modulo affine $=4=m-1$, the $(m-1)$-AND circuit agrees at all points\\
 Theorem~\ref{thm:V} & decomposition: toy $m=2$, $w=2$, all $16\,777\,216$ candidates, 32 cases; $m=3$ sample of $58\,035$ & accepted sets identical\\
@@ -48,7 +51,7 @@ The Lean developments use Lean 4.31.0-rc1 and Mathlib revision
 \texttt{d568c8c0}\allowbreak\texttt{9630de09}\allowbreak\texttt{7a046763}\allowbreak\texttt{c17b9ea9}\allowbreak\texttt{9f95f950}; every listed declaration depends only on the
 standard axioms \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}, with no \texttt{sorry}.
 \begin{table}[!htbp]\footnotesize
-\caption{What is machine-checked, and what is an input.}\label{tab:lean}
+\caption{What is checked in Lean, and what is an input.}\label{tab:lean}
 \begin{tabular}{p{0.2\textwidth}p{0.40\textwidth}p{0.3\textwidth}}
 \toprule
 file & checked content & not covered / input\\
@@ -61,7 +64,7 @@ file & checked content & not covered / input\\
 \end{tabular}
 \end{table}
 \begin{table}[!htbp]\footnotesize
-\caption{What is machine-checked (continued).}\label{tab:lean2}
+\caption{What is checked in Lean (continued).}\label{tab:lean2}
 \begin{tabular}{p{0.2\textwidth}p{0.40\textwidth}p{0.3\textwidth}}
 \toprule
 file & checked content & not covered / input\\
@@ -77,7 +80,7 @@ file & checked content & not covered / input\\
 \end{tabular}
 \end{table}
 \begin{table}[!htbp]\footnotesize
-\caption{What is machine-checked (continued): the concrete two-word mixer.}\label{tab:lean3}
+\caption{What is checked in Lean (continued): the concrete two-word mixer.}\label{tab:lean3}
 \begin{tabular}{p{0.2\textwidth}p{0.40\textwidth}p{0.3\textwidth}}
 \toprule
 file & checked content & not covered / input\\
@@ -91,7 +94,7 @@ file & checked content & not covered / input\\
 \end{table}
 The one-round bound $\varepsilon(B)\le1/q$ of Theorem~\ref{thm:eps} is formalized for all directions on concrete
 carry coordinates. For $\wt(\rho)=1$ and $w=2$, the chain Proposition~\ref{prop:table} $\to$ Theorem~\ref{thm:S} (one step) $\to$
-Theorem~\ref{thm:W2}(1) $\to$ Theorem~\ref{thm:P4}(1) is machine-checked on the real key averages on the additive group
+Theorem~\ref{thm:W2}(1) $\to$ Theorem~\ref{thm:P4}(1) is checked in Lean on the real key averages on the additive group
 $(\mathbb Z/4)^m$ with the digit split $\varphi_4$, for the two-word mixer $(x,y)\mapsto(x+y,\,x+\Theta y)$
 (\texttt{w2\_Z4\_theta\_le}), and the mixer hypotheses are shown to be satisfiable ($m=5$). The mixer is formalized as an additive
 automorphism, not as a matrix of ring scalars: in the pointwise ring $(\mathbb Z/4)^m$ a matrix with unit entries and unit

@@ -1,14 +1,14 @@
 # Blueprint: paper statements, proofs, formalization, finite checks
 
-Paper: `paper/main_v13.tex` (public build). Theorem numbers are those of the PDF (the anonymous build has the same
+Paper: `paper/main_v15.tex` (public build). Theorem numbers are those of the PDF (the anonymous build has the same
 numbers). Every row is checked by `tools/check_blueprint.py` (labels exist in the TeX sources or in the label list of
-the build, numbers agree with the label list, Lean declarations exist in `lean/ApnCipher/`, finite-check files exist).
+the build, numbers agree with the label list `paper/LABELS.tsv` generated from the .aux file of the build, Lean declarations exist in `lean/ApnCipher/`, finite-check files exist).
 
-Columns. **paper**: where the proof is. **Lean**: declarations that are machine-checked (Lean 4.31.0-rc1,
+Columns. **paper**: where the proof is. **Lean**: declarations that are checked by the Lean kernel (Lean 4.31.0-rc1,
 Mathlib d568c8c09630de097a046763c17b9ea99f95f950, standard axioms only). A Lean entry covers exactly what the
 `scope` column says, not the whole statement. **finite**: the checker in `checks/`, or the row directory in `evidence/` (its `README.md` is listed;
-index `EVIDENCE_COVERAGE.tsv`) that holds the scripts, inputs and recorded outputs (a finite check is not a proof). **kind**: `paper` = proof on paper only; `paper+lean` = the stated part is also machine-checked;
-`lean-negative` = a machine-checked statement that a former specialization is vacuous.
+index `EVIDENCE_COVERAGE.tsv`) that holds the scripts, inputs and recorded outputs (a finite check is not a proof). **kind**: `paper` = proof on paper only; `paper+lean` = the stated part is also checked in Lean;
+`lean-negative` = a checked in Lean statement that a former specialization is vacuous.
 
 | label | no. | paper | Lean | scope of the Lean part | finite | kind |
 |---|---|---|---|---|---|---|

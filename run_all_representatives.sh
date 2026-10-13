@@ -3,6 +3,7 @@
 # with the recorded / expected outputs.  POSIX sh.  Run from the repository root:
 #     sh run_all_representatives.sh            (all rows)
 #     sh run_all_representatives.sh eps UE     (selected rows; 'public' = the three checks/ scripts)
+#     G_MINV_SEARCH=1 sh run_all_representatives.sh G_Minv   (also re-run the a_adv hill-climbing search; witnesses not compared)
 # Each row runs in a fresh temporary directory (a copy of evidence/<row>/) with HOME set to a fresh empty
 # directory and python3 -I -B.  Nothing outside the temporary directories is written.
 # Exit status: 0 iff every executed command had its expected exit code and every comparison agreed.
@@ -16,7 +17,7 @@ fi
 command -v python3 > /dev/null 2>&1 || { echo "python3 not found"; exit 2; }
 python3 -I -c 'import numpy' 2> /dev/null || { echo "numpy not importable by python3 -I"; exit 2; }
 
-ROWS="public eps W2 UE repair_d0 general_d pf R1 G_Minv V V3 theta cost_p413 cost_F_ha3"
+ROWS="public selftest eps W2 UE repair_d0 general_d pf R1 G_Minv V V3 theta cost_p413 cost_F_ha3"
 [ $# -gt 0 ] && ROWS="$*"
 TOP=$(mktemp -d "${TMPDIR:-/tmp}/evrep.XXXXXX") || exit 2
 SUMMARY="$TOP/SUMMARY.txt"; : > "$SUMMARY"

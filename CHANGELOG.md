@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## 1.0.1 (2026-10-13)
+Corrections after the post-publication audits of 1.0.0 (no change of any theorem, proof or Lean source):
+- Paper: Table 5 states the adversarial-search values of Theorem 6.4 as the largest observed floating-point values
+  0.46287 (m = 3) and 0.06390 (m = 5); 1.0.0 printed "<= 0.46" for m = 3, which the recorded maximum 0.46286958505344594
+  exceeds. "machine-checked" is replaced by "checked in Lean" (Section 7). Data and code availability cites the concept DOI
+  of the software record (all versions) and describes the witness re-verification below.
+- Evidence: `evidence/G_Minv/check_recorded_witnesses.py` re-verifies the 40 recorded witnesses of the adversarial search
+  (standard check); re-running the search is optional (`G_MINV_SEARCH=1`), because floating-point ties can lead to
+  different witnesses on other NumPy versions. `_tools/cmp_json.py` rejects NaN/Infinity (with `_tools/test_cmp_json.py`,
+  row `selftest`). `evidence/V`: the pointer for the m = 3 sample 58 035 is corrected and the total is recounted from the
+  recorded aggregate (`sum_m3_sample.py`).
+- Documents: Blueprint names the current paper source; REPRODUCE explains that `--labels-file` reads `paper/LABELS.tsv`;
+  the CC BY notice and its row in FILE_RIGHTS.tsv describe it as the author's licence notice with a link to the legal code.
+- Historical scripts and their recorded outputs are unchanged (hashes in each `evidence/<row>/MANIFEST.tsv`).
+
 ## 1.0.0 (2026-10-13, first public release)
 - First public release. New repository and new archive records for this third paper of the series (the earlier papers keep their own
   repositories and records; they are cited, not earlier versions of this work).

@@ -8,19 +8,19 @@ authors:
     orcid: "https://orcid.org/0009-0008-7122-522X"
     affiliation: "Research Institute of Criminal Psychiatry / Sex Offender Medical Center, Tokyo, Japan; Department of Neuropsychiatry, Kyoto University, Kyoto, Japan"
     email: fukui@somec.org
-version: "1.0.0"
+version: "1.0.1"
 date-released: "2026-10-13"
 repository-code: "https://github.com/hirokifukui/residue-apn-carry"
-doi: 10.5281/zenodo.23330907
+doi: 10.5281/zenodo.23333039
 identifiers:
   - type: doi
-    value: 10.5281/zenodo.23330907
+    value: 10.5281/zenodo.23333039
     description: "Zenodo version DOI of this source archive (this version only)"
   - type: doi
     value: 10.5281/zenodo.23330906
     description: "Zenodo concept DOI of the source archive (resolves to the latest version)"
   - type: doi
-    value: 10.5281/zenodo.23330909
+    value: 10.5281/zenodo.23333044
     description: "Zenodo version DOI of the paper (supplemented by this archive)"
   - type: doi
     value: 10.5281/zenodo.23330908
@@ -68,5 +68,5 @@ preferred-citation:
   year: 2026
   status: preprint
   license: CC-BY-4.0
-  doi: 10.5281/zenodo.23330909
-  notes: "paper/main_v14.pdf in this package"
+  doi: 10.5281/zenodo.23333044
+  notes: "paper/main_v15.pdf in this package"

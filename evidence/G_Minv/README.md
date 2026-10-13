@@ -12,7 +12,8 @@ python3 -I -B c8/r1/code/t2_analyze.py c8/r1/code OUT.json 3
 python3 -I -B c8/r1/code/t3_extra.py c8/r1/code OUTDIR msurvey
 python3 -I -B c8/r1/audit_code/a_main.py OUT.json 3
 python3 -I -B c8/r1/audit_code/a_msurvey.py OUT.json
-python3 -I -B c8/r1/audit_code/a_adv.py OUT.json m3 11 40
+python3 -I -B check_recorded_witnesses.py expected/c8/r1/audit_results/a_adv_m3.json OUT.json   # standard (1.0.1)
+python3 -I -B c8/r1/audit_code/a_adv.py OUT.json m3 11 40   # optional search re-run (G_MINV_SEARCH=1)
 ```
 
 ## Expected output
@@ -22,6 +23,7 @@ expected/c8/r1/audit_results/a_main_m3.log (16 tables, g_eq_PsiSigma, closed_for
 about 3 min (a_adv m3 about 140 s). Not re-run: a_main 5 (8 min recorded), a_adv m5 (2-11 min), t2 m5, t3 adv/bframe/m7/split5.
 
 ## Notes
+Version 1.0.1: the standard check re-verifies the 40 recorded witnesses of a_adv.py (m=3) with the unchanged audit library (`check_recorded_witnesses.py`): every recorded field (M exactly; norms, ratio and bounds to relative 1e-9; ok) is recomputed from the stored (p, K, eps, h), and the maximum ratio 0.46286958505344594 is reproduced. Re-running the hill-climbing search is optional: it accepts floating-point ties (v >= cur), and on NumPy 2.4.2 two of the 40 trials ended at different witnesses h (same maximum). The largest observed ratio is a floating-point value (m=3: 0.46287; m=5: 0.06390 in a_adv_m5_long.log), not a certified bound.
 Two recorded files are withheld (hash only in MANIFEST.tsv) because they contain a build-host path: results/commands.json (command list with exit codes) and audit_results/a_adv_m5_run1_exit1.log (a first m=5 attempt that exited 1 through a harness error; rerun with exit 0). Neither is compared by rep.sh. code/ = author implementation (gcore), audit_code/ = independent audit implementation (acore).
 
 ## Scope

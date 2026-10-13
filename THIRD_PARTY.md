@@ -1,6 +1,6 @@
 # Third-party material
 
-Status: version 1.0.0 (2026-10-13).
+Status: version 1.0.1 (2026-10-13).
 
 ## Redistributed in this package
 
