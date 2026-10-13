@@ -1,0 +1,295 @@
+% sec_3_differential_v3.tex -- v3: one more display and the table of prop:table (layout only). Group I.
+\section{Differential structure common to all corrections}\label{sec:diff}
+
+Throughout this section Assumption~\ref{ass:PD} holds, $F=F_{p,d,h}$ and $B=J\circ F$.
+No statement depends on $h$.
+
+\subsection{Difference formulas}
+\begin{lemma}\label{lem:diffF}
+For $x=(a,b)$ and $\alpha=(u,v)$,
+\begin{multline*}
+F(x+\alpha)-F(x)=\Bigl(D_up(a),\\ h(a\oplus u)\oplus h(a)\oplus K(u)b\oplus d(a\oplus u)(v\oplus a\star u)\oplus\bigl(p(a)\star D_up(a)\bigr)\Bigr).
+\end{multline*}
+\end{lemma}
+% SOURCE: c1/proofs/ClassTransition.md:31-35 (formula (0.1)); PD version c3/notes/PD_ROLES_H0_P3.md:47-51
+\begin{proof}
+By Lemma~\ref{lem:add}, $x+\alpha=(a\oplus u,\ b\oplus v\oplus a\star u)$. Apply the difference formula
+of Lemma~\ref{lem:add} with $z_0=p(a)$, $s=D_up(a)$, and use $d(a\oplus u)b\oplus d(a)b=K(u)b$.
+\end{proof}
+
+\begin{lemma}\label{lem:diffB}
+For $x=(a,b)$ and $\alpha=(u,v)$ put $Q=h(a)\oplus d(a)b$. Then $B(x+\alpha)-B(x)=(s,t)$ with
+\[
+s=h(a\oplus u)\oplus h(a)\oplus K(u)\,b\oplus d(a\oplus u)(v\oplus a\star u),\qquad t=D_up(a)\oplus(Q\star s).
+\]
+\end{lemma}
+% SOURCE: c2/notes/EPSILON_THEOREM.md:13-14; c1/proofs/ClassTransition.md:45-46,65; c5/a1/notes/UE_P5.md:14-18
+\begin{proof}
+$B(x)=(Q,p(a))$ and $B(x+\alpha)=(Q',p(a\oplus u))$ with
+$Q'=h(a\oplus u)\oplus d(a\oplus u)(b\oplus v\oplus a\star u)$. Lemma~\ref{lem:add} with $z_0=Q$ and
+$s=Q'\oplus Q$ gives the claim.
+\end{proof}
+
+The output class of a difference of $B$ is read off its low digit $s$: $s=0$, $s=\rho$, or
+$s\notin\{0,\rho\}$. Since $B$ is a permutation (by (P1) and $d\ne0$), $\alpha\ne0$ gives $(s,t)\ne0$.
+
+\begin{proposition}[Rows of $T_F$]\label{prop:F-rows}
+Let $\alpha=(u,v)\ne0$.
+\begin{enumerate}
+\item If $\alpha\in\cG$ then $\delta_F(\alpha,\beta)\le2$ for all $\beta$.
+\item If $\alpha\in\cZ$ then $F(x+\alpha)-F(x)=(0,d(a)v)$; hence $\delta_F(\alpha,(0,w))=2q$ if
+$w/v\in\Img d$ and $\delta_F(\alpha,\beta)=0$ otherwise.
+\item If $\alpha\in\cE$ then the high digit of $F(x+\alpha)-F(x)$ does not depend on $b$ and, for fixed $a$, is a bijective function of $v$; in particular $\delta_F(\alpha,\beta)\le2q$.
+\end{enumerate}
+\end{proposition}
+% SOURCE: c1/proofs/ClassTransition.md:37-41 (Lemma 0 (i)-(iii)); c3/notes/PD_ROLES_H0_P3.md:49-51
+\begin{proof}
+(1) $K(u)\ne0$, so for each $a$ at most one $b$ gives a prescribed high digit, and $D_up(a)=\bar\beta$
+has at most two solutions by (P1). (2) Put $u=0$ in Lemma~\ref{lem:diffF}; $d$ is two-to-one onto
+$\Img d$. (3) $K(\rho)=0$ removes $b$, and the coefficient of $v$ is $d(a\oplus\rho)=d(a)\ne0$; at most two $a$
+solve $D_\rho p(a)=\bar\beta$, each with $q$ values of $b$.
+\end{proof}
+
+\subsection{Exact differential uniformity}
+\begin{theorem}\label{thm:eps}
+$\Delta(B)=q$; that is, $\max_{\alpha\ne0,\beta}T_B(\alpha,\beta)=1/q$. More precisely, for every
+$\beta$: $\delta_B(\alpha,\beta)\le q$ if $\alpha\in\cG$; $\delta_B(\alpha,\beta)\le 2q/2^{\wt(s)}\le q$ if
+$\alpha\in\cZ$ and $\beta=(s,t)$; and $\delta_B(\alpha,\beta)\le q$ if $\alpha\in\cE$. The value $q$ is attained.
+\end{theorem}
+% SOURCE: c2/notes/EPSILON_THEOREM.md:9-22 (theorem E, proof cases 1-4); generality: c3/notes/PD_ROLES_H0_P3.md:57,70
+\begin{proof}
+Use Lemma~\ref{lem:diffB} with $\beta=(s,t)$.
+
+\emph{$\cG$.} $K(u)\ne0$, so for fixed $a$ the value $s$ determines $b$. Hence at most one $b$ per $a$, at most $q$ in total.
+
+\emph{$\cZ$.} Here $s=d(a)v\ne0$, so at most two $a$ (fibres of $d$). For fixed $a$, $Q$ is a
+bijective function of $b$ and $t=Q\star s$; the map $Q\mapsto Q\star s$ takes $2^{\wt(s)}$ values, each
+$q/2^{\wt(s)}$ times. Total $\le 2q/2^{\wt(s)}\le q$ as $s\ne0$.
+
+\emph{$\cE$.} $K(\rho)=0$, so $s=s(a)$ does not depend on $b$, and from $d(a\oplus\rho)=d(a)$ and
+$(a\oplus\rho)\star\rho=(a\star\rho)\oplus\rho$,
+\begin{equation}\label{eq:C3}
+s(a\oplus\rho)=s(a)\oplus d(a)\rho\ne s(a).
+\end{equation}
+Let $S_s=\{z\star s:z\in\Fq\}$. The condition is $s(a)=s$ and $D_\rho p(a)\in t\oplus S_s$. By (P1) every
+non-empty fibre of $D_\rho p$ is a pair $\{a,a\oplus\rho\}$, so the admissible $a$ lie in at most $|S_s|$
+pairs; by~\eqref{eq:C3} each pair contains at most one $a$ with $s(a)=s$; for that $a$ exactly
+$q/|S_s|$ values of $b$ give the required $Q\star s$. Total $\le q$.
+
+\emph{Attainment.} Let $\eta$ be a basis vector, $d_*\in\Img d$, $v=\eta/d_*$, $\alpha=(0,v)$, $\beta=(\eta,0)$.
+Then $s=\eta$ exactly for the two $a$ with $d(a)=d_*$, and for each such $a$ exactly $q/2$ values of $b$
+give $Q\star\eta=0$.
+\end{proof}
+
+The proof uses neither $\wt(\rho)$ nor the permutation property of $p$ in the cases $\cZ,\cE$.
+
+\subsection{Class transitions}
+\begin{proposition}\label{prop:table}
+For $\beta$ in the indicated class, the following column sums (over all rows $\alpha$ of the indicated
+class) and entry bounds hold for $T_B$:
+\begin{center}
+\begin{tabular}{llp{0.12\textwidth}p{0.36\textwidth}}
+\toprule
+rows $\to$ target & quantity & bound & ingredient\\
+\midrule
+$\cZ\to\cZ$ & column sum & $0$ & $s=d(a)v\ne0$\\
+$\cZ\to\cE$ & column sum & $1/\omega$ & fibres of $d$, $Q$ uniform in $b$\\
+$\cE\to\cZ$ & column sum & $2/q$ & $v\mapsto s_v(a)$ bijective, APN in direction $\rho$\\
+$\cE\to\cE$ & column sum & $2/q$ & as above, $D_\rho p(a)\in t\oplus S_\rho$\\
+$\cG\to\cZ$ & entry & $2/N$ & $b$ unique per $a$, APN\\
+$\cG\to\cE$ & entry & $2\omega/N$ & $b$ unique per $a$, $D_up(a)\in t\oplus S_\rho$\\
+\bottomrule
+\end{tabular}
+\end{center}
+For the final layer $F$: if $\gamma$ has low digit $0$, only rows in $\cZ$ contribute and their column
+sum is at most $1$; if $\gamma$ has non-zero low digit, rows in $\cZ$ contribute $0$, rows in $\cE$ have
+column sum at most $2/q$, and rows in $\cG$ have entries at most $2/N$.
+\end{proposition}
+% SOURCE: c1/proofs/ClassTransition.md:63-78 (section 4 table and final layer); PD generality c3/notes/PD_ROLES_H0_P3.md:55
+\begin{proof}
+All counts use Lemma~\ref{lem:diffB} and divide by $N=q^2$.
+$\cZ\to\cZ$: $s=d(a)v\ne0$.
+$\cZ\to\cE$, target $(\rho,t)$: for each $v$ with $\rho/v\in\Img d$ (there are $q/2$ such $v$) exactly two
+$a$ have $s=\rho$; then $t=Q\star\rho$ and $Q$ is uniform in $b$, so $q/\omega$ values of $b$ (if $t\in S_\rho$).
+The column sum is at most $(q/2)\cdot2\cdot(q/\omega)/N=1/\omega$.
+$\cE\to\cZ$, target $(0,t)$: for fixed $a$, $v\mapsto s_v(a)=h(a\oplus\rho)\oplus h(a)\oplus d(a)(v\oplus a\star\rho)$ is
+bijective, so one $v$ per $a$ gives $s=0$; then $t=D_\rho p(a)$ has at most two solutions $a$, each with
+$q$ values of $b$: column sum $\le 2q/N$.
+$\cE\to\cE$, target $(\rho,t)$: one $v$ per $a$; $D_\rho p(a)\in t\oplus S_\rho$ for at most $2\omega$ values of $a$,
+each with $q/\omega$ values of $b$: column sum $\le2q/N$.
+$\cG\to\cZ$: $s=0$ fixes $b$ for each $a$, and $t=D_up(a)$ has at most two solutions.
+$\cG\to\cE$: $s=\rho$ fixes $b$, and $D_up(a)\in t\oplus S_\rho$ has at most $2\omega$ solutions.
+Final layer: by Lemma~\ref{lem:diffF} the low digit of an $F$-difference is $D_up(a)$, which is non-zero
+for $u\ne0$ because $p$ is a permutation; $T_F$ is doubly stochastic, so any partial column sum is at most
+$1$. For rows in $\cE$ apply Proposition~\ref{prop:F-rows}(3): at most two $a$, one $v$ per $a$, $q$ values
+of $b$. For rows in $\cG$ apply Proposition~\ref{prop:F-rows}(1).
+\end{proof}
+
+\subsection{A sup-norm recursion and the two-block bound}
+Fix $\alpha\ne0$ and let $\pi_t=e_\alpha T_B^{\,t}$ be the distribution of the difference after $t$
+key-separated applications of $B$ (Proposition~\ref{prop:markov}). Put
+$\sigma^{\cZ}_t=\max_{\beta\in\cZ}\pi_t(\beta)$ and $\sigma^{\cE}_t=\max_{\beta\in\cE}\pi_t(\beta)$.
+
+\begin{theorem}[Sup-norm recursion]\label{thm:S}
+For every $t\ge0$,
+\begin{gather*}
+\sigma^{\cZ}_{t+1}\le\frac2N+\frac2q\,\sigma^{\cE}_t,\qquad
+\sigma^{\cE}_{t+1}\le\frac{2\omega}N+\frac1\omega\,\sigma^{\cZ}_t+\frac2q\,\sigma^{\cE}_t,\\
+\max_\gamma(\pi_tT_F)(\gamma)\le\max\Bigl(\sigma^{\cZ}_t,\ \frac2N+\frac2q\,\sigma^{\cE}_t\Bigr).
+\end{gather*}
+\end{theorem}
+% SOURCE: c1/proofs/AllDirectionBound.md:26-31 (theorem S); constants c1/proofs/ClassTransition.md:63-78
+\begin{proof}
+$\pi_{t+1}(\beta)=\sum_{\alpha'}\pi_t(\alpha')T_B(\alpha',\beta)$ with $\pi_t(0)=0$. Split $\alpha'$ by class. The rows in
+$\cG$ contribute at most (largest entry)$\cdot\pi_t(\cG)\le$ largest entry; the rows in $\cZ$ (resp.\ $\cE$)
+contribute at most $\sigma^{\cZ}_t$ (resp.\ $\sigma^{\cE}_t$) times the column sum over that class. Insert
+Proposition~\ref{prop:table}. The last inequality is the same argument with the final-layer part of
+Proposition~\ref{prop:table}.
+\end{proof}
+
+\begin{theorem}[Two-block bound, kernel direction explicit]\label{thm:W2}
+Let $m\ge5$ be odd. For every $h$ and every $\alpha\ne0$, $\gamma$:
+\begin{enumerate}
+\item if $\wt(\rho)=1$ (so $\omega=2$), then $(T_B^2T_F)(\alpha,\gamma)\le 4/N$;
+\item for general $\rho$, $(T_B^2T_F)(\alpha,\gamma)\le(6+6/q)/N\le 99/(16N)$.
+\end{enumerate}
+By Proposition~\ref{prop:markov}, $\EDP_2$ of the local block $S_2$ obeys the same bounds.
+\end{theorem}
+% SOURCE: c3/notes/MAINLINE_P3.md:6-10 (lemma W, warm start, theorem W2), :14-16 (general rho); scope correction c5/notes/CORE_P5.md:5-13
+\begin{proof}
+Put $x=1/q$, so $x^2=1/N$. By Theorem~\ref{thm:eps}, $\pi_1(\beta)=T_B(\alpha,\beta)\le x$ for all $\beta$, hence
+$\sigma^{\cZ}_1,\sigma^{\cE}_1\le x$. Theorem~\ref{thm:S} uses of $\pi_t$ only that it is a probability vector and
+the two maxima, so it may be started at $t=1$:
+$\sigma^{\cZ}_2\le 2x^2+2x\cdot x=4x^2$ and $\sigma^{\cE}_2\le 2\omega x^2+x/\omega+2x^2$. Therefore
+$(T_B^2T_F)(\alpha,\gamma)\le\max(4x^2,\ 2x^2+2x\sigma^{\cE}_2)$ and
+\[
+N\bigl(2x^2+2x\sigma^{\cE}_2\bigr)=2+\frac2\omega+\frac{4(\omega+1)}q .
+\]
+For $\omega=2$ this is $3+12/q\le4$ since $q\ge12$. For general $2\le\omega\le q$,
+$(6+6/q)-\bigl(2+2/\omega+4(\omega+1)/q\bigr)=(4\omega-2)(q-\omega)/(q\omega)\ge0$, and $4\le6+6/q$.
+Finally $6+6/q\le 99/16$ for $q\ge32$.
+\end{proof}
+
+\begin{remark}
+The constant $4$ in (1) uses $\omega=2$, i.e.\ weight one of $\rho$ in the fixed basis; it is not
+obtained for general $\rho$ by a change of basis (Section~\ref{sec:setup}). All tables used in
+Sections~\ref{sec:repair}--\ref{sec:comp} have $\rho=1$.
+% SOURCE: c5/notes/CORE_P5.md:13-15 (rho of the actual tables)
+\end{remark}
+
+\subsection{A uniform collision-energy bound}
+Define the collision energy of $B$ as $\mathcal E_B=\sum_{\alpha\in R}\sum_{\beta}T_B(\alpha,\beta)^2$ (the row
+$\alpha=0$ included).
+
+\begin{theorem}[Uniform energy]\label{thm:UE}
+Assume (P2), (P3) and that $p$ is APN (the permutation property is not used). Then for every $m$,
+every $h$ and every $\rho$,
+\[
+\mathcal E_B\le 6+4(3/4)^m,\qquad\text{and}\qquad \mathcal E_B\le 1779/256<7\ \text{ if } m\ge5 .
+\]
+\end{theorem}
+% SOURCE: c5/a1/notes/UE_P5.md:69-75 (theorem UE); proof :14-68
+The proof occupies the rest of this subsection. Write $\mathcal E_{\cZ},\mathcal E_{\cE},\mathcal E_{\cG}$ for the
+contributions of the rows in each class; the zero row contributes $1$.
+
+\begin{lemma}[$\cZ$ rows, exact]\label{lem:UEZ}
+$\mathcal E_{\cZ}=2(3/4)^m-2/q$.
+\end{lemma}
+% SOURCE: c5/a1/notes/UE_P5.md:63-65
+\begin{proof}
+For $u=0$, Lemma~\ref{lem:diffB} gives $s=d(a)v$ and $t=Q\star s$. Hence
+$\delta_B((0,v),(s,t))=2q/2^{\wt(s)}$ if $s\in v\,\Img d$ and $t\subseteq s$ (bitwise), and $0$ otherwise. The
+row energy is $(4/q^2)\sum_{s\in v\Img d}2^{-\wt(s)}$. Each $s\ne0$ lies in $v\Img d$ for exactly $|\Img d|=q/2$
+values of $v\ne0$. Thus $\mathcal E_{\cZ}=(4/q^2)(q/2)\sum_{s\ne0}2^{-\wt(s)}=(2/q)((3/2)^m-1)$.
+\end{proof}
+
+\begin{lemma}[$\cE$ rows]\label{lem:UEE}
+$\mathcal E_{\cE}\le1$.
+\end{lemma}
+% SOURCE: c5/a1/notes/UE_P5.md:66
+\begin{proof}
+By the $\cE$ case of Theorem~\ref{thm:eps}, which uses only APN and (P2), every entry of an $\cE$ row is at
+most $1/q$; rows sum to $1$, so each row energy is at most $1/q$, and there are $q$ rows.
+\end{proof}
+
+For the $\cG$ rows fix $u\notin\{0,\rho\}$ and put
+\[
+\begin{gathered}
+\lambda(a)=d(a)K(u)^{-1},\qquad w(a)=K(u)\lambda(a)\lambda(a\oplus u),\\
+H_u(a)=\lambda(a\oplus u)h(a)\oplus\lambda(a)h(a\oplus u).
+\end{gathered}
+\]
+\begin{lemma}\label{lem:Grow}
+For $\alpha=(u,v)$ and each $(a,s)$ there is exactly one $b$ with low difference $s$, and then
+\begin{gather*}
+\delta_B((u,v),(s,t))=\#\{a: t_s(a)=t\},\qquad t_s(a)=D_up(a)\oplus\bigl(s\star z_s(a)\bigr),\\
+z_s(a)=H_u(a)\oplus\lambda(a)s\oplus w(a)(v\oplus a\star u).
+\end{gather*}
+Moreover:
+\textup{(S1)} $\lambda(a\oplus\rho)=\lambda(a)$, $\lambda(a\oplus u)=\lambda(a)\oplus1$, $w(a\oplus\rho)=w(a\oplus u)=w(a)\ne0$;
+\textup{(S2)} $w(a')=w(a)$ iff $a'\in a\oplus\{0,\rho,u,u\oplus\rho\}$;
+\textup{(S3)} $z_s(a)\oplus z_s(a\oplus u)=s\oplus w(a)u$; $z_s(a)\oplus z_s(a\oplus\rho)=Z_\rho(a)$ and
+$z_s(a)\oplus z_s(a\oplus\rho\oplus u)=s\oplus Z_{\rho u}(a)$, where $Z_\rho(a),Z_{\rho u}(a)$ depend neither on $s$ nor on $v$.
+\end{lemma}
+% SOURCE: c5/a1/notes/UE_P5.md:22-32 (facts S1-S3)
+\begin{proof}
+Solve $s$ in Lemma~\ref{lem:diffB} for $b$ (possible as $K(u)\ne0$) and substitute in $Q$; use
+$\lambda(a\oplus u)=(d(a)\oplus K(u))K(u)^{-1}=\lambda(a)\oplus1$, so $h(a)(1\oplus\lambda(a))=\lambda(a\oplus u)h(a)$ and
+$\lambda(a)d(a\oplus u)=w(a)$. (S1) follows from Lemma~\ref{lem:d}; $w(a)\ne0$ because $d$ has no zeros.
+(S2): $w=K(u)g(\lambda)$ with $g(x)=x^2+x$, which is two-to-one with $g(x)=g(x\oplus1)$; so $w(a')=w(a)$ iff
+$d(a')\in\{d(a),d(a\oplus u)\}$ iff $a'\oplus a\in\ker K$ or $a'\oplus a\oplus u\in\ker K$.
+(S3): $H_u(a\oplus u)=H_u(a)$ and $(a\star u)\oplus((a\oplus u)\star u)=u$; in the other two differences
+$\lambda$ and $w$ take the same value at both points, so the $\lambda(a)s$ terms and the $w(a)v$ terms cancel
+(resp.\ leave exactly $s$).
+\end{proof}
+
+\begin{lemma}[Energy identity]\label{lem:Eid}
+With $A_u=\sum_a 2^{\wt(w(a)u)}$,
+$\mathrm{Merge}_u=\#\{(s,a,a'): a'\in\{a\oplus\rho,a\oplus\rho\oplus u\},\ t_s(a)=t_s(a')\}$ (independent of $v$) and
+$\mathrm{Cross}_u=\sum 3^{\,m-\wt(r)}$ over ordered pairs $(a,a')$ with $w(a)\ne w(a')$, $r=D_up(a)\oplus D_up(a')$,
+\[
+\sum_v\sum_{s,t}\delta_B((u,v),(s,t))^2=q^3+q\,A_u+\mathrm{Cross}_u+q\,\mathrm{Merge}_u .
+\]
+\end{lemma}
+% SOURCE: c5/a1/notes/UE_P5.md:34-45 (identity E, definition of Merge)
+\begin{proof}
+For each $s$ the row has exactly $q$ points with low difference $s$ (one per $a$), so
+$\sum_t\delta_B^2=\#\{(a,a'):t_s(a)=t_s(a')\}$. Split the ordered pairs:
+(i) $a'=a$ gives $q^3$ after summing over $v,s,a$.
+(ii) $a'=a\oplus u$: $D_up(a\oplus u)=D_up(a)$ and the condition is $s\star(s\oplus w(a)u)=0$, i.e.\ $s\subseteq w(a)u$,
+which holds for $2^{\wt(w(a)u)}$ values of $s$ and every $v$.
+(iii) $a'\in\{a\oplus\rho,a\oplus\rho\oplus u\}$: by (S3) the condition does not depend on $v$.
+(iv) otherwise $w(a)\ne w(a')$ by (S2), and $z_s(a)\oplus z_s(a')=c\oplus(w(a)\oplus w(a'))v$ with $c$ independent
+of $v$; the condition $r=s\star(c\oplus(w\oplus w')v)$ has $2^{m-\wt(s)}$ solutions $v$ if $r\subseteq s$ and none
+otherwise, and $\sum_{s\supseteq r}2^{m-\wt(s)}=3^{m-\wt(r)}$.
+\end{proof}
+
+\begin{lemma}\label{lem:UEbounds}
+$\mathrm{Merge}_u\le q^2$, $A_u\le4(3^m-1)$, $\mathrm{Cross}_u\le 2q(q^2-3^m)$.
+\end{lemma}
+% SOURCE: c5/a1/notes/UE_P5.md:47-58 (lemmas M, A, X)
+\begin{proof}
+\emph{Merge.} Let $r_a=D_up(a)\oplus D_up(a\oplus\rho)$. Since $a\oplus\rho\notin\{a,a\oplus u\}$, APN gives
+$r_a\ne0$, and $D_up(a\oplus\rho\oplus u)=D_up(a\oplus\rho)$ gives the same $r_a$ for the second partner. For
+$a'=a\oplus\rho$ the condition is $r_a=s\star Z_\rho(a)$, with $2^{m-\wt(Z_\rho)}\le q/2$ solutions (as $\wt(Z_\rho)\ge\wt(r_a)\ge1$
+whenever solutions exist). For $a'=a\oplus\rho\oplus u$ the condition is $r_a=s\star\overline{Z_{\rho u}}$ (bitwise
+complement), with $2^{\wt(Z_{\rho u})}\le q/2$ solutions. Hence $\mathrm{Merge}_u\le q\cdot2\cdot q/2$.
+\emph{$A_u$.} $w(a)u\ne0$ and, by (S2), each value of $a\mapsto w(a)u$ has at most $4$ preimages; so
+$A_u\le4\sum_{z\ne0}2^{\wt(z)}=4(3^m-1)$.
+\emph{Cross.} In case (iv), $r\ne0$ (otherwise $a'\in\{a,a\oplus u\}$ by APN). For fixed $a$ and $r\ne0$ there are
+at most two $a'$; so $\mathrm{Cross}_u\le2q\sum_{r\ne0}3^{m-\wt(r)}=2q(4^m-3^m)$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:UE}]
+By Lemmas~\ref{lem:Eid} and~\ref{lem:UEbounds}, each $u\notin\{0,\rho\}$ contributes at most
+$(4q^3+2q\,3^m-4q)/q^4$, and there are $q-2$ such $u$, so
+$\mathcal E_{\cG}\le(1-2/q)(4+2(3/4)^m-4/q^2)\le4+2(3/4)^m$. Adding the zero row, Lemma~\ref{lem:UEZ}
+and Lemma~\ref{lem:UEE} gives $\mathcal E_B\le 1+2(3/4)^m+1+4+2(3/4)^m$. For $m\ge5$,
+$6+4\cdot243/1024=1779/256$.
+\end{proof}
+
+\begin{remark}
+Theorem~\ref{thm:UE} gives a constant independent of $m,p,d,h$; it does not by itself give a mixing
+statement or any security statement. Its use in the conditional mixing analysis is recorded in
+Section~\ref{sec:mixing}.
+\end{remark}

@@ -1,0 +1,661 @@
+{
+ "rule": "(same for every layout):\n  local block S_t(x;k_1..k_t) = F(B(...B(B(x)+k_1)...)+k_t), B = J o F  ->  F: t+1, J: t, inner key additions: t  (per word)\n  layout (t_1,...,t_r) with r local layers per word, r-1 word mixings M, whitening k0 (w words), and one reset\n  key word L_i after each mixing (w words each)  ->\n     F = w*sum(t_i+1), J = w*sum(t_i), M = r-1, key additions = w*sum(t_i) + w + (r-1)*w\n  (macro MAC (2,2) of C2 has no k0: keys = w*sum t_i + (r-1)*w; listed for reference only.)",
+ "counts_per_word": {
+  "SPLIT_TAIL_(2,2,1,1)": {
+   "F": 10,
+   "J": 6,
+   "M": 3,
+   "K": 10
+  },
+  "P3B_(2,2,2)": {
+   "F": 9,
+   "J": 6,
+   "M": 2,
+   "K": 9
+  },
+  "THICK_(2,2,2,2)": {
+   "F": 12,
+   "J": 8,
+   "M": 3,
+   "K": 12
+  },
+  "MAC_C2_(2,2)_ref": {
+   "F": 6,
+   "J": 4,
+   "M": 1,
+   "K": 5
+  }
+ },
+ "cost_symbolic": {
+  "SPLIT_TAIL_(2,2,1,1)": "10*c_F*w + 6*c_J*w + 3*c_M + 10*c_k*w",
+  "P3B_(2,2,2)": "9*c_F*w + 6*c_J*w + 2*c_M + 9*c_k*w",
+  "THICK_(2,2,2,2)": "12*c_F*w + 8*c_J*w + 3*c_M + 12*c_k*w",
+  "MAC_C2_(2,2)_ref": "6*c_F*w + 4*c_J*w + c_M + 5*c_k*w"
+ },
+ "differences_symbolic": {
+  "SPLIT_TAIL_(2,2,1,1) - P3B_(2,2,2)": "c_F*w + c_M + c_k*w",
+  "THICK_(2,2,2,2) - SPLIT_TAIL_(2,2,1,1)": "2*c_F*w + 2*c_J*w + 2*c_k*w",
+  "THICK_(2,2,2,2) - P3B_(2,2,2)": "3*c_F*w + 2*c_J*w + c_M + 3*c_k*w",
+  "P3B_(2,2,2) - MAC_C2_(2,2)_ref": "3*c_F*w + 2*c_J*w + c_M + 4*c_k*w"
+ },
+ "bounds_and_widths": [
+  {
+   "m": 5,
+   "w": 2,
+   "q": 32,
+   "N": 1024,
+   "width_bits": 20,
+   "bound_(4/N)^w": "1/65536",
+   "log2_bound": -16,
+   "check_log2": true,
+   "ideal_2^-width_ratio": "16",
+   "key_bits_independent_model": {
+    "SPLIT_TAIL_(2,2,1,1)": 200,
+    "P3B_(2,2,2)": 180,
+    "THICK_(2,2,2,2)": 240,
+    "MAC_C2_(2,2)_ref": 100
+   }
+  },
+  {
+   "m": 5,
+   "w": 4,
+   "q": 32,
+   "N": 1024,
+   "width_bits": 40,
+   "bound_(4/N)^w": "1/4294967296",
+   "log2_bound": -32,
+   "check_log2": true,
+   "ideal_2^-width_ratio": "256",
+   "key_bits_independent_model": {
+    "SPLIT_TAIL_(2,2,1,1)": 400,
+    "P3B_(2,2,2)": 360,
+    "THICK_(2,2,2,2)": 480,
+    "MAC_C2_(2,2)_ref": 200
+   }
+  },
+  {
+   "m": 7,
+   "w": 2,
+   "q": 128,
+   "N": 16384,
+   "width_bits": 28,
+   "bound_(4/N)^w": "1/16777216",
+   "log2_bound": -24,
+   "check_log2": true,
+   "ideal_2^-width_ratio": "16",
+   "key_bits_independent_model": {
+    "SPLIT_TAIL_(2,2,1,1)": 280,
+    "P3B_(2,2,2)": 252,
+    "THICK_(2,2,2,2)": 336,
+    "MAC_C2_(2,2)_ref": 140
+   }
+  },
+  {
+   "m": 7,
+   "w": 4,
+   "q": 128,
+   "N": 16384,
+   "width_bits": 56,
+   "bound_(4/N)^w": "1/281474976710656",
+   "log2_bound": -48,
+   "check_log2": true,
+   "ideal_2^-width_ratio": "256",
+   "key_bits_independent_model": {
+    "SPLIT_TAIL_(2,2,1,1)": 560,
+    "P3B_(2,2,2)": 504,
+    "THICK_(2,2,2,2)": 672,
+    "MAC_C2_(2,2)_ref": 280
+   }
+  }
+ ],
+ "general_width": {
+  "block_bits": "2*m*w",
+  "bound": "(4/N)^w = 2^{-(2m-2)w} (q>=32, independent keys)",
+  "key_bits_independent_model": {
+   "SPLIT_TAIL_(2,2,1,1)": "10*w*2m",
+   "P3B_(2,2,2)": "9*w*2m",
+   "THICK_(2,2,2,2)": "12*w*2m",
+   "MAC_C2_(2,2)_ref": "5*w*2m"
+  },
+  "practical_width_and_key_schedule": "UNDETERMINED (no key schedule specified; independent-key model only)"
+ },
+ "inverse_chain": {
+  "5": {
+   "mults": 2,
+   "squarings": 4,
+   "chain": [
+    "b2=b1^(2^1)*b1",
+    "b4=b2^(2^2)*b2",
+    "inv=b4^2"
+   ],
+   "verified_all_elements": true,
+   "ITT_formula_floorlog2(m-1)+HW(m-1)-1": 2,
+   "modulus_int": 37,
+   "steps": [
+    [
+     "b2=b1^(2^1)*b1",
+     1,
+     "self"
+    ],
+    [
+     "b4=b2^(2^2)*b2",
+     2,
+     "self"
+    ]
+   ],
+   "differential_uniformity": 2
+  },
+  "7": {
+   "mults": 3,
+   "squarings": 6,
+   "chain": [
+    "b2=b1^(2^1)*b1",
+    "b3=b2^2*x",
+    "b6=b3^(2^3)*b3",
+    "inv=b6^2"
+   ],
+   "verified_all_elements": true,
+   "ITT_formula_floorlog2(m-1)+HW(m-1)-1": 3,
+   "modulus_int": 131,
+   "steps": [
+    [
+     "b2=b1^(2^1)*b1",
+     1,
+     "self"
+    ],
+    [
+     "b3=b2^2*x",
+     1,
+     "x"
+    ],
+    [
+     "b6=b3^(2^3)*b3",
+     3,
+     "self"
+    ]
+   ],
+   "differential_uniformity": 2
+  }
+ },
+ "linear_maps_naive_XOR": {
+  "5": {
+   "squaring_map_naive_XOR": {
+    "1": 3,
+    "2": 7
+   },
+   "d0_linear_part_naive_XOR": 5,
+   "d0_constant_NOT": 1
+  },
+  "7": {
+   "squaring_map_naive_XOR": {
+    "1": 3,
+    "3": 14
+   },
+   "d0_linear_part_naive_XOR": 9,
+   "d0_constant_NOT": 1
+  }
+ },
+ "bit_units_m5": {
+  "F_natural": {
+   "AND": 45,
+   "XOR": 158
+  },
+  "F_PD_inv_d0_h0": {
+   "AND": 75,
+   "XOR": 93
+  },
+  "J": {
+   "AND": 0,
+   "XOR": 0
+  },
+  "key_add_ring_2m": {
+   "AND": 5,
+   "XOR": 15
+  },
+  "M": {
+   "MDS_alt_2x2": {
+    "AND": 11,
+    "XOR": 35,
+    "NOT": 0
+   },
+   "M2_2x2": {
+    "AND": 47,
+    "XOR": 207,
+    "NOT": 0
+   },
+   "L_C_4x4": {
+    "AND": 159,
+    "XOR": 723,
+    "NOT": 0
+   }
+  }
+ },
+ "PD_F_bit_m5": {
+  "AND": 75,
+  "XOR": 93,
+  "NOT": 1,
+  "formula": "(ITT mults + 1 product) x F32 schoolbook + naive XOR of squaring maps + d0 linear part; h0 = 0 costs nothing",
+  "status": "upper bound for ONE circuit; residue x^{-1}, d = d0, h = 0 (PD_ROLES_H0_P3 sec.2.1 witness)"
+ },
+ "bit_rows_m5": [
+  {
+   "layout": "SPLIT_TAIL_(2,2,1,1)",
+   "m": 5,
+   "w": 2,
+   "mixers": "A_all_MDS_alt",
+   "Mlist": [
+    "MDS_alt_2x2",
+    "MDS_alt_2x2",
+    "MDS_alt_2x2"
+   ],
+   "F": "F_natural",
+   "bit_upper": {
+    "AND": 1033,
+    "XOR": 3565
+   }
+  },
+  {
+   "layout": "SPLIT_TAIL_(2,2,1,1)",
+   "m": 5,
+   "w": 2,
+   "mixers": "A_all_MDS_alt",
+   "Mlist": [
+    "MDS_alt_2x2",
+    "MDS_alt_2x2",
+    "MDS_alt_2x2"
+   ],
+   "F": "F_PD_inv_d0_h0",
+   "bit_upper": {
+    "AND": 1633,
+    "XOR": 2265
+   }
+  },
+  {
+   "layout": "SPLIT_TAIL_(2,2,1,1)",
+   "m": 5,
+   "w": 2,
+   "mixers": "B_M1_MDS_alt_M2M3_M2",
+   "Mlist": [
+    "MDS_alt_2x2",
+    "M2_2x2",
+    "M2_2x2"
+   ],
+   "F": "F_natural",
+   "bit_upper": {
+    "AND": 1105,
+    "XOR": 3909
+   }
+  },
+  {
+   "layout": "SPLIT_TAIL_(2,2,1,1)",
+   "m": 5,
+   "w": 2,
+   "mixers": "B_M1_MDS_alt_M2M3_M2",
+   "Mlist": [
+    "MDS_alt_2x2",
+    "M2_2x2",
+    "M2_2x2"
+   ],
+   "F": "F_PD_inv_d0_h0",
+   "bit_upper": {
+    "AND": 1705,
+    "XOR": 2609
+   }
+  },
+  {
+   "layout": "SPLIT_TAIL_(2,2,1,1)",
+   "m": 5,
+   "w": 4,
+   "mixers": "L_C_substitute_for_Cauchy4",
+   "Mlist": [
+    "L_C_4x4",
+    "L_C_4x4",
+    "L_C_4x4"
+   ],
+   "F": "F_natural",
+   "bit_upper": {
+    "AND": 2477,
+    "XOR": 9089
+   }
+  },
+  {
+   "layout": "SPLIT_TAIL_(2,2,1,1)",
+   "m": 5,
+   "w": 4,
+   "mixers": "L_C_substitute_for_Cauchy4",
+   "Mlist": [
+    "L_C_4x4",
+    "L_C_4x4",
+    "L_C_4x4"
+   ],
+   "F": "F_PD_inv_d0_h0",
+   "bit_upper": {
+    "AND": 3677,
+    "XOR": 6489
+   }
+  },
+  {
+   "layout": "P3B_(2,2,2)",
+   "m": 5,
+   "w": 2,
+   "mixers": "A_all_MDS_alt",
+   "Mlist": [
+    "MDS_alt_2x2",
+    "MDS_alt_2x2"
+   ],
+   "F": "F_natural",
+   "bit_upper": {
+    "AND": 922,
+    "XOR": 3184
+   }
+  },
+  {
+   "layout": "P3B_(2,2,2)",
+   "m": 5,
+   "w": 2,
+   "mixers": "A_all_MDS_alt",
+   "Mlist": [
+    "MDS_alt_2x2",
+    "MDS_alt_2x2"
+   ],
+   "F": "F_PD_inv_d0_h0",
+   "bit_upper": {
+    "AND": 1462,
+    "XOR": 2014
+   }
+  },
+  {
+   "layout": "P3B_(2,2,2)",
+   "m": 5,
+   "w": 2,
+   "mixers": "B_M1_MDS_alt_M2M3_M2",
+   "Mlist": [
+    "MDS_alt_2x2",
+    "M2_2x2"
+   ],
+   "F": "F_natural",
+   "bit_upper": {
+    "AND": 958,
+    "XOR": 3356
+   }
+  },
+  {
+   "layout": "P3B_(2,2,2)",
+   "m": 5,
+   "w": 2,
+   "mixers": "B_M1_MDS_alt_M2M3_M2",
+   "Mlist": [
+    "MDS_alt_2x2",
+    "M2_2x2"
+   ],
+   "F": "F_PD_inv_d0_h0",
+   "bit_upper": {
+    "AND": 1498,
+    "XOR": 2186
+   }
+  },
+  {
+   "layout": "P3B_(2,2,2)",
+   "m": 5,
+   "w": 4,
+   "mixers": "L_C_substitute_for_Cauchy4",
+   "Mlist": [
+    "L_C_4x4",
+    "L_C_4x4"
+   ],
+   "F": "F_natural",
+   "bit_upper": {
+    "AND": 2118,
+    "XOR": 7674
+   }
+  },
+  {
+   "layout": "P3B_(2,2,2)",
+   "m": 5,
+   "w": 4,
+   "mixers": "L_C_substitute_for_Cauchy4",
+   "Mlist": [
+    "L_C_4x4",
+    "L_C_4x4"
+   ],
+   "F": "F_PD_inv_d0_h0",
+   "bit_upper": {
+    "AND": 3198,
+    "XOR": 5334
+   }
+  },
+  {
+   "layout": "THICK_(2,2,2,2)",
+   "m": 5,
+   "w": 2,
+   "mixers": "A_all_MDS_alt",
+   "Mlist": [
+    "MDS_alt_2x2",
+    "MDS_alt_2x2",
+    "MDS_alt_2x2"
+   ],
+   "F": "F_natural",
+   "bit_upper": {
+    "AND": 1233,
+    "XOR": 4257
+   }
+  },
+  {
+   "layout": "THICK_(2,2,2,2)",
+   "m": 5,
+   "w": 2,
+   "mixers": "A_all_MDS_alt",
+   "Mlist": [
+    "MDS_alt_2x2",
+    "MDS_alt_2x2",
+    "MDS_alt_2x2"
+   ],
+   "F": "F_PD_inv_d0_h0",
+   "bit_upper": {
+    "AND": 1953,
+    "XOR": 2697
+   }
+  },
+  {
+   "layout": "THICK_(2,2,2,2)",
+   "m": 5,
+   "w": 2,
+   "mixers": "B_M1_MDS_alt_M2M3_M2",
+   "Mlist": [
+    "MDS_alt_2x2",
+    "M2_2x2",
+    "M2_2x2"
+   ],
+   "F": "F_natural",
+   "bit_upper": {
+    "AND": 1305,
+    "XOR": 4601
+   }
+  },
+  {
+   "layout": "THICK_(2,2,2,2)",
+   "m": 5,
+   "w": 2,
+   "mixers": "B_M1_MDS_alt_M2M3_M2",
+   "Mlist": [
+    "MDS_alt_2x2",
+    "M2_2x2",
+    "M2_2x2"
+   ],
+   "F": "F_PD_inv_d0_h0",
+   "bit_upper": {
+    "AND": 2025,
+    "XOR": 3041
+   }
+  },
+  {
+   "layout": "THICK_(2,2,2,2)",
+   "m": 5,
+   "w": 4,
+   "mixers": "L_C_substitute_for_Cauchy4",
+   "Mlist": [
+    "L_C_4x4",
+    "L_C_4x4",
+    "L_C_4x4"
+   ],
+   "F": "F_natural",
+   "bit_upper": {
+    "AND": 2877,
+    "XOR": 10473
+   }
+  },
+  {
+   "layout": "THICK_(2,2,2,2)",
+   "m": 5,
+   "w": 4,
+   "mixers": "L_C_substitute_for_Cauchy4",
+   "Mlist": [
+    "L_C_4x4",
+    "L_C_4x4",
+    "L_C_4x4"
+   ],
+   "F": "F_PD_inv_d0_h0",
+   "bit_upper": {
+    "AND": 4317,
+    "XOR": 7353
+   }
+  },
+  {
+   "layout": "MAC_C2_(2,2)_ref",
+   "m": 5,
+   "w": 2,
+   "mixers": "A_all_MDS_alt",
+   "Mlist": [
+    "MDS_alt_2x2"
+   ],
+   "F": "F_natural",
+   "bit_upper": {
+    "AND": 601,
+    "XOR": 2081
+   }
+  },
+  {
+   "layout": "MAC_C2_(2,2)_ref",
+   "m": 5,
+   "w": 2,
+   "mixers": "A_all_MDS_alt",
+   "Mlist": [
+    "MDS_alt_2x2"
+   ],
+   "F": "F_PD_inv_d0_h0",
+   "bit_upper": {
+    "AND": 961,
+    "XOR": 1301
+   }
+  },
+  {
+   "layout": "MAC_C2_(2,2)_ref",
+   "m": 5,
+   "w": 2,
+   "mixers": "B_M1_MDS_alt_M2M3_M2",
+   "Mlist": [
+    "MDS_alt_2x2"
+   ],
+   "F": "F_natural",
+   "bit_upper": {
+    "AND": 601,
+    "XOR": 2081
+   }
+  },
+  {
+   "layout": "MAC_C2_(2,2)_ref",
+   "m": 5,
+   "w": 2,
+   "mixers": "B_M1_MDS_alt_M2M3_M2",
+   "Mlist": [
+    "MDS_alt_2x2"
+   ],
+   "F": "F_PD_inv_d0_h0",
+   "bit_upper": {
+    "AND": 961,
+    "XOR": 1301
+   }
+  },
+  {
+   "layout": "MAC_C2_(2,2)_ref",
+   "m": 5,
+   "w": 4,
+   "mixers": "L_C_substitute_for_Cauchy4",
+   "Mlist": [
+    "L_C_4x4"
+   ],
+   "F": "F_natural",
+   "bit_upper": {
+    "AND": 1339,
+    "XOR": 4815
+   }
+  },
+  {
+   "layout": "MAC_C2_(2,2)_ref",
+   "m": 5,
+   "w": 4,
+   "mixers": "L_C_substitute_for_Cauchy4",
+   "Mlist": [
+    "L_C_4x4"
+   ],
+   "F": "F_PD_inv_d0_h0",
+   "bit_upper": {
+    "AND": 2059,
+    "XOR": 3255
+   }
+  }
+ ],
+ "feistel_local_comparison": {
+  "model": "3-round balanced Feistel on 2m bits, f: F_q -> F_q APN permutation (x^{-1}, m odd), XOR round keys, independent",
+  "bound_proven_read": "NK J.Cryptology 8(1995) Thm 2 (WebFetch summary only): s>=3 (proof written for s=3), <= 2p^2 = 8/N with p = 2/q",
+  "bound_AO_unconfirmed": "Aoki-Ohta 1997: abstract says p^2-type strict bound for bijective F and \"more than 3 rounds\"; full text 403 -> 4/N at 3 rounds NOT asserted",
+  "ours_local_S2": "W2: <= 4/N (all lifts, q>=32) for S2 = 3F + 2J + 2 ring key additions on one 2m-bit word",
+  "counts": {
+   "Feistel3": {
+    "f(m-bit)": 3,
+    "xor_key(m-bit)": 3,
+    "xor_data(m-bit)": 3
+   },
+   "S2": {
+    "F(2m-bit word)": 3,
+    "J": 2,
+    "ring_key_add(2m-bit)": 2
+   }
+  },
+  "bit_m5_with_inverse": {
+   "Feistel3_f=x^-1": {
+    "AND": 150,
+    "XOR": 219
+   },
+   "Feistel3_f=x^3": {
+    "AND": 75,
+    "XOR": 114,
+    "note": "x^3 = x^2*x: 1 squaring (linear) + 1 product; APN permutation for odd m (checked below)"
+   },
+   "S2_PD_inv": {
+    "AND": 235,
+    "XOR": 309
+   },
+   "S2_natural": {
+    "AND": 145,
+    "XOR": 504
+   }
+  },
+  "reading": "Different guarantees (8/N proven vs 4/N), different key groups (XOR m-bit vs Z4-ring 2m-bit), different component widths; no ranking by call count.",
+  "x^3_check": {
+   "5": {
+    "permutation": true,
+    "differential_uniformity": 2
+   },
+   "7": {
+    "permutation": true,
+    "differential_uniformity": 2
+   }
+  }
+ },
+ "inputs_sha256": {
+  "../../c2/cost/p210_results.json": "50f69f6535dcd29a3dd492ab49cffcebebd7b8ad4a4fbc9b734c0c42d228c72f",
+  "../spec/CANDIDATE_P4_SPLIT_TAIL.json": "57a8bd8152f5da064d27b93d911241906de3418fcb8f9a248e6802930d973c90",
+  "../../c3/spec/CANDIDATE_P3B_THREE.json": "81ac4f316e41d812df02a6a888df0097ca29c2234b52799f8df4a7f13e599395"
+ }
+}

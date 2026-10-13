@@ -1,0 +1,25 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Prose written by Hiroki Fukui in this package (ResidueAPN) is licensed under the
+Creative Commons Attribution 4.0 International License. The licence of every
+file is stated in the `licence` column of FILE_RIGHTS.tsv; that column is
+authoritative. The CC BY 4.0 files are the author's documents with the
+extensions .tex, .md and .pdf, in particular:
+
+- the manuscript sources and PDF      paper/
+- the Blueprint                       BLUEPRINT.md
+- README.md, TRUST.md, REPRODUCE.md and the other Markdown documents of the author
+
+You are free to share and adapt this material for any purpose, provided you
+give appropriate credit (Hiroki Fukui, ResidueAPN; the archive identifiers are
+given in README.md and CITATION.cff once they have been assigned), link to the
+licence, and indicate if changes were made. Full legal code:
+https://creativecommons.org/licenses/by/4.0/legalcode
+
+Code, Lean sources, scripts, checkers, expected outputs and other
+machine-readable files of the author are licensed under the MIT License (see
+LICENSE), as stated in the same column.
+
+Third-party material is not covered by this notice and keeps its own licence;
+see THIRD_PARTY.md. Mathlib and the Lean toolchain are dependencies fetched by
+the build tool and are not redistributed in this package.

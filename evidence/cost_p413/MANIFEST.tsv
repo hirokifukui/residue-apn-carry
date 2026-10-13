@@ -1,0 +1,10 @@
+evidence_path	sha256	bytes	private_source	role
+c4/cost/p413_cost.py	4b6308116dc8394ba969cd39bbd1a41644d51ecb801bfeead580dad537336259	12547	w/c4/cost/p413_cost.py	code
+c2/cost/p210_results.json	50f69f6535dcd29a3dd492ab49cffcebebd7b8ad4a4fbc9b734c0c42d228c72f	14943	w/c2/cost/p210_results.json	code
+c4/spec/CANDIDATE_P4_SPLIT_TAIL.json	57a8bd8152f5da064d27b93d911241906de3418fcb8f9a248e6802930d973c90	2462	w/c4/spec/CANDIDATE_P4_SPLIT_TAIL.json	code
+c3/spec/CANDIDATE_P3B_THREE.json	81ac4f316e41d812df02a6a888df0097ca29c2234b52799f8df4a7f13e599395	1978	w/c3/spec/CANDIDATE_P3B_THREE.json	code
+expected/c4/cost/p413.log	72882aa12417fa890741ce9626c9c2f6135a27daaddcbc1b9922ae146ee2e3db	4215	w/c4/cost/p413.log	expected
+expected/c4/cost/p413.exit	418a5c17f33c70e99b0cc0a07fce69191489cfedc94164bfa903785777c5bd4b	7	w/c4/cost/p413.exit	expected
+expected/c4/cost/p413_results.json	d6064e505c59900879b64abaf58d5cfa238e577ce5e8ca26b076fcba1b29c5d0	12613	w/c4/cost/p413_results.json	expected
+README.md	6016855d4f8b54c872097132981398ed09e9ed8e352043afbc587040e908c28f	1811	NEW (written for the evidence set)	new
+rep.sh	34e6d8d53391a6acf9e796ccb9fb92dc88e74587a009d96ce7f80f45d3ce0410	482	NEW (written for the evidence set)	new

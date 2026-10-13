@@ -1,0 +1,418 @@
+path	role	licence	origin	status
+BLUEPRINT.md	reader document	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+CHANGELOG.md	reader document	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+CITATION.cff	citation metadata	MIT	generated from the metadata source	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+EVIDENCE_COVERAGE.tsv	package metadata / tool	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+FILE_RIGHTS.tsv	package metadata / tool	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+LICENSE	licence text (MIT)	MIT	standard MIT licence text with the author's copyright line	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+LICENSE-CC-BY-4.0.txt	licence text (CC BY 4.0 legal code)	CC-BY-4.0	Creative Commons legal code, unmodified	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+PUBLIC_SET.txt	package metadata / tool	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+README.md	reader document	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+REPRODUCE.md	reader document	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+SHA256SUMS	package metadata / tool	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+THIRD_PARTY.md	reader document	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+TRUST.md	reader document	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+VERSION	reader document / metadata (generated)	MIT	generated from the metadata source	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+checks/expected/p802_zexact.json	expected checker output	MIT	output of the checker in checks/ (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+checks/expected/p803_steps_v2.json	expected checker output	MIT	output of the checker in checks/ (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+checks/expected/p805_p806.json	expected checker output	MIT	output of the checker in checks/ (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+checks/grlib.py	finite checker	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+checks/p802_zexact.py	finite checker	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+checks/p803_steps.py	finite checker	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+checks/p803_steps_v2.py	finite checker	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+checks/p805_p806.py	finite checker	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/MANIFEST.tsv	evidence manifest	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/README.md	reader document (evidence row)	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/c8/r1/audit_code/a_adv.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/c8/r1/audit_code/a_main.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/c8/r1/audit_code/a_msurvey.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/c8/r1/audit_code/acore.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/c8/r1/code/gcore.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/c8/r1/code/t1_verify.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/c8/r1/code/t2_analyze.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/c8/r1/code/t3_extra.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/expected/c8/r1/audit_results/a_adv_m3.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/expected/c8/r1/audit_results/a_adv_m3.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/expected/c8/r1/audit_results/a_adv_m5.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/expected/c8/r1/audit_results/a_adv_m5.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/expected/c8/r1/audit_results/a_adv_m5.time	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/expected/c8/r1/audit_results/a_adv_m5_long.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/expected/c8/r1/audit_results/a_adv_m5_long.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/expected/c8/r1/audit_results/a_adv_m5_long.time	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/expected/c8/r1/audit_results/a_adv_m5pd.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/expected/c8/r1/audit_results/a_adv_m5pd.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/expected/c8/r1/audit_results/a_main_m3.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/expected/c8/r1/audit_results/a_main_m3.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/expected/c8/r1/audit_results/a_main_m5.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/expected/c8/r1/audit_results/a_main_m5.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/expected/c8/r1/audit_results/a_main_m5.time	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/expected/c8/r1/audit_results/a_msurvey.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/expected/c8/r1/audit_results/a_msurvey.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/expected/c8/r1/results/t1_verify.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/expected/c8/r1/results/t1_verify.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/expected/c8/r1/results/t2_m3.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/expected/c8/r1/results/t2_m3.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/expected/c8/r1/results/t2_m5.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/expected/c8/r1/results/t2_m5.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/expected/c8/r1/results/t3_adv.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/expected/c8/r1/results/t3_adv.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/expected/c8/r1/results/t3_m7.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/expected/c8/r1/results/t3_m7.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/expected/c8/r1/results/t3_msurvey.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/expected/c8/r1/results/t3_msurvey.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/G_Minv/rep.sh	evidence helper (written for the evidence set)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/R1/MANIFEST.tsv	evidence manifest	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/R1/README.md	reader document (evidence row)	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/R1/c1/code/codes.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/R1/c1/code/ddt.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/R1/c5/a1/code/a1c5_lib.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/R1/c7/fourier/code/fr_lib.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/R1/c7/fourier/code/p706_calib.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/R1/c7/fourier/code/p707_gram.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/R1/expected/c7/fourier/logs/p706_m3.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/R1/expected/c7/fourier/logs/p706_m5.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/R1/expected/c7/fourier/logs/p707_m3.exit	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/R1/expected/c7/fourier/logs/p707_m3.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/R1/expected/c7/fourier/logs/p707_m5.exit	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/R1/expected/c7/fourier/logs/p707_m5.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/R1/expected/c7/fourier/logs/p707_m7.exit	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/R1/expected/c7/fourier/logs/p707_m7.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/R1/expected/c7/fourier/results/p707_m3.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/R1/expected/c7/fourier/results/p707_m5.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/R1/expected/c7/fourier/results/p707_m7.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/R1/rep.sh	evidence helper (written for the evidence set)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/UE/MANIFEST.tsv	evidence manifest	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/UE/README.md	reader document (evidence row)	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/UE/c1/code/codes.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/UE/c1/code/ringlib.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/UE/c1/code/t303_oracle.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/UE/c1/code/t305_classes.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/UE/c1/code/t311a_rowmax.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/UE/c3/a1/code/a1_gpair.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/UE/c3/a1/code/a1_lifts.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/UE/c5/a1/code/a1c5_lib.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/UE/c5/a1/code/a1c5_ue.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/UE/expected/c1/logs/run_all/t303.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/UE/expected/c1/logs/run_all/t311a.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/UE/expected/c3/a1/logs/a1_gpair_m5.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/UE/expected/c3/a1/logs/a1_lifts.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/UE/expected/c3/a1/results/a1_gpair_m5.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/UE/expected/c3/a1/results/a1_lifts.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/UE/expected/c5/a1/logs/a1c5_ue_m5.exit	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/UE/expected/c5/a1/logs/a1c5_ue_m5.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/UE/expected/c5/a1/logs/a1c5_ue_m7.exit	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/UE/expected/c5/a1/logs/a1c5_ue_m7.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/UE/expected/c5/a1/results/a1c5_ue_m5.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/UE/expected/c5/a1/results/a1c5_ue_m7.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/UE/rep.sh	evidence helper (written for the evidence set)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/MANIFEST.tsv	evidence manifest	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/README.md	reader document (evidence row)	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/c1/code/codes.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/c1/code/ringlib.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/c2/macro/macro_ref.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/c3/macro/macro_p3.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/c4/attack/code/p4lib.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/c4/macro/macro_p4.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/c5/attack/code/atk_common.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/c5/attack/code/atk_fractions.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/c5/attack/code/atk_fullblind.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/c5/attack/code/atk_fullblind_v2.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/c5/attack/code/atk_runs_v2.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/c5/attack/code/atk_selftest_v2.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/expected/c5/attack/logs/atk_summary_v2.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/expected/c5/attack/logs/p503_literal_m2w2.exit	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/expected/c5/attack/logs/p503_literal_m2w2.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/expected/c5/attack/logs/p503_randA.exit	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/expected/c5/attack/logs/p503_randA.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/expected/c5/attack/logs/p503_randB.exit	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/expected/c5/attack/logs/p503_randB.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/expected/c5/attack/logs/p503_rand_RF_m3w3.exit	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/expected/c5/attack/logs/p503_rand_RF_m3w3.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/expected/c5/attack/logs/p503_rand_RP_m3w3.exit	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/expected/c5/attack/logs/p503_rand_RP_m3w3.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/expected/c5/attack/logs/p503_toy2.exit	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/expected/c5/attack/logs/p503_toy2.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/expected/c5/attack/logs/p503_true_pd_h0_m3w3.exit	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/expected/c5/attack/logs/p503_true_pd_h0_m3w3.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/expected/c5/attack/logs/selftest_v2.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/expected/c5/attack/results/ATK_SUMMARY.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/expected/c5/attack/results/p503_literal_m2w2.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/expected/c5/attack/results/p503_literal_m2w2_more.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/expected/c5/attack/results/p503_rand_RF_nat_m3w2.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/expected/c5/attack/results/p503_rand_RF_pd_a3_m3w2.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/expected/c5/attack/results/p503_rand_RF_pd_h0_m3w2.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/expected/c5/attack/results/p503_rand_RF_pd_h0_m3w3.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/expected/c5/attack/results/p503_rand_RP_nat_m3w2.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/expected/c5/attack/results/p503_rand_RP_pd_a3_m3w2.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/expected/c5/attack/results/p503_rand_RP_pd_h0_m3w2.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/expected/c5/attack/results/p503_rand_RP_pd_h0_m3w3.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/expected/c5/attack/results/p503_true_pd_h0_m3w3.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/expected/c5/attack/results/p503_true_toy_m2w2.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V/rep.sh	evidence helper (written for the evidence set)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V3/MANIFEST.tsv	evidence manifest	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V3/README.md	reader document (evidence row)	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V3/c1/code/codes.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V3/c1/code/ringlib.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V3/c2/macro/macro_ref.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V3/c3/macro/macro_p3.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V3/c4/attack/code/p4lib.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V3/c4/macro/macro_p4.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V3/c5/attack/code/atk_common.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V3/c5/attack/code/atk_fullblind.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V3/c5/attack/code/atk_fullblind_v2.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V3/c5/attack/code/atk_selftest_v2.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V3/c6/attack/code/atk_common.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V3/c6/attack/code/p607_rp_cond_v2.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V3/expected/c5/attack/logs/selftest_v2.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V3/expected/c6/attack/logs/p607_rp_cond_v2.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V3/expected/c6/attack/results/p607_rp_cond_v2.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/V3/rep.sh	evidence helper (written for the evidence set)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/W2/MANIFEST.tsv	evidence manifest	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/W2/README.md	reader document (evidence row)	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/W2/c1/code/codes.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/W2/c1/code/ddt.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/W2/c1/code/ringlib.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/W2/c1/code/t303_oracle.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/W2/c1/code/t305_classes.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/W2/c1/code/t311a_rowmax.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/W2/c1/spec/CANDIDATE_P1_40.json	input data of a finite check	MIT	author, written with AI assistance (author's own computed tables)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/W2/c2/cost/p210_hermite_cost.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/W2/c3/a1/code/a1_gpair.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/W2/c3/a1/code/a1_lifts.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/W2/c3/code/p301_warmstart.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/W2/c3/pd/p312_pd_roles.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/W2/expected/c1/logs/run_all/t303.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/W2/expected/c1/logs/run_all/t311a.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/W2/expected/c2/cost/p210.exit	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/W2/expected/c2/cost/p210.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/W2/expected/c2/cost/p210_results.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/W2/expected/c3/a1/logs/a1_gpair_m5.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/W2/expected/c3/a1/logs/a1_lifts.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/W2/expected/c3/logs/p301.exit	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/W2/expected/c3/logs/p301.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/W2/expected/c3/pd/p312.exit	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/W2/expected/c3/pd/p312.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/W2/expected/c3/pd/p312_results.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/W2/expected/c3/results/p301_warmstart.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/W2/rep.sh	evidence helper (written for the evidence set)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/_tools/README.md	reader document (evidence row)	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/_tools/cmp_json.py	evidence helper (written for the evidence set)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/_tools/cmp_lines.py	evidence helper (written for the evidence set)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/_tools/rep_lib.sh	evidence helper (written for the evidence set)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/cost_F_ha3/MANIFEST.tsv	evidence manifest	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/cost_F_ha3/README.md	reader document (evidence row)	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/cost_F_ha3/c4/pd/data/F_pd_inv_m5.npy	input data of a finite check	MIT	author, written with AI assistance (author's own computed tables)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/cost_F_ha3/c5/pd/code/pd5_circuit_v2.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/cost_F_ha3/c5/pd/code/pd5_math.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/cost_F_ha3/c5/pd/data/F_PD_h0_m5.npy	input data of a finite check	MIT	author, written with AI assistance (author's own computed tables)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/cost_F_ha3/c5/pd/data/F_PD_h0_m7.npy	input data of a finite check	MIT	author, written with AI assistance (author's own computed tables)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/cost_F_ha3/c5/pd/data/F_PD_hX3_m5.npy	input data of a finite check	MIT	author, written with AI assistance (author's own computed tables)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/cost_F_ha3/c5/pd/data/F_PD_hX3_m7.npy	input data of a finite check	MIT	author, written with AI assistance (author's own computed tables)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/cost_F_ha3/expected/c5/pd/logs/pd5_circuit_v2.exit	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/cost_F_ha3/expected/c5/pd/logs/pd5_circuit_v2.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/cost_F_ha3/expected/c5/pd/results/dag_m5_h0_v2.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/cost_F_ha3/expected/c5/pd/results/dag_m5_hX3_v2.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/cost_F_ha3/expected/c5/pd/results/pd5_circuit_v2.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/cost_F_ha3/rep.sh	evidence helper (written for the evidence set)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/cost_F_ha3/run_author_only.py	evidence helper (written for the evidence set)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/cost_p413/MANIFEST.tsv	evidence manifest	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/cost_p413/README.md	reader document (evidence row)	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/cost_p413/c2/cost/p210_results.json	input data of a finite check	MIT	author, written with AI assistance (author's own computed tables)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/cost_p413/c3/spec/CANDIDATE_P3B_THREE.json	input data of a finite check	MIT	author, written with AI assistance (author's own computed tables)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/cost_p413/c4/cost/p413_cost.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/cost_p413/c4/spec/CANDIDATE_P4_SPLIT_TAIL.json	input data of a finite check	MIT	author, written with AI assistance (author's own computed tables)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/cost_p413/expected/c4/cost/p413.exit	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/cost_p413/expected/c4/cost/p413.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/cost_p413/expected/c4/cost/p413_results.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/cost_p413/rep.sh	evidence helper (written for the evidence set)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/eps/MANIFEST.tsv	evidence manifest	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/eps/README.md	reader document (evidence row)	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/eps/c1/code/codes.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/eps/c1/code/ringlib.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/eps/c1/code/t303_oracle.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/eps/c1/code/t305_classes.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/eps/c1/code/t311a_rowmax.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/eps/c2/code/p202_epsilon.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/eps/c2/code/p202b_general_rho.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/eps/expected/c1/data/t303_oracle.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/eps/expected/c1/logs/run_all/EXITCODES.txt	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/eps/expected/c1/logs/run_all/t303.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/eps/expected/c1/logs/run_all/t311a.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/eps/expected/c1/results/t311a_rowmax.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/eps/expected/c2/logs/p202_m5.exit	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/eps/expected/c2/logs/p202_m5.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/eps/expected/c2/logs/p202_m7_r3.exit	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/eps/expected/c2/logs/p202_m7_r3.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/eps/expected/c2/logs/p202_m7_r5.exit	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/eps/expected/c2/logs/p202_m7_r5.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/eps/expected/c2/logs/p202b.exit	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/eps/expected/c2/logs/p202b.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/eps/expected/c2/results/p202_epsilon_m5.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/eps/expected/c2/results/p202_epsilon_m7_r3.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/eps/expected/c2/results/p202_epsilon_m7_r5.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/eps/expected/c2/results/p202b_general_rho.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/eps/rep.sh	evidence helper (written for the evidence set)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/general_d/MANIFEST.tsv	evidence manifest	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/general_d/README.md	reader document (evidence row)	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/general_d/c7/gd/code/gd_lib.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/general_d/c7/gd/code/p702.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/general_d/c7/gd/code/p703.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/general_d/c7/gd/code/p704.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/general_d/c7/gd/code/p705.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/general_d/expected/c7/gd/logs/p702.exit	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/general_d/expected/c7/gd/logs/p702.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/general_d/expected/c7/gd/logs/p703.exit	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/general_d/expected/c7/gd/logs/p703.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/general_d/expected/c7/gd/logs/p704.exit	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/general_d/expected/c7/gd/logs/p704.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/general_d/expected/c7/gd/logs/p705.exit	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/general_d/expected/c7/gd/logs/p705.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/general_d/expected/c7/gd/results/p702.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/general_d/expected/c7/gd/results/p703.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/general_d/expected/c7/gd/results/p704.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/general_d/expected/c7/gd/results/p705.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/general_d/rep.sh	evidence helper (written for the evidence set)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/pf/MANIFEST.tsv	evidence manifest	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/pf/README.md	reader document (evidence row)	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/pf/c1/code/codes.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/pf/c1/code/ddt.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/pf/c5/a1/code/a1c5_lib.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/pf/c7/fourier/code/fr_lib.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/pf/c7/fourier/code/p706_calib.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/pf/expected/c7/fourier/logs/p706_m3.exit	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/pf/expected/c7/fourier/logs/p706_m3.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/pf/expected/c7/fourier/logs/p706_m5.exit	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/pf/expected/c7/fourier/logs/p706_m5.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/pf/expected/c7/fourier/results/p706_m3.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/pf/expected/c7/fourier/results/p706_m5.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/pf/rep.sh	evidence helper (written for the evidence set)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/repair_d0/MANIFEST.tsv	evidence manifest	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/repair_d0/README.md	reader document (evidence row)	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/repair_d0/c1/code/codes.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/repair_d0/c1/code/ringlib.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/repair_d0/c1/code/t303_oracle.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/repair_d0/c4/pd/data/F_pd_inv_hC3_m5.npy	input data of a finite check	MIT	author, written with AI assistance (author's own computed tables)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/repair_d0/c5/pd/data/F_PD_h0_m5.npy	input data of a finite check	MIT	author, written with AI assistance (author's own computed tables)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/repair_d0/c5/pd/data/F_PD_hX3_m5.npy	input data of a finite check	MIT	author, written with AI assistance (author's own computed tables)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/repair_d0/c6/h/code/h6_check.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/repair_d0/c6/pd/code/pd6_cert.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/repair_d0/expected/c6/h/logs/h6_check.exit	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/repair_d0/expected/c6/h/logs/h6_check.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/repair_d0/expected/c6/h/results/h6_check.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/repair_d0/expected/c6/pd/logs/pd6_cert.exit	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/repair_d0/expected/c6/pd/logs/pd6_cert.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/repair_d0/expected/c6/pd/results/pd6_cert.json	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/repair_d0/rep.sh	evidence helper (written for the evidence set)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/theta/MANIFEST.tsv	evidence manifest	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/theta/README.md	reader document (evidence row)	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/theta/code/c3c4c5.py	finite-check script (historical, byte-identical)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/theta/expected/c3c4c5.exit	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/theta/expected/c3c4c5.log	recorded output of a finite check	MIT	output of the historical run (byte-identical copy)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+evidence/theta/rep.sh	evidence helper (written for the evidence set)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/ApnCipher.lean	Lean 4 source	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/ApnCipher/AxiomsC7.lean	Lean 4 source	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/ApnCipher/AxiomsC8.lean	Lean 4 source	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/ApnCipher/AxiomsC9_v2.lean	Lean 4 source	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/ApnCipher/AxiomsCarryPD.lean	Lean 4 source	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/ApnCipher/AxiomsResetCompose.lean	Lean 4 source	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/ApnCipher/AxiomsSuffixReset.lean	Lean 4 source	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/ApnCipher/AxiomsWarmStart.lean	Lean 4 source	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/ApnCipher/Bridge.lean	Lean 4 source	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/ApnCipher/CarryE_v2.lean	Lean 4 source	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/ApnCipher/CarryPD.lean	Lean 4 source	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/ApnCipher/CarryZ.lean	Lean 4 source	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/ApnCipher/ColsB_v3.lean	Lean 4 source	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/ApnCipher/ColsF_v2.lean	Lean 4 source	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/ApnCipher/DigitSplit_v2.lean	Lean 4 source	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/ApnCipher/MixAdd.lean	Lean 4 source	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/ApnCipher/OneRound.lean	Lean 4 source	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/ApnCipher/RepairCore_v2.lean	Lean 4 source	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/ApnCipher/RepairLink_v2.lean	Lean 4 source	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/ApnCipher/ResetCompose.lean	Lean 4 source	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/ApnCipher/SuffixReset.lean	Lean 4 source	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/ApnCipher/ThetaZ4_v3.lean	Lean 4 source	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/ApnCipher/Transport_v2.lean	Lean 4 source	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/ApnCipher/TwoStep.lean	Lean 4 source	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/ApnCipher/VacuousZ4.lean	Lean 4 source	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/ApnCipher/W2Bridge.lean	Lean 4 source	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/ApnCipher/WarmStart.lean	Lean 4 source	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/BUILD_RECORD.txt	Lean build record (summary)	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/LEAN_RECORD.md	reader document	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/build_closure.sh	Lean build configuration	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/lakefile.toml	Lean build configuration	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/lean-toolchain	Lean build configuration	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/ApnCipher.exit	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/ApnCipher.log	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/AxiomsC7.exit	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/AxiomsC7.log	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/AxiomsC8.exit	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/AxiomsC8.log	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/AxiomsC9_v2.exit	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/AxiomsC9_v2.log	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/AxiomsCarryPD.exit	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/AxiomsCarryPD.log	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/AxiomsResetCompose.exit	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/AxiomsResetCompose.log	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/AxiomsSuffixReset.exit	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/AxiomsSuffixReset.log	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/AxiomsWarmStart.exit	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/AxiomsWarmStart.log	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/Bridge.exit	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/Bridge.log	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/CarryE_v2.exit	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/CarryE_v2.log	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/CarryPD.exit	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/CarryPD.log	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/CarryZ.exit	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/CarryZ.log	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/ColsB_v3.exit	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/ColsB_v3.log	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/ColsF_v2.exit	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/ColsF_v2.log	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/DigitSplit_v2.exit	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/DigitSplit_v2.log	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/ENV_sanitized.txt	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/MixAdd.exit	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/MixAdd.log	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/OneRound.exit	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/OneRound.log	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/RESULT.txt	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/RepairCore_v2.exit	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/RepairCore_v2.log	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/RepairLink_v2.exit	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/RepairLink_v2.log	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/ResetCompose.exit	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/ResetCompose.log	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/SOURCES_after.sha256	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/SOURCES_before.sha256	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/SuffixReset.exit	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/SuffixReset.log	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/ThetaZ4_v3.exit	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/ThetaZ4_v3.log	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/Transport_v2.exit	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/Transport_v2.log	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/TwoStep.exit	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/TwoStep.log	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/VacuousZ4.exit	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/VacuousZ4.log	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/W2Bridge.exit	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/W2Bridge.log	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/WarmStart.exit	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+lean/record/WarmStart.log	Lean build record (raw output of the recorded run)	MIT	output of lean/build_closure.sh (recorded run)	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+paper/LABELS.tsv	label list of the built PDF (generated)	MIT	generated from the .aux file of the build	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+paper/abstract_v1.tex	paper source	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+paper/app_A_mixing_v2.tex	paper source	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+paper/bib_v2.tex	paper source	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+paper/macros_v1.tex	paper source	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+paper/main_v14.pdf	paper PDF (public build)	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+paper/main_v14.tex	paper source	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+paper/sec_1_intro_v6.tex	paper source	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+paper/sec_2_setup_v4.tex	paper source	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+paper/sec_3_differential_v3.tex	paper source	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+paper/sec_4_repair_v6.tex	paper source	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+paper/sec_5_composition_v4.tex	paper source	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+paper/sec_6_mixing_v5.tex	paper source	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+paper/sec_7_verification_v11.tex	paper source	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+paper/sec_8_limits_v4.tex	paper source	CC-BY-4.0	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+run_all_representatives.sh	package metadata / tool	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected
+tools/check_blueprint.py	package metadata / tool	MIT	author, written with AI assistance	licence split of the series (code MIT, prose CC BY 4.0); not re-selected

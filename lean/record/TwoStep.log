@@ -1,0 +1,10 @@
+ApnCipher/TwoStep.lean:34:72: warning: Variable name `hA` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+ApnCipher/TwoStep.lean:35:5: warning: Variable name `hB` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`

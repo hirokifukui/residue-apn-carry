@@ -1,0 +1,80 @@
+{
+ "m": 7,
+ "q": 128,
+ "N": 16384,
+ "variants": {
+  "natural": {
+   "DU_B": 128,
+   "max_by_class": {
+    "G": 12,
+    "Z": 128,
+    "E": 128
+   },
+   "Z_bound_violations": 0,
+   "formula_checked_directions": 207,
+   "formula_ok": true,
+   "witness_alpha": 128,
+   "witness_beta": 1,
+   "witness_count": 128
+  },
+  "h0": {
+   "DU_B": 128,
+   "max_by_class": {
+    "G": 12,
+    "Z": 128,
+    "E": 128
+   },
+   "Z_bound_violations": 0,
+   "formula_checked_directions": 207,
+   "formula_ok": true,
+   "witness_alpha": 128,
+   "witness_beta": 1,
+   "witness_count": 128
+  },
+  "random0": {
+   "DU_B": 128,
+   "max_by_class": {
+    "G": 12,
+    "Z": 128,
+    "E": 128
+   },
+   "Z_bound_violations": 0,
+   "formula_checked_directions": 207,
+   "formula_ok": true,
+   "witness_alpha": 128,
+   "witness_beta": 1,
+   "witness_count": 128
+  },
+  "random1": {
+   "DU_B": 128,
+   "max_by_class": {
+    "G": 11,
+    "Z": 128,
+    "E": 128
+   },
+   "Z_bound_violations": 0,
+   "formula_checked_directions": 207,
+   "formula_ok": true,
+   "witness_alpha": 128,
+   "witness_beta": 1,
+   "witness_count": 128
+  },
+  "random2": {
+   "DU_B": 128,
+   "max_by_class": {
+    "G": 12,
+    "Z": 128,
+    "E": 128
+   },
+   "Z_bound_violations": 0,
+   "formula_checked_directions": 207,
+   "formula_ok": true,
+   "witness_alpha": 128,
+   "witness_beta": 1,
+   "witness_count": 128
+  }
+ },
+ "rho": 1,
+ "rho_weight": 1,
+ "p_is_permutation": true
+}

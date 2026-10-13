@@ -1,0 +1,135 @@
+% sec_7_verification_v11.tex = v10 with the middle column of the three Lean tables 0.41 -> 0.40\textwidth
+% (anonymous iacrtrans build: three 1.05pt overfull boxes); no change of content.
+% v10 = v9 + \clearpage at the end so that Tables 4-9 are placed after Section 7
+% (in v9 they all floated behind the references). v9 = v8 with the Lean tables placed [!htbp] (v8: Table 8 floated to the end). v8 = v7 with the last Lean table split in two (v7: float too large by 266pt in amsart).
+% v7: formalization subsection rewritten for the additive two-word mixer;
+% internal session labels and provenance comments removed.
+\section{Finite calibration, formalization and cost: the actual scope}\label{sec:verif}
+
+The theorems of Sections~\ref{sec:diff}--\ref{sec:mixing} are proved on paper. This section records
+which parts were additionally checked on finite instances, which parts are machine-checked in Lean,
+and what was measured about cost. A finite check is a calibration, not a proof of a general statement.
+
+\subsection{Finite calibration}
+\begin{table}[p]\footnotesize
+\caption{Finite checks (exact integer or rational arithmetic unless stated).}\label{tab:finite}
+\begin{tabular}{p{0.25\textwidth}p{0.35\textwidth}p{0.3\textwidth}}
+\toprule
+statement & instances & result\\
+\midrule
+Theorem~\ref{thm:eps} & $m=5$: natural, $h=0$, adversarial, three random $h$; $m=7$: two $p$ with natural, $h=0$, random $h$; $m=5$ with $\wt(\rho)=3,3,5$ & $\Delta(B)=q$ in every case; $\cZ$-bound $2q/2^{\wt(s)}$ never violated\\
+Theorem~\ref{thm:W2} & $m=5$, author DDT, exact matrix products & $N\cdot\EDP_2$: natural $185/128$, $h=0$ $311/128$, adversarial $31/16$, random $h$ $303/256$; $x^{-1}$ with $d_0$ (ring-polynomial witness): $159/128$; $\wt(\rho)=3$ example $75/64$ ($\le6+6/q$)\\
+Theorem~\ref{thm:UE} & $m=5$: 11 tables (incl.\ $\wt(\rho)=2,3$); $m=7$: 8 tables (incl.\ $\wt(\rho)=4$) & identity of Lemma~\ref{lem:Eid} holds for every $\cG$ direction; $\mathcal E_{\cZ}=211/512$ ($m=5$), $2059/8192$ ($m=7$); $\mathcal E_B\in[3.497,3.559]$ ($m=5$), $[3.345,3.357]$ ($m=7$)\\
+Section~\ref{sec:repair} ($d_0$) & power sums $m=3,5,7,9$; coefficients: 40 cases each for $m=3,5$, 8 for $m=7$; correction rule: all $\lambda$, 800 pairs; $m=5$ all $1024$ local keys for $h=a^3$ & all agree; minimum number of non-zero $c$: $27$ ($\tau=0$, bound $18$), $26$ ($\tau=1$, bound $19$)\\
+Lemma~\ref{lem:norm}, Theorems~\ref{thm:top}--\ref{thm:repair}, Proposition~\ref{prop:affine} (general $d$) & own arithmetic, $m=3,4,5$; 19 maps $d$ (random $\rho$, hyperplane and $K$, plus $d_0$); coefficients for 144/144/168 keys, all $L$ and $\mu$ for $m=3$ (45\,056 keys); $\chi$ two choices; 550 affine $h$ & all agree; minimal non-zero counts $6/13/28$ ($\tau\ne\eta A$) and $7/12/28$ ($\tau=\eta A$); Boolean degree of $g_d$ exactly $2$; pass rate in $\mathcal Q_2$ ($m=3$, sample) $0.873$--$0.879$\\
+Proposition~\ref{prop:pf} & author DDT $\to$ integer Walsh, $m=3$ (24\,576) and $m=5$ (7\,864\,320 components), 16 tables, $\wt(\rho)=1,2,3$ & all agree; $\cG$ entries in $\{0,\pm4\}/q^2$ only\\
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{table}[p]\footnotesize
+\caption{Finite checks (continued).}\label{tab:finite2}
+\begin{tabular}{p{0.25\textwidth}p{0.35\textwidth}p{0.3\textwidth}}
+\toprule
+statement & instances & result\\
+\midrule
+Theorem~\ref{thm:R1} & $m=3,5,7$ (20 tables; numerical norms) & every block below its bound; $\|M_\cZ\|^2=(q/2-1)/q^2$ exactly\\
+Proposition~\ref{prop:Zexact} & independent code, $m=3,5$; $d_0$ and $1\oplus K_0(x/\rho)$ ($\rho=7,11$); $h\in\{0,a^3,\text{random}\}$; 15 tables & integer Walsh of the $\cZ$ rows $=x_s$; Gram $q^2[s=t]$ exactly; SVD norm and exact Rayleigh quotient of the witness $=(q/2-1)/q^2$\\
+Theorem~\ref{thm:G}, Proposition~\ref{prop:Minv} & two independent implementations; $m=3$: 16, $m=5$: 21 tables; adversarial $h$ (hill climbing); $\mathsf M$ for $p=x^{-1}$, $m=3,\dots,11$ & $g=\Psi\Sigma$ entrywise; closed form of $\mathcal B^0_z$ exact; $\|M_\cG\|^2q/\mathsf M\le0.46$ ($m=3$), $\le0.064$ ($m=5$); $\mathsf M\le5$ for $d_0$ type\\
+Theorem~\ref{thm:steps}, Corollary~\ref{cor:inv13} & every elementary inequality for $m=5,\dots,61$ (outward rational square roots); start lemma for $m=3$, all $4095$ two-word inputs, $M=[[1,1],[1,t]]$ & all hold; $\max\|\pi_2\|_\infty=0.00464<1/64$ ($q=8$ calibrates the start lemma only)\\
+Example~\ref{ex:quant}, Proposition~\ref{prop:mc} & $m=3$: all $64$ carry-mask keys and all $512\cdot8$ linear $(L,\mu)$; $m=5$: $g_d$ for $\rho=1$ and $\rho=7$ & $\ell(h)=0$, no carry-mask key vanishes, $(L,\mu)=((3,0,0),0)$ vanishes ($64$ linear pairs in all); quadratic rank modulo affine $=4=m-1$, the $(m-1)$-AND circuit agrees at all points\\
+Theorem~\ref{thm:V} & decomposition: toy $m=2$, $w=2$, all $16\,777\,216$ candidates, 32 cases; $m=3$ sample of $58\,035$ & accepted sets identical\\
+Theorem~\ref{thm:V}(3) & $M=5$, $Q=3$, all $120$ permutations & $\RP$ law $=\RF\mid\mathsf D$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Formalization}
+The Lean developments use Lean 4.31.0-rc1 and Mathlib revision
+\texttt{d568c8c0}\allowbreak\texttt{9630de09}\allowbreak\texttt{7a046763}\allowbreak\texttt{c17b9ea9}\allowbreak\texttt{9f95f950}; every listed declaration depends only on the
+standard axioms \texttt{propext}, \texttt{Classical.choice}, \texttt{Quot.sound}, with no \texttt{sorry}.
+\begin{table}[!htbp]\footnotesize
+\caption{What is machine-checked, and what is an input.}\label{tab:lean}
+\begin{tabular}{p{0.2\textwidth}p{0.40\textwidth}p{0.3\textwidth}}
+\toprule
+file & checked content & not covered / input\\
+\midrule
+\texttt{WarmStart} & arithmetic of the warm-started recursion: from initial values $\le x$ the bound $4x^2$; $\le4/q^2$ for real $q\ge32$ & the counts of Section~\ref{sec:diff} on a concrete ring\\
+\texttt{SuffixReset}, \texttt{ResetCompose} & DDT row/column sums on any finite abelian group; reset identity of Lemma~\ref{lem:reset}; two applications (four layers) & the bound on the first part is an input\\
+\texttt{W2Bridge} & averaged kernel of a parallel layer with product keys is the tensor product; real averaged DP of the $w=2$ superbox equals the abstract MDS kernel; $(2,2,1,1)$, $w=2$: $\E\DP\le b_\star^2$ & the one-word bound $b_\star$ (Theorem~\ref{thm:W2}) is an input; general $w$; identification with the reference code\\
+\texttt{CarryPD} & two-digit addition with an \emph{arbitrary} carry function, $B=J\circ F$, real DDT: in $\cG$ directions ($d(a+u)=d(a)+k$, $k\ne0$) $\delta_B\le q$ for all $p,h,\beta$ & $\cZ$ and $\cE$ directions; Theorem~\ref{thm:W2}; connection to \texttt{W2Bridge}\\
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{table}[!htbp]\footnotesize
+\caption{What is machine-checked (continued).}\label{tab:lean2}
+\begin{tabular}{p{0.2\textwidth}p{0.40\textwidth}p{0.3\textwidth}}
+\toprule
+file & checked content & not covered / input\\
+\midrule
+\texttt{CarryZ}, \texttt{CarryE\_v2} & concrete carry $\star$ (product in a fixed basis $e:\Fq\simeq\FF^m$); fibres of $x\mapsto x\star s$ have $\le q/2$ points for $s\ne0$; $\cZ$ direction $\delta_B\le q$ ($d\ne0$, $d$ two-to-one); $\cE$ direction $\delta_B\le q$ ($p$ APN along $\rho$) & exact fibre size $q/2^{\wt s}$\\
+\texttt{OneRound} & all $\alpha\ne0$: $\delta_B\le q$ and $\DP\le1/q$, for $d=\varepsilon\oplus K$, $\ker K=\{0,\rho\}$, $d\ne0$, $p$ APN, every $h$ (two-to-one derived; the $\cG$ lemma is that of \texttt{CarryPD}) & ---\\
+\texttt{Transport\_v2} & for any group $G$ and bijection $\varphi:G\to\Fq^2$ carrying $+$ to the carry addition: $\mathrm{ddt}=\mathrm{ddtC}$ exactly; keyed families of PD layers have $\mathrm{avgDP}\le1/q$ in the definitions of \texttt{W2Bridge} & the identification $\GR(4,m)\cong(\Fq^2,\oplus_\star)$ (Lemma~\ref{lem:add}) is the hypothesis $\varphi$; the two-block bound $4/N$\\
+\texttt{RepairCore\_v2} & $A^2+B\ne0\Rightarrow$ top coefficients not both $0$; root count $\ge q-(s-1)$; for any finite $\Fq$-module $V$ and $\ell(g)=1$: surjectivity, $\ell(h+\lambda g)=\ell(h)+\lambda$, exactly one failing $\lambda$, $q\cdot\#\ker\ell=|V|$ & $\ell=\ell_d$, power sums, Lucas, $\ell_d(g_d)=1$, $\Psi=\Phi^2$\\
+\texttt{ColsB\_v3}, \texttt{ColsF\_v2} & the rows of Proposition~\ref{prop:table} as counts of the real DDT of $B$ and of $F$ on concrete carry coordinates, for $\wt(\rho)=1$: $\cZ\to\cZ$ $0$, $\cZ\to\cE$ column $\le q^2/2$, $\cE\to\cZ$, $\cE\to\cE$ columns $\le2q$, $\cG\to\cZ$ $\le2$, $\cG\to\cE$ $\le4$; final layer: low digit $0$ only from $\cZ$, $\cZ$ column $\le q^2$, $\cE$ column $\le2q$, $\cG$ entries $\le2$ & general $\omega$ (only $\le1/2$ for $\cZ\to\cE$), so Theorem~\ref{thm:W2}(2)\\
+\texttt{TwoStep}, \texttt{Bridge} & Theorem~\ref{thm:S} one step from the warm start and the final layer: $(T_B^2T_F)(\alpha,\gamma)\le4/N$ ($q\ge12$); the real key average of $S_2$ (with whitening) equals $T_B^2T_F$; hence \texttt{hb1}--\texttt{hb4} of \texttt{W2Bridge} are theorems and the $(2,2,1,1)$, $w=2$ average is $\le(4/N)^2$ & $\wt(\rho)=1$ only; $t\ge2$ of Theorem~\ref{thm:S}; the identification $\varphi$ of $\GR(4,m)$ with $(\Fq^2,\oplus_\star)$ remains a hypothesis\\
+\texttt{RepairLink\_v2} & $\ell_d$ on actual definitions ($A_d$, $B_d$ over a transversal, Frobenius) is $\Fq$-linear; $\Delta_{g_d}=r$; repair, one failure and pass count $1-1/q$ for the actual $\ell_d$ & $\ell_d(g_d)=1$ (power sums $p_2,p_3$) is the only hypothesis; that the index set is a transversal is not stated in Lean\\
+\bottomrule
+\end{tabular}
+\end{table}
+\begin{table}[!htbp]\footnotesize
+\caption{What is machine-checked (continued): the concrete two-word mixer.}\label{tab:lean3}
+\begin{tabular}{p{0.2\textwidth}p{0.40\textwidth}p{0.3\textwidth}}
+\toprule
+file & checked content & not covered / input\\
+\midrule
+\texttt{DigitSplit\_v2} & the digit split $\varphi_4:(\mathbb Z/4)^m\to\Fq^2$, $x=a+2b$ coordinatewise, carries $+$ to the carry addition (\texttt{phi4\_add}) & the ring multiplication of $\GR(4,m)$ is not used; a statement there that takes the mixer entries in the \emph{pointwise} ring $(\mathbb Z/4)^m$ has no instance (\texttt{VacuousZ4})\\
+\texttt{VacuousZ4} & in the pointwise ring $(\mathbb Z/4)^m$, $m\ge1$, four unit entries and a unit determinant are incompatible (\texttt{w2\_Z4\_mixer\_hyps\_false}); hence the earlier specialization of the two-word bound to that ring is vacuous and is not counted as a verification & ---\\
+\texttt{MixAdd} & two-word MDS kernel lemma over any finite abelian group $A$ for an additive automorphism $M$ of $A^2$ whose four partial maps are bijective (\texttt{mds2A\_le}); real key average of the $w=2$ superbox $=$ this kernel; $(2,2,1,1)$, $w=2$: $\E\DP\le\varepsilon^2$ (\texttt{w2A\_split\_tail\_le}) & the one-word bound $\varepsilon$ is an input\\
+\texttt{ThetaZ4\_v3} & mixer $M(x,y)=(x+y,\,x+\Theta y)$ on $A=(\mathbb Z/4)^m$ for an additive automorphism $\Theta$ with $\Theta-I$ invertible; with the actual local blocks $S_2$ and $\varphi_4$: $(2,2,1,1)$, $w=2$ average $\le(4/N)^2$ (\texttt{w2\_Z4\_theta\_le}); explicit witness $m=5$, $\Theta=$ multiplication by $t$ in $(\mathbb Z/4)[t]/(t^5+t^2+1)$, with $\Theta^{-1}$ and $(\Theta-I)^{-1}$ (\texttt{theta5}, \texttt{theta5\_mixer\_mds}, \texttt{w2\_Z4\_theta5\_le}) & PD data $(p,K,\varepsilon)$ with $\wt(\rho)=1$ are hypotheses; for general $m$ the choice of $\Theta$ is on paper (Remark below)\\
+\bottomrule
+\end{tabular}
+\end{table}
+The one-round bound $\varepsilon(B)\le1/q$ of Theorem~\ref{thm:eps} is formalized for all directions on concrete
+carry coordinates. For $\wt(\rho)=1$ and $w=2$, the chain Proposition~\ref{prop:table} $\to$ Theorem~\ref{thm:S} (one step) $\to$
+Theorem~\ref{thm:W2}(1) $\to$ Theorem~\ref{thm:P4}(1) is machine-checked on the real key averages on the additive group
+$(\mathbb Z/4)^m$ with the digit split $\varphi_4$, for the two-word mixer $(x,y)\mapsto(x+y,\,x+\Theta y)$
+(\texttt{w2\_Z4\_theta\_le}), and the mixer hypotheses are shown to be satisfiable ($m=5$). The mixer is formalized as an additive
+automorphism, not as a matrix of ring scalars: in the pointwise ring $(\mathbb Z/4)^m$ a matrix with unit entries and unit
+determinant does not exist (\texttt{VacuousZ4}), so the earlier specialization with such scalars proves nothing about a concrete mixer
+and is superseded. That the additive group of $\GR(4,m)$ in a polynomial basis is $(\mathbb Z/4)^m$, and that multiplication by $t$ is
+the companion matrix $\Theta$ of the lift $\hat f$, are used on paper; the local bound for $\wt(\rho)>1$, general $\omega$, general $w$,
+Theorem~\ref{thm:UE} and Section~\ref{sec:mixing} are not formalized; of Section~\ref{sec:repair} the linear part on the actual
+definitions is formalized, the power sums are not. All Lean sources needed by these declarations are released as one source
+closure that builds from sources only.
+
+\begin{remark}[The mixer for general $m$]\label{rem:theta}
+Let $f\in\FF[t]$ be irreducible of degree $m\ge2$ and $\hat f$ its lift with coefficients in $\{0,1\}$. Let $\Theta$ be the matrix of
+multiplication by $t$ on $(\mathbb Z/4)[t]/(\hat f)\cong(\mathbb Z/4)^m$. Then $\det\Theta=\pm\hat f(0)$ and $\det(\Theta-I)=\pm\hat f(1)$
+are odd, hence units of $\mathbb Z/4$, so $\Theta$ and $\Theta-I$ are invertible and $(x,y)\mapsto(x+y,\,x+\Theta y)$ is the mixer
+$\bigl[\begin{smallmatrix}1&1\\1&t\end{smallmatrix}\bigr]$ of $\GR(4,m)$ in additive form, with partial maps $I,I,I,\Theta$.
+This was checked exactly for all $69$ binary irreducible $f$ with $2\le\deg f\le8$ (inverse identities), and the agreement with
+multiplication by $t$ in $\GR(4,m)$ on all pairs for $m=3,5$ (two polynomials each).
+\end{remark}
+
+\subsection{Cost}
+Counts are in a bit-level model with AND gates (XOR and NOT counted separately), for $m=5$. They are
+reported to locate the constructions, not to claim an advantage.
+\begin{table}[ht]\small
+\caption{Bit-model counts ($m=5$).}\label{tab:cost}
+\begin{tabular}{p{0.36\textwidth}p{0.14\textwidth}p{0.4\textwidth}}
+\toprule
+object & AND & averaged differential bound\\
+\midrule
+three-round Feistel with $x^3$, independent XOR keys & 75 & $4/N$ (\cite{AO}, Thm.~2; bijective round function, $\ge3$ rounds)\\
+$S_2$ with the natural table of \cite{FukuiFFA} & 145 & $4/N$ (Theorem~\ref{thm:W2})\\
+$S_2$ with an inverse-based PD table & 235 & $4/N$ (Theorem~\ref{thm:W2})\\
+one $F$, PD table with $h=a^3$ & 75 (98 XOR, 1 NOT) & ---\\
+correction $g_d$ alone (Proposition~\ref{prop:mc}) & $m-1$, minimal (4 for $m=5$) & --- (cost of the correction only, not of $h$)\\
+\bottomrule
+\end{tabular}
+\end{table}
+The Feistel network reaches the same constant with fewer AND gates. The differences that remain are
+structural (ring differences with carry versus XOR differences; $2m$-bit ring key additions; direction-wise
+structure; uniformity over all $h$; the integral structure of Section~\ref{sec:repair}), not an ordering by
+cost. Ring-only and MPC costs were not measured.
+\clearpage

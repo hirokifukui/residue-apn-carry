@@ -1,0 +1,19 @@
+{
+ "id": "CANDIDATE_P4_SPLIT_TAIL",
+ "status": "research candidate (C4, 2026-10-11); layout proposed by the GPT C3 audit (NEW_DERIVATIONS B), implemented by Claude; not a recommendation for use; independent-key model, no key schedule; no security claim",
+ "ring": "R = GR(4,m), q=2^m, N=q^2; encoding low m bits = digit 0; F table c1/data/F_m5_r3.npy (m=5), F_m7_r3.npy (m=7); optional PD table for P4-08",
+ "local_blocks": "S_t(x; k_1..k_t) = F(B(...B(B(x)+k_1)...)+k_t), B = J o F, + ring addition; S2 has 2 key words, S1 has 1",
+ "structure": "E(x) = S1^(4)( M3 . S1^(3)( M2 . S2^(2)( M1 . S2^(1)(x + k0) + L1 ) + L2 ) + L3 )   (wordwise S layers; local lengths (2,2,1,1))",
+ "state_names": {"X1": "S2^(1)(x+k0)", "V1": "M1 X1 + L1", "X2": "S2^(2)(V1)", "V2": "M2 X2 + L2 (audit: v3)", "X3": "S1^(3)(V2)", "V3": "M3 X3 + L3 (audit: v4)", "Y": "S1^(4)(V3)"},
+ "keys": {"k0": "w", "K1": "w x 2", "L1": "w", "K2": "w x 2", "L2": "w", "K3": "w x 1", "L3": "w", "K4": "w x 1", "total_words": "10w", "model": "all independent uniform (differential theorem model only)"},
+ "mixers": {"w=2": "config A: M1=M2=M3=MDS_alt [[1,1],[1,t]]; config B: M1=MDS_alt, M2=M3=M2 (c1/spec/mixer2.json, m=5 only)", "w=4": "Cauchy4 for all three", "requirement": "M1: all minors units (D1, MDS kernel lemma); M2, M3: invertible over R suffices for the bound"},
+ "cost": {"F": "10w", "J": "6w", "M": 3, "key_additions": "10w"},
+ "averaged_differential_bound": "max_{alpha!=0,gamma} E_keys DP <= (4/N)^w, q>=32 (P4-04: W2 + D1 for S2-M1-S2, then the reset post-composition lemma twice, with L2 and L3)",
+ "inverse": "Y -> V3 = S1^-1(Y;K4) - L3 -> X3 = M3^-1 V3 -> V2 = S1^-1(X3;K3) - L2 -> X2 = M2^-1 V2 -> macro dec (c2)",
+ "reference_impl": "c4/macro/macro_p4.py class SplitTail; tests c4/macro/p405_tests.py -> c4/results/p405_tests.json",
+ "known_structure_at_creation": [
+  "one-word slice: V2 (input of the third local layer) has ring sum 0 in every word for every key (inherited from the two-mixing part; proposition I + M2 linear + N L2 = 0)",
+  "finite probe (p405, 40 slices: m5 w2 two matrix configs, m5 w4, m7 w2, 4 keys each): no all-word zero ring sum at X3, V3, Y, after peeling a public F, no all-word zero XOR, no output word a permutation; this is NOT a proof of integral resistance"
+ ],
+ "relation": {"CANDIDATE_P3B_THREE": "kept unchanged (negative control, local lengths (2,2,2), two mixings)", "CANDIDATE_P2_SUPERBOX": "kept unchanged (differential baseline)"}
+}

@@ -1,0 +1,4 @@
+3 x^3+x+1 n_d 6 [('m3_rho1_r', 7, 4, True), ('m3_rho2_r', 5, 2, True), ('m3_rho4_r', 3, 6, True), ('m3_rho3_r', 5, 2, True), ('m3_rho6_r', 5, 2, True), ('m3_rho7_r', 4, 7, True)]
+4 x^4+x+1 n_d 6 [('m4_rho1_r', 3, 14, True), ('m4_rho8_r', 13, 4, True), ('m4_rho3_r', 8, 15, True), ('m4_rho5_r', 10, 12, True), ('m4_rho14_r', 15, 8, True), ('m4_rho15_r', 12, 10, True)]
+5 x^5+x^2+1 n_d 7 [('m5_rho2_r', 29, 19, True), ('m5_rho16_r', 22, 8, True), ('m5_rho3_r', 11, 16, True), ('m5_rho13_r', 23, 5, True), ('m5_rho31_r', 2, 18, True), ('m5_rho22_r', 27, 31, True), ('m5_d0', 1, 1, True)]
+PASS True fail []

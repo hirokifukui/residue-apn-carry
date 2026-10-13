@@ -1,0 +1,212 @@
+% sec_5_composition_v4.tex -- C9 paper lane (P9-09/P9-10): internal labels removed from the text ("; C2" after the
+% MDS citation, the table name h_{C3}); mathematics unchanged from sec_5_composition_v3.tex.
+% sec_5_composition_v3.tex -- C8 (P8-12): evidence kind attached to every attack/cost statement; C7 repair experiment.
+% sec_5_composition_v2.tex -- v2: Table tab:fp header; last paragraph corrected (v1 misread P6-09). Group III.
+\section{Composition: an averaged bound and what it does not prevent}\label{sec:comp}
+
+This section concerns the arrangement of Section~\ref{ss:arr}, with every local layer built from one
+table $F=F_{p,d,h}$ satisfying Assumption~\ref{ass:PD}, $m\ge5$ odd. Everything here is an
+application of known principles; we state the results in the form needed and give the short proofs to
+keep the paper self-contained, without claiming novelty for the principles.
+
+\subsection{Two standard lemmas}
+\begin{lemma}[Post-composition with a reset key; standard]\label{lem:reset}
+Let $G$ be a finite abelian group, $E_\kappa:G\to G$ a family of maps, $M$ an automorphism of $G$, and
+$C_k:G\to G$ a family of permutations. Let $\kappa$, $L$, $k$ be independent with $L$ uniform on $G$. Then
+\[
+\E_{\kappa,L,k}\DP_{C_k\circ\tau_L\circ M\circ E_\kappa}(\alpha,\gamma)
+=\sum_{\delta}\E_\kappa\DP_{E_\kappa}(\alpha,\delta)\;\bar T_C(M\delta,\gamma),
+\]
+with $\bar T_C=\E_k T_{C_k}$,
+where $\tau_L(y)=y+L$. In particular, if $\E_\kappa\DP_{E_\kappa}(\alpha,\delta)\le b_\star$ for all $\delta$, then the
+left side is at most $b_\star$.
+\end{lemma}
+% SOURCE: c3/notes/MAINLINE_P3.md:24-27 (section D: DDT doubly stochastic, reset count, suffix bound);
+%         c4/notes/CORE_P4.md:57 (sum_reset_ddt); Lean: C3 SuffixReset, C4 ResetCompose (Section 7).
+% Known principle (same form as Park et al. ASIACRYPT 2002 Lemma 2, c3/notes/MAINLINE_P3.md:27).
+\begin{proof}
+For a fixed pair $(y,y')$ with $y'-y=M\delta$, the number of $L$ with $C(y'+L)-C(y+L)=\gamma$ is
+$\delta_C(M\delta,\gamma)$ (translation). Averaging over the inputs and $\kappa$ gives the identity. Each
+$C_k$ is a permutation, so $\bar T_C$ has column sums $1$, and since $M$ is bijective,
+$\sum_\delta\bar T_C(M\delta,\gamma)=1$; the bound follows. (Without the reset $L$ the product formula fails in
+general.)
+\end{proof}
+
+\begin{lemma}[Two-layer MDS count for averaged kernels; standard]\label{lem:D1}
+Let $R$ be a finite commutative ring, $M\in\mathrm{Mat}_w(R)$ with all minors units, and let
+$T_i,U_j$ ($1\le i,j\le w$) be non-negative $R\times R$ matrices with row sums $1$, $T(0,\cdot)=e_0$,
+$T(\alpha,0)=0$ for $\alpha\ne0$, and all entries of non-zero rows at most $b_\star$. Put
+$\mathsf K(\alpha,\gamma)=\sum_{\delta\in R^w}\prod_iT_i(\alpha_i,\delta_i)\prod_jU_j((M\delta)_j,\gamma_j)$. Then
+$\mathsf K(\alpha,\gamma)\le b_\star^{\,w}$ for every $\alpha\ne0$ and every $\gamma$.
+\end{lemma}
+% SOURCE: c2/notes/AVERAGED_KERNEL_MDS.md:11-18 (lemma D1); attribution :4 (Hong et al. FSE 2000,
+% Park et al., wide-trail/MDS two-layer argument). Not claimed as new.
+\begin{proof}
+Let $I=\mathrm{supp}\,\alpha$, $J=\mathrm{supp}\,\gamma$, $a=|I|\ge1$, $b=|J|$. Non-zero terms have
+$\mathrm{supp}\,\delta=I$ and $\mathrm{supp}\,M\delta=J$. If $a+b\le w$ there is no such $\delta\ne0$ (branch number $w+1$),
+so $\mathsf K=0$. If $a+b>w$, choose $I'\subseteq I$ with $|I'|=a+b-w$; the condition $(M\delta)_{J^c}=0$ determines
+$\delta_{I\setminus I'}$ from $\delta_{I'}$ because the $(w-b)\times(w-b)$ minor $M_{J^c,I\setminus I'}$ is invertible. Bound the
+$w-b$ factors $T_i$, $i\in I\setminus I'$, and the $b$ factors $U_j$, $j\in J$, by $b_\star$, and sum the remaining
+$\prod_{i\in I'}T_i(\alpha_i,\delta_i)$ over $\delta_{I'}$ to at most $1$.
+\end{proof}
+
+\subsection{The averaged multi-word bound}
+\begin{theorem}\label{thm:P4}
+Let $q\ge32$, $w\ge2$, $M_1$ with all minors units and $M_2,M_3$ invertible, all key words
+independent and uniform. For every $h$ and every $\alpha\ne0$, $\gamma$:
+\begin{enumerate}
+\item if $\wt(\rho)=1$, then $\E_{\cK}\DP_E(\alpha,\gamma)\le(4/N)^w$;
+\item for general $\rho$, $\E_{\cK}\DP_E(\alpha,\gamma)\le((6+6/q)/N)^w\le(99/(16N))^w$.
+\end{enumerate}
+\end{theorem}
+% SOURCE: c5/notes/CORE_P5.md:9-13 (corrected theorem P4, (a)/(b)); proof c4/notes/CORE_P4.md:56-61.
+\begin{proof}
+Let $b_\star$ be the bound of Theorem~\ref{thm:W2} in the relevant case. By Proposition~\ref{prop:markov}
+(with the whitening $k_0$, resp.\ the reset $L_1$, providing the uniform input), the averaged kernel of
+each word of $S_2^{(1)}$ and of $S_2^{(2)}$ is $T_B^2T_F$, which satisfies the hypotheses of
+Lemma~\ref{lem:D1} with $b_\star$ (it is the averaged kernel of permutations). With $L_1$ uniform and keys
+independent across words, the averaged kernel of $x\mapsto X_2$ is the kernel $\mathsf K$ of Lemma~\ref{lem:D1}
+for $M=M_1$ (\cite{Hong,Park}), hence at most $b_\star^{\,w}$. Apply Lemma~\ref{lem:reset} with
+$(M_2,L_2,S_1^{(3)})$ and then with $(M_3,L_3,S_1^{(4)})$; each $S_1(\cdot;k)$ is a permutation.
+\end{proof}
+
+\begin{remark}
+The bound is an average over the $10w$ independent key words. It is not a fixed-key bound, it says
+nothing about the key schedule, and the reset keys $L_2,L_3$ are essential to the proof. $M_1$ uses the
+MDS property; $M_2,M_3$ only invertibility.
+\end{remark}
+
+\subsection{A candidate-existence distinguisher}
+\begin{lemma}[Zero sum of all ring elements; known]\label{lem:sumR}
+$\sum_{r\in R}r=0$ for $R=\GR(4,m)$, $m\ge2$, and $N\cdot y=0$ for every $y\in R$.
+\end{lemma}
+% SOURCE: c4/notes/CORE_P4.md:30 (premise Z; Knudsen-Wagner FSE 2002 Thm 1 for the general statement).
+\begin{proof}
+$(R,+)\cong(\mathbb Z/4)^m$; in each coordinate each residue occurs $4^{m-1}$ times and
+$4^{m-1}(0+1+2+3)\equiv0\pmod4$ for $m\ge2$. Also $4\mid N$.
+\end{proof}
+
+\begin{lemma}[Zero sum at $V_2$]\label{lem:V2}
+Fix all keys and let $x$ range over a one-word slice $\{x: x_{a}\in R,\ x_j=c_j\ (j\ne a)\}$. Then
+$\sum_xV_2(x)=0$ in $R^w$.
+\end{lemma}
+% SOURCE: c4/notes/CORE_P4.md:32-33 (proposition Z); c5/notes/CORE_P5.md:48 (lemma, property P).
+\begin{proof}
+$X_{1,a}$ runs over $R$ bijectively and the other words of $X_1$ are constant. Since $M_{1,ia}$ is a unit,
+$V_{1,i}$ is a bijective function of $x_a$ for every $i$, hence so is $X_{2,i}$. By Lemma~\ref{lem:sumR},
+$\sum_xX_{2,i}=0$, and $\sum_xV_{2,j}=\sum_iM_{2,ji}\cdot0+N L_{2,j}=0$.
+\end{proof}
+
+For a candidate $\theta=(K_4,c,K_3)\in R^w\times R^w\times R^w$ define the word-wise map
+\[
+G_\theta(y)=S_1^{-1}\bigl(M_3^{-1}S_1^{-1}(y;K_4)-c;\ K_3\bigr).
+\]
+$G_\theta$ is a bijection of $R^w$, and for $\theta^*=(K_4,M_3^{-1}L_3,K_3)$ one has $G_{\theta^*}(E(x))=V_2(x)$.
+The distinguisher $D_s$ queries $s$ pairwise disjoint one-word slices $X_1,\dots,X_s$ (fixed in advance,
+non-adaptively; $Q=sN$ distinct inputs) and accepts iff
+\[
+A:\quad \exists\theta\ \forall t\le s\ \forall j:\ \textstyle\sum_{x\in X_t}G_\theta(y(x))_j=0 .
+\]
+
+\begin{theorem}[Candidate-existence distinguisher]\label{thm:V}
+Let $M=N^w$ and $Q=sN\le M$.
+\begin{enumerate}
+\item On the arrangement $E$, $D_s$ accepts with probability $1$ for every key.
+\item For a uniformly random function $\RF$, $\Pr[A]\le N^{(3-s)w}$.
+\item For a uniformly random permutation $\RP$, $\Pr[A]\le\min\{1,\ N^{(3-s)w}+\binom{Q}{2}/M\}$ and
+\[
+\Pr\nolimits_{\RP}[A]\le\min\Bigl\{1,\ N^{(3-s)w}\,\frac{M^Q}{(M)_Q}\Bigr\},\qquad (M)_Q=M(M-1)\cdots(M-Q+1).
+\]
+\end{enumerate}
+No independence between different candidates, or between output words, is used.
+\end{theorem}
+% SOURCE: c5/notes/CORE_P5.md:50-53 (theorem V (1)-(3), additive form);
+%         c6/attack/notes/ATTACK_P6_ATK_v2.md:9-28 and c6/notes/resp/P6-07.md:5-13 (conditioned form).
+% Attribution: the multiplicative RP/RF comparison is Bernstein 2005 Thm 2.1/2.2 (c6/lit/notes/LIT_P6.md:78-85);
+% the additive form is the PRP/PRF switching argument. Neither is claimed as new.
+\begin{proof}
+(1) Lemma~\ref{lem:V2} and $\theta^*$.
+(2) Fix $\theta$. The answers of $\RF$ on the $Q$ distinct inputs are independent and uniform in $R^w$, and
+$G_\theta$ is a bijection, so the values $G_\theta(y(x))$ are independent and uniform. The sum over one slice
+of $N$ independent uniform elements is uniform, so it vanishes with probability $N^{-w}$; disjoint slices
+give independent sums, hence probability $N^{-sw}$. A union bound over the $N^{3w}$ candidates gives the claim.
+(3) On fixed distinct inputs, the output distribution of $\RP$ equals that of $\RF$ conditioned on the event
+$\mathsf D$ that all $Q$ outputs are distinct, and $\Pr_{\RF}[\mathsf D]=(M)_Q/M^Q$. Hence
+$\Pr_{\RP}[A]=\Pr_{\RF}[A\cap\mathsf D]/\Pr_{\RF}[\mathsf D]\le\Pr_{\RF}[A]\,M^Q/(M)_Q$; no independence of $A$ and
+$\mathsf D$ is used. The additive form follows from $|\Pr_{\RP}[A]-\Pr_{\RF}[A]|\le\Pr_{\RF}[\overline{\mathsf D}]\le\binom Q2/M$.
+\end{proof}
+
+\begin{proposition}[Decomposition of the acceptance condition]\label{prop:dec}
+$G_\theta(y)_j$ depends only on $K_4$, $c_j$ and $K_{3,j}$. Hence $A$ holds iff
+$\exists K_4\ \bigwedge_j\ \exists(c_j,K_{3,j}):\ P_j(K_4,c_j,K_{3,j})$, where $P_j$ is the slice condition for
+word $j$. An implementation that, for each $K_4$, searches each target word separately computes $D_s$
+exactly; it examines $N^{w}\cdot N^{2}$ cells per target word.
+\end{proposition}
+% SOURCE: c5/notes/CORE_P5.md:57 (decomposition, calibration m2 w2 all 16,777,216 theta, m3 sample);
+%         c6/attack/notes/ATTACK_P6_ATK_v2.md:44 (N^{w+2} = cells enumerated per target word; not a lower bound).
+\begin{proof}
+For fixed $K_4$, the conditions for different $j$ involve disjoint variables $(c_j,K_{3,j})$.
+\end{proof}
+
+\subsection{Numbers, resources and recovered objects}
+Table~\ref{tab:fp} lists the false-acceptance bounds for $\RP$ (exact rational arithmetic).
+For two words the additive bound is void, while the conditioned bound is not.
+\begin{table}[ht]\small
+\caption{Bounds on $\Pr_{\RP}[A]$ from Theorem~\ref{thm:V}(3).}\label{tab:fp}
+\begin{tabular}{lrrll}
+\toprule
+case & $Q$ & $\log_2$ cond. & cond.\ (outward) & additive\\
+\midrule
+$m=3,w=2,s=4$ & 256 & $-0.2567$ & $<9/10$ & $\approx7.97$ (void)\\
+$m=3,w=2,s=5$ & 320 & $-5.536$ & $<1/40$ & $\approx12.46$ (void)\\
+$m=5,w=2,s=4$ & 4096 & $-8.446$ & $<1/300$ & $\approx7.998$ (void)\\
+$m=5,w=2,s=5$ & 5120 & $-21.94$ & $<1/4\,000\,000$ & $\approx12.50$ (void)\\
+$m=5,w=4,s=4$ & 4096 & $-39.99999$ & $<2/N^4$ & $8386561/2^{40}$\\
+\bottomrule
+\end{tabular}
+\end{table}
+% SOURCE: c6/attack/notes/ATTACK_P6_ATK_v2.md:30-38; c6/notes/resp/P6-07.md:22-31; m5w4 additive: c5/notes/CORE_P5.md:55
+
+Table~\ref{tab:tdm} fixes, for each experiment, the game, what is unknown, what is recovered, and the
+resources; each entry is marked as a theorem, a finite measurement, or an extrapolation. Data is $D=sN$ chosen plaintexts; $T$ is counted in local multiply-accumulate operations of
+the implemented enumeration; this is the cost of one implementation, not a lower bound.
+\begin{table}[ht]\small
+\caption{Resources and recovered objects (the recovered object is at most $\theta$, i.e.\ $3w$ of the $10w$ key words).}\label{tab:tdm}
+\begin{tabular}{p{0.15\textwidth}p{0.11\textwidth}p{0.13\textwidth}p{0.21\textwidth}p{0.2\textwidth}}
+\toprule
+experiment & unknown & recovered & $T/D/M$ & outcome / status\\
+\midrule
+full-blind, $m=3,w=2$ & all of $\theta$ & $\theta$ & $0.77$\,s, $1.54\cdot10^{10}$ ops; $D=4N=256$; $21$\,MB & $s\ge4$: unique candidate $=$ true $\theta$ in $144/144$ runs; $s=3$ ambiguous in $33/48$ (verified, finite)\\
+full-blind, $m=5,w=2$ & all of $\theta$ & --- & extrapolated $2.7\cdot10^{16}$ ops (72--87\,h single process); partial-sum variant $5.6\cdot10^{15}$ ops, $\approx30$\,h (Poisson-type extrapolation from $m=5$ timings: neither a measurement nor a bound) & not run\\
+candidate existence, $m=5,w=4,s=4$ & existence of $\theta$ & none (dis\-tin\-guish\-ing only) & $D=4N$; implemented $T\approx5.1\cdot10^{22}$ ops & advantage $\ge1-2^{-39.99}$ (Theorem~\ref{thm:V})\\
+\bottomrule
+\end{tabular}
+\end{table}
+% SOURCE: c5/notes/CORE_P5.md:25-33 (contract table); c6/attack/notes/ATTACK_P6_ATK_v2.md:45-53 (T/D/M by s),
+%         :74-83 (partial-sum decomposition; the 30 h figure uses p = 1-exp(-N^{2-s}), a Poisson-type
+%         approximation, per REVIEW_JA C6-02 -- an extrapolation, neither a measurement nor a bound).
+% Controls (m3 w2, PD h0, v2 slices): true 16/16 accepted and unique; RF 0/200; RP 0/200
+%         (ATTACK_P6_ATK_v2.md:66-70). These are samples, and s=4/s=5 share output streams.
+
+\subsection{A small averaged differential bound is not PRP security}
+The same arrangement satisfies Theorem~\ref{thm:P4} and Theorem~\ref{thm:V}. For $m=5$, $w=4$ the averaged
+differential probability is at most $(4/N)^4=2^{-32}$ for every non-zero input difference, while $D_4$
+uses $4N=2^{12}$ chosen plaintexts and distinguishes $E$ from a random permutation with advantage at
+least $1-2^{-39.99}$. There is no contradiction: Theorem~\ref{thm:P4} is an average over independent keys
+of a differential quantity, whereas $D_s$ exploits an integral property (Lemma~\ref{lem:V2}) and a
+candidate set of size $N^{3w}$, far smaller than the key space $N^{10w}$. The implemented enumeration
+for $m=5$, $w=4$ costs more than the codebook $N^w$; we prove no lower bound on the time of any
+attack, and we do not claim that no attack below the codebook exists.
+
+The local correction of Section~\ref{sec:repair} acts inside one $S_2$ block. It removes the local zero
+sum of Proposition~\ref{dz:prop:link} for every local key, but it does not remove the word-level zero sum of
+Lemma~\ref{lem:V2}, which holds for every bijective local layer. Consistently, in the finite experiments the
+tables compared (natural, $h=0$, one further fixed table, $h=a^3$) behaved alike: in the two-layer oracle test all four kept
+only the true local candidates ($16/16$ targets), the $m=3$, $w=2$ full-blind runs with $h\in\{0,a^3\}$ were
+unique for $s\ge4$, and the SAT experiments on the same arrangement did not separate the tables. With the correction itself
+($m=3$, $w=2$, $s=4$, the same $16$ keys and slices for eight tables including $h=a^3$, $h_0$, $g_{d_0}$ and $h_0+g_{d_0}$, the latter
+changing $\ell$ from $0$ to $1$ and the number of local keys with $\Psi\equiv0$ from $32$ to $0$), the real construction was accepted in
+$16/16$ runs for every table, $\theta$ was recovered uniquely in $127/128$ runs, and $\RF$, $\RP$ were accepted in $0/16$ runs each
+(finite measurement; the case $m=5$ was not run). A local certificate and a word-level candidate-existence distinguisher are
+different statements; the success of the correction does not neutralize the distinguisher.
+% SOURCE: c5/notes/RESPONSE_C5.md:47-49 (P5-07..P5-11); c6/notes/RESPONSE_C6.md:25,28 (P6-09, P6-12).

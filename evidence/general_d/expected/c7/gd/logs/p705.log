@@ -1,0 +1,8 @@
+m5_rho2_r wt 1 AND 5 XOR 20 match True lam 17 True AND after 5
+m5_rho22_r wt 3 AND 5 XOR 16 match True lam 13 True AND after 5
+{'d': 'm5_rho2_r', 'h_pre': 'rand_ell0', 'ell_pre': 0, 'ell_post': 1, 'grid': 'kappa 32 x mu 32 = 1024', 'Psi_identically_zero_pre': 0, 'Psi_identically_zero_post': 0}
+{'d': 'm5_rho2_r', 'h_pre': 'cube_ell0', 'ell_pre': 0, 'ell_post': 1, 'grid': 'kappa 32 x mu 32 = 1024', 'Psi_identically_zero_pre': 0, 'Psi_identically_zero_post': 0}
+{'d': 'm5_rho22_r', 'h_pre': 'rand_ell0', 'ell_pre': 0, 'ell_post': 1, 'grid': 'kappa 32 x mu 32 = 1024', 'Psi_identically_zero_pre': 0, 'Psi_identically_zero_post': 0}
+{'d': 'm5_rho22_r', 'h_pre': 'cube_ell0', 'ell_pre': 0, 'ell_post': 1, 'grid': 'kappa 32 x mu 32 = 1024', 'Psi_identically_zero_pre': 0, 'Psi_identically_zero_post': 0}
+{'d': 'm5_d0', 'h_pre': 'a^21', 'ell_pre': 0, 'ell_post': 1, 'grid': 'kappa 32 x mu 32 = 1024', 'Psi_identically_zero_pre': 1, 'Psi_identically_zero_post': 0}
+PASS True []

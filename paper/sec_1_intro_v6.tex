@@ -1,0 +1,143 @@
+% sec_1_intro_v6.tex -- C9 paper lane: layout fix of sec_1_intro_v5.tex (Table tab:main was 10.4pt too wide; column
+% separation 3pt, widths adjusted). Text identical to v5.
+% sec_1_intro_v5.tex -- C9 paper lane (P9-01, P9-09, P9-10, P9-14). Changes from sec_1_intro_v4.tex (C8):
+% (1) contraction paragraph: exponent 1/2 restricted to p(x)=x^{q-2}, odd m, d=1+K0(x/rho), K0=X^4+X^2, rho!=0;
+%     general linearized degree e shown with its constant 2^{e+1}+5 (finding C8-F02);
+% (2) new summary table of the main statements (family / all h / rho / exponent or constant / steps);
+% (3) relation to the two earlier papers written in the third person, with the result numbers of the
+%     submitted versions (derivation recorded in c9/lit/P9-14_lit.md); internal comments removed.
+\section{Introduction}\label{sec:intro}
+
+\subsection{Two kinds of statements about the same map}
+Let $R=\GR(4,m)$ be the Galois ring of characteristic $4$ and residue field $\Fq$, $q=2^m$, and put $N=q^2=|R|$.
+Writing $x\in R$ in base $2$ along a fixed basis gives two digits $x=(a,b)\in\Fq^2$; ring addition
+is then the digit-wise exclusive or, plus a carry $a\star u$ from the low into the high digit
+(Lemma~\ref{lem:add}). A polynomial map of $R$ has, in these coordinates, the shape
+\[
+  F(a,b)=\bigl(p(a),\,h(a)\oplus d(a)\,b\bigr)
+\]
+(Proposition~\ref{prop:realize}); the swap $J(a,b)=(b,a)$ turns $F$ into a map $B=J\circ F$ whose
+low digit depends on $b$. The present paper separates two kinds of statements about $B$.
+
+\emph{Differential statements are uniform in $h$.} Under an assumption on $(p,d)$ only
+(Assumption~\ref{ass:PD}), the differential uniformity of $B$ with respect to ring subtraction is
+exactly $q$ for every $h$ (Theorem~\ref{thm:eps}); the key-averaged differential probability of a
+two-block local map is at most $4/N$ when the kernel direction $\rho$ of $d$ has weight one, and
+at most $(6+6/q)/N$ in general, again for every $h$ (Theorem~\ref{thm:W2}); and a collision energy
+is bounded by an absolute constant (Theorem~\ref{thm:UE}). The proofs are direction-wise counts
+that keep the carry visible; no change of basis is used.
+
+\emph{Contraction is uniform in $h$.} For the key-averaged alternating two-word arrangement, the one-word fluctuation
+operator of $B$ has norm $\tau$ with $\tau^2\le5(3/4)^m-3/q+1/q^2$ for all PD data and all $h$ (Theorem~\ref{thm:R1}), so a
+fixed number of steps brings the difference distribution to the scale $1/N$ (Theorem~\ref{thm:steps}). For one explicit family,
+namely $p(x)=x^{q-2}$, $m$ odd, and $d=1\oplus K_0(x/\rho)$ with $K_0(X)=X^4+X^2$ and any $\rho\ne0$, one has $\tau^2<13.5/q$ for every $h$
+(Corollary~\ref{cor:half}); since one block of the operator has norm exactly $((q/2-1)/q^2)^{1/2}$ for all PD data
+(Proposition~\ref{prop:Zexact}), the exponent $1/2$ is optimal for this family. For the inverse map with another admissible $d=\varepsilon\oplus K$,
+$K=\sum_{j=0}^ek_jX^{2^j}$, $k_e\ne0$, the same argument gives only $\tau^2\le(2^{e+1}+5)/q+(q/2-1)/q^2$
+(Proposition~\ref{prop:Minv}, Corollary~\ref{cor:half}), whose constant grows with $e$; the exponent $1/2$ uniformly over all PD
+data, or over all admissible $d$ for the inverse map, is not proved (Remark~\ref{rem:exp}).
+
+\emph{Integral statements depend on $h$.} The ring sum of the low digit of the same two-block map
+over a coset $a+2R$ is a sum of a non-affine image (Section~\ref{sec:repair}); whether it vanishes
+identically depends on $h$. For $p(x)=x^{q-2}$ and every admissible $d$ we give an $\Fq$-linear functional
+$\ell_d$ on the space of all $h$ whose non-vanishing excludes the local zero sum for every local key, and an
+explicit correction $g_d$ of Boolean degree two, whose multiplicative complexity on its own is exactly $m-1$, for every $h$ with
+$\ell_d(h)=0$; affine $h$ never suffice. The differential statements are
+untouched by this correction because they never depended on $h$.
+
+The third part records the consequences, and the limits, for an independent-key composition with
+three mixing layers and local lengths $(2,2,1,1)$: a multi-word averaged bound
+(Theorem~\ref{thm:P4}) holds simultaneously with a candidate-existence distinguisher whose data
+is linear in $N$ (Theorem~\ref{thm:V}). We use this to state precisely why a small averaged
+differential bound is not a PRP-security statement.
+
+Table~\ref{tab:main} lists the quantifiers of the main statements. ``PD'' means all $(p,d)$ under Assumption~\ref{ass:PD}.
+\begin{table}[ht]\footnotesize\setlength{\tabcolsep}{3pt}
+\caption{Main statements and their quantifiers.}\label{tab:main}
+\begin{tabular}{p{0.15\textwidth}p{0.25\textwidth}p{0.06\textwidth}p{0.11\textwidth}p{0.33\textwidth}}
+\toprule
+statement & family & all $h$ & $\rho$ & exponent / constant / steps\\
+\midrule
+Thm.~\ref{thm:eps} & PD & yes & any & $\Delta(B)=q$, one step\\
+Thm.~\ref{thm:W2} & PD, odd $m\ge5$ & yes & $\wt(\rho)=1$; any & $4/N$; $(6+6/q)/N$ (two blocks)\\
+Thms.~\ref{thm:cert}, \ref{thm:repair} & $p=x^{q-2}$, every admissible $d$, $m\ge3$ & yes$^\ast$ & any & certificate $\ell_d$; correction $g_d$\\
+Thm.~\ref{thm:R1} & PD, $m\ge3$ & yes & any & $\tau\le\sqrt5\,q^{-\gamma}$, $\gamma=1-\frac12\log_23$\\
+Prop.~\ref{prop:Zexact} & PD, $m\ge3$ & yes & any & $\tau\ge((q/2-1)/q^2)^{1/2}$: no exponent $>1/2$\\
+Cor.~\ref{cor:half} & $p=x^{q-2}$, $d=1\oplus K_0(x/\rho)$, odd $m$ & yes & any $\rho\ne0$ & $\tau^2<13.5/q$: exponent $1/2$ (optimal)\\
+Cor.~\ref{cor:half} (general) & $p=x^{q-2}$, odd $m$, $\deg_2K=e$ & yes & any & $\tau^2\le(2^{e+1}+5)/q+(q/2-1)/q^2$\\
+Thm.~\ref{thm:steps} & PD, $m\ge5$, A1 & yes & any & $\|D_{14}\|_2\le1\,600\,000/N$; zero word after $15$ steps\\
+Cor.~\ref{cor:inv13} & $p=x^{q-2}$, $d=1\oplus K_0(x/\rho)$, odd $m\ge5$, A1 & yes & any $\rho\ne0$ & $\|D_{13}\|_2\le24\,405/N$; zero word after $14$ steps\\
+Thm.~\ref{thm:P4} & PD, $q\ge32$, $w\ge2$, $(2,2,1,1)$ & yes & $\wt(\rho)=1$; any & $(4/N)^w$; $((6+6/q)/N)^w$\\
+\bottomrule
+\end{tabular}
+
+\smallskip
+{\footnotesize $^\ast$The certificate is a condition on $h$; the correction $h\mapsto h+g_d$ applies to every $h$ that fails it.
+$\deg_2K=e$ means $K=\sum_{j\le e}k_jX^{2^j}$ with $k_e\ne0$. All bounds concern key-averaged transitions.}
+\end{table}
+
+\subsection{Relation to two earlier papers}
+The papers \cite{FukuiIT} and \cite{FukuiFFA} concern standard representatives of APN permutations and their
+Galois-ring lifts. The table lists the results of those papers that are used or recalled here, and how the present paper differs.
+\begin{center}\small
+\begin{tabular}{p{0.08\textwidth}p{0.42\textwidth}p{0.38\textwidth}}
+\toprule
+Paper & Result recalled & Present paper\\
+\midrule
+\cite{FukuiIT} & Every quadratic APN permutation in odd dimension $m\ge5$ is linearly equivalent to an optimal
+one (\cite[Main Theorem]{FukuiIT}; existence). & Used only as background; no result here depends on it.\\
+\cite{FukuiFFA} & Explicit reduced representatives $P_{m,r}$, permutation and APN, with derivative
+$P'=1+X^{2^{r-2}}+X^{2^{m-2}}$, whose linear part has kernel $\{0,\rho\}$, $\rho=1$ (``derivative-optimal'')
+and product formula $P_{m,r}+1=DE$ (\cite[Thm.~3.1, Def.~2.1]{FukuiFFA}); integer product form (\cite[Prop.~5.1]{FukuiFFA});
+coefficient lifts are permutations (\cite[Prop.~6.1]{FukuiFFA}); $\delta_F\le 2$ for unit directions
+$\bar\alpha\notin\{0,\rho\}$ (\cite[Thm.~6.2(1)]{FukuiFFA}). & The data $(p,d,h)$ is arbitrary subject to
+Assumption~\ref{ass:PD}; $d$ need not be $p'$, $p$ need not be quadratic; the $k=2$ direction bound
+is reproved (Proposition~\ref{prop:F-rows}); the objects are key-averaged transitions and local sums,
+not representatives.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsection{Contributions in three groups}
+\begin{enumerate}
+\item[(I)] \emph{Differential structure common to all corrections $h$} (Section~\ref{sec:diff}).
+Direction-wise counts for the classes $\cZ,\cE,\cG$, the exact uniformity $\Delta(J\circ F)=q$,
+the two-block bound with the kernel direction made explicit, a uniform collision-energy bound, and
+(Section~\ref{sec:mixing}) the uniform one-word contraction R1 with the exact $\cZ$ block, the $h$-free estimate of the $\cG$
+block, the resulting unconditional step count for the averaged alternating arrangement, and the exponent $1/2$ for the
+inverse map with $d=1\oplus K_0(x/\rho)$.
+\item[(II)] \emph{Constructive correction of local zero sums} (Section~\ref{sec:repair}).
+For the inverse map and every non-zero two-to-one affine $d$: a linear certificate on $h$, an explicit correction of Boolean
+degree two, the exact pass fraction $1-1/q$ on every linear design space containing it, minimality of
+Boolean degree two for this local problem, and the count of cosets on which the local sum is non-zero.
+\item[(III)] \emph{Composition guarantees and what they do not prevent} (Section~\ref{sec:comp}).
+The averaged multi-word bound for the $(2,2,1,1)$ arrangement, the candidate-existence distinguisher
+and its conditioned false-acceptance bound, and the resources $T/D/M$ of the implemented
+enumeration.
+\end{enumerate}
+Group~(III) consists of applications of known principles (key averaging of Markov ciphers
+\cite{LMM}, the two-layer MDS count \cite{Hong,Park}, post-composition with a reset key, the zero
+sum of all ring elements \cite{KW}, and the RP/RF comparison of \cite{Bernstein}). It is included to
+fix the design meaning and the limits of~(I) and~(II), not as an independent novelty claim.
+
+\subsection{What is not claimed}
+We do not propose a cipher and do not claim that any construction in this paper is secure.
+In particular we do not claim: PRP security of any arrangement; a fixed-key differential bound;
+a key schedule; a lower bound on the cost of any attack; that no attack below the codebook exists;
+minimality of AND counts of $F$, of $S_t$ or of any arrangement (Proposition~\ref{prop:mc} concerns the correction alone); an advantage in cost over known Feistel or SPN
+constructions (for instance a three-round Feistel network with $x^3$ attains the same constant
+$4/N$ with fewer AND gates \cite{AO}). The contraction results of Section~\ref{sec:mixing} concern key-averaged difference distributions of the
+alternating arrangement; they are not fixed-key statements and do not recommend a number of rounds. Optimality of the exponent
+$1/2$ refers to the order of decay in $q$ for the family of Corollary~\ref{cor:half}, not to the constants, to a cipher, or to any other choice of $d$.
+
+\subsection{Related work}
+The analysis uses standard tools: branch-number (MDS) arguments \cite{Hong,Park}, Parseval's identity, Newton's identities
+for power sums, the Schur test, and the key-averaging view of Markov ciphers \cite{LMM}, under which the expected
+differential transition matrix is a Markov matrix whose subdominant spectrum governs convergence to uniformity
+(cf.\ \cite{BV}). What is specific here is the object and the explicit, family-uniform bound: for $B=J\circ F$ on $\GR(4,m)$ the
+carry-aware difference table restricted to the fluctuation subspace has norm $\tau$ with $\tau^2\le5(3/4)^m-3/q+1/q^2$; in the
+sources we read the subdominant eigenvalue is left implicit or assumed, not bounded in this way. The work on sum-free
+functions \cite{EHRZ,HZ} concerns sums of a function over $k$-dimensional affine subspaces; here the sums are of the inverse
+map over a non-affine image set, their non-vanishing is certified by a linear functional built from reciprocal power sums
+over the trace-one hyperplane, and a Boolean-degree-two correction makes the certificate non-zero for every $h$. We did not
+find these statements in the works cited; our search was limited, and the techniques themselves are not claimed as new.

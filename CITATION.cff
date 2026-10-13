@@ -1,0 +1,72 @@
+cff-version: 1.2.0
+message: "If you use this package, cite it as below."
+type: software
+title: "Carry-aware differential bounds and certified correction of local zero sums: paper sources, Lean 4 sources, finite checks"
+authors:
+  - family-names: Fukui
+    given-names: Hiroki
+    orcid: "https://orcid.org/0009-0008-7122-522X"
+    affiliation: "Research Institute of Criminal Psychiatry / Sex Offender Medical Center, Tokyo, Japan; Department of Neuropsychiatry, Kyoto University, Kyoto, Japan"
+    email: fukui@somec.org
+version: "1.0.0"
+date-released: "2026-10-13"
+repository-code: "https://github.com/hirokifukui/residue-apn-carry"
+doi: 10.5281/zenodo.23330907
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23330907
+    description: "Zenodo version DOI of this source archive (this version only)"
+  - type: doi
+    value: 10.5281/zenodo.23330906
+    description: "Zenodo concept DOI of the source archive (resolves to the latest version)"
+  - type: doi
+    value: 10.5281/zenodo.23330909
+    description: "Zenodo version DOI of the paper (supplemented by this archive)"
+  - type: doi
+    value: 10.5281/zenodo.23330908
+    description: "Zenodo concept DOI of the paper (latest version)"
+# licences: this package has two licences and therefore no single top-level "license" field:
+#   code, Lean sources, checkers, evidence scripts and recorded outputs, metadata: MIT (LICENSE);
+#   paper sources and PDF, Blueprint, Markdown documents: CC-BY-4.0 (LICENSE-CC-BY-4.0.txt);
+#   per-file table: FILE_RIGHTS.tsv.
+keywords:
+  - "APN permutation"
+  - "Galois ring"
+  - "differential uniformity"
+  - "Markov cipher"
+  - "key-averaged differential probability"
+  - "contraction"
+  - "zero sum"
+  - "multiplicative complexity"
+  - "Lean 4"
+  - "formal verification"
+abstract: "We study a two-digit coordinate model of maps on the Galois ring GR(4,m), with q = 2^m and N = q^2 = |GR(4,m)|, in which the ring addition carries from the low digit into the high digit. For maps F(a,b) = (p(a), h(a) ⊕ d(a)b) with p an APN permutation, d a nowhere-vanishing F_2-affine map whose linear part has a one-dimensional kernel, and h arbitrary, we prove direction-wise differential counts for B = J ∘ F, a key-averaged two-block bound of order 1/N, and a collision-energy bound, all uniform in h. In contrast, a local integral property of the same two-block map depends on h; for the inverse map and every admissible d we give a linear certificate on h that excludes a family of local zero sums, and an explicit correction of Boolean degree two of every h that fails it; degree two is minimal for this local problem. For the averaged alternating two-word arrangement we prove a one-word contraction of order q^{-(1-(1/2)log_2 3)}, uniform in h and in the admissible data, and deduce that a fixed number of steps brings the averaged two-word difference distribution to the scale 1/N. For the inverse map with d(a) = 1 + (a/ρ)^4 + (a/ρ)^2, where m is odd and ρ ≠ 0, the contraction improves to the order q^{-1/2}, which is optimal since no admissible data give a faster order; for other d our constant grows with the linearized degree of d. We then record what these statements do and do not imply for an independent-key composition: the averaged multi-word bound coexists with a candidate-existence distinguisher with data linear in the word size. No security claim for a concrete cipher is made."
+references:
+  - type: article
+    title: "Optimal reduced representatives of quadratic APN permutations in odd dimension"
+    authors:
+      - family-names: Fukui
+        given-names: Hiroki
+    year: 2026
+    doi: 10.5281/zenodo.23053113
+    status: preprint
+  - type: article
+    title: "Explicit reduced APN permutations: ramification and optimal Galois-ring lifts"
+    authors:
+      - family-names: Fukui
+        given-names: Hiroki
+    year: 2026
+    doi: 10.5281/zenodo.23233176
+    status: preprint
+preferred-citation:
+  type: article
+  title: "Carry-aware differential bounds and certified correction of local zero sums"
+  authors:
+    - family-names: Fukui
+      given-names: Hiroki
+      orcid: "https://orcid.org/0009-0008-7122-522X"
+  year: 2026
+  status: preprint
+  license: CC-BY-4.0
+  doi: 10.5281/zenodo.23330909
+  notes: "paper/main_v14.pdf in this package"

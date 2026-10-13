@@ -1,0 +1,49 @@
+Lean source-closure build record (sanitized: host names and local paths removed).
+date (UTC): 2026-10-12T11:00:29Z
+Lean (version 4.31.0-rc1, arm64-apple-darwin24.6.0, commit fd009949156901e6cf15b6d9bf1122294b8e697a, Release)
+toolchain file: leanprover/lean4:v4.31.0-rc1
+mathlib commit: d568c8c09630de097a046763c17b9ea99f95f950
+result: OK 26 modules + root
+per-module exit codes (import order):
+  WarmStart 0
+  SuffixReset 0
+  ResetCompose 0
+  CarryPD 0
+  CarryZ 0
+  CarryE_v2 0
+  OneRound 0
+  Transport_v2 0
+  RepairCore_v2 0
+  W2Bridge 0
+  ColsB_v3 0
+  ColsF_v2 0
+  TwoStep 0
+  Bridge 0
+  DigitSplit_v2 0
+  RepairLink_v2 0
+  VacuousZ4 0
+  MixAdd 0
+  ThetaZ4_v3 0
+  AxiomsWarmStart 0
+  AxiomsSuffixReset 0
+  AxiomsResetCompose 0
+  AxiomsCarryPD 0
+  AxiomsC7 0
+  AxiomsC8 0
+  AxiomsC9_v2 0
+  ApnCipher 0
+axiom audit (#print axioms in Axioms*.lean):
+  AxiomsC7: 16 declarations with axioms, 0 without
+  AxiomsC8: 64 declarations with axioms, 0 without
+  AxiomsC9_v2: 57 declarations with axioms, 3 without
+  AxiomsCarryPD: 3 declarations with axioms, 0 without
+  AxiomsResetCompose: 4 declarations with axioms, 0 without
+  AxiomsSuffixReset: 5 declarations with axioms, 0 without
+  AxiomsWarmStart: 7 declarations with axioms, 0 without
+  distinct axiom sets:
+       119 depends on axioms: [propext, Classical.choice, Quot.sound]
+        37 depends on axioms: [propext, Quot.sound]
+sorry in logs: 0
+source hashes before/after build identical: yes
+build script: the recorded run used build_closure.sh sha256 9a9e1545c4b1ee1b35f30c713d6eb64c57eac575f891368df8552d32c83ca291, which differs from the released
+build_closure.sh (sha256 b3b07b7b859cfa99869d484affe43e4d96c60eb13265384f9d60350cbc11553c) only in the default of MATHLIB (a local path there; required variable here).

@@ -1,0 +1,52 @@
+% sec_8_limits_v4.tex -- C9 paper lane (P9-01): exponent 1/2 stated for d=1+K0(x/rho) with the general-d constant;
+% otherwise unchanged from sec_8_limits_v3.tex.
+% sec_8_limits_v3.tex -- C8: exponents, step count, quantifiers of Section 4, formalization status.
+% sec_8_limits_v2.tex -- main author (C7): general-d scope, R1 status.
+\section{Limits and remaining design questions}\label{sec:limits}
+
+\subsection{What the theorems cover}
+Each theorem fixes its quantifiers as follows.
+Theorems~\ref{thm:eps} and~\ref{thm:UE}: all $h$, all $\rho$, all $(p,d)$ under Assumption~\ref{ass:PD} (for
+Theorem~\ref{thm:UE} the permutation property of $p$ is not used), exact counts.
+Theorem~\ref{thm:W2}: odd $m\ge5$, all $h$; constant $4$ only for $\wt(\rho)=1$ in the fixed basis,
+$(6+6/q)$ otherwise; average over independent uniform keys and whitening.
+Theorem~\ref{thm:P4}: the $(2,2,1,1)$ arrangement with three mixings and reset keys $L_2,L_3$,
+$M_1$ MDS, $M_2,M_3$ invertible, average over $10w$ independent uniform key words.
+Theorem~\ref{thm:V}: non-adaptive queries on pre-fixed disjoint slices; the real construction is accepted for
+every key; false acceptance bounded by a union over $N^{3w}$ candidates.
+Section~\ref{sec:repair}: $p(x)=x^{q-2}$, every $d$ satisfying (P2), every $m\ge3$ for the algebra (odd $m\ge5$ when
+combined with Section~\ref{sec:diff}), every local key; the certificate is sufficient for every $\FF$-linear $L$, and its
+necessity is not asserted (Example~\ref{ex:quant}); the degree statement concerns $h$ only; Proposition~\ref{prop:mc} concerns $g_d$ alone.
+Theorem~\ref{thm:R1}, Proposition~\ref{prop:Zexact}, Theorem~\ref{thm:G}: every $m\ge3$, all PD data, all $h$; averaged transitions.
+Corollary~\ref{cor:half}, Corollary~\ref{cor:inv13}: $p(x)=x^{q-2}$, odd $m$, $d=1\oplus K_0(x/\rho)$, all $h$.
+Theorem~\ref{thm:steps}: $m\ge5$, all PD data, all $h$, the alternating arrangement A1 with independent uniform keys in every step and a
+two-word mixing with unit entries and determinant.
+
+\subsection{What remains open or is not addressed}
+\begin{itemize}
+\item The one-word contraction has exponent $\gamma\approx0.2075$ for all PD data (Theorem~\ref{thm:R1}) and the optimal exponent
+$1/2$ for the inverse map with $m$ odd and $d=1\oplus K_0(x/\rho)$ (Corollary~\ref{cor:half}). For the inverse map with another admissible
+$d=\varepsilon\oplus K$, $K$ of linearized degree $e$, the constant becomes $2^{e+1}+5$ (Proposition~\ref{prop:Minv}), which is not uniform in $m$ when $e$
+grows with $m$. Exponent $1/2$ uniformly over all PD data is reduced to the
+$h$-free bound $\max_z\|\mathcal B^0_z\|\le Cq^2$ and is open. The step counts (Theorem~\ref{thm:steps}, Corollary~\ref{cor:inv13}) have
+large constants; they are statements about the scale $1/N$, not round recommendations. Numerical contraction constants are estimates.
+\item No fixed-key differential bound, no linear or algebraic bounds, no related-key statement.
+\item No key schedule; the $10w$ independent key words are the randomness of the averaging model.
+\item No lower bound on attack time; the implemented enumerations are upper bounds for one method.
+Meet-in-the-middle and character-sum (Fourier) decompositions of the candidate search, higher-order
+integrals and division-property analyses were not carried out.
+\item The local correction removes one family of local zero sums inside an $S_2$ block; it does not remove
+the word-level zero sum used by Theorem~\ref{thm:V}, and it is not a statement about integral resistance of
+the arrangement.
+\item The classification of $h$ with $\ell_d(h)=0$ is not attempted; the vanishing example of
+Example~\ref{dz:prop:X21} is a single instance. Non-inverse $p$ and non-affine $d$ are not treated in
+Section~\ref{sec:repair}.
+\item Cost: no claim of minimal AND count or of an advantage over known constructions; ring-only and MPC
+costs are unmeasured.
+\end{itemize}
+
+\subsection{Design questions left for later work}
+The arrangement $(2,2,1,1)$ and the number of mixing layers are fixed in this paper; we do not add layers
+to raise attack cost. A design that addresses the word-level integral of Lemma~\ref{lem:V2}, a key
+schedule, and fixed-key statements would be required before any construction built from these
+components could be considered as a cipher.

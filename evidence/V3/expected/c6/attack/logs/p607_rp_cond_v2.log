@@ -1,0 +1,10 @@
+m3w2s4 {'log2_new': -0.2567351411294112, 'new_lt_claimed (exact)': True, 'old_float': 7.968994140625}
+m3w2s5 {'log2_new': -5.536108513105319, 'new_lt_claimed (exact)': True, 'old_float': 12.460937559604645}
+m5w2s4 {'log2_new': -8.446205459986231, 'new_lt_claimed (exact)': True, 'old_float': 7.998047828674316}
+m5w2s5 {'log2_new': -21.94041924443445, 'new_lt_claimed (exact)': True, 'old_float': 12.49755859375091}
+m5w4s4 {'log2_new': -39.9999889957835, 'new_lt_claimed (exact)': True, 'old_float': 7.627532795595471e-06}
+pd_m3_inv_h0 {'N': 64, 'S1inv(.;k)_bijective_all_k': True, 'M3inv_M3_eq_I': True, 'M3_source': 'c.M3', 'ring_add_eq_coefwise_mod4_all_pairs': True}
+pd_m3_inv_a3 {'N': 64, 'S1inv(.;k)_bijective_all_k': True, 'M3inv_M3_eq_I': True, 'M3_source': 'c.M3', 'ring_add_eq_coefwise_mod4_all_pairs': True}
+nat_m3 {'N': 64, 'S1inv(.;k)_bijective_all_k': True, 'M3inv_M3_eq_I': True, 'M3_source': 'c.M3', 'ring_add_eq_coefwise_mod4_all_pairs': True}
+nat_m5_P53 {'N': 1024, 'S1inv(.;k)_bijective_all_k': True, 'M3inv_M3_eq_I': True, 'M3_source': 'c.M3', 'ring_add_eq_coefwise_mod4_all_pairs': True}
+P607=PASS 0.34

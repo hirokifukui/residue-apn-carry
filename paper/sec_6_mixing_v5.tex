@@ -1,0 +1,310 @@
+% sec_6_mixing_v5.tex -- C9 paper lane (P9-01, finding C8-F02): the exponent 1/2 is stated for p(x)=x^{q-2}, odd m,
+% d=1+K0(x/rho) in the section opening, the subsection title, the corollary titles and the text before Prop. condsteps;
+% internal references ("C6 reduction", "C7 proof", "previous version") removed. Statements and proofs unchanged.
+% sec_6_mixing_v4.tex -- C8: exact Z block (P8-02), G block uniform in h and exponent 1/2 for the inverse map (P8-07),
+% two-word reduction now proved in Appendix A (P8-04), unconditional step count with the proved exponent (P8-03).
+% sec_6_mixing_v3.tex (v3: one display split, layout only) -- written by the main author (C7, P7-06..P7-08, P7-14).
+% Proof sources: c7/r1/R1_P7.md (Theorem thm:R1, main author; blocks G and E follow the fourier lane's
+% sketches c7/fourier/notes/P7-07_fourier.md C1/C2, re-proved; block Z is new), GPT NEW_DERIVATIONS_JA.md B
+% (partial Fourier identity, re-proved) and C (conditional constants, re-proved: c7/a1/notes/P7-08_a1.md),
+% C6 c6/a1/notes/N1_P6.md (Proposition D2), C5 c5/a1/notes/LYAP_P5.md (L1-L5), UE_P5.md (1779/256).
+\section{Mixing of the alternating arrangement: a uniform one-word contraction}\label{sec:mixing}
+
+This section concerns the averaged (Markov) transition of the alternating two-word arrangement of
+\cite{FukuiFFA}-type blocks with an MDS mixing $M$ whose entries and determinant are units. Its statements
+are about key-averaged transitions only. Theorem~\ref{thm:R1} gives a contraction exponent that is positive and
+uniform over all PD data and all $h$; with it, Theorem~\ref{thm:steps} reaches the scale $1/N$ in a fixed number of steps
+without further hypotheses. For the inverse map $p(x)=x^{q-2}$ with $m$ odd and $d=1\oplus K_0(x/\rho)$, $K_0(X)=X^4+X^2$, $\rho\ne0$, the
+exponent is $1/2$ (Corollary~\ref{cor:half}), the largest possible for any PD data (Proposition~\ref{prop:Zexact}); for the inverse map with a
+general admissible $d$ the constant obtained grows with the linearized degree of $d$, and the exponent $1/2$ uniformly over all PD data is
+open (Remark~\ref{rem:exp}). The constants are explicit but weak for small $m$.
+
+\subsection{One word: the partial Fourier picture}
+Let $T=T_B$ be the averaged transition matrix of $B$ on ring differences ($N\times N$, doubly stochastic,
+$T(\alpha,0)=[\alpha=0]$). For a low digit $u$ of the input difference and $s$ of the output difference, use on
+each fibre the orthonormal Walsh basis in the high digit:
+\[
+\widehat T((u,\eta),(s,\xi))=q^{-1}\sum_{v,t}(-1)^{\langle\eta,v\rangle+\langle\xi,t\rangle}\,T((u,v),(s,t)),
+\]
+where $\langle\cdot,\cdot\rangle$ is the coordinate inner product of the fixed basis. For $u\notin\{0,\rho\}$ put
+$k=K(u)$, $A_a=d(a)d(a\oplus u)/k$, $D_up(a)=p(a\oplus u)\oplus p(a)$ and
+$C_a(s)=h(a)\oplus\frac{d(a)}{k}\bigl[s\oplus h(a\oplus u)\oplus h(a)\oplus d(a\oplus u)(a\star u)\bigr]$.
+
+\begin{proposition}[Partial Fourier formulas]\label{prop:pf}
+For every $(p,d,h)$ under Assumption~\ref{ass:PD}:
+\begin{enumerate}
+\item ($\cG$) $\widehat T((u,\eta),(s,\xi))=q^{-2}\sum_{a:\,M_{A_a}^\ast(s\star\xi)=\eta}
+(-1)^{\langle\xi,D_up(a)\rangle+\langle s\star\xi,\,C_a(s)\rangle}$, where $M_A:x\mapsto Ax$ and $M_A^\ast$ is its adjoint for
+$\langle\cdot,\cdot\rangle$. For $\eta\ne0$ the sum is either empty or runs over one coset $a\oplus\langle\rho,u\rangle$
+(four points), and the four signs multiply to $+1$; hence every such entry lies in $\{0,\pm4/q^2\}$.
+\item ($\cE$, $u=\rho$) $\widehat T=q^{-2}[s\star\xi=0]\sum_a(-1)^{\langle\eta,v_a(s)\rangle+\langle\xi,D_\rho p(a)\rangle}$ with
+$v_a(s)=(s\oplus h(a)\oplus h(a\oplus\rho))/d(a)\oplus(a\star\rho)$.
+\item ($\cZ$, $u=0$) $\widehat T=q^{-2}[s\star\xi=0]\sum_a(-1)^{\langle\eta,s/d(a)\rangle}$.
+\end{enumerate}
+\end{proposition}
+\begin{proof}
+By Lemma~\ref{lem:diffB}, for each $a$ the high input digit $b$ is determined in the $\cG$ case by the low
+equation, and the high output difference is $t=D_up(a)\oplus s\star(A_av\oplus C_a(s))$; summing the characters
+over $t$ and then over $v$ leaves the indicator of $\eta=M_{A_a}^\ast(s\star\xi)$. For fixed $z=s\star\xi\ne0$ the map
+$A\mapsto M_A^\ast z$ is injective ($\langle z,Ax\rangle=\Tr(\omega Ax)$ for some $\omega\ne0$), so $A_a$ is determined;
+$A_a$ is constant on $a\oplus\langle\rho,u\rangle$ and the two roots $\{y,y\oplus k\}$ of $y^2+ky+kA=0$ have
+$d$-preimages forming one such coset. On that coset $D_up$ takes one value twice in each of two pairs, and the
+four values of $C_a(s)$ sum to $0$ (the $h$-terms cancel because $d(a)/k+d(a\oplus u)/k=1$, the $s$-terms and the
+$\star$-terms appear with equal coefficients an even number of times). In the $\cE$ and $\cZ$ cases the low equation
+does not involve $b$; the sum over $b$ of $(-1)^{\langle s\star\xi,\,h(a)\oplus d(a)b\rangle}$ equals $q[s\star\xi=0]$, and
+the low equation determines $v$ from $(a,s)$.
+\end{proof}
+The entrywise bound $4/q^2$ is not an operator-norm bound; the next theorem bounds the operator norm.
+% Finite check: author DDT -> integer Walsh, all components, m=3 (24,576) and m=5 (7,864,320), 16 tables
+% including rho of weight 1,2,3 (c7/fourier/notes/P7-06_fourier.md); also GPT checks/partial_fourier.py.
+
+\subsection{The uniform contraction R1}
+Let $W=R\setminus\{0\}$, $T'=T|_{W\times W}$, and let $\perp\subset\ell^2(W)$ be the functions whose sum over every
+low-digit fibre $f_s\cap W$ vanishes; $\tau:=\|\Pi_\perp T'^{\top}\Pi_\perp\|$ (the one-word fluctuation contraction used in
+the two-word reduction of Appendix~\ref{app:mix}).
+
+\begin{theorem}[R1]\label{thm:R1}
+For every $m\ge3$, every $(p,d,h)$ under Assumption~\ref{ass:PD}:
+\[
+\tau^2\ \le\ \frac{4(1.5^m-1)}{q}+\frac{3}{q}+\frac{3^m-2q+1}{q^2}\ =\ 5\Bigl(\frac34\Bigr)^m-\frac3q+\frac1{q^2},
+\]
+so that $\tau\le\sqrt5\,q^{-\gamma}$ with $\gamma=1-\tfrac12\log_23\approx0.2075$.
+\end{theorem}
+\begin{proof}
+\emph{Blocks.} The input space $\perp$ is the orthogonal sum of the fibres $u\ne0$ (Walsh directions $\eta\ne0$)
+and the fibre $u=0$ (zero-sum functions on $q-1$ points, extended by $0$ at the origin: an isometry into the
+directions $\eta\ne0$). Hence $\Pi_\perp T'^\top\Pi_\perp=[M_\cG\,|\,M_\cE\,|\,M_\cZ]$ and
+$\tau^2\le\|M_\cG\|^2+\|M_\cE\|^2+\|M_\cZ\|^2$. On an output fibre $s\ne0$, $\perp$ is spanned by $\xi\ne0$; on the
+output fibre $s=0$ ($q-1$ points), the projection of $f|_W$ onto zero-sum functions has norm at most
+$\|f-\mathrm{mean}(f)\|$, the norm of the $\xi\ne0$ part of $f$. So each $\|M_\bullet\|$ is at most the norm of the
+corresponding rows $\eta\ne0$ and columns $\xi\ne0$ of $\widehat T$.
+
+\emph{$\cG$.} Let $g=q^2\widehat T$ on these rows and columns and $Q=gg^\top$. For rows $r=(u,\eta)$, $r'=(u',\eta')$,
+atoms $a\in$ fibre of $r$ and $a'\in$ fibre of $r'$ share the column $(s,\xi)$ iff $s\star\xi=z$, where $z=z_a(\eta)$ is the
+unique solution of $M^\ast_{A_a}z=\eta$, and $z_{a'}(\eta')=z$; then $z\ne0$. Summing over the $2^{m-\wt s}$ vectors $\xi$
+with $s\star\xi=z$ gives $2^{m-\wt s}(-1)^{\langle z,\delta\rangle}[\delta\subseteq s]$ with
+$\delta=D_up(a)\oplus D_{u'}p(a')$. The function $h$ enters only through the phase $\langle z,C_a(s)\oplus C'_{a'}(s)\rangle$;
+taking absolute values and summing over $s\supseteq z\vee\delta$, $\sum_{s\supseteq w}2^{m-\wt s}=3^{m-\wt w}$, gives
+$|Q[r,r']|\le\sum_{(a,a')}3^{m-\wt(z\vee\delta)}$. For fixed $r$ and $a$, every pair $(u',a')$ determines $\eta'$, so the
+absolute row sum is at most $\sum_a\sum_{u',a'}3^{m-\wt(z_a\vee\delta)}$. As $p$ is a permutation, each value
+$y=D_{u'}p(a')$ is taken at most $q$ times, so the inner sum is at most
+$q\sum_{\delta\in\Fq}3^{m-\wt(z\vee\delta)}=q\,4^m2^{-\wt z}$. Each $z\ne0$ arises from at most four $a$ (one coset), so
+$\sum_a2^{-\wt z_a}\le4((3/2)^m-1)$. By Schur's test $\|M_\cG\|^2\le\|Q\|/q^4\le4(1.5^m-1)/q$. ($\cG$ rows do not reach
+the output fibre $s=0$: there $s\star\xi=0$ and $\eta\ne0$ leaves an empty sum.)
+
+\emph{$\cE$.} Write the block as $q^{-2}\Phi N$ with $\Phi[\eta,v]=(-1)^{\langle\eta,v\rangle}$ ($\|\Phi\|\le\sqrt q$) and
+$N[v,(s,\xi)]=[s\star\xi=0]\sum_{a:v_a(s)=v}(-1)^{\langle\xi,D_\rho p(a)\rangle}$. In $NN^\top[v,v']$ the sum over $\xi\ne0$
+with $s\star\xi=0$ is at most $2^{m-\wt s}[\delta\subseteq s]+1$ in absolute value. Since $D_\rho p$ is two-to-one ($p$ APN),
+for fixed $a$ at most $2^{\wt s+1}$ values $a'$ have $\delta\subseteq s$; so the row sum is at most
+$\sum_s\#\{a:v_a(s)=v\}\cdot3q=3q^2$, because $s\mapsto v_a(s)$ is bijective for each $a$. Hence
+$\|M_\cE\|^2\le q^{-4}\cdot q\cdot3q^2=3/q$.
+
+\emph{$\cZ$.} Here $s=d(a)v\ne0$, and the entry does not depend on $\xi$: for fixed $s$ the block has
+$n_s=2^{m-\wt s}-1$ equal columns $x_s[\eta]=q^{-2}\widehat w_s(\eta)$, $w_s=2\cdot\mathbf 1_{s(\Img d)^{-1}}$
+($d$ is two-to-one onto a set of size $q/2$). By Parseval, $\sum_\eta\widehat w_s(\eta)^2=2q^2$ and $\widehat w_s(0)=q$,
+so $\|x_s\|^2=q^{-2}$ on $\eta\ne0$, and $\|M_\cZ\|^2\le\sum_{s\ne0}n_s\|x_s\|^2=(3^m-2^m-q+1)/q^2$.
+\end{proof}
+The function $h$ enters only the phases of the $\cG$ and $\cE$ blocks; the $\cZ$ block depends only on $\Img d$.
+The $\cG$ estimate uses that $p$ is a permutation and that $d$ is affine; the $\cE$ estimate uses APN in the direction
+$\rho$; oddness of $m$ is not used.
+% Finite check: m=5, 8 tables: tau 0.139-0.151 (bound vacuous); blocks ||M_G||^2 <= 0.0057 (bound 0.82),
+% ||M_E||^2 <= 0.022 (bound 0.094), ||M_Z||^2 = 15/1024 exactly (bound 180/1024); m=7: tau 0.063 (bound 0.80).
+
+
+\subsection{The exact $\cZ$ block}
+\begin{proposition}[Exact $\cZ$ norm]\label{prop:Zexact}
+For every $m\ge3$ and all $(p,d,h)$ under Assumption~\ref{ass:PD}, $\|M_\cZ\|^2=(q/2-1)/q^2$. Consequently
+\[
+\tau^2\ \le\ 4\Bigl(\frac34\Bigr)^m-\frac1{2q}-\frac1{q^2}.
+\]
+\end{proposition}
+\begin{proof}
+By Lemma~\ref{lem:norm} (which uses only (P2)), $\Img d=\{z:\Tr(\eta_0z)=1\}$ for a unique $\eta_0\ne0$. For $s\ne0$ let
+$w_s(v)=2\cdot[\Tr(\eta_0s/v)=1]$ for $v\ne0$ and $w_s(0)=0$, and $x_s(\nu)=q^{-2}\sum_v(-1)^{\langle\nu,v\rangle}w_s(v)$ for $\nu\ne0$; by
+the proof of Theorem~\ref{thm:R1} these are the columns of the $\cZ$ block, each repeated $n_s=2^{m-\wt(s)}-1$ times.
+One has $\sum_vw_s(v)=q$, $\sum_vw_s(v)^2=2q$, and for $s\ne t$, after the substitution $v\mapsto1/v$, the conditions
+$\Tr(\eta_0sv)=1$ and $\Tr(\eta_0tv)=1$ are two independent affine conditions (the linear forms differ), so
+$\sum_vw_s(v)w_t(v)=4\cdot q/4=q$. By Parseval over all $\nu$ and removal of $\nu=0$,
+\begin{gather*}
+\langle x_s,x_t\rangle=q^{-4}\Bigl(q\sum_vw_sw_t-\bigl(\textstyle\sum_vw_s\bigr)\bigl(\sum_vw_t\bigr)\Bigr)=q^{-2}[s=t],\\
+\sum_{\nu\ne0}x_s(\nu)=q^{-2}\bigl(qw_s(0)-\textstyle\sum_vw_s(v)\bigr)=-\frac1q .
+\end{gather*}
+Hence on the extended space of all functions of $\nu\ne0$, $M_\cZ^*M_\cZ=\sum_{s\ne0}n_sx_sx_s^{\top}$ has the orthogonal
+eigenvectors $x_s$ with eigenvalues $n_s/q^2$, the largest being $(q/2-1)/q^2$ ($\wt(s)=1$); this gives
+$\|M_\cZ\|^2\le(q/2-1)/q^2$. The physical input space of the $\cZ$ block is the space of functions on the $q-1$ points $(0,v)$,
+$v\ne0$, with sum $0$; extended by $0$ at the origin, its image under the high-digit Walsh transform is exactly the set of
+coefficient vectors $c$ with $c(0)=0$ and $\sum_{\nu\ne0}c(\nu)=0$ (the value at the origin is $q^{-1/2}\sum_\nu c(\nu)$). For two
+distinct $s,t$ of weight one ($m\ge2$), $c=x_s-x_t$ satisfies both conditions and is an eigenvector for $(q/2-1)/q^2$. On these
+inputs the output low digit is $s=d(a)v\ne0$, so the output fibre $s=0$ (where the proof of Theorem~\ref{thm:R1} only uses a contraction) is not
+reached, and on the fibres $s\ne0$ the projection onto $\perp$ is exactly the removal of $\xi=0$. So the bound is attained by
+a physical input, and $\|M_\cZ\|^2=(q/2-1)/q^2$. The bound on $\tau^2$ is Theorem~\ref{thm:R1} with the $\cZ$ term replaced:
+$4(1.5^m-1)/q+3/q+(q/2-1)/q^2=4(3/4)^m-1/(2q)-1/q^2$.
+\end{proof}
+% SOURCE: GPT NEW_DERIVATIONS_JA.md A (audit proposal), re-proved here (c8/notes/resp/P8-02.md);
+% finite check c8/checks/p802_zexact.py: m=3,5, d0 and d=1+K0(x/rho) (rho=7,11), h in {0,a^3,random}: integer Walsh of the
+% physical Z rows = x_s columns, exact Gram q^2[s=t], SVD norm = (q/2-1)/q^2, exact Rayleigh quotient of the witness.
+Since $\tau\ge\|M_\cZ\|=((q/2-1)/q^2)^{1/2}$, no bound $\tau=O(q^{-\gamma'})$ with $\gamma'>1/2$ can hold uniformly; $1/2$ is the
+largest possible exponent.
+
+\subsection{The $\cG$ block: removal of $h$, and exponent $1/2$ for the inverse map with $d$ of $d_0$ type}
+For $u\notin\{0,\rho\}$, $k=K(u)$ and $a\in\Fq$ put $\mu_{u,a}=d(a)/k$, $y_{u,a}=D_up(a)$, and for $z\ne0$ let
+$\ell_{u,a}(z)=M^*_{\mu_{u,a}}z$. Let $g=q^2\widehat T$ on the rows $(u,\eta)$, $u\notin\{0,\rho\}$, $\eta\ne0$, and the columns $(s,\xi)$,
+$\xi\ne0$; by Proposition~\ref{prop:pf} and the proof of Theorem~\ref{thm:R1}, $\|M_\cG\|=\|g\|/q^2$ (the $\cG$ rows do not reach $s=0$).
+Define
+\[
+\mathsf M(p,d)=\max_{y,\nu\in\Fq}\#\bigl\{(u,a):u\notin\{0,\rho\},\ D_up(a)=y,\ d(a)=\nu K(u)\bigr\}.
+\]
+
+\begin{theorem}[$\cG$ block, uniform in $h$]\label{thm:G}
+For every $m\ge3$, all $(p,d)$ under Assumption~\ref{ass:PD} and every $h$,
+$\|M_\cG\|^2\le\mathsf M(p,d)/q$.
+\end{theorem}
+\begin{proof}
+\emph{Separation of $h$.} In Proposition~\ref{prop:pf}(1) write $C_a(s)=h(a)\oplus\mu_{u,a}(s\oplus E_{u,a})$ with
+$E_{u,a}=h(a\oplus u)\oplus h(a)\oplus d(a\oplus u)(a\star u)$. For a column with $s\star\xi=z$,
+$\langle z,C_a(s)\rangle=\langle z,h(a)\oplus\mu_{u,a}E_{u,a}\rangle\oplus\langle\ell_{u,a}(z),s\rangle$, so the sign of the atom $(u,a)$ is
+$\varepsilon_{u,a}(z)\,\sigma^0_{u,a,z}(s,\xi)$ with $\varepsilon_{u,a}(z)=\pm1$ independent of $(s,\xi)$ and
+$\sigma^0_{u,a,z}(s,\xi)=(-1)^{\langle\xi,y_{u,a}\rangle+\langle s,\ell_{u,a}(z)\rangle}$ independent of $h$.
+
+\emph{Factorization.} Let $\Psi$ be the $0/1$ matrix with rows $(u,\eta)$ and columns $(u',a,z)$, $z\ne0$, entry
+$[u=u'][\eta=M^*_{A_{u,a}}z]$, and $\Sigma$ the matrix with rows $(u,a,z)$ and columns $(s,\xi)$, entry
+$[s\star\xi=z]\,\varepsilon_{u,a}(z)\sigma^0_{u,a,z}(s,\xi)$. Proposition~\ref{prop:pf}(1) says $g=\Psi\Sigma$ (columns with $s\star\xi=0$ vanish on
+both sides because $\eta\ne0$). Since $A_{u,a}=d(a)d(a\oplus u)/k\ne0$, $M^*_{A_{u,a}}$ is invertible, so for each row $(u,\eta)$ and each
+$a$ exactly one $z$ occurs, and different rows have disjoint supports: $\Psi\Psi^\top=qI$, $\|\Psi\|^2=q$. Every column $(s,\xi)$ of
+$\Sigma$ belongs to the single value $z=s\star\xi$, so $\Sigma\Sigma^\top$ is block diagonal over $z$, with blocks
+$\mathcal B_z=E_z\mathcal B^0_zE_z$, $E_z=\mathrm{diag}(\varepsilon_{u,a}(z))$, $\mathcal B^0_z=\Sigma^0_z\Sigma^{0\top}_z$. As $E_z$ is a signed
+identity, $\|\mathcal B_z\|=\|\mathcal B^0_z\|$, and $\|g\|^2\le\|\Psi\|^2\|\Sigma\|^2=q\max_{z\ne0}\|\mathcal B^0_z\|$; $h$ has disappeared.
+
+\emph{Frame bound.} The non-zero spectrum of $\mathcal B^0_z$ equals that of the sum over all atoms $(u,a)$ of the rank-one
+operators $\sigma^0_{u,a,z}\sigma^{0\top}_{u,a,z}$ on the columns
+$\{(s,\xi):s\star\xi=z\}$. Each $\sigma^0_{u,a,z}$ is the restriction of a character of $\FF^{2m}$, namely
+$\chi_P(\xi,s)=(-1)^{\langle\xi,y\rangle+\langle s,\ell\rangle}$ with $P=(y,\ell)=(y_{u,a},\ell_{u,a}(z))$. If $n_z(P)$ atoms share the point $P$, then, in the semidefinite
+order,
+\[
+\sum_{(u,a)}\sigma^0\sigma^{0\top}=\sum_Pn_z(P)\chi_P\chi_P^\top\preceq\bigl(\max_Pn_z\bigr)\sum_{P\in\FF^{2m}}\chi_P\chi_P^\top
+=\bigl(\max_Pn_z\bigr)\,q^2I
+\]
+by orthogonality of characters. For $z\ne0$ the map $\nu\mapsto M^*_\nu z$ is $\FF$-linear and injective, so $\ell_{u,a}(z)$ determines $\mu_{u,a}$ and
+$\max_Pn_z(P)=\mathsf M(p,d)$. Thus $\|\mathcal B^0_z\|\le\mathsf M q^2$, $\|g\|^2\le\mathsf Mq^3$ and $\|M_\cG\|^2=\|g\|^2/q^4\le\mathsf M/q$.
+\end{proof}
+The absolute-value Schur estimate in the proof of Theorem~\ref{thm:R1} loses the factor $(3/2)^m$ in the cross terms between
+different $u$; the proof above avoids it by passing from the row Gram matrix to the atom Gram matrix, where $h$ acts by a diagonal
+sign change. The theorem uses of the assumption only $d\ne0$ and the definition of $K$.
+
+\begin{proposition}[Multiplicity for the inverse map]\label{prop:Minv}
+Let $p(x)=x^{q-2}$ and $K(x)=\sum_{j=0}^ek_jx^{2^j}$ with $k_e\ne0$. Then $\mathsf M(p,d)\le2^{e+1}+2$. In particular
+$\mathsf M\le10$ for $d=d_0$ and, more generally, for $d(x)=1\oplus K_0(x/\rho)$ with $K_0(x)=x^4+x^2$ and any $\rho\ne0$, $m$ odd.
+\end{proposition}
+\begin{proof}
+Fix $(y,\nu)$. As $p$ is a permutation, $y=D_up(a)$ with $u\ne0$ forces $y\ne0$, and for given $a$ at most one $u$ works. For $a\notin\{0,1/y\}$
+the equation $1/(a+u)+1/a=y$ gives $u=a^2y/(1+ay)$. Multiplying $\varepsilon\oplus K(a)=\nu K(u)$ by $(1+ay)^{2^e}\ne0$ gives a polynomial
+equation $\Phi(a)=0$ of degree at most $2^{e+1}$ (the term $k_j(a^2y)^{2^j}(1+ay)^{2^e-2^j}$ has degree $2^e+2^j$), and $\Phi(0)=\varepsilon\ne0$
+because $0\in\Img K$ and $\varepsilon\notin\Img K$. Adding the two exceptional values of $a$ gives the bound. For $d_0=1\oplus K_0$, $e=2$; the
+same holds for $K_0(x/\rho)$, whose kernel is $\{0,\rho\}$ and whose image is $\Img K_0=\{\Tr=0\}\not\ni1$ for odd $m$.
+\end{proof}
+% SOURCE: c8/r1/P8-07_G.md (Theorem G, Prop. I; main author C8 r1 lane), independent adversarial audit c8/r1/P8-07_AUDIT.md
+% (all claims CONFIRMED; own brute-force DDT -> Walsh, m=3: 16 tables, m=5: 21 tables; exact M for p=inverse, m=3..11, ~150 cases,
+% max M = 5 for d0 type; adversarial h: ||M_G||^2 q/M <= 0.064 at m=5).
+
+\begin{corollary}[Exponent $1/2$ for the inverse map with $d=1\oplus K_0(x/\rho)$]\label{cor:half}
+For $p(x)=x^{q-2}$, $m\ge3$ odd, $d=1\oplus K_0(x/\rho)$ (any $\rho\ne0$; $\rho=1$ is $d_0$) and every $h$:
+$\tau^2\le13/q+(q/2-1)/q^2<13.5/q$, that is $\tau<3.68\,q^{-1/2}$. For general PD data,
+$\tau^2\le(\mathsf M(p,d)+3)/q+(q/2-1)/q^2$.
+\end{corollary}
+\begin{proof}
+$\tau^2\le\|M_\cG\|^2+\|M_\cE\|^2+\|M_\cZ\|^2$ (proof of Theorem~\ref{thm:R1}), Theorem~\ref{thm:G}, the bound $\|M_\cE\|^2\le3/q$, and
+Proposition~\ref{prop:Zexact}.
+\end{proof}
+For general APN permutations $p$ (or $K$ of large $2$-degree) a uniform bound on $\mathsf M(p,d)$ is not proved; in the computed cases
+($p\in\{x^{-1},x^3,x^5,x^{13}\}$, random $K$, $m\le11$) $\mathsf M\le11$. Uniformity of the exponent $1/2$ over all PD data is therefore
+reduced to the $h$-free inequality $\max_{z\ne0}\|\mathcal B^0_z\|\le Cq^2$ (Remark~\ref{rem:exp}).
+
+\begin{remark}[What limits the exponent]\label{rem:exp}
+For general PD data, Theorem~\ref{thm:R1} gives the exponent $\gamma=1-\frac12\log_23\approx0.2075$, and
+Theorem~\ref{thm:G} improves it to $1/2$ whenever $\mathsf M(p,d)$ is bounded. Numerically $\|M_\cG\|\approx2.2/q$ ($m=3,5,7$),
+$\|M_\cE\|\approx0.8\,q^{-1/2}$ and $\|M_\cZ\|^2=(q/2-1)/q^2$ exactly. What remains open for exponent $1/2$ uniformly over all PD data is
+the large-sieve type bound $\max_{z\ne0}\|\mathcal B^0_z\|\le Cq^2$ with an absolute $C$; a bound $\sup\mathsf M<\infty$ suffices.
+\end{remark}
+
+\subsection{Two words}
+Let $M=\bigl[\begin{smallmatrix}m_{11}&m_{12}\\m_{21}&m_{22}\end{smallmatrix}\bigr]$ have unit entries and unit determinant. The
+\emph{alternating arrangement} A1 applies, in every step, $B$ to each word with an independent uniform key in front, and then $M$.
+Its averaged transition on two-word differences is $\mathcal TX=\mathrm{Perm}_M(T^\top XT)$, where $X$ is a function on $R^2$ (an
+$N\times N$ array) and $(\mathrm{Perm}_MX)(M\beta)=X(\beta)$ (Proposition~\ref{prop:markov} applied word-wise; Section~\ref{ss:arr}
+is a different arrangement). Starting from $\pi_0=e_\alpha$, $\alpha\ne(0,0)$, put $\pi_j=\mathcal T^j\pi_0$ and $D_j=\pi_j-U$, $U$ the uniform
+distribution on $R^2\setminus\{(0,0)\}$. The spaces $P$, $Q$, the quantities $\theta_2=\|Q\mathcal T^2Q\|$, $\zeta_2=\|Q\mathcal T^2P\|$,
+$\eta_{\mathrm{rss}}=\sqrt{2/q+1/(q^2-1)}$ and the proof of the following reduction are in Appendix~\ref{app:mix}
+(Proposition~\ref{prop:appD2}): with $\nu^2\le2/(q-1)+\tau^2$,
+\begin{equation}\label{eq:D2}
+\theta_2\ \le\ \eta_{\mathrm{rss}}+\sqrt{\bigl(\nu^2+(2+\sqrt2)/\sqrt{q-1}\bigr)^2+2\nu^2}.
+\end{equation}
+% SOURCE: c6/a1/notes/N1_P6.md sections 1-5, now Appendix A (c8 P8-04).
+\begin{corollary}[Unconditional two-word contraction]\label{cor:N1}
+For all $m\ge3$, all PD data and all $h$, \eqref{eq:D2} with Theorem~\ref{thm:R1} gives
+$\theta_2=O(q^{-\gamma})$; with $x=(\sqrt3/2)^m$, $\theta_2\le(1919/240)\,x<8x$ for $m\ge5$ (Lemma~\ref{lem:app-arith}).
+\end{corollary}
+
+\begin{theorem}[Step count with the proved exponent]\label{thm:steps}
+Let $m\ge5$, all PD data, all $h$, and A1 as above. With $x=(\sqrt3/2)^m=q^{-\gamma}$, for every integer $k\ge0$,
+\[
+\|D_{2+2k}\|_2\ \le\ \frac85\,10^k\,q^{-1}x^{k-1}.
+\]
+In particular $\|D_{14}\|_2\le1\,600\,000\,q^{-(1+5\gamma)}\le1\,600\,000/N$, and for each word $j$,
+\[
+\Pr\nolimits_{\pi_{15}}[\beta_j=0]\ \le\ \min\Bigl(1,\ \frac{11\,118\,751}{N}\Bigr).
+\]
+\end{theorem}
+\begin{proof}
+\emph{Start.} By Theorem~\ref{thm:eps} every entry of a non-zero row of $T_B$ is at most $1/q$. Lemma~\ref{lem:D1} with $w=2$, $T_i=U_j=T_B$,
+$b_\star=1/q$, followed by the permutation $\mathrm{Perm}_M$, gives $\|\pi_2\|_\infty\le1/N$, hence $\|D_2\|_2\le\|\pi_2\|_2\le(\|\pi_2\|_\infty\|\pi_2\|_1)^{1/2}=1/q$
+($D_2\perp U$). For the cell projection, $\|PD\|_2^2\le\sum_C m_C^2/|C|\le1/(q^2-1)$, where $m_C$ is the mass of $\pi_2$ in the cell $C$ and every
+cell has at least $q^2-1$ points. Thus $a_2:=\|PD_2\|\le(q^2-1)^{-1/2}$ and $b_2:=\|QD_2\|\le1/q$.
+
+\emph{Comparison.} By Lemma~\ref{lem:app-cmp}, $(a_{j+2},b_{j+2})^\top\le A_q(a_j,b_j)^\top$ entrywise with
+$A_q=\bigl[\begin{smallmatrix}\eta_{\mathrm{rss}}+q^{-4}&\eta_{\mathrm{rss}}(1+q^{-2})\\ \zeta_2&\theta_2\end{smallmatrix}\bigr]$, $\zeta_2\le1$. Put $u=q^{-1/2}$.
+By Lemma~\ref{lem:app-arith}, $A_q\le\bigl[\begin{smallmatrix}2u&2u\\1&8x\end{smallmatrix}\bigr]$ and, with $\Delta=\mathrm{diag}(x,1)$, the column sums of
+$\Delta^{-1}\bigl[\begin{smallmatrix}2u&2u\\1&8x\end{smallmatrix}\bigr]\Delta$ are $2u+x$ and $2u/x+8x$, both at most $10x$ (since $u\le x^2$). For the weighted quantity
+$v_j=a_j/x+b_j$ (the $\ell^1$ norm of $\Delta^{-1}(a_j,b_j)^\top$) this gives $v_{j+2}\le10x\,v_j$.
+
+\emph{Conclusion.} $v_2\le[(1-q^{-2})^{-1/2}+x]/(qx)\le8/(5qx)$ because $(1-q^{-2})^{-1/2}\le11/10$ and $x\le1/2$. As $x\le1$,
+$\|D_j\|_2\le a_j+b_j\le v_j$, and $v_{2+2k}\le(10x)^kv_2$ gives the general bound. For $k=6$, $x^5\le1/q$ because $3^5<2^8$; hence
+$\|D_{14}\|\le(8/5)10^6q^{-2}$. Finally Lemma~\ref{lem:app-line} gives
+$|\Pr_{\pi_{15}}[\beta_j=0]-1/(N+1)|\le(1779/256)\|D_{14}\|_2$, and $1/(N+1)+(1779/256)\cdot1\,600\,000/N\le11\,118\,751/N$.
+\end{proof}
+% SOURCE: GPT NEW_DERIVATIONS_JA.md B (audit proposal), re-proved (c8/notes/resp/P8-03.md); exact rational checks of every
+% elementary inequality for m=5..61 and the m=3 start (all 4095 input pairs) in c8/checks/p803_steps.py (exit 0).
+The constants are far from sharp and the theorem is not a recommendation of a number of rounds for any small $m$; it is a statement,
+uniform in $h$ and in the PD data, that a fixed number of steps reaches the scale $1/N$. It concerns the key-averaged difference
+distribution of A1, not the $(2,2,1,1)$ arrangement of Section~\ref{sec:comp}, and nothing here concerns a fixed key, a key schedule or
+PRP security.
+
+For the inverse map with $m$ odd and $d=1\oplus K_0(x/\rho)$, Corollary~\ref{cor:half} supplies the hypothesis of the following proposition.
+
+\begin{proposition}[Step count under $\theta_2\le C q^{-1/2}$]\label{prop:condsteps}
+Let $q\ge32$, $u=q^{-1/2}$, and assume $\theta_2\le Cu$. With $A_q$ as above one has
+$0\le A_q\le B(u)=\bigl[\begin{smallmatrix}2u&2u\\1&Cu\end{smallmatrix}\bigr]$ entrywise,
+$\|B(u)^2\|_1\le K_Cu$ with $K_C=\max(C+24/5,\ 14/5+2C/5+C^2/5)$, hence $\|A_q^6\|_1\le K_C^3q^{-3/2}$,
+$\|D_{13}\|_2\le\sqrt2K_C^3/N$, and the probability that one word is zero after the next step is at most
+$[1+(1779/256)\sqrt2K_C^3]/N$.
+\end{proposition}
+\begin{proof}
+$\eta_{\mathrm{rss}}\le\frac32u$ is equivalent to $q^2-4q-1\ge0$; $q^{-4}\le u/2$; $\frac32(1+q^{-2})\le2$; and $u\le1/5$ for $q\ge25$.
+The column sums of $B^2$ are $u(4u+4+C)\le(C+24/5)u$ and $u(2+(4+2C+C^2)u)\le(14/5+2C/5+C^2/5)u$. For
+entrywise non-negative matrices $0\le A\le B$ implies $0\le A^k\le B^k$, and the maximal column sum is monotone and
+submultiplicative. By Theorem~\ref{thm:eps} and Lemma~\ref{lem:app-start}, $\|D_1\|_2\le q^{-1/2}$ and $a_1+b_1\le\sqrt2\|D_1\|$; so
+$\|D_{1+2k}\|_2\le\sqrt2q^{-1/2}\|A_q^k\|_1$, used with $k=6$, and Lemma~\ref{lem:app-line} converts the $\ell^2$ bound into a zero-word
+probability ($m\ge5$).
+\end{proof}
+% SOURCE: c7/a1/notes/P7-08_a1.md (GPT C6 NEW_DERIVATIONS C, re-proved in C7); c6/a1/notes/LYAP_P6.md section 5.
+
+\begin{corollary}[Inverse map with $d=1\oplus K_0(x/\rho)$: thirteen steps]\label{cor:inv13}
+For $p(x)=x^{q-2}$, odd $m\ge5$, $d=1\oplus K_0(x/\rho)$ and every $h$, $\theta_2\le(489/50)\,q^{-1/2}$; hence
+$\|D_{13}\|_2\le24\,405/N$ and $\Pr_{\pi_{14}}[\beta_j=0]\le169\,597/N$.
+\end{corollary}
+\begin{proof}
+Insert $\tau^2\le13/q+(q/2-1)/q^2$ (Corollary~\ref{cor:half}) and $\nu^2\le2/(q-1)+\tau^2$ in \eqref{eq:D2}. Divided by $u$, each of the terms
+$\eta_{\mathrm{rss}}/u$, $(\nu^2+(2+\sqrt2)/\sqrt{q-1})/u$ and $\nu/u$ is non-increasing in $q$ for $q\ge32$, so the ratio $\theta_2/u$ is at most its value at
+$m=5$, which is below $489/50$ (outward rational evaluation). Then $K_C<25.85$ for $C=489/50$, and Proposition~\ref{prop:condsteps} gives
+$\sqrt2K_C^3<24\,405$ and $1+(1779/256)\sqrt2K_C^3<169\,597$.
+\end{proof}
+% SOURCE: c8/checks/p803_steps.py part B (ratio list m=5..201, K_C = 25.84168, D13 coefficient 24404.91, zero-word coefficient 169596.07).

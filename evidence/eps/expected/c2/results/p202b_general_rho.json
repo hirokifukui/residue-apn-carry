@@ -1,0 +1,32 @@
+[
+ {
+  "rho": 7,
+  "rho_weight": 3,
+  "DU_B": 32,
+  "max_by_class": {
+   "G": 8,
+   "E": 32,
+   "Z": 32
+  }
+ },
+ {
+  "rho": 21,
+  "rho_weight": 3,
+  "DU_B": 32,
+  "max_by_class": {
+   "G": 8,
+   "E": 32,
+   "Z": 32
+  }
+ },
+ {
+  "rho": 31,
+  "rho_weight": 5,
+  "DU_B": 32,
+  "max_by_class": {
+   "G": 8,
+   "E": 32,
+   "Z": 32
+  }
+ }
+]

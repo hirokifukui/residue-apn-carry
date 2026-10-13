@@ -1,0 +1,14 @@
+evidence_path	sha256	bytes	private_source	role
+c7/fourier/code/fr_lib.py	2a22d97a7e20fea3ba9c4a387e2d490be977de7e2ab124ba12e8f1f76b2eecc8	5282	w/c7/fourier/code/fr_lib.py	code
+c7/fourier/code/p706_calib.py	d44d2299dbc73ce20742b8e5a7081fd84004e6f04b242c1fe9641c3aa33d29d4	7116	w/c7/fourier/code/p706_calib.py	code
+c5/a1/code/a1c5_lib.py	2e0e5f3b67bddea2ef5c67f9582a071c6cbb79be5bf2086ea35a6aed8c128364	6624	w/c5/a1/code/a1c5_lib.py	code
+c1/code/ddt.py	1f0507e16b36dcbd6ce9a80346be621b61f3d2cceb45a7688f26ef17ceea12c9	1353	w/c1/code/ddt.py	code
+c1/code/codes.py	22d0272e92151fcf67a706166cc9c4a3b74ba264bd09c6e3d77e6a07c028388c	946	w/c1/code/codes.py	code
+expected/c7/fourier/logs/p706_m3.log	9c146daad895cd1b46cb63073a03b2681354375fe9fdc4fa0857655fc654a61c	7520	w/c7/fourier/logs/p706_m3.log	expected
+expected/c7/fourier/logs/p706_m3.exit	418a5c17f33c70e99b0cc0a07fce69191489cfedc94164bfa903785777c5bd4b	7	w/c7/fourier/logs/p706_m3.exit	expected
+expected/c7/fourier/logs/p706_m5.log	bbead747c3df501990264fd80095a75e1fa962803c5e98528732494d821976c4	7641	w/c7/fourier/logs/p706_m5.log	expected
+expected/c7/fourier/logs/p706_m5.exit	418a5c17f33c70e99b0cc0a07fce69191489cfedc94164bfa903785777c5bd4b	7	w/c7/fourier/logs/p706_m5.exit	expected
+expected/c7/fourier/results/p706_m3.json	0ec3c798f5571d6d7dbf784a8535b57d3728863ca61c763c50cc20d77c720d11	9325	w/c7/fourier/results/p706_m3.json	expected
+expected/c7/fourier/results/p706_m5.json	ef922466483b3d841cf6a4d2dc1dbc902dce859466c43c042f0f425e8cb2ad56	9457	w/c7/fourier/results/p706_m5.json	expected
+README.md	f845d69b0162fb8a1303864189935b94e4c794e634173b05bc1416f9acf5f210	1691	NEW (written for the evidence set)	new
+rep.sh	9f24d94dda4879f709636614b0670bd5a25525bb77ffd8ed5183b6099220a21b	373	NEW (written for the evidence set)	new

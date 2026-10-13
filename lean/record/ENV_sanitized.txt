@@ -1,0 +1,5 @@
+date: 2026-10-12T11:00:29Z
+Lean (version 4.31.0-rc1, arm64-apple-darwin24.6.0, commit fd009949156901e6cf15b6d9bf1122294b8e697a, Release)
+toolchain file: leanprover/lean4:v4.31.0-rc1
+mathlib rev: 
+   "inputRev": "d568c8c09630de097a046763c17b9ea99f95f950",

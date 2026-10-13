@@ -1,0 +1,20 @@
+-- ResidueAPN (third paper): root module of the Lean source closure (C9, v2: every file listed in Section 7).
+import ApnCipher.WarmStart
+import ApnCipher.SuffixReset
+import ApnCipher.ResetCompose
+import ApnCipher.CarryPD
+import ApnCipher.CarryZ
+import ApnCipher.CarryE_v2
+import ApnCipher.OneRound
+import ApnCipher.Transport_v2
+import ApnCipher.RepairCore_v2
+import ApnCipher.W2Bridge
+import ApnCipher.ColsB_v3
+import ApnCipher.ColsF_v2
+import ApnCipher.TwoStep
+import ApnCipher.Bridge
+import ApnCipher.DigitSplit_v2
+import ApnCipher.RepairLink_v2
+import ApnCipher.VacuousZ4
+import ApnCipher.MixAdd
+import ApnCipher.ThetaZ4_v3

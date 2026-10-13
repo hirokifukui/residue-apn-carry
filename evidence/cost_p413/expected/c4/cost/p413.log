@@ -1,0 +1,43 @@
+counts {'SPLIT_TAIL_(2,2,1,1)': {'F': 10, 'J': 6, 'M': 3, 'K': 10}, 'P3B_(2,2,2)': {'F': 9, 'J': 6, 'M': 2, 'K': 9}, 'THICK_(2,2,2,2)': {'F': 12, 'J': 8, 'M': 3, 'K': 12}, 'MAC_C2_(2,2)_ref': {'F': 6, 'J': 4, 'M': 1, 'K': 5}}
+COST SPLIT_TAIL_(2,2,1,1) 10*c_F*w + 6*c_J*w + 3*c_M + 10*c_k*w
+COST P3B_(2,2,2) 9*c_F*w + 6*c_J*w + 2*c_M + 9*c_k*w
+COST THICK_(2,2,2,2) 12*c_F*w + 8*c_J*w + 3*c_M + 12*c_k*w
+COST MAC_C2_(2,2)_ref 6*c_F*w + 4*c_J*w + c_M + 5*c_k*w
+DIFF SPLIT_TAIL_(2,2,1,1) - P3B_(2,2,2) = c_F*w + c_M + c_k*w
+DIFF THICK_(2,2,2,2) - SPLIT_TAIL_(2,2,1,1) = 2*c_F*w + 2*c_J*w + 2*c_k*w
+DIFF THICK_(2,2,2,2) - P3B_(2,2,2) = 3*c_F*w + 2*c_J*w + c_M + 3*c_k*w
+DIFF P3B_(2,2,2) - MAC_C2_(2,2)_ref = 3*c_F*w + 2*c_J*w + c_M + 4*c_k*w
+BOUND m=5 w=2 width=20 bound=1/65536 log2=-16 keybits={'SPLIT_TAIL_(2,2,1,1)': 200, 'P3B_(2,2,2)': 180, 'THICK_(2,2,2,2)': 240, 'MAC_C2_(2,2)_ref': 100}
+BOUND m=5 w=4 width=40 bound=1/4294967296 log2=-32 keybits={'SPLIT_TAIL_(2,2,1,1)': 400, 'P3B_(2,2,2)': 360, 'THICK_(2,2,2,2)': 480, 'MAC_C2_(2,2)_ref': 200}
+BOUND m=7 w=2 width=28 bound=1/16777216 log2=-24 keybits={'SPLIT_TAIL_(2,2,1,1)': 280, 'P3B_(2,2,2)': 252, 'THICK_(2,2,2,2)': 336, 'MAC_C2_(2,2)_ref': 140}
+BOUND m=7 w=4 width=56 bound=1/281474976710656 log2=-48 keybits={'SPLIT_TAIL_(2,2,1,1)': 560, 'P3B_(2,2,2)': 504, 'THICK_(2,2,2,2)': 672, 'MAC_C2_(2,2)_ref': 280}
+INV m=5 mults=2 sq=4 chain=['b2=b1^(2^1)*b1', 'b4=b2^(2^2)*b2', 'inv=b4^2'] verified=True DU=2
+INV m=7 mults=3 sq=6 chain=['b2=b1^(2^1)*b1', 'b3=b2^2*x', 'b6=b3^(2^3)*b3', 'inv=b6^2'] verified=True DU=2
+LIN {5: {'squaring_map_naive_XOR': {1: 3, 2: 7}, 'd0_linear_part_naive_XOR': 5, 'd0_constant_NOT': 1}, 7: {'squaring_map_naive_XOR': {1: 3, 3: 14}, 'd0_linear_part_naive_XOR': 9, 'd0_constant_NOT': 1}}
+PD_F_bit_m5 75 93
+BIT SPLIT_TAIL_(2,2,1,1) w=2 A_all_MDS_alt F_natural {'AND': 1033, 'XOR': 3565}
+BIT SPLIT_TAIL_(2,2,1,1) w=2 A_all_MDS_alt F_PD_inv_d0_h0 {'AND': 1633, 'XOR': 2265}
+BIT SPLIT_TAIL_(2,2,1,1) w=2 B_M1_MDS_alt_M2M3_M2 F_natural {'AND': 1105, 'XOR': 3909}
+BIT SPLIT_TAIL_(2,2,1,1) w=2 B_M1_MDS_alt_M2M3_M2 F_PD_inv_d0_h0 {'AND': 1705, 'XOR': 2609}
+BIT SPLIT_TAIL_(2,2,1,1) w=4 L_C_substitute_for_Cauchy4 F_natural {'AND': 2477, 'XOR': 9089}
+BIT SPLIT_TAIL_(2,2,1,1) w=4 L_C_substitute_for_Cauchy4 F_PD_inv_d0_h0 {'AND': 3677, 'XOR': 6489}
+BIT P3B_(2,2,2) w=2 A_all_MDS_alt F_natural {'AND': 922, 'XOR': 3184}
+BIT P3B_(2,2,2) w=2 A_all_MDS_alt F_PD_inv_d0_h0 {'AND': 1462, 'XOR': 2014}
+BIT P3B_(2,2,2) w=2 B_M1_MDS_alt_M2M3_M2 F_natural {'AND': 958, 'XOR': 3356}
+BIT P3B_(2,2,2) w=2 B_M1_MDS_alt_M2M3_M2 F_PD_inv_d0_h0 {'AND': 1498, 'XOR': 2186}
+BIT P3B_(2,2,2) w=4 L_C_substitute_for_Cauchy4 F_natural {'AND': 2118, 'XOR': 7674}
+BIT P3B_(2,2,2) w=4 L_C_substitute_for_Cauchy4 F_PD_inv_d0_h0 {'AND': 3198, 'XOR': 5334}
+BIT THICK_(2,2,2,2) w=2 A_all_MDS_alt F_natural {'AND': 1233, 'XOR': 4257}
+BIT THICK_(2,2,2,2) w=2 A_all_MDS_alt F_PD_inv_d0_h0 {'AND': 1953, 'XOR': 2697}
+BIT THICK_(2,2,2,2) w=2 B_M1_MDS_alt_M2M3_M2 F_natural {'AND': 1305, 'XOR': 4601}
+BIT THICK_(2,2,2,2) w=2 B_M1_MDS_alt_M2M3_M2 F_PD_inv_d0_h0 {'AND': 2025, 'XOR': 3041}
+BIT THICK_(2,2,2,2) w=4 L_C_substitute_for_Cauchy4 F_natural {'AND': 2877, 'XOR': 10473}
+BIT THICK_(2,2,2,2) w=4 L_C_substitute_for_Cauchy4 F_PD_inv_d0_h0 {'AND': 4317, 'XOR': 7353}
+BIT MAC_C2_(2,2)_ref w=2 A_all_MDS_alt F_natural {'AND': 601, 'XOR': 2081}
+BIT MAC_C2_(2,2)_ref w=2 A_all_MDS_alt F_PD_inv_d0_h0 {'AND': 961, 'XOR': 1301}
+BIT MAC_C2_(2,2)_ref w=2 B_M1_MDS_alt_M2M3_M2 F_natural {'AND': 601, 'XOR': 2081}
+BIT MAC_C2_(2,2)_ref w=2 B_M1_MDS_alt_M2M3_M2 F_PD_inv_d0_h0 {'AND': 961, 'XOR': 1301}
+BIT MAC_C2_(2,2)_ref w=4 L_C_substitute_for_Cauchy4 F_natural {'AND': 1339, 'XOR': 4815}
+BIT MAC_C2_(2,2)_ref w=4 L_C_substitute_for_Cauchy4 F_PD_inv_d0_h0 {'AND': 2059, 'XOR': 3255}
+FEISTEL {"Feistel3_f=x^-1": {"AND": 150, "XOR": 219}, "Feistel3_f=x^3": {"AND": 75, "XOR": 114, "note": "x^3 = x^2*x: 1 squaring (linear) + 1 product; APN permutation for odd m (checked below)"}, "S2_PD_inv": {"AND": 235, "XOR": 309}, "S2_natural": {"AND": 145, "XOR": 504}} {5: {'permutation': True, 'differential_uniformity': 2}, 7: {'permutation': True, 'differential_uniformity': 2}}
+P413=PASS

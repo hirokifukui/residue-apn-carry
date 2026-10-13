@@ -1,0 +1,7 @@
+'ApnCipherC3.edp2_of_init' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ApnCipherC3.boundW1_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ApnCipherC3.boundW2_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ApnCipherC3.boundW3_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ApnCipherC3.boundW4_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ApnCipherC3.boundW_le_t5' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ApnCipherC3.edp2_le_four_div_N' depends on axioms: [propext, Classical.choice, Quot.sound]

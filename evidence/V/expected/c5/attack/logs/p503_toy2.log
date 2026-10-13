@@ -1,0 +1,88 @@
+F_toy_m2 key 0 s 3 [256, 172, 11, 1] [61952, 2240, 64] AMBIGUOUS [True, True, True] 0.004
+F_toy_m2 key 0 s 4 [256, 196, 8, 1, 1] [70144, 992, 96, 16] AMBIGUOUS [True, True, True, True] 0.003
+F_toy_m2 key 0 s 5 [256, 205, 14, 1, 1, 1] [69760, 736, 16, 16, 16] AMBIGUOUS [True, True, True, True, True] 0.004
+F_toy_m2 key 0 s 6 [256, 205, 16, 1, 1, 1, 1] [69760, 544, 32, 16, 16, 16] AMBIGUOUS [True, True, True, True, True, True] 0.004
+F_toy_m2 key 1 s 3 [256, 212, 15, 1] [66176, 416, 16] AMBIGUOUS [True, True, True] 0.003
+F_toy_m2 key 1 s 4 [256, 191, 15, 1, 1] [65792, 512, 16, 16] AMBIGUOUS [True, True, True, True] 0.003
+F_toy_m2 key 1 s 5 [256, 183, 10, 1, 1, 1] [62592, 304, 16, 16, 16] AMBIGUOUS [True, True, True, True, True] 0.003
+F_toy_m2 key 1 s 6 [256, 203, 19, 1, 1, 1, 1] [67968, 384, 16, 16, 16, 16] AMBIGUOUS [True, True, True, True, True, True] 0.004
+F_toy_m2 key 2 s 3 [256, 243, 13, 1] [68224, 224, 16] AMBIGUOUS [True, True, True] 0.004
+F_toy_m2 key 2 s 4 [256, 203, 19, 1, 1] [70144, 448, 16, 16] AMBIGUOUS [True, True, True, True] 0.003
+F_toy_m2 key 2 s 5 [256, 198, 20, 1, 1, 1] [64000, 368, 16, 16, 16] AMBIGUOUS [True, True, True, True, True] 0.004
+F_toy_m2 key 2 s 6 [256, 194, 8, 1, 1, 1, 1] [68736, 176, 16, 16, 16, 16] AMBIGUOUS [True, True, True, True, True, True] 0.004
+F_toy_m2 key 3 s 3 [256, 180, 14, 1] [60416, 336, 16] AMBIGUOUS [True, True, True] 0.003
+F_toy_m2 key 3 s 4 [256, 192, 10, 1, 1] [76672, 368, 32, 16] AMBIGUOUS [True, True, True, True] 0.003
+F_toy_m2 key 3 s 5 [256, 201, 12, 1, 1, 1] [64384, 256, 16, 16, 16] AMBIGUOUS [True, True, True, True, True] 0.004
+F_toy_m2 key 3 s 6 [256, 180, 10, 1, 1, 1, 1] [60416, 256, 16, 16, 16, 16] AMBIGUOUS [True, True, True, True, True, True] 0.004
+F_toy_m2 key 4 s 3 [256, 209, 10, 1] [62976, 176, 16] AMBIGUOUS [True, True, True] 0.003
+F_toy_m2 key 4 s 4 [256, 195, 16, 1, 1] [76288, 416, 16, 16] AMBIGUOUS [True, True, True, True] 0.003
+F_toy_m2 key 4 s 5 [256, 204, 16, 1, 1, 1] [65408, 368, 16, 16, 16] AMBIGUOUS [True, True, True, True, True] 0.004
+F_toy_m2 key 4 s 6 [256, 223, 16, 1, 1, 1, 1] [68224, 368, 16, 16, 16, 16] AMBIGUOUS [True, True, True, True, True, True] 0.004
+F_toy_m2 key 5 s 3 [256, 201, 8, 1] [70528, 192, 16] AMBIGUOUS [True, True, True] 0.003
+F_toy_m2 key 5 s 4 [256, 181, 20, 1, 1] [60928, 416, 16, 16] AMBIGUOUS [True, True, True, True] 0.003
+F_toy_m2 key 5 s 5 [256, 202, 16, 1, 1, 1] [66688, 368, 16, 16, 16] AMBIGUOUS [True, True, True, True, True] 0.003
+F_toy_m2 key 5 s 6 [256, 245, 15, 1, 1, 1, 1] [62208, 336, 16, 16, 16, 16] AMBIGUOUS [True, True, True, True, True, True] 0.004
+F_toy_m2 key 6 s 3 [256, 151, 13, 1] [59264, 416, 32] AMBIGUOUS [True, True, True] 0.003
+F_toy_m2 key 6 s 4 [256, 176, 11, 1, 1] [58752, 336, 32, 32] AMBIGUOUS [True, True, True, True] 0.004
+F_toy_m2 key 6 s 5 [256, 163, 16, 1, 1, 1] [65408, 352, 32, 32, 32] AMBIGUOUS [True, True, True, True, True] 0.004
+F_toy_m2 key 6 s 6 [256, 187, 8, 1, 1, 1, 1] [63360, 272, 32, 32, 32, 32] AMBIGUOUS [True, True, True, True, True, True] 0.004
+F_toy_m2 key 7 s 3 [256, 190, 13, 1] [66432, 272, 16] AMBIGUOUS [True, True, True] 0.003
+F_toy_m2 key 7 s 4 [256, 152, 9, 1, 1] [66048, 176, 32, 16] AMBIGUOUS [True, True, True, True] 0.003
+F_toy_m2 key 7 s 5 [256, 190, 9, 1, 1, 1] [63488, 176, 32, 16, 16] AMBIGUOUS [True, True, True, True, True] 0.004
+F_toy_m2 key 7 s 6 [256, 190, 12, 1, 1, 1, 1] [63488, 224, 16, 16, 16, 16] AMBIGUOUS [True, True, True, True, True, True] 0.004
+F_toy_m2 key 8 s 3 [256, 198, 19, 1] [69888, 368, 16] AMBIGUOUS [True, True, True] 0.003
+F_toy_m2 key 8 s 4 [256, 118, 9, 1, 1] [62976, 192, 16, 16] AMBIGUOUS [True, True, True, True] 0.003
+F_toy_m2 key 8 s 5 [256, 118, 13, 1, 1, 1] [62976, 256, 16, 16, 16] AMBIGUOUS [True, True, True, True, True] 0.003
+F_toy_m2 key 8 s 6 [256, 223, 14, 1, 1, 1, 1] [68096, 304, 16, 16, 16, 16] AMBIGUOUS [True, True, True, True, True, True] 0.003
+F_toy_m2 key 9 s 3 [256, 192, 12, 1] [61440, 288, 16] AMBIGUOUS [True, True, True] 0.004
+F_toy_m2 key 9 s 4 [256, 182, 18, 1, 1] [63360, 368, 16, 16] AMBIGUOUS [True, True, True, True] 0.003
+F_toy_m2 key 9 s 5 [256, 137, 9, 1, 1, 1] [58496, 224, 16, 16, 16] AMBIGUOUS [True, True, True, True, True] 0.003
+F_toy_m2 key 9 s 6 [256, 181, 11, 1, 1, 1, 1] [67584, 256, 16, 16, 16, 16] AMBIGUOUS [True, True, True, True, True, True] 0.004
+F_toy_m2 key 10 s 3 [256, 190, 11, 1] [61824, 272, 64] AMBIGUOUS [True, True, True] 0.003
+F_toy_m2 key 10 s 4 [256, 208, 10, 1, 1] [68736, 208, 32, 16] AMBIGUOUS [True, True, True, True] 0.004
+F_toy_m2 key 10 s 5 [256, 208, 4, 1, 1, 1] [68736, 80, 16, 16, 16] AMBIGUOUS [True, True, True, True, True] 0.003
+F_toy_m2 key 10 s 6 [256, 207, 14, 1, 1, 1, 1] [65280, 432, 16, 16, 16, 16] AMBIGUOUS [True, True, True, True, True, True] 0.004
+F_toy_m2 key 11 s 3 [256, 202, 12, 1] [72448, 304, 16] AMBIGUOUS [True, True, True] 0.003
+F_toy_m2 key 11 s 4 [256, 174, 9, 1, 1] [67072, 240, 16, 16] AMBIGUOUS [True, True, True, True] 0.003
+F_toy_m2 key 11 s 5 [256, 195, 20, 1, 1, 1] [66688, 400, 16, 16, 16] AMBIGUOUS [True, True, True, True, True] 0.004
+F_toy_m2 key 11 s 6 [256, 155, 13, 1, 1, 1, 1] [62848, 272, 16, 16, 16, 16] AMBIGUOUS [True, True, True, True, True, True] 0.003
+F_toy_m2 key 12 s 3 [256, 208, 9, 1] [64256, 192, 16] AMBIGUOUS [True, True, True] 0.003
+F_toy_m2 key 12 s 4 [256, 208, 11, 1, 1] [64256, 272, 16, 16] AMBIGUOUS [True, True, True, True] 0.004
+F_toy_m2 key 12 s 5 [256, 163, 16, 2, 1, 1] [60032, 400, 32, 16, 16] AMBIGUOUS [True, True, True, True, True] 0.003
+F_toy_m2 key 12 s 6 [256, 215, 11, 1, 1, 1, 1] [76544, 304, 16, 16, 16, 16] AMBIGUOUS [True, True, True, True, True, True] 0.005
+F_toy_m2 key 13 s 3 [256, 202, 8, 1] [65024, 384, 64] AMBIGUOUS [True, True, True] 0.003
+F_toy_m2 key 13 s 4 [256, 216, 12, 1, 1] [74240, 304, 64, 64] AMBIGUOUS [True, True, True, True] 0.004
+F_toy_m2 key 13 s 5 [256, 108, 11, 1, 1, 1] [60928, 304, 64, 64, 32] AMBIGUOUS [True, True, True, True, True] 0.003
+F_toy_m2 key 13 s 6 [256, 175, 8, 1, 1, 1, 1] [60160, 352, 192, 96, 32, 32] AMBIGUOUS [True, True, True, True, True, True] 0.004
+F_toy_m2 key 14 s 3 [256, 243, 5, 1] [67584, 192, 16] AMBIGUOUS [True, True, True] 0.003
+F_toy_m2 key 14 s 4 [256, 243, 11, 1, 1] [67584, 224, 16, 16] AMBIGUOUS [True, True, True, True] 0.003
+F_toy_m2 key 14 s 5 [256, 218, 11, 1, 1, 1] [62848, 304, 16, 16, 16] AMBIGUOUS [True, True, True, True, True] 0.004
+F_toy_m2 key 14 s 6 [256, 192, 9, 1, 1, 1, 1] [66048, 320, 64, 16, 16, 16] AMBIGUOUS [True, True, True, True, True, True] 0.004
+F_toy_m2 key 15 s 3 [256, 175, 16, 1] [64640, 416, 16] AMBIGUOUS [True, True, True] 0.003
+F_toy_m2 key 15 s 4 [256, 187, 13, 1, 1] [63744, 368, 16, 16] AMBIGUOUS [True, True, True, True] 0.003
+F_toy_m2 key 15 s 5 [256, 164, 5, 1, 1, 1] [58496, 96, 16, 16, 16] AMBIGUOUS [True, True, True, True, True] 0.003
+F_toy_m2 key 15 s 6 [256, 194, 6, 1, 1, 1, 1] [62080, 144, 16, 16, 16, 16] AMBIGUOUS [True, True, True, True, True, True] 0.004
+DONE 1.4
+{'oracle': 'RF:10', 'factorized_theta_after_slice': [68224, 480, 0, 0, 0], 'literal_theta_after_slice': [68224, 480, 0, 0, 0], 'sets_equal': True, 'candidate_exists_factorized': False, 'candidate_exists_literal': False, 'n_final': 0, 'literal_seconds': 2.9, 'attack_T_wall_s': 0.006}
+{'oracle': 'RF:11', 'factorized_theta_after_slice': [64768, 304, 0, 0, 0], 'literal_theta_after_slice': [64768, 304, 0, 0, 0], 'sets_equal': True, 'candidate_exists_factorized': False, 'candidate_exists_literal': False, 'n_final': 0, 'literal_seconds': 2.9, 'attack_T_wall_s': 0.003}
+{'oracle': 'RF:12', 'factorized_theta_after_slice': [64128, 304, 0, 0, 0], 'literal_theta_after_slice': [64128, 304, 0, 0, 0], 'sets_equal': True, 'candidate_exists_factorized': False, 'candidate_exists_literal': False, 'n_final': 0, 'literal_seconds': 2.9, 'attack_T_wall_s': 0.003}
+{'oracle': 'RF:13', 'factorized_theta_after_slice': [67328, 208, 0, 0, 0], 'literal_theta_after_slice': [67328, 208, 0, 0, 0], 'sets_equal': True, 'candidate_exists_factorized': False, 'candidate_exists_literal': False, 'n_final': 0, 'literal_seconds': 2.9, 'attack_T_wall_s': 0.003}
+{'oracle': 'RF:14', 'factorized_theta_after_slice': [71552, 368, 0, 0, 0], 'literal_theta_after_slice': [71552, 368, 0, 0, 0], 'sets_equal': True, 'candidate_exists_factorized': False, 'candidate_exists_literal': False, 'n_final': 0, 'literal_seconds': 2.9, 'attack_T_wall_s': 0.003}
+{'oracle': 'RF:15', 'factorized_theta_after_slice': [70400, 320, 0, 0, 0], 'literal_theta_after_slice': [70400, 320, 0, 0, 0], 'sets_equal': True, 'candidate_exists_factorized': False, 'candidate_exists_literal': False, 'n_final': 0, 'literal_seconds': 2.9, 'attack_T_wall_s': 0.003}
+{'oracle': 'RF:16', 'factorized_theta_after_slice': [66688, 208, 0, 0, 0], 'literal_theta_after_slice': [66688, 208, 0, 0, 0], 'sets_equal': True, 'candidate_exists_factorized': False, 'candidate_exists_literal': False, 'n_final': 0, 'literal_seconds': 2.9, 'attack_T_wall_s': 0.003}
+{'oracle': 'RF:17', 'factorized_theta_after_slice': [74496, 192, 0, 0, 0], 'literal_theta_after_slice': [74496, 192, 0, 0, 0], 'sets_equal': True, 'candidate_exists_factorized': False, 'candidate_exists_literal': False, 'n_final': 0, 'literal_seconds': 3.0, 'attack_T_wall_s': 0.003}
+{'oracle': 'RF:18', 'factorized_theta_after_slice': [65792, 176, 0, 0, 0], 'literal_theta_after_slice': [65792, 176, 0, 0, 0], 'sets_equal': True, 'candidate_exists_factorized': False, 'candidate_exists_literal': False, 'n_final': 0, 'literal_seconds': 2.9, 'attack_T_wall_s': 0.003}
+{'oracle': 'RF:19', 'factorized_theta_after_slice': [61312, 272, 0, 0, 0], 'literal_theta_after_slice': [61312, 272, 0, 0, 0], 'sets_equal': True, 'candidate_exists_factorized': False, 'candidate_exists_literal': False, 'n_final': 0, 'literal_seconds': 2.9, 'attack_T_wall_s': 0.003}
+{'oracle': 'RP:10', 'factorized_theta_after_slice': [63104, 336, 0, 0, 0], 'literal_theta_after_slice': [63104, 336, 0, 0, 0], 'sets_equal': True, 'candidate_exists_factorized': False, 'candidate_exists_literal': False, 'n_final': 0, 'literal_seconds': 2.9, 'attack_T_wall_s': 0.004}
+{'oracle': 'RP:11', 'factorized_theta_after_slice': [65408, 160, 16, 0, 0], 'literal_theta_after_slice': [65408, 160, 16, 0, 0], 'sets_equal': True, 'candidate_exists_factorized': False, 'candidate_exists_literal': False, 'n_final': 0, 'literal_seconds': 2.9, 'attack_T_wall_s': 0.003}
+{'oracle': 'RP:12', 'factorized_theta_after_slice': [66304, 320, 0, 0, 0], 'literal_theta_after_slice': [66304, 320, 0, 0, 0], 'sets_equal': True, 'candidate_exists_factorized': False, 'candidate_exists_literal': False, 'n_final': 0, 'literal_seconds': 2.9, 'attack_T_wall_s': 0.004}
+{'oracle': 'RP:13', 'factorized_theta_after_slice': [62592, 224, 0, 0, 0], 'literal_theta_after_slice': [62592, 224, 0, 0, 0], 'sets_equal': True, 'candidate_exists_factorized': False, 'candidate_exists_literal': False, 'n_final': 0, 'literal_seconds': 2.9, 'attack_T_wall_s': 0.003}
+{'oracle': 'RP:14', 'factorized_theta_after_slice': [66432, 256, 0, 0, 0], 'literal_theta_after_slice': [66432, 256, 0, 0, 0], 'sets_equal': True, 'candidate_exists_factorized': False, 'candidate_exists_literal': False, 'n_final': 0, 'literal_seconds': 2.9, 'attack_T_wall_s': 0.003}
+{'oracle': 'RP:15', 'factorized_theta_after_slice': [59264, 128, 0, 0, 0], 'literal_theta_after_slice': [59264, 128, 0, 0, 0], 'sets_equal': True, 'candidate_exists_factorized': False, 'candidate_exists_literal': False, 'n_final': 0, 'literal_seconds': 2.9, 'attack_T_wall_s': 0.003}
+{'oracle': 'RP:16', 'factorized_theta_after_slice': [63616, 288, 0, 0, 0], 'literal_theta_after_slice': [63616, 288, 0, 0, 0], 'sets_equal': True, 'candidate_exists_factorized': False, 'candidate_exists_literal': False, 'n_final': 0, 'literal_seconds': 2.9, 'attack_T_wall_s': 0.003}
+{'oracle': 'RP:17', 'factorized_theta_after_slice': [67712, 432, 0, 0, 0], 'literal_theta_after_slice': [67712, 432, 0, 0, 0], 'sets_equal': True, 'candidate_exists_factorized': False, 'candidate_exists_literal': False, 'n_final': 0, 'literal_seconds': 2.9, 'attack_T_wall_s': 0.004}
+{'oracle': 'RP:18', 'factorized_theta_after_slice': [60160, 192, 0, 0, 0], 'literal_theta_after_slice': [60160, 192, 0, 0, 0], 'sets_equal': True, 'candidate_exists_factorized': False, 'candidate_exists_literal': False, 'n_final': 0, 'literal_seconds': 2.8, 'attack_T_wall_s': 0.004}
+{'oracle': 'RP:19', 'factorized_theta_after_slice': [63360, 224, 0, 0, 0], 'literal_theta_after_slice': [63360, 224, 0, 0, 0], 'sets_equal': True, 'candidate_exists_factorized': False, 'candidate_exists_literal': False, 'n_final': 0, 'literal_seconds': 3.0, 'attack_T_wall_s': 0.003}
+{'oracle': 'E:10', 'factorized_theta_after_slice': [63872, 224, 16, 16, 16], 'literal_theta_after_slice': [63872, 224, 16, 16, 16], 'sets_equal': True, 'candidate_exists_factorized': True, 'candidate_exists_literal': True, 'n_final': 16, 'literal_seconds': 2.9, 'attack_T_wall_s': 0.004, 'true_in_literal': True}
+{'oracle': 'E:11', 'factorized_theta_after_slice': [61952, 192, 16, 16, 16], 'literal_theta_after_slice': [61952, 192, 16, 16, 16], 'sets_equal': True, 'candidate_exists_factorized': True, 'candidate_exists_literal': True, 'n_final': 16, 'literal_seconds': 2.9, 'attack_T_wall_s': 0.003, 'true_in_literal': True}
+DONE 64.1

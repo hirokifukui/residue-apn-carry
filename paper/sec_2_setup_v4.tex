@@ -1,0 +1,151 @@
+% sec_2_setup_v4.tex -- C8 (P8-01, GPT C7-F01): DDT normalized by |X| (N for one word, N^w for w words);
+% product rule for word-wise maps stated once. v3: two more displays split (layout only).
+\section{Two-digit coordinates, carry, and the PD assumption}\label{sec:setup}
+
+\subsection{Field, ring and coordinates}
+Let $m\ge 3$, $q=2^m$, and let $\Fq=\FF[t]/(f)$ with $f$ irreducible of degree $m$. We fix the
+polynomial basis $1,t,\dots,t^{m-1}$ once and for all and identify $\Fq$ with $\FF^m$ through it.
+We write $\oplus$ for addition in $\Fq$, juxtaposition for the field product, and $a\star u$ for the
+coordinate-wise product in the fixed basis (bitwise AND). The operation $\star$ distributes over
+$\oplus$ and $u\star u=u$. For $x\in\Fq$, $\wt(x)$ is the number of non-zero coordinates.
+
+Let $R=\GR(4,m)=\mathbb Z_4[t]/(\hat f)$ with $\hat f$ a monic lift of $f$, and $N=|R|=q^2$. Every
+$x\in R$ is uniquely $x=\sum_i c_it^i$ with $c_i=a_i+2b_i\in\{0,1,2,3\}$; with $a=(a_i)$,
+$b=(b_i)\in\Fq$ and $\sigma(a)=\sum a_it^i$ we have $x=\sigma(a)+2\sigma(b)$ and we write $x=(a,b)$.
+The reduction $x\mapsto a$ is the ring homomorphism $R\to\Fq$.
+
+\begin{lemma}[Carry]\label{lem:add}
+$(a,b)+(u,v)=(a\oplus u,\ b\oplus v\oplus(a\star u))$ and $-(a,b)=(a,\ a\oplus b)$.
+For $y=(y_0,y_1)$, $z=(z_0,z_1)$ and $s=y_0\oplus z_0$,
+\[ y-z=\bigl(s,\ y_1\oplus z_1\oplus(z_0\star s)\bigr). \]
+\end{lemma}
+% SOURCE: c1/proofs/ClassTransition.md:18-22 (Lemma A, A'); negation: c5/a1/notes/UE_P5.md:9
+\begin{proof}
+Coefficient-wise $a_i+u_i=(a_i\oplus u_i)+2a_iu_i$ in $\mathbb Z_4$, and $2\sigma(x)+2\sigma(y)=2\sigma(x\oplus y)$
+because $4=0$. This gives the sum. For the difference, $z+(s,w)=(y_0,\ z_1\oplus w\oplus(z_0\star s))$
+by the sum formula, which equals $y$ exactly when $w=y_1\oplus z_1\oplus(z_0\star s)$. The negation
+is the case $y=0$.
+\end{proof}
+
+In particular a difference with $s=0$ has XOR high digit, while for $s\ne0$ the high digit carries
+the correction $z_0\star s$, which takes $2^{\wt(s)}$ values as $z_0$ varies.
+
+\subsection{Polynomial maps in coordinates}
+\begin{proposition}[Coordinate form and realizability]\label{prop:realize}
+Let $\mathsf F\in R[X]$ and let $\bar{\mathsf F}\in\Fq[X]$ be its reduction. Then
+\[
+\mathsf F(a,b)=\bigl(\bar{\mathsf F}(a),\ h(a)\oplus d(a)\,b\bigr),\qquad d=\bar{\mathsf F}'\ \text{(formal derivative)},
+\]
+where $h(a)$ is the high digit of $\mathsf F(\sigma(a))$. Conversely, for arbitrary functions
+$p,d,h:\Fq\to\Fq$ there is $\mathsf F\in R[X]$ with $\mathsf F(a,b)=(p(a),h(a)\oplus d(a)b)$.
+\end{proposition}
+% SOURCE: c1/proofs/ClassTransition.md:25-27 (Lemma T); c3/notes/PD_ROLES_H0_P3.md:19-23 (section 1), :36-38 (section 2.1)
+\begin{proof}
+For $y,z\in R$, $(y+2z)^n=y^n+2nzy^{n-1}+4(\cdots)$, hence $\mathsf F(y+2z)=\mathsf F(y)+2z\mathsf F'(y)$.
+With $y=\sigma(a)$, $z=\sigma(b)$, the term $2\sigma(b)\mathsf F'(\sigma(a))$ equals $2\sigma(\bar{\mathsf F}'(a)b)$, and adding
+an element of $2R$ only XORs the high digit. For the converse let $p_{\rm rep},d_{\rm rep}$ be the
+interpolating polynomials of degree $<q$ and put $G=p_{\rm rep}+(X^q-X)(d_{\rm rep}+p_{\rm rep}')$. On $\Fq$,
+$G=p$, and $G'=p'_{\rm rep}+(qX^{q-1}-1)(d_{\rm rep}+p'_{\rm rep})+(X^q-X)(\cdots)'$ equals
+$p'_{\rm rep}+d_{\rm rep}+p'_{\rm rep}=d$ on $\Fq$ (characteristic $2$, $q\equiv0$). Let $\mathsf F_0$ be any
+coefficient lift of $G$, with high digit $h_0$. If $\hat H$ lifts an interpolant of $h\oplus h_0$,
+then $2\hat H(\sigma(a)+2\sigma(b))=2\sigma(h(a)\oplus h_0(a))$, so $\mathsf F=\mathsf F_0+2\hat H$ has high digit
+$h(a)\oplus d(a)b$.
+\end{proof}
+
+Thus the quantifier ``over all coefficient lifts'' is the same as ``over all functions $h$'', and
+$d$ is not tied to $p$. Let $J(a,b)=(b,a)$; $J$ is a bijection of $R$ which is not additive.
+For $p,d,h$ as above put
+\begin{gather*}
+F=F_{p,d,h}:(a,b)\mapsto (p(a),\,h(a)\oplus d(a)b),\\
+B=J\circ F:(a,b)\mapsto(h(a)\oplus d(a)b,\,p(a)).
+\end{gather*}
+
+\subsection{The PD assumption}
+For $u\in\Fq$ write $D_up(a)=p(a\oplus u)\oplus p(a)$. A map $p$ is APN if for every $u\ne0$ and
+every $c$ the equation $D_up(x)=c$ has either no solution or exactly the two solutions
+$\{x,x\oplus u\}$.
+
+\begin{assumption}[PD]\label{ass:PD}
+\begin{enumerate}
+\item[(P1)] $p:\Fq\to\Fq$ is an APN permutation (not necessarily quadratic);
+\item[(P2)] $d=\varepsilon\oplus K$ with $K$ $\FF$-linear, $\ker K=\{0,\rho\}$ for some $\rho\ne0$, and $\varepsilon\notin\Img K$;
+\item[(P3)] $h:\Fq\to\Fq$ is arbitrary.
+\end{enumerate}
+We write $\omega=2^{\wt(\rho)}$, where the weight is taken in the fixed basis, and
+$S_\rho=\{x\star\rho:x\in\Fq\}$, so $|S_\rho|=\omega$.
+\end{assumption}
+% SOURCE: c3/notes/PD_ROLES_H0_P3.md:62-73 (theorem PD and its hypotheses); c5/notes/CORE_P5.md:9-13
+
+\begin{lemma}\label{lem:d}
+Under (P2): $d(a)\ne0$ for all $a$; $d(a\oplus u)\oplus d(a)=K(u)$; $d(a\oplus\rho)=d(a)$; every
+non-empty fibre of $d$ is a pair $\{a,a\oplus\rho\}$; $\Img d=\varepsilon\oplus\Img K$ is an affine
+hyperplane of $\Fq$ not containing $0$, so $|\Img d|=q/2$.
+\end{lemma}
+% SOURCE: c1/proofs/ClassTransition.md:12; c3/notes/PD_ROLES_H0_P3.md:42 (Fib follows from Aff, Ker)
+\begin{proof}
+$d(a)=0$ would mean $\varepsilon=K(a)\in\Img K$. The other statements follow from linearity of $K$
+and $\dim\ker K=1$.
+\end{proof}
+
+\begin{remark}
+The basis is fixed. Replacing $p$ by $p(\rho x)$ would normalize $\rho=1$, but this changes the map
+because $J$ and the carry are defined in the fixed basis; we never do this. For the inverse
+$p(x)=x^{q-2}$ with $m$ odd and $d_0(a)=(a^2+a+1)^2$ one has $\rho=1$, $\omega=2$
+(Section~\ref{sec:repair}). The inverse map is an APN permutation exactly for odd $m$; when an APN permutation
+is needed for all statements at once we therefore take $p(x)=x^{q-2}$ with $m\ge5$ odd. The counting lemmas of
+Section~\ref{sec:diff} and Theorem~\ref{thm:R1} use only (P1)--(P3) and do not use the parity of $m$.
+\end{remark}
+
+\subsection{Difference distribution and direction classes}
+All differences are ring differences. For a finite abelian group $X$ (below $X=R$ or $X=R^w$) and a map
+$G:X\to X$ put
+\begin{gather*}
+\delta_G(\alpha,\beta)=\#\{x\in X: G(x+\alpha)-G(x)=\beta\},\\
+T_G=\DP_G=\delta_G/|X|,\qquad \Delta(G)=\max_{\alpha\ne0,\beta}\delta_G(\alpha,\beta).
+\end{gather*}
+The normalizing factor is $N$ for one word and $N^w$ for $w$ words, so that every row of $T_G$ sums to $1$.
+For a word-wise map $G=(G_1,\dots,G_w)$ one has $\delta_G=\prod_i\delta_{G_i}$ and $|R^w|=N^w$, hence
+$T_G(\alpha,\beta)=\prod_iT_{G_i}(\alpha_i,\beta_i)$; multi-word tables enter only in this product form
+(Proposition~\ref{prop:markov}, Lemmas~\ref{lem:reset}, \ref{lem:D1}, Section~\ref{sec:mixing}). If $G$ is a permutation, $T_G$ is doubly stochastic, $T_G(0,\cdot)=e_0$ and $T_G(\alpha,0)=0$ for $\alpha\ne0$.
+A non-zero difference $\alpha=(u,v)$ belongs to the class
+\[
+\cZ:\ u=0\ (q-1\text{ elements}),\qquad \cE:\ u=\rho\ (q),\qquad \cG:\ u\notin\{0,\rho\}\ (q(q-2)).
+\]
+
+\subsection{Keys, local blocks and averaged probabilities}
+Keys are added in $R$. For $t\ge1$ the local block with $t$ key words is
+\[
+S_t(x;k_1,\dots,k_t)=F\bigl(B(\cdots B(B(x)+k_1)\cdots)+k_t\bigr),
+\]
+so $S_t$ uses $t+1$ evaluations of $F$ and $t$ of $J$. In the averaging model the keys, and a
+whitening key $k_0$ in front, are independent and uniform.
+
+\begin{proposition}[Key averaging; standard]\label{prop:markov}
+For $\alpha,\gamma\in R$,
+\[\E_{k_0,\dots,k_t}\DP_{x\mapsto S_t(x+k_0;k)}(\alpha,\gamma)=(T_B^{\,t}T_F)(\alpha,\gamma).\]
+\end{proposition}
+% SOURCE: c1/notes/MODEL.md:22,29 (model and key-averaged DP); c2/notes/AVERAGED_KERNEL_MDS.md:20-25. Known principle [LMM].
+\begin{proof}
+This is the Markov-cipher principle \cite{LMM}: for fixed inputs $x,x+\alpha$, the value $x+k_0$
+is uniform and the difference is $\alpha$; after each $B$ the addition of an independent uniform key
+makes the next input uniform and independent of the difference already produced, so the
+difference evolves by the transition matrix $T_B$, and finally by $T_F$.
+\end{proof}
+
+We write $\EDP_t=\max_{\alpha\ne0,\gamma}(T_B^tT_F)(\alpha,\gamma)$.
+
+\subsection{The \texorpdfstring{$(2,2,1,1)$}{(2,2,1,1)} arrangement}\label{ss:arr}
+Let $w\ge2$, let $M_1,M_2,M_3$ be $R$-linear automorphisms of $R^w$, and let local layers act
+word-wise. The arrangement studied in Section~\ref{sec:comp} is
+\[
+E(x)=S_1^{(4)}\Bigl(M_3\,S_1^{(3)}\bigl(M_2\,S_2^{(2)}(M_1\,S_2^{(1)}(x+k_0)+L_1)+L_2\bigr)+L_3\Bigr),
+\]
+with state names $X_1=S_2^{(1)}(x+k_0)$, $V_1=M_1X_1+L_1$, $X_2=S_2^{(2)}(V_1)$, $V_2=M_2X_2+L_2$,
+$X_3=S_1^{(3)}(V_2)$, $V_3=M_3X_3+L_3$, $Y=S_1^{(4)}(V_3)$. It has three mixing layers and two
+reset keys $L_2,L_3$ in front of the one-key layers. The key words are
+$k_0,L_1,L_2,L_3,K_3,K_4$ ($w$ words each) and $K_1,K_2$ ($2w$ words each), $10w$ words in total,
+all independent and uniform in the averaging model. These $10w$ words are the randomness of the
+model, not a security level; no key schedule is specified. The arrangement and the number of mixing
+layers are fixed throughout; we do not add layers. We assume that every entry and every minor of
+$M_1$ is a unit (MDS) and that $M_2,M_3$ are invertible.
+% SOURCE: c4/notes/CORE_P4.md:49-55; c5/spec/CANDIDATE_P5_SPLIT_TAIL.json (structure, keys, mixers, claims_not_made)

@@ -1,0 +1,31 @@
+ApnCipher/CarryZ.lean:39:0: warning: automatically included section variable(s) unused in theorem `ApnCipherC7.star_zero_right`:
+  [Fintype F]
+  [DecidableEq F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype F] [DecidableEq F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ApnCipher/CarryZ.lean:45:0: warning: automatically included section variable(s) unused in theorem `ApnCipherC7.star_add_left`:
+  [Fintype F]
+  [DecidableEq F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype F] [DecidableEq F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ApnCipher/CarryZ.lean:66:4: warning: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+ApnCipher/CarryZ.lean:81:6: warning: Try `simp at this` instead of `simpa using this`
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+ApnCipher/CarryZ.lean:76:12: warning: This simp argument is unused:
+  Pi.single_apply
+
+Hint: Omit it from the simp argument list.
+  simp [P̵i̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵,̵ ̵hj]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

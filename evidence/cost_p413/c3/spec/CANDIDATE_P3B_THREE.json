@@ -1,0 +1,17 @@
+{
+ "id": "CANDIDATE_P3B_THREE",
+ "status": "research candidate (C3, Claude 2026-10-10); not a recommendation for use; independent-key model, no key schedule",
+ "ring": "R = GR(4,m), q=2^m, N=q^2; encoding low m bits = digit 0; F table c1/data/F_m5_r3.npy (m=5), F_m7_r3.npy (m=7)",
+ "local_block": "S_2(x; k1,k2) = F( B( B(x) + k1 ) + k2 ),  B = J o F, + is ring addition",
+ "structure": "E(x) = S_2^(3)( M2 . S_2^(2)( M . S_2^(1)(x + k0) + L ) + L2 )   (wordwise S layers)",
+ "keys": {"k0": "R^w whitening", "K1": "w x 2 (layer 1)", "L": "R^w", "K2": "w x 2 (layer 2)", "L2": "R^w", "K3": "w x 2 (layer 3)", "total_words": "9w", "model": "all independent uniform"},
+ "mixers": {"w=2": "MDS_alt [[1,1],[1,t]] or M2 (c1/spec/mixer2.json); M2=M allowed", "w=4": "Cauchy4 (c2/macro/macro_ref.mixers)", "requirement": "all minors units over R (D1)"},
+ "cost": {"F": "9w", "J": "6w", "M": 2, "key_additions": "9w"},
+ "averaged_differential_bound": "max E_keys DP <= (4/N)^w for q>=32: warm start EDP_2<=4/N (P3-01) + D1 for layers 1-2 (C2 SB) + reset post-composition lemma (P3-05) for layer 3 with L2",
+ "known_structure": [
+  "one-word slice: state entering layer 3 has ring-sum 0 in every word for every key (balanced after second mixing); exploiting it needs the 2 layer-3 key words of each output word (N^2 guesses per word, independent per word)",
+  "C2 macro integral (each output word a permutation) and the P3A zero-sum after public peel are not observed (p306_tests, m5, 32 slices)"
+ ],
+ "reference_impl": "c3/macro/macro_p3.py class P3(kind='B'); tests c3/macro/p306_tests.py",
+ "superseded_or_rejected": {"CANDIDATE_P3A_SUFFIX (C=F^w or B^w)": "REFUTED as standalone: ring zero-sum after peeling public C, every key (P3-15 finding, reproduced 32/32 slices)", "CANDIDATE_P3A_SUFFIX (C=S1 keyed)": "zero-sum after guessing one key word per output word (N guesses)", "CANDIDATE_P2_SUPERBOX": "kept unchanged as a differential-theory baseline; full-word integral (P3-04)"}
+}

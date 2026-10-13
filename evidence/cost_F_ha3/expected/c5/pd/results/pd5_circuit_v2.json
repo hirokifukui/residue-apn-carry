@@ -1,0 +1,189 @@
+{
+ "id": "P5-09 gate DAG v2",
+ "rule": "C4 COST_P4 bit model (schoolbook product, naive linear rows, NOT for d0 constant)",
+ "m5_h0": {
+  "m": 5,
+  "h": "0",
+  "chain": "b2=b1^2 b1, b4=b2^(2^2) b2, inv=b4^2",
+  "counts": {
+   "AND": 75,
+   "XOR": 93,
+   "NOT": 1,
+   "IN": 10,
+   "CONST0": 0
+  },
+  "chain_only_counts": {
+   "AND": 50,
+   "XOR": 63,
+   "NOT": 0,
+   "IN": 10,
+   "CONST0": 0
+  },
+  "nodes": 179,
+  "b2_nodes": [
+   55,
+   56,
+   59,
+   61,
+   62
+  ],
+  "b2_fanout": [
+   6,
+   6,
+   8,
+   8,
+   9
+  ],
+  "eval_table_sha256": "9759027c651804280b207bfe430d30b565b3907859ca21d03a38d4d7c1eae47a",
+  "match": {
+   "c5/pd/data/F_PD_h0_m5.npy": true,
+   "c4/pd/data/F_pd_inv_m5.npy": true
+  },
+  "points": 1024,
+  "dag_file": "c5/pd/results/dag_m5_h0_v2.json",
+  "dag_file_sha256": "bd76444a9241d378e38cfb5de16d4421dd0501beea60980b9cd9a9021215a19a"
+ },
+ "m5_hX3": {
+  "m": 5,
+  "h": "a^3 (=b2 reused)",
+  "chain": "b2=b1^2 b1, b4=b2^(2^2) b2, inv=b4^2",
+  "counts": {
+   "AND": 75,
+   "XOR": 98,
+   "NOT": 1,
+   "IN": 10,
+   "CONST0": 0
+  },
+  "chain_only_counts": {
+   "AND": 50,
+   "XOR": 63,
+   "NOT": 0,
+   "IN": 10,
+   "CONST0": 0
+  },
+  "nodes": 184,
+  "b2_nodes": [
+   55,
+   56,
+   59,
+   61,
+   62
+  ],
+  "b2_fanout": [
+   7,
+   7,
+   9,
+   9,
+   10
+  ],
+  "eval_table_sha256": "25649a2579712258dc0f13d175b417e74befee1939283d477519053e1293daa7",
+  "match": {
+   "c5/pd/data/F_PD_hX3_m5.npy": true,
+   "gpt_input/extracted_P5/ResidueAPN_P4_C4_Reviewed_P5_20261011/evidence/auditor_PD_inverse_hX3_m5.npy": true
+  },
+  "points": 1024,
+  "dag_file": "c5/pd/results/dag_m5_hX3_v2.json",
+  "dag_file_sha256": "3d59f76e413de80dc060706e3d817510f9f6bd8adc61364cdc9de04f894ac57e"
+ },
+ "m5_delta_hX3_minus_h0": {
+  "AND": 0,
+  "XOR": 5,
+  "NOT": 0
+ },
+ "m7_h0": {
+  "m": 7,
+  "h": "0",
+  "chain": "b2=b1^2 b1, b3=b2^2 x, b6=b3^(2^3) b3, inv=b6^2",
+  "counts": {
+   "AND": 196,
+   "XOR": 224,
+   "NOT": 1,
+   "IN": 14,
+   "CONST0": 1
+  },
+  "chain_only_counts": {
+   "AND": 147,
+   "XOR": 167,
+   "NOT": 0,
+   "IN": 14,
+   "CONST0": 0
+  },
+  "nodes": 436,
+  "b2_nodes": [
+   102,
+   104,
+   106,
+   108,
+   110,
+   112,
+   113
+  ],
+  "b2_fanout": [
+   7,
+   1,
+   1,
+   1,
+   8,
+   8,
+   8
+  ],
+  "eval_table_sha256": "c5a8c1bb42c07d92a7c014d9cb5780451fbb24b7db4e0aeb2fc0affdeb33adcf",
+  "match": {
+   "c5/pd/data/F_PD_h0_m7.npy": true
+  },
+  "points": 16384,
+  "dag_file": "c5/pd/results/dag_m7_h0_v2.json",
+  "dag_file_sha256": "bab6f135b7d71029578e2285750c56e466fa70a5958b1cf96e9585aeed80ce54"
+ },
+ "m7_hX3": {
+  "m": 7,
+  "h": "a^3 (=b2 reused)",
+  "chain": "b2=b1^2 b1, b3=b2^2 x, b6=b3^(2^3) b3, inv=b6^2",
+  "counts": {
+   "AND": 196,
+   "XOR": 231,
+   "NOT": 1,
+   "IN": 14,
+   "CONST0": 1
+  },
+  "chain_only_counts": {
+   "AND": 147,
+   "XOR": 167,
+   "NOT": 0,
+   "IN": 14,
+   "CONST0": 0
+  },
+  "nodes": 443,
+  "b2_nodes": [
+   102,
+   104,
+   106,
+   108,
+   110,
+   112,
+   113
+  ],
+  "b2_fanout": [
+   8,
+   2,
+   2,
+   2,
+   9,
+   9,
+   9
+  ],
+  "eval_table_sha256": "c96b74910f041a5f3bb25f17b9fa5da811228a180435e1f53022e30648d8b934",
+  "match": {
+   "c5/pd/data/F_PD_hX3_m7.npy": true
+  },
+  "points": 16384,
+  "dag_file": "c5/pd/results/dag_m7_hX3_v2.json",
+  "dag_file_sha256": "f4f1b43bcbfb2909d7194ba80c22b0e78b457a8a62a2a6baef88408cacb4d898"
+ },
+ "m7_delta_hX3_minus_h0": {
+  "AND": 0,
+  "XOR": 7,
+  "NOT": 0
+ },
+ "time_s": 0.0
+}

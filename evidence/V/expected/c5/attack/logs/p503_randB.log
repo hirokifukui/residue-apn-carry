@@ -1,0 +1,24 @@
+RF F_pd_m3_inv_a3 trial 1000 [1, 1, 0, 0, 0] 0.9
+RF F_pd_m3_inv_a3 trial 1020 [21, 21, 15, 0, 0] 17.8
+RF F_pd_m3_inv_a3 trial 1040 [41, 41, 29, 0, 0] 35.3
+RF F_pd_m3_inv_a3 trial 1060 [61, 61, 43, 0, 0] 52.4
+RF F_pd_m3_inv_a3 trial 1080 [81, 81, 60, 0, 0] 69.4
+DONE [100, 100, 71, 0, 0] 85.0
+RP F_pd_m3_inv_a3 trial 1000 [1, 1, 1, 0, 0] 0.9
+RP F_pd_m3_inv_a3 trial 1020 [21, 21, 12, 0, 0] 17.2
+RP F_pd_m3_inv_a3 trial 1040 [41, 41, 24, 0, 0] 33.4
+RP F_pd_m3_inv_a3 trial 1060 [61, 61, 39, 0, 0] 49.5
+RP F_pd_m3_inv_a3 trial 1080 [81, 81, 53, 0, 0] 65.8
+DONE [100, 100, 59, 0, 0] 81.3
+RF F_nat_m3_X1_X3_X9 trial 2000 [1, 1, 0, 0, 0] 0.9
+RF F_nat_m3_X1_X3_X9 trial 2020 [21, 21, 10, 0, 0] 17.1
+RF F_nat_m3_X1_X3_X9 trial 2040 [41, 41, 23, 0, 0] 33.4
+RF F_nat_m3_X1_X3_X9 trial 2060 [61, 61, 35, 0, 0] 49.6
+RF F_nat_m3_X1_X3_X9 trial 2080 [81, 81, 44, 0, 0] 65.9
+DONE [100, 100, 54, 0, 0] 81.4
+RP F_nat_m3_X1_X3_X9 trial 2000 [1, 1, 0, 0, 0] 0.8
+RP F_nat_m3_X1_X3_X9 trial 2020 [21, 21, 12, 0, 0] 17.1
+RP F_nat_m3_X1_X3_X9 trial 2040 [41, 41, 23, 0, 0] 33.3
+RP F_nat_m3_X1_X3_X9 trial 2060 [61, 61, 40, 0, 0] 49.6
+RP F_nat_m3_X1_X3_X9 trial 2080 [81, 81, 54, 0, 0] 66.0
+DONE [100, 100, 66, 0, 0] 81.6

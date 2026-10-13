@@ -1,0 +1,194 @@
+{
+ "status": "research toy, NOT for use; no key schedule; independent-uniform-key model only",
+ "ring": "GR(4,5) = Z4[t]/(t^5+t^2+1)",
+ "code": "10-bit word: bits 0-4 digit-0, bits 5-9 digit-1",
+ "F": "natural 0/1 lift of P_{5,3}",
+ "F_table_sha256_int64": "e7355ba82671a3a95d1c319512603fc0cea52a60f0fcda928119a09b36bca222",
+ "J": "digit swap",
+ "id": "CANDIDATE_P1_40",
+ "words": 4,
+ "rounds_t": 4,
+ "round": "x <- L_C(B(x_1),...,B(x_4)) + k_i ; whitening k_0 ; final y = (F(x_j)) + k_{t+1}",
+ "L_C_codes": [
+  [
+   9,
+   12,
+   14,
+   4
+  ],
+  [
+   12,
+   9,
+   23,
+   25
+  ],
+  [
+   14,
+   23,
+   9,
+   16
+  ],
+  [
+   1,
+   18,
+   28,
+   7
+  ]
+ ],
+ "L_C_inverse_codes": [
+  [
+   314,
+   206,
+   523,
+   58
+  ],
+  [
+   255,
+   261,
+   89,
+   655
+  ],
+  [
+   820,
+   964,
+   374,
+   202
+  ],
+  [
+   411,
+   396,
+   53,
+   463
+  ]
+ ],
+ "L_C_note": "4x4 Cauchy over F_32, x=(1,2,3,4), y=(5,6,7,8), entry 1/(x_i+y_j), lifted with digit-1 = 0; MDS over R (all minors units)",
+ "keys_for_test_vectors_seed20261017": [
+  [
+   849,
+   847,
+   563,
+   519
+  ],
+  [
+   876,
+   980,
+   63,
+   788
+  ],
+  [
+   681,
+   560,
+   895,
+   693
+  ],
+  [
+   32,
+   372,
+   111,
+   395
+  ],
+  [
+   69,
+   277,
+   461,
+   516
+  ],
+  [
+   725,
+   285,
+   545,
+   577
+  ]
+ ],
+ "test_vectors": [
+  {
+   "pt": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "ct": [
+    501,
+    646,
+    435,
+    973
+   ]
+  },
+  {
+   "pt": [
+    1,
+    0,
+    0,
+    0
+   ],
+   "ct": [
+    863,
+    327,
+    835,
+    767
+   ]
+  },
+  {
+   "pt": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "ct": [
+    433,
+    916,
+    716,
+    442
+   ]
+  },
+  {
+   "pt": [
+    1023,
+    1023,
+    1023,
+    1023
+   ],
+   "ct": [
+    376,
+    486,
+    264,
+    636
+   ]
+  },
+  {
+   "pt": [
+    5,
+    77,
+    300,
+    901
+   ],
+   "ct": [
+    426,
+    585,
+    359,
+    686
+   ]
+  }
+ ],
+ "checked": "bijective by construction; dec(enc(x)) = x on 2^18 seeded random states; L_C L_C^-1 = I on the same sample",
+ "proved_bound_in_model": "Beyne et al. 2026/1104 Thm 3 transferred to GR(4,5): key-averaged EDP <= (1/q)^4 = q^4/N^4 = 2^-20 for t >= 2 (eps = 1/q measured for this lift, t316b); four-word type-LP is weaker (t312)",
+ "min_active_words_by_layers": [
+  1,
+  5,
+  6,
+  10,
+  11,
+  15,
+  16,
+  20
+ ],
+ "cost_per_block": {
+  "S_box_F_evaluations": 20,
+  "J": 16,
+  "ring_general_mult_in_F": 20,
+  "mixer_const_mults": 64,
+  "mixer_additions": 48
+ }
+}

@@ -1,0 +1,197 @@
+[
+ {
+  "m": 3,
+  "table": "inv,d0(rho=1),h=0",
+  "rho": 1,
+  "entries_equal": true,
+  "nentries": 2352,
+  "value_set": [
+   -4,
+   0,
+   4
+  ],
+  "sec": 0.03
+ },
+ {
+  "m": 3,
+  "table": "inv,d0(rho=1),h=a^3",
+  "rho": 1,
+  "entries_equal": true,
+  "nentries": 2352,
+  "value_set": [
+   -4,
+   0,
+   4
+  ],
+  "sec": 0.0
+ },
+ {
+  "m": 3,
+  "table": "inv,d0(rho=1),h=rand",
+  "rho": 1,
+  "entries_equal": true,
+  "nentries": 2352,
+  "value_set": [
+   -4,
+   0,
+   4
+  ],
+  "sec": 0.0
+ },
+ {
+  "m": 3,
+  "table": "inv,d0(rho=7),h=0",
+  "rho": 7,
+  "entries_equal": true,
+  "nentries": 2352,
+  "value_set": [
+   -4,
+   0,
+   4
+  ],
+  "sec": 0.0
+ },
+ {
+  "m": 3,
+  "table": "inv,d0(rho=7),h=a^3",
+  "rho": 7,
+  "entries_equal": true,
+  "nentries": 2352,
+  "value_set": [
+   -4,
+   0,
+   4
+  ],
+  "sec": 0.0
+ },
+ {
+  "m": 3,
+  "table": "inv,d0(rho=7),h=rand",
+  "rho": 7,
+  "entries_equal": true,
+  "nentries": 2352,
+  "value_set": [
+   -4,
+   0,
+   4
+  ],
+  "sec": 0.0
+ },
+ {
+  "m": 3,
+  "table": "inv,randomK,h=rand",
+  "rho": 4,
+  "entries_equal": true,
+  "nentries": 2352,
+  "value_set": [
+   -4,
+   0,
+   4
+  ],
+  "sec": 0.0
+ },
+ {
+  "m": 5,
+  "table": "inv,d0(rho=1),h=0",
+  "rho": 1,
+  "entries_equal": true,
+  "nentries": 922560,
+  "value_set": [
+   -4,
+   0,
+   4
+  ],
+  "sec": 0.33
+ },
+ {
+  "m": 5,
+  "table": "inv,d0(rho=1),h=a^3",
+  "rho": 1,
+  "entries_equal": true,
+  "nentries": 922560,
+  "value_set": [
+   -4,
+   0,
+   4
+  ],
+  "sec": 0.18
+ },
+ {
+  "m": 5,
+  "table": "inv,d0(rho=1),h=rand",
+  "rho": 1,
+  "entries_equal": true,
+  "nentries": 922560,
+  "value_set": [
+   -4,
+   0,
+   4
+  ],
+  "sec": 0.09
+ },
+ {
+  "m": 5,
+  "table": "inv,d0(rho=7),h=0",
+  "rho": 7,
+  "entries_equal": true,
+  "nentries": 922560,
+  "value_set": [
+   -4,
+   0,
+   4
+  ],
+  "sec": 0.12
+ },
+ {
+  "m": 5,
+  "table": "inv,d0(rho=7),h=a^3",
+  "rho": 7,
+  "entries_equal": true,
+  "nentries": 922560,
+  "value_set": [
+   -4,
+   0,
+   4
+  ],
+  "sec": 0.1
+ },
+ {
+  "m": 5,
+  "table": "inv,d0(rho=7),h=rand",
+  "rho": 7,
+  "entries_equal": true,
+  "nentries": 922560,
+  "value_set": [
+   -4,
+   0,
+   4
+  ],
+  "sec": 0.09
+ },
+ {
+  "m": 5,
+  "table": "inv,randomK,h=rand",
+  "rho": 29,
+  "entries_equal": true,
+  "nentries": 922560,
+  "value_set": [
+   -4,
+   0,
+   4
+  ],
+  "sec": 0.11
+ },
+ {
+  "m": 5,
+  "table": "x^3,d0,h=rand",
+  "rho": 1,
+  "entries_equal": true,
+  "nentries": 922560,
+  "value_set": [
+   -4,
+   0,
+   4
+  ],
+  "sec": 0.09
+ }
+]

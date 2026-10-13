@@ -1,0 +1,230 @@
+{
+ "cases": [
+  {
+   "label": "m3_d0_h0",
+   "m": 3,
+   "walsh_formula_ok": true,
+   "gram_exact_ok": true,
+   "sum_nu_nonzero_x_s_times_q": [
+    "-1/8"
+   ],
+   "f0_of_witness": 0,
+   "phys_norm2": 0.04687500000000001,
+   "target_(q/2-1)/q^2": 0.046875,
+   "phys_minus_target": 6.938893903907228e-18,
+   "witness_rayleigh_exact": "3/64",
+   "witness_equals_target": true
+  },
+  {
+   "label": "m3_d0_ha3",
+   "m": 3,
+   "walsh_formula_ok": true,
+   "gram_exact_ok": true,
+   "sum_nu_nonzero_x_s_times_q": [
+    "-1/8"
+   ],
+   "f0_of_witness": 0,
+   "phys_norm2": 0.04687500000000001,
+   "target_(q/2-1)/q^2": 0.046875,
+   "phys_minus_target": 6.938893903907228e-18,
+   "witness_rayleigh_exact": "3/64",
+   "witness_equals_target": true
+  },
+  {
+   "label": "m3_d0_hrand",
+   "m": 3,
+   "walsh_formula_ok": true,
+   "gram_exact_ok": true,
+   "sum_nu_nonzero_x_s_times_q": [
+    "-1/8"
+   ],
+   "f0_of_witness": 0,
+   "phys_norm2": 0.04687500000000001,
+   "target_(q/2-1)/q^2": 0.046875,
+   "phys_minus_target": 6.938893903907228e-18,
+   "witness_rayleigh_exact": "3/64",
+   "witness_equals_target": true
+  },
+  {
+   "label": "m3_d_rho7_h0",
+   "m": 3,
+   "walsh_formula_ok": true,
+   "gram_exact_ok": true,
+   "sum_nu_nonzero_x_s_times_q": [
+    "-1/8"
+   ],
+   "f0_of_witness": 0,
+   "phys_norm2": 0.04687500000000001,
+   "target_(q/2-1)/q^2": 0.046875,
+   "phys_minus_target": 6.938893903907228e-18,
+   "witness_rayleigh_exact": "3/64",
+   "witness_equals_target": true
+  },
+  {
+   "label": "m3_d_rho7_ha3",
+   "m": 3,
+   "walsh_formula_ok": true,
+   "gram_exact_ok": true,
+   "sum_nu_nonzero_x_s_times_q": [
+    "-1/8"
+   ],
+   "f0_of_witness": 0,
+   "phys_norm2": 0.04687500000000001,
+   "target_(q/2-1)/q^2": 0.046875,
+   "phys_minus_target": 6.938893903907228e-18,
+   "witness_rayleigh_exact": "3/64",
+   "witness_equals_target": true
+  },
+  {
+   "label": "m3_d_rho7_hrand",
+   "m": 3,
+   "walsh_formula_ok": true,
+   "gram_exact_ok": true,
+   "sum_nu_nonzero_x_s_times_q": [
+    "-1/8"
+   ],
+   "f0_of_witness": 0,
+   "phys_norm2": 0.04687500000000001,
+   "target_(q/2-1)/q^2": 0.046875,
+   "phys_minus_target": 6.938893903907228e-18,
+   "witness_rayleigh_exact": "3/64",
+   "witness_equals_target": true
+  },
+  {
+   "label": "m5_d0_h0",
+   "m": 5,
+   "walsh_formula_ok": true,
+   "gram_exact_ok": true,
+   "sum_nu_nonzero_x_s_times_q": [
+    "-1/32"
+   ],
+   "f0_of_witness": 0,
+   "phys_norm2": 0.014648437500000005,
+   "target_(q/2-1)/q^2": 0.0146484375,
+   "phys_minus_target": 5.204170427930421e-18,
+   "witness_rayleigh_exact": "15/1024",
+   "witness_equals_target": true
+  },
+  {
+   "label": "m5_d0_ha3",
+   "m": 5,
+   "walsh_formula_ok": true,
+   "gram_exact_ok": true,
+   "sum_nu_nonzero_x_s_times_q": [
+    "-1/32"
+   ],
+   "f0_of_witness": 0,
+   "phys_norm2": 0.014648437500000005,
+   "target_(q/2-1)/q^2": 0.0146484375,
+   "phys_minus_target": 5.204170427930421e-18,
+   "witness_rayleigh_exact": "15/1024",
+   "witness_equals_target": true
+  },
+  {
+   "label": "m5_d0_hrand",
+   "m": 5,
+   "walsh_formula_ok": true,
+   "gram_exact_ok": true,
+   "sum_nu_nonzero_x_s_times_q": [
+    "-1/32"
+   ],
+   "f0_of_witness": 0,
+   "phys_norm2": 0.014648437500000005,
+   "target_(q/2-1)/q^2": 0.0146484375,
+   "phys_minus_target": 5.204170427930421e-18,
+   "witness_rayleigh_exact": "15/1024",
+   "witness_equals_target": true
+  },
+  {
+   "label": "m5_d_rho7_h0",
+   "m": 5,
+   "walsh_formula_ok": true,
+   "gram_exact_ok": true,
+   "sum_nu_nonzero_x_s_times_q": [
+    "-1/32"
+   ],
+   "f0_of_witness": 0,
+   "phys_norm2": 0.014648437500000005,
+   "target_(q/2-1)/q^2": 0.0146484375,
+   "phys_minus_target": 5.204170427930421e-18,
+   "witness_rayleigh_exact": "15/1024",
+   "witness_equals_target": true
+  },
+  {
+   "label": "m5_d_rho7_ha3",
+   "m": 5,
+   "walsh_formula_ok": true,
+   "gram_exact_ok": true,
+   "sum_nu_nonzero_x_s_times_q": [
+    "-1/32"
+   ],
+   "f0_of_witness": 0,
+   "phys_norm2": 0.014648437500000005,
+   "target_(q/2-1)/q^2": 0.0146484375,
+   "phys_minus_target": 5.204170427930421e-18,
+   "witness_rayleigh_exact": "15/1024",
+   "witness_equals_target": true
+  },
+  {
+   "label": "m5_d_rho7_hrand",
+   "m": 5,
+   "walsh_formula_ok": true,
+   "gram_exact_ok": true,
+   "sum_nu_nonzero_x_s_times_q": [
+    "-1/32"
+   ],
+   "f0_of_witness": 0,
+   "phys_norm2": 0.014648437500000005,
+   "target_(q/2-1)/q^2": 0.0146484375,
+   "phys_minus_target": 5.204170427930421e-18,
+   "witness_rayleigh_exact": "15/1024",
+   "witness_equals_target": true
+  },
+  {
+   "label": "m5_d_rho11_h0",
+   "m": 5,
+   "walsh_formula_ok": true,
+   "gram_exact_ok": true,
+   "sum_nu_nonzero_x_s_times_q": [
+    "-1/32"
+   ],
+   "f0_of_witness": 0,
+   "phys_norm2": 0.014648437500000005,
+   "target_(q/2-1)/q^2": 0.0146484375,
+   "phys_minus_target": 5.204170427930421e-18,
+   "witness_rayleigh_exact": "15/1024",
+   "witness_equals_target": true
+  },
+  {
+   "label": "m5_d_rho11_ha3",
+   "m": 5,
+   "walsh_formula_ok": true,
+   "gram_exact_ok": true,
+   "sum_nu_nonzero_x_s_times_q": [
+    "-1/32"
+   ],
+   "f0_of_witness": 0,
+   "phys_norm2": 0.014648437500000005,
+   "target_(q/2-1)/q^2": 0.0146484375,
+   "phys_minus_target": 5.204170427930421e-18,
+   "witness_rayleigh_exact": "15/1024",
+   "witness_equals_target": true
+  },
+  {
+   "label": "m5_d_rho11_hrand",
+   "m": 5,
+   "walsh_formula_ok": true,
+   "gram_exact_ok": true,
+   "sum_nu_nonzero_x_s_times_q": [
+    "-1/32"
+   ],
+   "f0_of_witness": 0,
+   "phys_norm2": 0.014648437500000005,
+   "target_(q/2-1)/q^2": 0.0146484375,
+   "phys_minus_target": 5.204170427930421e-18,
+   "witness_rayleigh_exact": "15/1024",
+   "witness_equals_target": true
+  }
+ ],
+ "all_ok": true
+}

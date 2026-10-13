@@ -1,0 +1,94 @@
+{
+ "m": 5,
+ "q": 32,
+ "N": 1024,
+ "variants": {
+  "natural": {
+   "DU_B": 32,
+   "max_by_class": {
+    "G": 8,
+    "Z": 32,
+    "E": 32
+   },
+   "Z_bound_violations": 0,
+   "formula_checked_directions": 49,
+   "formula_ok": true,
+   "witness_alpha": 32,
+   "witness_beta": 1,
+   "witness_count": 32
+  },
+  "h0": {
+   "DU_B": 32,
+   "max_by_class": {
+    "G": 9,
+    "Z": 32,
+    "E": 32
+   },
+   "Z_bound_violations": 0,
+   "formula_checked_directions": 49,
+   "formula_ok": true,
+   "witness_alpha": 32,
+   "witness_beta": 1,
+   "witness_count": 32
+  },
+  "F_m5_r3_adversarialG": {
+   "DU_B": 32,
+   "max_by_class": {
+    "G": 16,
+    "Z": 32,
+    "E": 32
+   },
+   "Z_bound_violations": 0,
+   "formula_checked_directions": 49,
+   "formula_ok": true,
+   "witness_alpha": 32,
+   "witness_beta": 1,
+   "witness_count": 32
+  },
+  "random0": {
+   "DU_B": 32,
+   "max_by_class": {
+    "G": 9,
+    "Z": 32,
+    "E": 32
+   },
+   "Z_bound_violations": 0,
+   "formula_checked_directions": 49,
+   "formula_ok": true,
+   "witness_alpha": 32,
+   "witness_beta": 1,
+   "witness_count": 32
+  },
+  "random1": {
+   "DU_B": 32,
+   "max_by_class": {
+    "G": 9,
+    "Z": 32,
+    "E": 32
+   },
+   "Z_bound_violations": 0,
+   "formula_checked_directions": 49,
+   "formula_ok": true,
+   "witness_alpha": 32,
+   "witness_beta": 1,
+   "witness_count": 32
+  },
+  "random2": {
+   "DU_B": 32,
+   "max_by_class": {
+    "G": 8,
+    "Z": 32,
+    "E": 32
+   },
+   "Z_bound_violations": 0,
+   "formula_checked_directions": 49,
+   "formula_ok": true,
+   "witness_alpha": 32,
+   "witness_beta": 1,
+   "witness_count": 32
+  }
+ },
+ "rho": 1,
+ "rho_weight": 1,
+ "p_is_permutation": true
+}

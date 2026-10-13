@@ -1,0 +1,301 @@
+{
+ "mode": "true",
+ "table": "F_pd_m3_inv_h0",
+ "table_sha256": "8f35c8cb0325e4c39d089484c23d8a383a6d40812796464fe912830c63e1f9f4",
+ "hyp": {
+  "form_(p,h+db)": true,
+  "p_perm": true,
+  "DU_p": 2,
+  "p_APN": true,
+  "d_affine": true,
+  "ker_K": [
+   0,
+   1
+  ],
+  "eps": 1,
+  "eps_notin_ImK": true,
+  "d_nowhere_zero": true,
+  "F_perm": true,
+  "h_zero": true,
+  "PD_hypotheses": true
+ },
+ "m": 3,
+ "w": 3,
+ "N": 64,
+ "M": [
+  [
+   3,
+   11,
+   15
+  ],
+  [
+   10,
+   41,
+   3
+  ],
+  [
+   53,
+   26,
+   37
+  ]
+ ],
+ "runs": [
+  {
+   "key_seed": 0,
+   "s": 4,
+   "slice_seed": 0,
+   "slice_consts_sha256": "6677c0930933b4bd8de300b7dc64c0dca0cfe2dd89e5ee405cf4d1f6eac0a7bc",
+   "kappa_range": [
+    0,
+    262144
+   ],
+   "K4_tuples_alive_after_slice": [
+    262144,
+    262144,
+    65878,
+    1,
+    1
+   ],
+   "pairs_per_target_after_slice": [
+    [
+     16789889,
+     16777029,
+     16776596
+    ],
+    [
+     261928,
+     262601,
+     262320
+    ],
+    [
+     1629,
+     1661,
+     1680
+    ],
+    [
+     1,
+     1,
+     1
+    ]
+   ],
+   "theta_accepted_after_slice": [
+    68770333215,
+    263146,
+    1,
+    1
+   ],
+   "expected_theta_RF_after_slice": [
+    68719476736.0,
+    262144.0,
+    1.0,
+    3.814697265625e-06
+   ],
+   "candidate_exists": true,
+   "n_candidates_enumerated": 1,
+   "candidates": [
+    {
+     "K4": [
+      63,
+      2,
+      43
+     ],
+     "c": [
+      6,
+      17,
+      46
+     ],
+     "K3": [
+      35,
+      34,
+      14
+     ]
+    }
+   ],
+   "T_wall_s": 59.337,
+   "T_cpu_s": 59.094,
+   "ops": {
+    "S1inv_lookups": 113312064,
+    "matmul_mult_adds": 1392378642432,
+    "z_ring_ops": 566560320,
+    "histograms": 1770501
+   },
+   "D_queries": 256,
+   "M_peak_working_arrays_bytes_est": 23068672,
+   "M_maxrss": 128483328,
+   "commit_sha256_before_reveal": "9c91c66f10bab541a28421e579cc5c9211b9b198aef10be6df667ed236940e4a",
+   "oracle_query_counter": 256,
+   "score": {
+    "true_theta": {
+     "K4": [
+      63,
+      2,
+      43
+     ],
+     "c": [
+      6,
+      17,
+      46
+     ],
+     "K3": [
+      35,
+      34,
+      14
+     ]
+    },
+    "true_retained_after_slice": [
+     true,
+     true,
+     true,
+     true
+    ],
+    "n_candidates": 1,
+    "candidates_enumeration_complete": true,
+    "true_in_candidates": true,
+    "equivalent_map_candidates(not true, same G)": 0,
+    "wrong_candidates(different G)": 0,
+    "distinct_maps_among_candidates": 1,
+    "verdict": "UNIQUE_TRUE",
+    "literal_vs_factorized_sample": {
+     "agree": 302,
+     "disagree": 0
+    }
+   },
+   "bounds": {
+    "RF_bound_N^{(3-s)w}": "1/262144",
+    "RF_bound_float": 3.814697265625e-06,
+    "RP_bound_N^{(3-s)w}+C(sN,2)/N^w": "32641/262144",
+    "RP_bound_float": 0.12451553344726562,
+    "RP_bound_vacuous(>=1)": false
+   }
+  },
+  {
+   "key_seed": 1,
+   "s": 4,
+   "slice_seed": 1,
+   "slice_consts_sha256": "ac081872c622cc07232e20c5f8d8e9aa1da04251dea2c9870c5a928af98f41e3",
+   "kappa_range": [
+    0,
+    262144
+   ],
+   "K4_tuples_alive_after_slice": [
+    262144,
+    262144,
+    66101,
+    3,
+    1
+   ],
+   "pairs_per_target_after_slice": [
+    [
+     16784745,
+     16783073,
+     16783328
+    ],
+    [
+     262110,
+     262273,
+     262824
+    ],
+    [
+     1589,
+     1650,
+     1684
+    ],
+    [
+     1,
+     1,
+     1
+    ]
+   ],
+   "theta_accepted_after_slice": [
+    68807839043,
+    263328,
+    3,
+    1
+   ],
+   "expected_theta_RF_after_slice": [
+    68719476736.0,
+    262144.0,
+    1.0,
+    3.814697265625e-06
+   ],
+   "candidate_exists": true,
+   "n_candidates_enumerated": 1,
+   "candidates": [
+    {
+     "K4": [
+      13,
+      28,
+      33
+     ],
+     "c": [
+      46,
+      63,
+      57
+     ],
+     "K3": [
+      18,
+      30,
+      26
+     ]
+    }
+   ],
+   "T_wall_s": 70.601,
+   "T_cpu_s": 70.168,
+   "ops": {
+    "S1inv_lookups": 113355264,
+    "matmul_mult_adds": 1392909484032,
+    "z_ring_ops": 566776320,
+    "histograms": 1771176
+   },
+   "D_queries": 256,
+   "M_peak_working_arrays_bytes_est": 23068672,
+   "M_maxrss": 151306240,
+   "commit_sha256_before_reveal": "0d873f93091067e1fe64dcf5343036573576f2ad213bd15c802444cc234c35b9",
+   "oracle_query_counter": 256,
+   "score": {
+    "true_theta": {
+     "K4": [
+      13,
+      28,
+      33
+     ],
+     "c": [
+      46,
+      63,
+      57
+     ],
+     "K3": [
+      18,
+      30,
+      26
+     ]
+    },
+    "true_retained_after_slice": [
+     true,
+     true,
+     true,
+     true
+    ],
+    "n_candidates": 1,
+    "candidates_enumeration_complete": true,
+    "true_in_candidates": true,
+    "equivalent_map_candidates(not true, same G)": 0,
+    "wrong_candidates(different G)": 0,
+    "distinct_maps_among_candidates": 1,
+    "verdict": "UNIQUE_TRUE",
+    "literal_vs_factorized_sample": {
+     "agree": 302,
+     "disagree": 0
+    }
+   },
+   "bounds": {
+    "RF_bound_N^{(3-s)w}": "1/262144",
+    "RF_bound_float": 3.814697265625e-06,
+    "RP_bound_N^{(3-s)w}+C(sN,2)/N^w": "32641/262144",
+    "RP_bound_float": 0.12451553344726562,
+    "RP_bound_vacuous(>=1)": false
+   }
+  }
+ ],
+ "seconds": 130.0
+}

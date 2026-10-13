@@ -1,0 +1,3 @@
+Gconc: alpha 3 delta 522 count 8 (q = 32 )
+lifts ['natural', 'h0', 'adversarialG', 'random', 'Gconc']
+A1_LIFTS=PASS

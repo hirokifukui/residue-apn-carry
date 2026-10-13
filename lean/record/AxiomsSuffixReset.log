@@ -1,0 +1,5 @@
+'ApnCipherC3.ddt_row' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ApnCipherC3.ddt_col' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ApnCipherC3.reset_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ApnCipherC3.ddt_col_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ApnCipherC3.suffix_le' depends on axioms: [propext, Classical.choice, Quot.sound]

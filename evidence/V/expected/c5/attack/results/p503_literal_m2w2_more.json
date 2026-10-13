@@ -1,0 +1,520 @@
+{
+ "mode": "literal",
+ "table": "F_toy_m2",
+ "m": 2,
+ "w": 2,
+ "N": 16,
+ "s": 5,
+ "theta_space": 16777216,
+ "cases": [
+  {
+   "oracle": "RF:10",
+   "factorized_theta_after_slice": [
+    68224,
+    480,
+    0,
+    0,
+    0
+   ],
+   "literal_theta_after_slice": [
+    68224,
+    480,
+    0,
+    0,
+    0
+   ],
+   "sets_equal": true,
+   "candidate_exists_factorized": false,
+   "candidate_exists_literal": false,
+   "n_final": 0,
+   "literal_seconds": 2.9,
+   "attack_T_wall_s": 0.006
+  },
+  {
+   "oracle": "RF:11",
+   "factorized_theta_after_slice": [
+    64768,
+    304,
+    0,
+    0,
+    0
+   ],
+   "literal_theta_after_slice": [
+    64768,
+    304,
+    0,
+    0,
+    0
+   ],
+   "sets_equal": true,
+   "candidate_exists_factorized": false,
+   "candidate_exists_literal": false,
+   "n_final": 0,
+   "literal_seconds": 2.9,
+   "attack_T_wall_s": 0.003
+  },
+  {
+   "oracle": "RF:12",
+   "factorized_theta_after_slice": [
+    64128,
+    304,
+    0,
+    0,
+    0
+   ],
+   "literal_theta_after_slice": [
+    64128,
+    304,
+    0,
+    0,
+    0
+   ],
+   "sets_equal": true,
+   "candidate_exists_factorized": false,
+   "candidate_exists_literal": false,
+   "n_final": 0,
+   "literal_seconds": 2.9,
+   "attack_T_wall_s": 0.003
+  },
+  {
+   "oracle": "RF:13",
+   "factorized_theta_after_slice": [
+    67328,
+    208,
+    0,
+    0,
+    0
+   ],
+   "literal_theta_after_slice": [
+    67328,
+    208,
+    0,
+    0,
+    0
+   ],
+   "sets_equal": true,
+   "candidate_exists_factorized": false,
+   "candidate_exists_literal": false,
+   "n_final": 0,
+   "literal_seconds": 2.9,
+   "attack_T_wall_s": 0.003
+  },
+  {
+   "oracle": "RF:14",
+   "factorized_theta_after_slice": [
+    71552,
+    368,
+    0,
+    0,
+    0
+   ],
+   "literal_theta_after_slice": [
+    71552,
+    368,
+    0,
+    0,
+    0
+   ],
+   "sets_equal": true,
+   "candidate_exists_factorized": false,
+   "candidate_exists_literal": false,
+   "n_final": 0,
+   "literal_seconds": 2.9,
+   "attack_T_wall_s": 0.003
+  },
+  {
+   "oracle": "RF:15",
+   "factorized_theta_after_slice": [
+    70400,
+    320,
+    0,
+    0,
+    0
+   ],
+   "literal_theta_after_slice": [
+    70400,
+    320,
+    0,
+    0,
+    0
+   ],
+   "sets_equal": true,
+   "candidate_exists_factorized": false,
+   "candidate_exists_literal": false,
+   "n_final": 0,
+   "literal_seconds": 2.9,
+   "attack_T_wall_s": 0.003
+  },
+  {
+   "oracle": "RF:16",
+   "factorized_theta_after_slice": [
+    66688,
+    208,
+    0,
+    0,
+    0
+   ],
+   "literal_theta_after_slice": [
+    66688,
+    208,
+    0,
+    0,
+    0
+   ],
+   "sets_equal": true,
+   "candidate_exists_factorized": false,
+   "candidate_exists_literal": false,
+   "n_final": 0,
+   "literal_seconds": 2.9,
+   "attack_T_wall_s": 0.003
+  },
+  {
+   "oracle": "RF:17",
+   "factorized_theta_after_slice": [
+    74496,
+    192,
+    0,
+    0,
+    0
+   ],
+   "literal_theta_after_slice": [
+    74496,
+    192,
+    0,
+    0,
+    0
+   ],
+   "sets_equal": true,
+   "candidate_exists_factorized": false,
+   "candidate_exists_literal": false,
+   "n_final": 0,
+   "literal_seconds": 3.0,
+   "attack_T_wall_s": 0.003
+  },
+  {
+   "oracle": "RF:18",
+   "factorized_theta_after_slice": [
+    65792,
+    176,
+    0,
+    0,
+    0
+   ],
+   "literal_theta_after_slice": [
+    65792,
+    176,
+    0,
+    0,
+    0
+   ],
+   "sets_equal": true,
+   "candidate_exists_factorized": false,
+   "candidate_exists_literal": false,
+   "n_final": 0,
+   "literal_seconds": 2.9,
+   "attack_T_wall_s": 0.003
+  },
+  {
+   "oracle": "RF:19",
+   "factorized_theta_after_slice": [
+    61312,
+    272,
+    0,
+    0,
+    0
+   ],
+   "literal_theta_after_slice": [
+    61312,
+    272,
+    0,
+    0,
+    0
+   ],
+   "sets_equal": true,
+   "candidate_exists_factorized": false,
+   "candidate_exists_literal": false,
+   "n_final": 0,
+   "literal_seconds": 2.9,
+   "attack_T_wall_s": 0.003
+  },
+  {
+   "oracle": "RP:10",
+   "factorized_theta_after_slice": [
+    63104,
+    336,
+    0,
+    0,
+    0
+   ],
+   "literal_theta_after_slice": [
+    63104,
+    336,
+    0,
+    0,
+    0
+   ],
+   "sets_equal": true,
+   "candidate_exists_factorized": false,
+   "candidate_exists_literal": false,
+   "n_final": 0,
+   "literal_seconds": 2.9,
+   "attack_T_wall_s": 0.004
+  },
+  {
+   "oracle": "RP:11",
+   "factorized_theta_after_slice": [
+    65408,
+    160,
+    16,
+    0,
+    0
+   ],
+   "literal_theta_after_slice": [
+    65408,
+    160,
+    16,
+    0,
+    0
+   ],
+   "sets_equal": true,
+   "candidate_exists_factorized": false,
+   "candidate_exists_literal": false,
+   "n_final": 0,
+   "literal_seconds": 2.9,
+   "attack_T_wall_s": 0.003
+  },
+  {
+   "oracle": "RP:12",
+   "factorized_theta_after_slice": [
+    66304,
+    320,
+    0,
+    0,
+    0
+   ],
+   "literal_theta_after_slice": [
+    66304,
+    320,
+    0,
+    0,
+    0
+   ],
+   "sets_equal": true,
+   "candidate_exists_factorized": false,
+   "candidate_exists_literal": false,
+   "n_final": 0,
+   "literal_seconds": 2.9,
+   "attack_T_wall_s": 0.004
+  },
+  {
+   "oracle": "RP:13",
+   "factorized_theta_after_slice": [
+    62592,
+    224,
+    0,
+    0,
+    0
+   ],
+   "literal_theta_after_slice": [
+    62592,
+    224,
+    0,
+    0,
+    0
+   ],
+   "sets_equal": true,
+   "candidate_exists_factorized": false,
+   "candidate_exists_literal": false,
+   "n_final": 0,
+   "literal_seconds": 2.9,
+   "attack_T_wall_s": 0.003
+  },
+  {
+   "oracle": "RP:14",
+   "factorized_theta_after_slice": [
+    66432,
+    256,
+    0,
+    0,
+    0
+   ],
+   "literal_theta_after_slice": [
+    66432,
+    256,
+    0,
+    0,
+    0
+   ],
+   "sets_equal": true,
+   "candidate_exists_factorized": false,
+   "candidate_exists_literal": false,
+   "n_final": 0,
+   "literal_seconds": 2.9,
+   "attack_T_wall_s": 0.003
+  },
+  {
+   "oracle": "RP:15",
+   "factorized_theta_after_slice": [
+    59264,
+    128,
+    0,
+    0,
+    0
+   ],
+   "literal_theta_after_slice": [
+    59264,
+    128,
+    0,
+    0,
+    0
+   ],
+   "sets_equal": true,
+   "candidate_exists_factorized": false,
+   "candidate_exists_literal": false,
+   "n_final": 0,
+   "literal_seconds": 2.9,
+   "attack_T_wall_s": 0.003
+  },
+  {
+   "oracle": "RP:16",
+   "factorized_theta_after_slice": [
+    63616,
+    288,
+    0,
+    0,
+    0
+   ],
+   "literal_theta_after_slice": [
+    63616,
+    288,
+    0,
+    0,
+    0
+   ],
+   "sets_equal": true,
+   "candidate_exists_factorized": false,
+   "candidate_exists_literal": false,
+   "n_final": 0,
+   "literal_seconds": 2.9,
+   "attack_T_wall_s": 0.003
+  },
+  {
+   "oracle": "RP:17",
+   "factorized_theta_after_slice": [
+    67712,
+    432,
+    0,
+    0,
+    0
+   ],
+   "literal_theta_after_slice": [
+    67712,
+    432,
+    0,
+    0,
+    0
+   ],
+   "sets_equal": true,
+   "candidate_exists_factorized": false,
+   "candidate_exists_literal": false,
+   "n_final": 0,
+   "literal_seconds": 2.9,
+   "attack_T_wall_s": 0.004
+  },
+  {
+   "oracle": "RP:18",
+   "factorized_theta_after_slice": [
+    60160,
+    192,
+    0,
+    0,
+    0
+   ],
+   "literal_theta_after_slice": [
+    60160,
+    192,
+    0,
+    0,
+    0
+   ],
+   "sets_equal": true,
+   "candidate_exists_factorized": false,
+   "candidate_exists_literal": false,
+   "n_final": 0,
+   "literal_seconds": 2.8,
+   "attack_T_wall_s": 0.004
+  },
+  {
+   "oracle": "RP:19",
+   "factorized_theta_after_slice": [
+    63360,
+    224,
+    0,
+    0,
+    0
+   ],
+   "literal_theta_after_slice": [
+    63360,
+    224,
+    0,
+    0,
+    0
+   ],
+   "sets_equal": true,
+   "candidate_exists_factorized": false,
+   "candidate_exists_literal": false,
+   "n_final": 0,
+   "literal_seconds": 3.0,
+   "attack_T_wall_s": 0.003
+  },
+  {
+   "oracle": "E:10",
+   "factorized_theta_after_slice": [
+    63872,
+    224,
+    16,
+    16,
+    16
+   ],
+   "literal_theta_after_slice": [
+    63872,
+    224,
+    16,
+    16,
+    16
+   ],
+   "sets_equal": true,
+   "candidate_exists_factorized": true,
+   "candidate_exists_literal": true,
+   "n_final": 16,
+   "literal_seconds": 2.9,
+   "attack_T_wall_s": 0.004,
+   "true_in_literal": true
+  },
+  {
+   "oracle": "E:11",
+   "factorized_theta_after_slice": [
+    61952,
+    192,
+    16,
+    16,
+    16
+   ],
+   "literal_theta_after_slice": [
+    61952,
+    192,
+    16,
+    16,
+    16
+   ],
+   "sets_equal": true,
+   "candidate_exists_factorized": true,
+   "candidate_exists_literal": true,
+   "n_final": 16,
+   "literal_seconds": 2.9,
+   "attack_T_wall_s": 0.003,
+   "true_in_literal": true
+  }
+ ],
+ "seconds": 64.1
+}

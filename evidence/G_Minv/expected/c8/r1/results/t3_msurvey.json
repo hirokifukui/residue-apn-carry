@@ -1,0 +1,803 @@
+{
+ "m3,inv,d0(rho=1)": {
+  "m": 3,
+  "M": 2,
+  "rho": 1
+ },
+ "m3,inv,d0(rho=7)": {
+  "m": 3,
+  "M": 2,
+  "rho": 7
+ },
+ "m3,inv,randomK#0": {
+  "m": 3,
+  "M": 2,
+  "rho": 5
+ },
+ "m3,inv,randomK#1": {
+  "m": 3,
+  "M": 2,
+  "rho": 1
+ },
+ "m3,inv,randomK#2": {
+  "m": 3,
+  "M": 2,
+  "rho": 7
+ },
+ "m3,inv,randomK#3": {
+  "m": 3,
+  "M": 2,
+  "rho": 5
+ },
+ "m3,inv,randomK#4": {
+  "m": 3,
+  "M": 2,
+  "rho": 2
+ },
+ "m3,inv,randomK#5": {
+  "m": 3,
+  "M": 2,
+  "rho": 2
+ },
+ "m3,x^3,d0(rho=1)": {
+  "m": 3,
+  "M": 2,
+  "rho": 1
+ },
+ "m3,x^3,d0(rho=7)": {
+  "m": 3,
+  "M": 2,
+  "rho": 7
+ },
+ "m3,x^3,randomK#0": {
+  "m": 3,
+  "M": 2,
+  "rho": 1
+ },
+ "m3,x^3,randomK#1": {
+  "m": 3,
+  "M": 2,
+  "rho": 2
+ },
+ "m3,x^3,randomK#2": {
+  "m": 3,
+  "M": 2,
+  "rho": 6
+ },
+ "m3,x^3,randomK#3": {
+  "m": 3,
+  "M": 2,
+  "rho": 3
+ },
+ "m3,x^3,randomK#4": {
+  "m": 3,
+  "M": 2,
+  "rho": 3
+ },
+ "m3,x^3,randomK#5": {
+  "m": 3,
+  "M": 2,
+  "rho": 1
+ },
+ "m3,x^5,d0(rho=1)": {
+  "m": 3,
+  "M": 2,
+  "rho": 1
+ },
+ "m3,x^5,d0(rho=7)": {
+  "m": 3,
+  "M": 2,
+  "rho": 7
+ },
+ "m3,x^5,randomK#0": {
+  "m": 3,
+  "M": 2,
+  "rho": 1
+ },
+ "m3,x^5,randomK#1": {
+  "m": 3,
+  "M": 2,
+  "rho": 5
+ },
+ "m3,x^5,randomK#2": {
+  "m": 3,
+  "M": 2,
+  "rho": 1
+ },
+ "m3,x^5,randomK#3": {
+  "m": 3,
+  "M": 2,
+  "rho": 3
+ },
+ "m3,x^5,randomK#4": {
+  "m": 3,
+  "M": 2,
+  "rho": 2
+ },
+ "m3,x^5,randomK#5": {
+  "m": 3,
+  "M": 2,
+  "rho": 4
+ },
+ "m3,x^13(Kasami k=2),d0(rho=1)": {
+  "m": 3,
+  "M": 2,
+  "rho": 1
+ },
+ "m3,x^13(Kasami k=2),d0(rho=7)": {
+  "m": 3,
+  "M": 2,
+  "rho": 7
+ },
+ "m3,x^13(Kasami k=2),randomK#0": {
+  "m": 3,
+  "M": 2,
+  "rho": 6
+ },
+ "m3,x^13(Kasami k=2),randomK#1": {
+  "m": 3,
+  "M": 2,
+  "rho": 3
+ },
+ "m3,x^13(Kasami k=2),randomK#2": {
+  "m": 3,
+  "M": 2,
+  "rho": 2
+ },
+ "m3,x^13(Kasami k=2),randomK#3": {
+  "m": 3,
+  "M": 2,
+  "rho": 7
+ },
+ "m3,x^13(Kasami k=2),randomK#4": {
+  "m": 3,
+  "M": 2,
+  "rho": 3
+ },
+ "m3,x^13(Kasami k=2),randomK#5": {
+  "m": 3,
+  "M": 2,
+  "rho": 7
+ },
+ "m5,inv,d0(rho=1)": {
+  "m": 5,
+  "M": 4,
+  "rho": 1
+ },
+ "m5,inv,d0(rho=7)": {
+  "m": 5,
+  "M": 4,
+  "rho": 7
+ },
+ "m5,inv,randomK#0": {
+  "m": 5,
+  "M": 4,
+  "rho": 27
+ },
+ "m5,inv,randomK#1": {
+  "m": 5,
+  "M": 4,
+  "rho": 9
+ },
+ "m5,inv,randomK#2": {
+  "m": 5,
+  "M": 5,
+  "rho": 17
+ },
+ "m5,inv,randomK#3": {
+  "m": 5,
+  "M": 4,
+  "rho": 22
+ },
+ "m5,inv,randomK#4": {
+  "m": 5,
+  "M": 4,
+  "rho": 25
+ },
+ "m5,inv,randomK#5": {
+  "m": 5,
+  "M": 4,
+  "rho": 21
+ },
+ "m5,x^3,d0(rho=1)": {
+  "m": 5,
+  "M": 4,
+  "rho": 1
+ },
+ "m5,x^3,d0(rho=7)": {
+  "m": 5,
+  "M": 4,
+  "rho": 7
+ },
+ "m5,x^3,randomK#0": {
+  "m": 5,
+  "M": 5,
+  "rho": 17
+ },
+ "m5,x^3,randomK#1": {
+  "m": 5,
+  "M": 4,
+  "rho": 21
+ },
+ "m5,x^3,randomK#2": {
+  "m": 5,
+  "M": 5,
+  "rho": 11
+ },
+ "m5,x^3,randomK#3": {
+  "m": 5,
+  "M": 4,
+  "rho": 25
+ },
+ "m5,x^3,randomK#4": {
+  "m": 5,
+  "M": 5,
+  "rho": 5
+ },
+ "m5,x^3,randomK#5": {
+  "m": 5,
+  "M": 4,
+  "rho": 12
+ },
+ "m5,x^5,d0(rho=1)": {
+  "m": 5,
+  "M": 4,
+  "rho": 1
+ },
+ "m5,x^5,d0(rho=7)": {
+  "m": 5,
+  "M": 4,
+  "rho": 7
+ },
+ "m5,x^5,randomK#0": {
+  "m": 5,
+  "M": 5,
+  "rho": 25
+ },
+ "m5,x^5,randomK#1": {
+  "m": 5,
+  "M": 4,
+  "rho": 27
+ },
+ "m5,x^5,randomK#2": {
+  "m": 5,
+  "M": 4,
+  "rho": 2
+ },
+ "m5,x^5,randomK#3": {
+  "m": 5,
+  "M": 4,
+  "rho": 19
+ },
+ "m5,x^5,randomK#4": {
+  "m": 5,
+  "M": 4,
+  "rho": 7
+ },
+ "m5,x^5,randomK#5": {
+  "m": 5,
+  "M": 5,
+  "rho": 12
+ },
+ "m5,x^13(Kasami k=2),d0(rho=1)": {
+  "m": 5,
+  "M": 4,
+  "rho": 1
+ },
+ "m5,x^13(Kasami k=2),d0(rho=7)": {
+  "m": 5,
+  "M": 4,
+  "rho": 7
+ },
+ "m5,x^13(Kasami k=2),randomK#0": {
+  "m": 5,
+  "M": 4,
+  "rho": 8
+ },
+ "m5,x^13(Kasami k=2),randomK#1": {
+  "m": 5,
+  "M": 5,
+  "rho": 16
+ },
+ "m5,x^13(Kasami k=2),randomK#2": {
+  "m": 5,
+  "M": 6,
+  "rho": 5
+ },
+ "m5,x^13(Kasami k=2),randomK#3": {
+  "m": 5,
+  "M": 6,
+  "rho": 14
+ },
+ "m5,x^13(Kasami k=2),randomK#4": {
+  "m": 5,
+  "M": 4,
+  "rho": 28
+ },
+ "m5,x^13(Kasami k=2),randomK#5": {
+  "m": 5,
+  "M": 5,
+  "rho": 10
+ },
+ "m7,inv,d0(rho=1)": {
+  "m": 7,
+  "M": 5,
+  "rho": 1
+ },
+ "m7,inv,d0(rho=7)": {
+  "m": 7,
+  "M": 5,
+  "rho": 7
+ },
+ "m7,inv,randomK#0": {
+  "m": 7,
+  "M": 8,
+  "rho": 91
+ },
+ "m7,inv,randomK#1": {
+  "m": 7,
+  "M": 6,
+  "rho": 100
+ },
+ "m7,inv,randomK#2": {
+  "m": 7,
+  "M": 7,
+  "rho": 80
+ },
+ "m7,inv,randomK#3": {
+  "m": 7,
+  "M": 6,
+  "rho": 28
+ },
+ "m7,inv,randomK#4": {
+  "m": 7,
+  "M": 6,
+  "rho": 77
+ },
+ "m7,inv,randomK#5": {
+  "m": 7,
+  "M": 8,
+  "rho": 108
+ },
+ "m7,x^3,d0(rho=1)": {
+  "m": 7,
+  "M": 5,
+  "rho": 1
+ },
+ "m7,x^3,d0(rho=7)": {
+  "m": 7,
+  "M": 5,
+  "rho": 7
+ },
+ "m7,x^3,randomK#0": {
+  "m": 7,
+  "M": 8,
+  "rho": 71
+ },
+ "m7,x^3,randomK#1": {
+  "m": 7,
+  "M": 6,
+  "rho": 73
+ },
+ "m7,x^3,randomK#2": {
+  "m": 7,
+  "M": 6,
+  "rho": 43
+ },
+ "m7,x^3,randomK#3": {
+  "m": 7,
+  "M": 7,
+  "rho": 18
+ },
+ "m7,x^3,randomK#4": {
+  "m": 7,
+  "M": 6,
+  "rho": 75
+ },
+ "m7,x^3,randomK#5": {
+  "m": 7,
+  "M": 6,
+  "rho": 54
+ },
+ "m7,x^5,d0(rho=1)": {
+  "m": 7,
+  "M": 6,
+  "rho": 1
+ },
+ "m7,x^5,d0(rho=7)": {
+  "m": 7,
+  "M": 6,
+  "rho": 7
+ },
+ "m7,x^5,randomK#0": {
+  "m": 7,
+  "M": 6,
+  "rho": 55
+ },
+ "m7,x^5,randomK#1": {
+  "m": 7,
+  "M": 6,
+  "rho": 71
+ },
+ "m7,x^5,randomK#2": {
+  "m": 7,
+  "M": 6,
+  "rho": 124
+ },
+ "m7,x^5,randomK#3": {
+  "m": 7,
+  "M": 7,
+  "rho": 27
+ },
+ "m7,x^5,randomK#4": {
+  "m": 7,
+  "M": 7,
+  "rho": 111
+ },
+ "m7,x^5,randomK#5": {
+  "m": 7,
+  "M": 7,
+  "rho": 2
+ },
+ "m7,x^13(Kasami k=2),d0(rho=1)": {
+  "m": 7,
+  "M": 5,
+  "rho": 1
+ },
+ "m7,x^13(Kasami k=2),d0(rho=7)": {
+  "m": 7,
+  "M": 5,
+  "rho": 7
+ },
+ "m7,x^13(Kasami k=2),randomK#0": {
+  "m": 7,
+  "M": 6,
+  "rho": 126
+ },
+ "m7,x^13(Kasami k=2),randomK#1": {
+  "m": 7,
+  "M": 6,
+  "rho": 126
+ },
+ "m7,x^13(Kasami k=2),randomK#2": {
+  "m": 7,
+  "M": 6,
+  "rho": 40
+ },
+ "m7,x^13(Kasami k=2),randomK#3": {
+  "m": 7,
+  "M": 6,
+  "rho": 26
+ },
+ "m7,x^13(Kasami k=2),randomK#4": {
+  "m": 7,
+  "M": 6,
+  "rho": 71
+ },
+ "m7,x^13(Kasami k=2),randomK#5": {
+  "m": 7,
+  "M": 6,
+  "rho": 127
+ },
+ "m9,inv,d0(rho=1)": {
+  "m": 9,
+  "M": 5,
+  "rho": 1
+ },
+ "m9,inv,d0(rho=7)": {
+  "m": 9,
+  "M": 5,
+  "rho": 7
+ },
+ "m9,inv,randomK#0": {
+  "m": 9,
+  "M": 8,
+  "rho": 464
+ },
+ "m9,inv,randomK#1": {
+  "m": 9,
+  "M": 8,
+  "rho": 6
+ },
+ "m9,inv,randomK#2": {
+  "m": 9,
+  "M": 8,
+  "rho": 430
+ },
+ "m9,inv,randomK#3": {
+  "m": 9,
+  "M": 7,
+  "rho": 133
+ },
+ "m9,inv,randomK#4": {
+  "m": 9,
+  "M": 8,
+  "rho": 308
+ },
+ "m9,inv,randomK#5": {
+  "m": 9,
+  "M": 8,
+  "rho": 419
+ },
+ "m9,x^3,d0(rho=1)": {
+  "m": 9,
+  "M": 6,
+  "rho": 1
+ },
+ "m9,x^3,d0(rho=7)": {
+  "m": 9,
+  "M": 6,
+  "rho": 7
+ },
+ "m9,x^3,randomK#0": {
+  "m": 9,
+  "M": 8,
+  "rho": 366
+ },
+ "m9,x^3,randomK#1": {
+  "m": 9,
+  "M": 8,
+  "rho": 342
+ },
+ "m9,x^3,randomK#2": {
+  "m": 9,
+  "M": 7,
+  "rho": 27
+ },
+ "m9,x^3,randomK#3": {
+  "m": 9,
+  "M": 8,
+  "rho": 424
+ },
+ "m9,x^3,randomK#4": {
+  "m": 9,
+  "M": 8,
+  "rho": 109
+ },
+ "m9,x^3,randomK#5": {
+  "m": 9,
+  "M": 8,
+  "rho": 400
+ },
+ "m9,x^5,d0(rho=1)": {
+  "m": 9,
+  "M": 7,
+  "rho": 1
+ },
+ "m9,x^5,d0(rho=7)": {
+  "m": 9,
+  "M": 7,
+  "rho": 7
+ },
+ "m9,x^5,randomK#0": {
+  "m": 9,
+  "M": 8,
+  "rho": 96
+ },
+ "m9,x^5,randomK#1": {
+  "m": 9,
+  "M": 8,
+  "rho": 245
+ },
+ "m9,x^5,randomK#2": {
+  "m": 9,
+  "M": 9,
+  "rho": 393
+ },
+ "m9,x^5,randomK#3": {
+  "m": 9,
+  "M": 8,
+  "rho": 317
+ },
+ "m9,x^5,randomK#4": {
+  "m": 9,
+  "M": 7,
+  "rho": 396
+ },
+ "m9,x^5,randomK#5": {
+  "m": 9,
+  "M": 7,
+  "rho": 60
+ },
+ "m9,x^13(Kasami k=2),d0(rho=1)": {
+  "m": 9,
+  "M": 7,
+  "rho": 1
+ },
+ "m9,x^13(Kasami k=2),d0(rho=7)": {
+  "m": 9,
+  "M": 7,
+  "rho": 7
+ },
+ "m9,x^13(Kasami k=2),randomK#0": {
+  "m": 9,
+  "M": 9,
+  "rho": 201
+ },
+ "m9,x^13(Kasami k=2),randomK#1": {
+  "m": 9,
+  "M": 9,
+  "rho": 334
+ },
+ "m9,x^13(Kasami k=2),randomK#2": {
+  "m": 9,
+  "M": 7,
+  "rho": 490
+ },
+ "m9,x^13(Kasami k=2),randomK#3": {
+  "m": 9,
+  "M": 7,
+  "rho": 56
+ },
+ "m9,x^13(Kasami k=2),randomK#4": {
+  "m": 9,
+  "M": 7,
+  "rho": 355
+ },
+ "m9,x^13(Kasami k=2),randomK#5": {
+  "m": 9,
+  "M": 8,
+  "rho": 244
+ },
+ "m11,inv,d0(rho=1)": {
+  "m": 11,
+  "M": 5,
+  "rho": 1
+ },
+ "m11,inv,d0(rho=7)": {
+  "m": 11,
+  "M": 5,
+  "rho": 7
+ },
+ "m11,inv,randomK#0": {
+  "m": 11,
+  "M": 9,
+  "rho": 289
+ },
+ "m11,inv,randomK#1": {
+  "m": 11,
+  "M": 9,
+  "rho": 1273
+ },
+ "m11,inv,randomK#2": {
+  "m": 11,
+  "M": 8,
+  "rho": 171
+ },
+ "m11,inv,randomK#3": {
+  "m": 11,
+  "M": 9,
+  "rho": 567
+ },
+ "m11,inv,randomK#4": {
+  "m": 11,
+  "M": 9,
+  "rho": 1248
+ },
+ "m11,inv,randomK#5": {
+  "m": 11,
+  "M": 9,
+  "rho": 1222
+ },
+ "m11,x^3,d0(rho=1)": {
+  "m": 11,
+  "M": 6,
+  "rho": 1
+ },
+ "m11,x^3,d0(rho=7)": {
+  "m": 11,
+  "M": 6,
+  "rho": 7
+ },
+ "m11,x^3,randomK#0": {
+  "m": 11,
+  "M": 9,
+  "rho": 685
+ },
+ "m11,x^3,randomK#1": {
+  "m": 11,
+  "M": 8,
+  "rho": 1278
+ },
+ "m11,x^3,randomK#2": {
+  "m": 11,
+  "M": 9,
+  "rho": 1763
+ },
+ "m11,x^3,randomK#3": {
+  "m": 11,
+  "M": 9,
+  "rho": 348
+ },
+ "m11,x^3,randomK#4": {
+  "m": 11,
+  "M": 9,
+  "rho": 1848
+ },
+ "m11,x^3,randomK#5": {
+  "m": 11,
+  "M": 9,
+  "rho": 112
+ },
+ "m11,x^5,d0(rho=1)": {
+  "m": 11,
+  "M": 8,
+  "rho": 1
+ },
+ "m11,x^5,d0(rho=7)": {
+  "m": 11,
+  "M": 8,
+  "rho": 7
+ },
+ "m11,x^5,randomK#0": {
+  "m": 11,
+  "M": 9,
+  "rho": 1319
+ },
+ "m11,x^5,randomK#1": {
+  "m": 11,
+  "M": 8,
+  "rho": 1583
+ },
+ "m11,x^5,randomK#2": {
+  "m": 11,
+  "M": 8,
+  "rho": 1150
+ },
+ "m11,x^5,randomK#3": {
+  "m": 11,
+  "M": 9,
+  "rho": 869
+ },
+ "m11,x^5,randomK#4": {
+  "m": 11,
+  "M": 9,
+  "rho": 810
+ },
+ "m11,x^5,randomK#5": {
+  "m": 11,
+  "M": 8,
+  "rho": 261
+ },
+ "m11,x^13(Kasami k=2),d0(rho=1)": {
+  "m": 11,
+  "M": 8,
+  "rho": 1
+ },
+ "m11,x^13(Kasami k=2),d0(rho=7)": {
+  "m": 11,
+  "M": 8,
+  "rho": 7
+ },
+ "m11,x^13(Kasami k=2),randomK#0": {
+  "m": 11,
+  "M": 11,
+  "rho": 1525
+ },
+ "m11,x^13(Kasami k=2),randomK#1": {
+  "m": 11,
+  "M": 11,
+  "rho": 570
+ },
+ "m11,x^13(Kasami k=2),randomK#2": {
+  "m": 11,
+  "M": 10,
+  "rho": 1363
+ },
+ "m11,x^13(Kasami k=2),randomK#3": {
+  "m": 11,
+  "M": 8,
+  "rho": 890
+ },
+ "m11,x^13(Kasami k=2),randomK#4": {
+  "m": 11,
+  "M": 9,
+  "rho": 2043
+ },
+ "m11,x^13(Kasami k=2),randomK#5": {
+  "m": 11,
+  "M": 9,
+  "rho": 817
+ },
+ "_sec": 5.9
+}

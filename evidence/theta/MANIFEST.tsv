@@ -1,0 +1,6 @@
+evidence_path	sha256	bytes	private_source	role
+code/c3c4c5.py	f3b8ae931103d21ca3653d0df307bf624114eec84605b4539f73f269f40bb170	8059	w/c9/audit/code/c3c4c5.py	code
+expected/c3c4c5.log	4b0fd90824caa4bbac81719e022ea8090f4714aa447ba46ec6f6efef0dfe5bde	1804	w/c9/audit/results/c3c4c5.log	expected
+expected/c3c4c5.exit	19eaf43821a7660ec323a87c8457bf74823beb296c39f5e01aa8a683aa50f061	7	w/c9/audit/results/c3c4c5.exit	expected
+README.md	e64e93678850f1e9b9923760d103482cf3c3017554f2d0d2287923473614b161	1263	NEW (written for the evidence set)	new
+rep.sh	bf61c1ac17dd7af3a3ac2f5cfeeae12e216f9c25a66dc949c813e09d2dcb2998	347	NEW (written for the evidence set)	new

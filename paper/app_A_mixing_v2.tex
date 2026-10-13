@@ -1,0 +1,167 @@
+% app_A_mixing_v2.tex = app_A_mixing_v1 with one inline sum of the proof of Lemma app-line set as a display
+% (anonymous iacrtrans build: 24.5pt overfull box); no change of content.
+% app_A_mixing_v1.tex -- C8 (P8-04, GPT C7-F02): the C5/C6 lemmas used by Section 6, collected and proved here so that
+% Section 6 depends on no research note. Sources (unchanged originals): c5/a1/notes/LYAP_P5.md (L1-L5, Prop. 1),
+% c6/a1/notes/LYAP_P6.md (corrected meaning of Lambda', L4', Prop. 1', comparison matrix), c6/a1/notes/N1_P6.md
+% (W1-W4, G0, G1, Proposition D2). Not included because Section 6 does not use them: Lambda'' and the axis low modes (LYAP_P6 s.2),
+% the zeta_2 reduction and R2 (N1_P6 s.7), Perron weights (LYAP_P6 s.5).
+\section{The two-word reduction}\label{app:mix}
+
+Throughout, Assumption~\ref{ass:PD} holds, $T=T_B$, $W=R\setminus\{0\}$, and $M$ is a $2\times2$ matrix over $R$ whose entries and
+determinant are units. All spaces carry the counting-measure inner product.
+
+\subsection{Spaces and operators}
+Let $V_0=\{X:R^2\to\mathbb R,\ X(0,0)=0\}$, $U=\mathbf 1_{R^2\setminus\{(0,0)\}}/(N^2-1)$, and work in $V_0\ominus U$. For $X\in V_0$ put
+$SX=T^\top XT$ (that is, $(SX)(\gamma_1,\gamma_2)=\sum_{\beta}T(\beta_1,\gamma_1)X(\beta_1,\beta_2)T(\beta_2,\gamma_2)$) and $\mathcal TX=\mathrm{Perm}_M(SX)$ with
+$(\mathrm{Perm}_MX)(M\beta)=X(\beta)$. Since $T^\top$ is doubly stochastic with $T(0,\cdot)=e_0$ and $T(\alpha,0)=0$ for $\alpha\ne0$, and $\mathrm{Perm}_M$ is an
+orthogonal permutation fixing $(0,0)$, $\mathcal T$ maps $V_0$ to itself, $\mathcal TU=U$, $\|\mathcal T\|\le1$, and $\mathcal T$ preserves $V_0\ominus U$.
+
+\emph{Cells.} For $s,t\in\Fq$ let $f_s=\{\beta\in R:\mathrm{lo}\,\beta=s\}$ ($q$ points). The cells of $R^2\setminus\{(0,0)\}$ are $f_s\times f_t$ for
+$(s,t)\ne(0,0)$ and $(f_0\times f_0)\setminus\{(0,0)\}$; every cell has at least $q^2-1$ points. $\Lambda'\subset V_0$ is the space of functions
+constant on cells, $P=\Pi_{\Lambda'}$ and $Q=I-P$ (on $V_0\ominus U$; note $U\in\Lambda'$). In one word, $\lambda$ is the space of functions on
+$R$ constant on the fibres $f_s$, $\tilde\lambda$ the functions on $W$ constant on $f_s\cap W$, and $\perp\subset\ell^2(W)$ the functions with sum $0$
+on every $f_s\cap W$; $T'=T|_{W\times W}$ and $\tau=\|\Pi_\perp T'^\top\Pi_\perp\|$ as in Theorem~\ref{thm:R1}.
+
+\subsection{The slow mode}
+\begin{lemma}[L1]\label{lem:L1}
+$\mathrm{Perm}_M$ maps cells to cells and fixes $(0,0)$; hence $\mathrm{Perm}_MP=P\,\mathrm{Perm}_M$.
+\end{lemma}
+\begin{proof}
+Reduction modulo $2R$ is a ring homomorphism, so $\mathrm{lo}(M\beta)=\bar M\,\mathrm{lo}(\beta)$ with $\bar M$ invertible over $\Fq$.
+\end{proof}
+
+\begin{lemma}[L2]\label{lem:L2}
+In one word, $\Pi_\lambda T^\top\Pi_\lambda$ is the projection onto the constants: the low digit of the output, averaged over an input fibre
+$f_u$, is uniform.
+\end{lemma}
+\begin{proof}
+Use Lemma~\ref{lem:diffB}. $\cG$ ($u\notin\{0,\rho\}$): for each $(a,s)$ exactly one $b$ gives low difference $s$, so every row of the fibre has a uniform
+low marginal. $\cZ$ ($u=0$): $v=0$ is the zero difference (output $0$), and for $v\ne0$ the low output $s=d(a)v$ is uniform on $v\,\Img d$ (each value
+with probability $2/q$); averaging over $v$ gives $q^{-1}([s=0]+[s\ne0]\cdot(2/q)\cdot\#\{v\ne0:s\in v\Img d\})=q^{-1}([s=0]+[s\ne0])=1/q$.
+$\cE$ ($u=\rho$): the low output $s_v(a)$ is a bijective function of $v$ for each $a$, so the average over $v$ is uniform.
+\end{proof}
+
+\begin{lemma}[L3]\label{lem:L3}
+$\|\Pi_\lambda T^\top\Pi_{\lambda^\perp}\|\le\sqrt{2/q}$.
+\end{lemma}
+\begin{proof}
+For $Y\in\lambda^\perp$ (sum $0$ on every input fibre) the low marginal of $T^\top Y$ is $m(s)=\sum_\alpha Y(\alpha)K(\alpha,s)$ with
+$K(\alpha,s)=\Pr[\mathrm{lo}\text{ of output}=s\mid\alpha]$, and $\|\Pi_\lambda T^\top Y\|^2=q^{-1}\sum_sm(s)^2$. Rows in $\cG$ have constant $K$ (Lemma~\ref{lem:L2}),
+so their contribution vanishes. On the $\cZ$ fibre, $K_ZK_Z^\top=\mathrm{diag}(1)\oplus q^{-1}(I+J)$, because $|v\Img d\cap v'\Img d|=q/4$ for $v\ne v'$ ($\Img d$ is
+an affine hyperplane); on vectors of sum $0$ its largest Rayleigh quotient is $1$, so $\|K_Z^\top Y_Z\|\le\|Y_Z\|$. On the $\cE$ fibre
+the $q\times q$ matrix $K_E$ is doubly stochastic, so $\|K_E^\top Y_E\|\le\|Y_E\|$. Hence $\|m\|\le\|Y_Z\|+\|Y_E\|\le\sqrt2\|Y\|$ and
+$\|\Pi_\lambda T^\top Y\|=q^{-1/2}\|m\|\le\sqrt{2/q}\,\|Y\|$.
+\end{proof}
+
+\begin{lemma}[L4]\label{lem:L4}
+On $V_0\ominus U$, $P\mathcal TP=-q^{-2}\psi\psi^\top/\|\psi\|^2$ with $\psi=-\mathbf 1_c+q^{-2}\mathbf 1_{R'}$, where $c=(f_0\times f_0)\setminus\{(0,0)\}$ and
+$R'$ is the set of the other non-zero states; in particular $\|P\mathcal TP\|=1/N$.
+\end{lemma}
+\begin{proof}
+For a cell $\sigma=(s,t)\ne(0,0)$, $S\mathbf 1_{f_s\times f_t}=(T^\top\mathbf 1_{f_s})\otimes(T^\top\mathbf 1_{f_t})$; by Lemma~\ref{lem:L2} each factor has mass $1$ in every
+fibre and value $[s=0]$ at $0$. Hence the cell projection of $S\mathbf1_\sigma$ equals $q^{-2}$ on $R'$ and $1/(q^2-1)$ on $c$, while
+$S(\mathbf 1_{f_0\times f_0}-e_{00})$ projects to $q^{-2}$ on $R'$ and $0$ on $c$. For $X=\sum_\sigma x_\sigma\mathbf 1_\sigma\in\Lambda'$ of mass $0$,
+$q^2\sum_{\sigma\ne00}x_\sigma=-(q^2-1)x_{00}$, and substituting gives $P SX=(x_{00}/q^2)\psi$; $\mathrm{Perm}_M$ preserves $c$ and $R'$ (Lemma~\ref{lem:L1}). Finally
+$\langle\psi,X\rangle/\|\psi\|^2=-x_{00}$.
+\end{proof}
+
+\begin{lemma}[L5]\label{lem:L5}
+$\eta:=\|P\mathcal TQ\|\le\eta_{\mathrm{rss}}=\sqrt{2/q+1/(q^2-1)}$.
+\end{lemma}
+\begin{proof}
+Work in $\ell^2(R^2)\supset V_0$. There, the cell-constant functions together with $e_{00}$ form $(\lambda\otimes\lambda)\oplus\mathrm{span}\{e'\}$,
+$e'=e_{00}-q^{-2}\mathbf 1_{f_0\times f_0}$, an orthogonal sum with $\|e'\|^2=1-q^{-2}$; for $Y\in V_0$ the projection onto $\Lambda'$ is the projection onto this
+space, because $Y\perp e_{00}$. By Lemma~\ref{lem:L1} $\mathrm{Perm}_M$ may be removed. For $X\in\Lambda'^\perp\subset(\lambda\otimes\lambda)^\perp$ split $X$ into its $\lambda\otimes\lambda^\perp$, $\lambda^\perp\otimes\lambda$ and
+$\lambda^\perp\otimes\lambda^\perp$ parts; $\Pi_{\lambda\otimes\lambda}S=(\Pi_\lambda T^\top)\otimes(\Pi_\lambda T^\top)$ and Lemma~\ref{lem:L3} bound the three images, which are mutually
+orthogonal, by $\sqrt{2/q}$ times the norms, so the $\lambda\otimes\lambda$ component is at most $\sqrt{2/q}\|X\|$. The $e'$ component is
+$|\langle(T\otimes T)e',X\rangle|/\|e'\|=q^{-2}|\langle(T\mathbf1_{f_0})\otimes(T\mathbf1_{f_0}),X\rangle|/\|e'\|\le q^{-2}\cdot q\|X\|/\sqrt{1-q^{-2}}$ (the vector
+$(T\mathbf 1_{f_0})\otimes(T\mathbf1_{f_0})$ has norm at most $q$). The two components are orthogonal.
+\end{proof}
+
+\subsection{One word, and the mixed Gram estimates}
+\begin{lemma}[W1--W4]\label{lem:W}
+(W2) $\ell_W:=\|\Pi_{\tilde\lambda}T'^\top\Pi_\perp\|\le\sqrt{2/(q-1)}$. (W3) $\nu:=\|T'^\top\Pi_\perp\|$ satisfies $\nu^2\le2/(q-1)+\tau^2$; hence, with
+$\mathcal K=\perp\otimes\perp$ and $\mathcal R=(\tilde\lambda\otimes\perp)\oplus(\perp\otimes\tilde\lambda)$, $\|S\Pi_{\mathcal K}\|\le\nu^2$ and $\|S\Pi_{\mathcal R\oplus\mathcal K}\|\le\sqrt2\nu$.
+(W4) $S$ preserves the axis $\mathrm{Ax}=e_0\otimes\ell^2(W)\oplus\ell^2(W)\otimes e_0$ and the interior $\ell^2(W\times W)$, and $\|S|_{\mathrm{Ax}}\|\le1$.
+(W1, not used below) $\|\Pi_{\tilde\lambda\ominus1}T'^\top\Pi_{\tilde\lambda\ominus1}\|=1/q$.
+\end{lemma}
+\begin{proof}
+(W2) Extend $Y\in\perp$ by $0$ at the origin; it lies in $\lambda^\perp$ on $R$ and $(T^\top Y)(0)=Y(0)=0$. Averaging over $q-1$ instead of $q$ points in $f_0$
+multiplies the bound of Lemma~\ref{lem:L3} by at most $\sqrt{q/(q-1)}$. (W3) $T'^\top$ preserves mass, so $T'^\top Y$ has no constant component for $Y\in\perp$;
+split it into its $\tilde\lambda$ and $\perp$ parts. On the interior $S=T'^\top\otimes T'^\top$, so $\|S\Pi_{\mathcal K}\|=\nu^2$; writing
+$\mathcal R\oplus\mathcal K=(\ell^2(W)\otimes\perp)\oplus(\perp\otimes\tilde\lambda)$ (orthogonal inputs, each image of norm at most $\nu$) gives $\sqrt2\nu$. (W4) $T^\top e_0=e_0$ and
+$T^\top\ell^2(W)\subset\ell^2(W)$. (W1) is a rank-one computation from Lemma~\ref{lem:L2} and is recorded only for completeness.
+\end{proof}
+
+\begin{lemma}[G0, G1]\label{lem:G}
+(G0) If $X\perp\Lambda'$, then $\|\Pi_{\tilde\lambda\otimes\tilde\lambda}X_{\mathrm{int}}\|\le\sqrt{2/(q-1)}\,\|X_{\mathrm{Ax}}\|$.
+(G1) $\|(I-\Pi_{\mathcal K})\,\mathrm{Perm}_M\,\Pi_{\mathrm{Ax}}\|\le2/\sqrt{q-1}$.
+\end{lemma}
+\begin{proof}
+(G0) On cells $(s,t)$ with $s,t\ne0$ the sum of $X$ is $0$ and there are no axis points, so the $\tilde\lambda\otimes\tilde\lambda$ component vanishes. A cell
+$(0,t)$, $t\ne0$, has $q$ axis points and $q(q-1)$ interior points; the interior sum is minus the axis sum, which is at most $\sqrt q$ times the axis norm,
+so the component has norm at most $\|X_{\mathrm{Ax}}|_{\mathrm{cell}}\|/\sqrt{q-1}$. The cell $c$ contributes in the same way with $2(q-1)$ axis points.
+(G1) $\mathrm{Perm}_M(e_0\otimes g)$ is supported on the line $\{(m_{12}r,m_{22}r)\}$ (both coefficients units), which lies in the interior; for fixed second
+coordinate at most one first coordinate in a fibre lies on the line, and conversely. Hence each of the two one-word $\tilde\lambda$ projections of the
+line function has norm at most $\|g\|/\sqrt{q-1}$; as $I-\Pi_{\mathcal K}=\Pi_{\tilde\lambda}\otimes I+\Pi_\perp\otimes\Pi_{\tilde\lambda}$ is an orthogonal sum, the
+non-$\mathcal K$ part is at most $\sqrt{2/(q-1)}\|g\|$. The two halves of the axis are orthogonal inputs, which gives $\sqrt2\cdot\sqrt{2/(q-1)}=2/\sqrt{q-1}$.
+\end{proof}
+
+\begin{proposition}[D2]\label{prop:appD2}
+\[
+\theta_2=\|Q\mathcal T^2Q\|\le\eta_{\mathrm{rss}}+\sqrt{\bigl(\nu^2+(2+\sqrt2)/\sqrt{q-1}\bigr)^2+2\nu^2}.
+\]
+\end{proposition}
+\begin{proof}
+With $A=P\mathcal TP$, $B=P\mathcal TQ$, $C=Q\mathcal TP$, $D=Q\mathcal TQ$ one has $Q\mathcal T^2Q=CB+D^2$, $\|C\|\le1$ and $\|B\|\le\eta_{\mathrm{rss}}$ (Lemma~\ref{lem:L5}).
+Let $X=QX$, $a=\|X_{\mathrm{Ax}}\|$, $b=\|X_{\mathrm{int}}\|$. Then $SX=SX_{\mathrm{Ax}}+S\Pi_{\tilde\lambda\otimes\tilde\lambda}X_{\mathrm{int}}+S\Pi_{\mathcal R\oplus\mathcal K}X_{\mathrm{int}}$, the last two
+terms of norm at most $\sqrt{2/(q-1)}\,a$ (Lemma~\ref{lem:G}, G0) and $\sqrt2\nu b$ (Lemma~\ref{lem:W}). Write $Y=\mathrm{Perm}_MSX=L+E$ with
+$L=\mathrm{Perm}_MSX_{\mathrm{Ax}}$, $\|L\|\le a$, and $\|E\|\le\sqrt{2/(q-1)}\,a+\sqrt2\nu b$. Since $\mathcal K\perp\Lambda'$, $QY=\Pi_{\mathcal K}L+Q(I-\Pi_{\mathcal K})L+QE$, and
+$D^2X=Q\,\mathrm{Perm}_MS\,QY$ with $\|S\Pi_{\mathcal K}L\|\le\nu^2a$ and $\|(I-\Pi_{\mathcal K})L\|\le(2/\sqrt{q-1})a$ (G1). Collecting,
+$\|D^2X\|\le(\nu^2+(2+\sqrt2)/\sqrt{q-1})a+\sqrt2\nu b$, and Cauchy--Schwarz with $a^2+b^2=\|X\|^2$ gives the bound for $\|D^2\|$.
+\end{proof}
+
+\subsection{Comparison, start and the line lemma}
+\begin{lemma}[comparison]\label{lem:app-cmp}
+For $a_j=\|PD_j\|$, $b_j=\|QD_j\|$: $a_{j+1}\le q^{-2}a_j+\eta b_j$, $b_{j+1}\le a_j+b_j$, hence
+$a_{j+2}\le(\eta+q^{-4})a_j+\eta(1+q^{-2})b_j$ and $b_{j+2}\le\zeta_2a_j+\theta_2b_j$ with $\zeta_2=\|Q\mathcal T^2P\|\le1$.
+\end{lemma}
+\begin{proof}
+$PD_{j+1}=P\mathcal TPD_j+P\mathcal TQD_j$ with Lemmas~\ref{lem:L4} and~\ref{lem:L5}; $\|QD_{j+1}\|\le\|D_j\|\le a_j+b_j$; iterate once for $a_{j+2}$, and split
+$D_j=PD_j+QD_j$ under $Q\mathcal T^2$ for $b_{j+2}$.
+\end{proof}
+
+\begin{lemma}[start]\label{lem:app-start}
+$\|D_1\|_2\le\|\pi_1\|_2\le q^{-1/2}$ and $\|\pi_2\|_\infty\le1/N$.
+\end{lemma}
+\begin{proof}
+$\|\pi_1\|_2^2=\mathcal E(\alpha_1)\mathcal E(\alpha_2)$ with the row energies $\mathcal E(\alpha)=\sum_\beta T(\alpha,\beta)^2$, which equal $1$ for $\alpha=0$ and are at most
+$\max_\beta T(\alpha,\beta)\le1/q$ otherwise (Theorem~\ref{thm:eps}); at least one word of $\alpha$ is non-zero. The second statement is Lemma~\ref{lem:D1}
+($w=2$, $b_\star=1/q$) followed by the permutation $\mathrm{Perm}_M$.
+\end{proof}
+
+\begin{lemma}[line lemma]\label{lem:app-line}
+For $m\ge5$ and every $j\in\{1,2\}$, $|\Pr_{\pi_{r+1}}[\beta_j=0]-1/(N+1)|\le(1779/256)\|D_r\|_2$.
+\end{lemma}
+\begin{proof}
+Let $A_j=\{\beta\ne(0,0):\beta_j=0\}$ and $f=\mathcal T^*\mathbf 1_{A_j}$, so
+\[f(\alpha)=\sum_\delta T(\alpha_1,\delta_1)T(\alpha_2,\delta_2)[(M\delta)_j=0].\]
+The condition
+$(M\delta)_j=0$ is the graph $\delta_2=\phi(\delta_1)$ of a bijection ($m_{j2}$ is a unit), so by Cauchy--Schwarz $f(\alpha)\le(\mathcal E(\alpha_1)\mathcal E(\alpha_2))^{1/2}$ and
+$\|f\|_2\le\mathcal E_B\le1779/256$ (Theorem~\ref{thm:UE}). As $\mathcal TU=U$ and $D_r\perp U$,
+$\Pr_{\pi_{r+1}}[\beta_j=0]=\langle f,U\rangle+\langle f,D_r\rangle$ with $\langle f,U\rangle=|A_j|/(N^2-1)=1/(N+1)$.
+\end{proof}
+
+\begin{lemma}[arithmetic]\label{lem:app-arith}
+Let $m\ge5$, $x=(\sqrt3/2)^m$, $u=q^{-1/2}$. Then $x\le1/2$, $u/x\le3/8$, $u\le x^2$, $\eta_{\mathrm{rss}}\le\frac32u$, $2/(q-1)\le x^2/2$,
+$(2+\sqrt2)/\sqrt{q-1}\le\frac{18}5u$; with Theorem~\ref{thm:R1}, $\nu^2\le\frac{11}2x^2$ and $\theta_2\le\frac{1919}{240}x<8x$. Moreover
+$\eta_{\mathrm{rss}}+q^{-4}\le2u$ and $\eta_{\mathrm{rss}}(1+q^{-2})\le2u$.
+\end{lemma}
+\begin{proof}
+$x\le1/2$ and $u/x=(2/3)^{m/2}\le3/8$ hold at $m=5$ and are monotone in $m$; $u\le x^2$ is $2^{3/2}\le3$. $\eta_{\mathrm{rss}}\le\frac32u$ is $q^2-4q-1\ge0$.
+$2/(q-1)\le x^2/2$ is $4q^2\le(q-1)3^m$, true at $m=5$ ($4096\le7533$) and the ratio decreases. $(2+\sqrt2)^2q/(q-1)\le(7/2)^2\cdot32/31<324/25$.
+Theorem~\ref{thm:R1} gives $\tau^2\le5x^2$, so $\nu^2\le\frac{11}2x^2\le\frac{11}4x$ and $\sqrt2\nu\le\sqrt{11}\,x\le\frac{10}3x$. Splitting the square root in
+\eqref{eq:D2} by the triangle inequality, $\theta_2\le\nu^2+\sqrt2\nu+(\frac{18}5+\frac32)u\le(\frac{11}4+\frac{10}3+\frac{51}{10}\cdot\frac38)x=\frac{1919}{240}x$. The last two
+inequalities follow from $\eta_{\mathrm{rss}}\le\frac32u$, $q^{-4}\le u/2$ and $\frac32(1+q^{-2})\le2$.
+\end{proof}
+% Exact rational re-check of every inequality for m=5..61: c8/checks/p803_steps.py part A (exit 0).

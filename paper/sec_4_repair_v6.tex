@@ -1,0 +1,227 @@
+% sec_4_repair_v6.tex -- C9 paper lane (P9-09/P9-10): two internal references in the text removed
+% ("the C6 notes", "of C6"); mathematics unchanged from sec_4_repair_v5.tex.
+% sec_4_repair_v5.tex -- C8: P8-05 (quantifier of non-necessity, GPT C7-F03; Example ex:quant),
+% P8-06 (Proposition prop:mc, multiplicative complexity m-1 of g_d alone).
+% sec_4_repair_v4.tex (v4: one display split, layout only) -- Group II, written by the main author (C7, P7-02..P7-05, P7-14).
+% Replaces the frame sec_4_repair_v2.tex. The d0 statements of sec_4_d0_notes_v2.tex appear here as
+% specializations (Corollary cor:d0); labels dz:prop:link and dz:prop:X21 are kept for Section 8.
+% Proof sources: c7/notes/resp/P7-02.md .. P7-05.md (paper), GPT NEW_DERIVATIONS_JA.md A (audit proposal,
+% re-proved independently), C6 c6/h/notes/H_CERT_P6.md (d0 case). Finite calibration: c7/gd/.
+\section{Local zero sums and their certified correction}\label{sec:repair}
+
+Throughout this section $p(x)=x^{q-2}$ (with $0\mapsto0$), $m\ge3$, and $d=\varepsilon\oplus K$ is any
+$\FF$-affine map with $\ker K=\{0,\rho\}$, $\rho\ne0$, $\varepsilon\notin\Img K$ (condition (P2) of
+Assumption~\ref{ass:PD}). Oddness of $m$ is not used in Subsections~\ref{ss:norm}--\ref{ss:deg}; it enters
+only when the inverse map is required to be APN, i.e.\ when the results are combined with
+Section~\ref{sec:diff} (Remark~\ref{rem:same}).
+
+\subsection{The local sum}
+For an $\FF$-linear map $L:\Fq\to\Fq$, $\mu\in\Fq$ and $c\in\Fq$ put
+\[
+\Psi_{L,\mu}(c)=\sum_{a\in\Fq}p\bigl(h(a)\oplus d(a)(c\oplus L(a))\oplus\mu\bigr).
+\]
+\begin{proposition}[Identification with the local coset sum of $S_2$]\label{dz:prop:link}
+Let $F=F_{p,d,h}$ with $(p,d,h)$ as above, $S_2(x;K_1,K_2)=F(B(B(x)+K_1)+K_2)$, $K_1=(\kappa,\lambda)$,
+$K_2=(\mu,\nu)$, and let $\mathrm{lo}\,s(a)$ be the exclusive or of the low digits of $S_2((a,b);K_1,K_2)$ over
+$b\in\Fq$ (equivalently the low digit of the ring sum over the coset $(a,\ast)$). Then, with
+$L(u)=u\star\kappa$ and $c=p(a)\oplus\lambda\oplus\kappa$, $\mathrm{lo}\,s(a)=\Psi_{L,\mu}(c)$. The key word $\nu$
+does not occur, $\lambda$ only translates $c$, and $a\mapsto c$ is bijective; hence
+$\#\{a:\mathrm{lo}\,s(a)\ne0\}=\#\{c:\Psi_{L,\mu}(c)\ne0\}$.
+\end{proposition}
+\begin{proof}
+$B(a,b)=(h(a)\oplus d(a)b,\ p(a))$. Adding $K_1$ (Lemma~\ref{lem:add}) gives low digit
+$u=h(a)\oplus d(a)b\oplus\kappa$ and high digit $p(a)\oplus\lambda\oplus((u\oplus\kappa)\star\kappa)=c\oplus L(u)$.
+Since $d(a)\ne0$ (Lemma~\ref{lem:d}), $b\mapsto u$ is a bijection of $\Fq$, so the exclusive or over $b$ is
+an exclusive or over $u$. The low digit of $B(u,c\oplus L(u))+K_2$ is $h(u)\oplus d(u)(c\oplus L(u))\oplus\mu$
+($\nu$ enters only the high digit), and the low digit of the final $F$ is $p$ of it. Summing over $u$
+gives $\Psi_{L,\mu}(c)$. Finally $p$ is a permutation, so $a\mapsto c$ is bijective.
+\end{proof}
+% SOURCE: c6/notes/resp/P6-05_link.md:11-27 (d0); the derivation uses only d(a)!=0 and p bijective,
+%         so it holds for every d satisfying (P2) (c7/notes/resp/P7-03.md).
+Thus $\Psi_{L,\mu}\not\equiv0$ means that the local zero sum fails on at least one coset, and a lower bound on
+$\#\{c:\Psi\ne0\}$ is a lower bound on the number of cosets on which it fails. The converse direction
+(non-vanishing on every coset) is not claimed.
+
+\subsection{Normalization of $d$}\label{ss:norm}
+\begin{lemma}\label{lem:norm}
+There is a unique $\eta\in\Fq^\ast$ with $\Img d=\{z:\Tr(\eta z)=1\}$. Put $\beta=\eta^{-1}$ and
+$r(a)=(\eta d(a))^{q/2}$, the square root of $\eta d(a)$. Then $r$ is $\FF$-affine, $d=\beta r^2$,
+$r(a\oplus\rho)=r(a)$, and $r$ maps $\Fq$ two-to-one onto $H=\{x:\Tr(x)=1\}$; the fibre of $r$ over each
+$x\in H$ is a pair $\{a,a\oplus\rho\}$. Moreover $0\notin H$.
+\end{lemma}
+\begin{proof}
+$\Img K$ is an $\FF$-hyperplane, so $\Img K=\{z:\Tr(\eta z)=0\}$ for a unique $\eta\ne0$ (non-degeneracy of
+the trace form). $\Img d=\varepsilon\oplus\Img K$ is the other coset because $\varepsilon\notin\Img K$, i.e.\
+$\Tr(\eta z)=1$ on $\Img d$; uniqueness of $\eta$ follows since a coset of a hyperplane determines the
+hyperplane and its defining functional. Squaring is $\FF$-linear and bijective, so $r$ is affine and
+$r^2=\eta d$. $\Tr(r(a))=\Tr(r(a)^2)=\Tr(\eta d(a))=1$, so $r(\Fq)\subseteq H$; $d$ is two-to-one with fibres
+$\{a,a\oplus\rho\}$ (Lemma~\ref{lem:d}), hence so is $r$, and $|r(\Fq)|=q/2=|H|$. $\Tr(0)=0$ gives $0\notin H$.
+\end{proof}
+For $d=d_0=(a^2+a+1)^2$ and odd $m$ one has $\eta=\beta=1$, $r(a)=a^2+a+1$, $\rho=1$ (the setting of
+\cite{FukuiFFA}). Lemma~\ref{lem:norm} uses no change of basis: $r$ is defined from $d$
+and the carry $\star$ is untouched.
+
+\begin{lemma}[Power sums over $H$; known]\label{lem:P}
+For $m\ge3$, $p_j:=\sum_{x\in H}x^{-j}$ satisfies $(p_1,p_2,p_3,p_4,p_5)=(1,1,0,1,0)$.
+\end{lemma}
+\begin{proof}
+$Q(X)=1+\sum_{i<m}X^{2^i}$ has $Q'=1$, $Q(0)=1$, $\deg Q=q/2$ and root set $H$, so
+$Q(X)=\prod_{x\in H}(1+X/x)$ and the elementary symmetric functions of $\{1/x\}$ are $e_1=e_2=e_4=1$,
+$e_3=e_5=0$ ($e_5=0$ also for $m=3$, where $\deg Q=4$). Newton's identities in characteristic two give
+$p_1=1$, $p_2=p_1^2=1$, $p_3=e_1p_2+e_2p_1+e_3=0$, $p_4=p_2^2=1$, $p_5=e_1p_4+e_2p_3+e_3p_2+e_4p_1+e_5=0$.
+\end{proof}
+% Known tool: reciprocal power sums over affine subspaces, [EHRZ] Lemma 4.5 (and Carlitz); not claimed as new.
+
+\subsection{The linear certificate}
+For $x=r(a)\in H$ put $\Delta_h(x)=h(a)\oplus h(a\oplus\rho)$ (independent of the choice in the fibre) and
+\[
+A_d(h)=\sum_{x\in H}x^{-3}\Delta_h(x),\qquad B_d(h)=\sum_{x\in H}x^{-5}\Delta_h(x)^2,
+\]
+\[
+\ell_d(h)=A_d(h)+B_d(h)^{q/2},\qquad \tau=L(\rho).
+\]
+Let $s=q/2-1$, $z(a)=h(a)\oplus d(a)L(a)\oplus\mu$ and $\Phi(C)=\sum_a(z(a)+d(a)C)^s\in\Fq[C]$.
+
+\begin{theorem}[Top coefficients]\label{thm:top}
+For every $h$, $L$, $\mu$: $\Psi_{L,\mu}(c)=\Phi(c)^2$ for all $c\in\Fq$, and
+\begin{gather*}
+[C^{s}]\Phi=0,\qquad [C^{s-1}]\Phi=\beta^{s-1}\bigl(A_d(h)+\beta\tau\bigr),\\
+[C^{s-2}]\Phi=\beta^{s-2}\bigl(B_d(h)+\beta^2\tau^2\bigr).
+\end{gather*}
+\end{theorem}
+\begin{proof}
+$q-2=2s$ and Frobenius give $\Psi=\Phi^2$ pointwise. The binary expansion of $s$ consists of $m-1$ ones, so
+$\binom sk\equiv1\pmod2$ for $0\le k\le s$ (Lucas) and $[C^k]\Phi=\sum_az(a)^{s-k}d(a)^k$. Group $a$ in fibres
+$\{a,a\oplus\rho\}$ of $d$: $d$ is constant on a fibre, so $[C^s]\Phi=\sum_ad(a)^s=0$. On a fibre,
+$L(a\oplus\rho)=L(a)\oplus\tau$, hence $z(a)\oplus z(a\oplus\rho)=\Delta_h(x)\oplus\beta x^2\tau$ with $x=r(a)$
+($\mu$ cancels). With $d=\beta x^2$ and $x^{q-1}=1$: $d^{s-1}=\beta^{s-1}x^{-3}$, $d^{s-2}=\beta^{s-2}x^{-5}$
+(here $s\ge3$ for $m\ge3$; for $m=3$, $s-2=1$). Therefore
+$[C^{s-1}]\Phi=\beta^{s-1}\sum_Hx^{-3}(\Delta_h+\beta x^2\tau)=\beta^{s-1}(A_d+\beta\tau p_1)$ and
+$[C^{s-2}]\Phi=\beta^{s-2}\sum_Hx^{-5}(z(a)^2\oplus z(a\oplus\rho)^2)=\beta^{s-2}\sum_Hx^{-5}(\Delta_h+\beta x^2\tau)^2
+=\beta^{s-2}(B_d+\beta^2\tau^2p_1)$, and $p_1=1$ (Lemma~\ref{lem:P}).
+\end{proof}
+
+\begin{theorem}[Certificate]\label{thm:cert}
+If $\ell_d(h)\ne0$ then for every $\FF$-linear $L$ and every $\mu$, $\Phi\ne0$, $\deg\Phi\le q/2-2$ and
+\[
+\#\{c\in\Fq:\Psi_{L,\mu}(c)\ne0\}\ \ge\ q/2+2 .
+\]
+More precisely $\deg\Phi=q/2-2$ if $\tau\ne\eta A_d(h)$, and $\deg\Phi=q/2-3$ (so at least $q/2+3$ non-zero
+values) if $\tau=\eta A_d(h)$. By Proposition~\ref{dz:prop:link}, the local zero sum of $S_2$ then fails on at
+least $q/2+2$ cosets for every local key.
+\end{theorem}
+\begin{proof}
+$\ell_d(h)^2=A_d^2+B_d$. If both coefficients of Theorem~\ref{thm:top} vanished, then $A_d=\beta\tau$ and
+$B_d=\beta^2\tau^2=A_d^2$, i.e.\ $\ell_d(h)=0$. So $\Phi\ne0$ and, since $[C^s]\Phi=0$, $\deg\Phi\le s-1$; a non-zero
+polynomial of degree $\le s-1$ has at most $s-1$ roots, and $\Psi(c)=0\iff\Phi(c)=0$. If $\tau=\eta A_d$ then the
+first coefficient vanishes and the second is $\beta^{s-2}(B_d+A_d^2)=\beta^{s-2}\ell_d^2\ne0$.
+\end{proof}
+The condition $\ell_d(h)\ne0$ is sufficient; its necessity is not asserted. Theorem~\ref{thm:cert} quantifies over
+\emph{all} $\FF$-linear $L$, whereas the local keys of Proposition~\ref{dz:prop:link} only produce the carry-mask maps
+$L(a)=a\star\kappa$; the two quantifiers are kept apart in the examples below (Examples~\ref{ex:nonnec}
+and~\ref{ex:quant}).
+
+\begin{theorem}[Linearity, explicit correction, exact pass fraction]\label{thm:repair}
+Let $\chi:\Fq\to\FF$ be $\FF$-linear with $\chi(\rho)=1$ and $g_d(a)=\chi(a)\,r(a)$. Then
+\begin{enumerate}
+\item $\ell_d:\Fq^{\Fq}\to\Fq$ is $\Fq$-linear and $\ell_d(g_d)=1$; in particular $\ell_d$ is surjective;
+\item $\ell_d(h+\lambda g_d)=\ell_d(h)+\lambda$ for all $h$ and $\lambda\in\Fq$; exactly one of the $q$ functions
+$h+\lambda g_d$ fails the certificate, and $h^\sharp=h$ ($\ell_d(h)\ne0$), $h^\sharp=h+g_d$ ($\ell_d(h)=0$) always passes;
+\item for every $\Fq$-linear subspace $V\subseteq\Fq^{\Fq}$ with $g_d\in V$, exactly a fraction $1-1/q$ of $V$
+passes the certificate; this applies to $V=\Fq^{\Fq}$ and to the space $\mathcal Q_2$ of functions of Boolean
+degree $\le2$ (in a fixed basis), $\dim_{\Fq}\mathcal Q_2=1+m+\binom m2$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+(1) $\Delta_h$ is $\Fq$-linear in $h$; $x\mapsto x^{q/2}$ is additive with $(xy^2)^{q/2}=x^{q/2}y$, so
+$B_d(h)^{q/2}=\sum_H(x^{-5})^{q/2}\Delta_h(x)$ is $\Fq$-linear in $h$. Since $r(a\oplus\rho)=r(a)$ and
+$\chi(a\oplus\rho)=\chi(a)\oplus1$, $\Delta_{g_d}(x)=x$; hence $A_d(g_d)=p_2=1$, $B_d(g_d)=p_3=0$, $\ell_d(g_d)=1$.
+(2) is linearity. (3) $\ell_d|_V$ is a surjective linear functional, so its kernel has index $q$ in $V$.
+Each coordinate of $g_d$ is $\chi\cdot r_i$, a product of two affine Boolean functions, so $g_d\in\mathcal Q_2$; a basis of
+$\mathcal Q_2$ over $\Fq$ is given by the square-free monomials of degree $\le2$ in the coordinates of $a$.
+\end{proof}
+The fraction in (3) is the fraction passing a sufficient certificate, not the fraction of $h$ without local zero
+sums, and not a fraction of ciphers that are secure.
+
+\subsection{Boolean degree two is minimal for this local problem}\label{ss:deg}
+\begin{proposition}\label{prop:affine}
+If $h$ is $\FF$-affine then $\Psi_{0,\mu}(c)=0$ for all $c,\mu$. Consequently every $h$ with
+$\Psi_{L,\mu}\not\equiv0$ for all $(L,\mu)$ (in particular $g_d$ and every $h$ passing the certificate) has Boolean
+degree $\ge2$, and $g_d$ has Boolean degree exactly $2$.
+\end{proposition}
+\begin{proof}
+For $L=0$ and fixed $c,\mu$, $a\mapsto y(a)=h(a)\oplus d(a)c\oplus\mu$ is $\FF$-affine. If it is not injective, every
+fibre is a coset of its kernel and has even size, so $\sum_ap(y(a))=0$. If it is bijective,
+$\sum_ap(y(a))=\sum_{x\in\Fq}x^{q-2}=\sum_{x}x=0$ ($m\ge2$). By Theorem~\ref{thm:cert}, $\ell_d(g_d)=1$ forces
+$\Psi_{0,\mu}\not\equiv0$, so $g_d$ is not affine.
+\end{proof}
+This is a statement about the Boolean degree of $h$ for this local problem only; it says nothing about AND
+counts, about the degree of $F$ or of the whole arrangement, or about optimality among known constructions.
+
+\subsection{Evaluation and the unchanged differential guarantees}
+\begin{remark}[Cost of the correction]\label{rem:cost}
+The coordinates of $r$ are public affine forms in the bits of $a$ and $\chi(a)$ is one public linear form, so $g_d$
+is evaluated with at most $m$ AND gates plus linear gates (in fact $m-1$, Proposition~\ref{prop:mc}); $\lambda g_d$ for a
+fixed $\lambda$ adds only an $\FF$-linear map (no AND). This bounds the cost of the correction, not of $h$ itself. The quantities
+$\eta,\rho,\chi$ are fixed off line; computing $\ell_d(h)$ for an arbitrary table $h$ may require $q$ evaluations
+and is not claimed to be cheap for large $m$. Choosing $h=g_d$ from the start needs no scan of $h$.
+\end{remark}
+% Finite check: c7/gd (m=5, rho of weight 1 and 3: AND = 5, all 32 points; lambda*g_d as a 5x5 F2 matrix).
+
+\begin{proposition}[Multiplicative complexity of the correction alone]\label{prop:mc}
+In the model of XOR/NOT/AND straight-line circuits with two-input AND gates counted and linear gates free,
+the multiplicative complexity of $g_d$ (as a map $\FF^m\to\FF^m$) is exactly $m-1$.
+\end{proposition}
+\begin{proof}
+Choose an $\FF$-linear isomorphism $O$ of $\Fq$ whose first coordinate is $\Tr$. Since $r(\Fq)=H$, $Or(a)=(1,v_1(a),\dots,v_{m-1}(a))$
+with $v_i$ affine. The map $a\mapsto(t,v_1,\dots,v_{m-1})$, $t=\chi(a)$, is an affine bijection: if two points have the same $v$, their
+difference lies in $\{0,\rho\}$ (the fibres of $r$), and $\chi(\rho)=1$ separates them. In these coordinates
+$Og_d=(t,tv_1,\dots,tv_{m-1})$, which uses $m-1$ AND gates. Conversely, in a circuit with $k$ AND gates every output is an affine
+combination of the inputs and of the $k$ AND outputs, so modulo affine functions the outputs span a space of dimension at most $k$.
+The functions $tv_1,\dots,tv_{m-1}$ are linearly independent modulo affine functions (distinct square-free quadratic monomials in
+the coordinates $(t,v)$), and an affine change of the input and a linear change of the output do not change this dimension; hence
+$k\ge m-1$.
+\end{proof}
+This concerns $g_d$ computed on its own. It is not a bound for $F$, nor for $h+g_d$, nor for the additional cost when the
+correction shares intermediate values with the inverse map (for $h=a^3$ no additional AND gate is needed). The upper bound and
+the quotient-dimension lower bound are standard principles of multiplicative complexity; only the identification of the
+normal form is specific to $g_d$.
+% SOURCE: GPT NEW_DERIVATIONS_JA.md C (proposal), re-proved; c8/checks/p805_p806.py: m=5, d0 (rho=1) and rho=7 (weight 3):
+% quadratic rank modulo affine = 4 = m-1, the (m-1)-AND circuit agrees at all 32 points.
+
+\begin{remark}[Same differential guarantees]\label{rem:same}
+The correction changes $h$ only. For odd $m\ge5$ the inverse map is an APN permutation, so $(p,d,h^\sharp)$
+satisfies Assumption~\ref{ass:PD} and Theorems~\ref{thm:eps}, \ref{thm:W2} (constant $4/N$ when $\wt(\rho)=1$,
+$(6+6/q)/N$ in general), \ref{thm:UE} and~\ref{thm:P4} apply to it verbatim, with the same independence and
+reset assumptions. For even $m$ only the algebra of Subsections~\ref{ss:norm}--\ref{ss:deg} holds.
+\end{remark}
+
+\begin{corollary}[The case $d=d_0$]\label{cor:d0}
+For odd $m\ge3$ and $d=d_0$: $\eta=\beta=1$, $\rho=1$, and Theorems~\ref{thm:top}--\ref{thm:repair} reduce to
+$[C^{s-1}]\Phi=A+\tau$, $[C^{s-2}]\Phi=B+\tau^2$, $\ell=A+\sqrt B$. For $h(a)=a^3$: $\Delta_h=r$, $A=1$, $B=0$,
+$\ell=1$, so $\Psi_{L,\mu}\not\equiv0$ for every local key, with at least $q/2+2$ non-zero values if $\tau\ne1$ and
+at least $q/2+3$ if $\tau=1$. The correction $h+\lambda a^3$ and the correction $h+\lambda g_{d_0}$ have the same
+effect on $\ell$ ($\ell(a^3)=\ell(g_{d_0})=1$).
+\end{corollary}
+The function $h=a^3$ remains the main comparison point: it is shared with the inverse chain and its
+certificate value is $1$; the general construction does not replace it.
+
+\begin{example}[Vanishing; non-necessity]\label{dz:prop:X21}\label{ex:nonnec}
+For $m=5$, $d=d_0$, $h(a)=a^{21}$ and $L=0$, $\mu=0$: $\Psi_{0,0}\equiv0$ on $\mathbb F_{32}$ (substitute $a=b^3$;
+the expansion of $(X+C(X^{12}+X^6+1))^{30}$ has $128$ monomials and no positive $X$-degree divisible by $31$).
+Here $\ell(h)=0$. Conversely, for random $h$ with $\ell_d(h)=0$ we observed no \emph{carry-mask} key
+$(L,\mu)=(a\mapsto a\star\kappa,\mu)$ with $\Psi\equiv0$ (Section~\ref{sec:verif}); so, for the carry-mask key family of this fixed
+model, $\ell_d=0$ is not a vanishing criterion. Neither observation is a classification.
+\end{example}
+
+\begin{example}[The two quantifiers differ]\label{ex:quant}
+Let $m=3$, $\mathbb F_8=\FF[t]/(t^3+t+1)$ with the polynomial basis, $d=d_0$, and let $h$ have the value table
+$(h(0),\dots,h(7))=(7,5,2,2,2,0,7,2)$ (index $a=a_0+2a_1+4a_2$). Then $\ell(h)=0$. For each of the $64$ carry-mask keys
+$(\kappa,\mu)$ the function $\Psi_{L,\mu}$ with $L(a)=a\star\kappa$ is not identically zero; but for the $\FF$-linear map $L$ with
+$(L(1),L(t),L(t^2))=(3,0,0)$ and $\mu=0$ one has $\Psi_{L,0}\equiv0$ (exact computation; among all $512\cdot8$ pairs $(L,\mu)$ with $L$
+linear, $64$ give $\Psi\equiv0$). So a finite check over carry-mask keys says nothing about non-necessity for general $L$, and the
+statement after Theorem~\ref{thm:cert} is restricted accordingly. This example is not a counterexample to
+Theorem~\ref{thm:cert}, which is a sufficient condition.
+\end{example}
+% SOURCE: GPT NEW_DERIVATIONS_JA.md D (proposal); independent check c8/checks/p805_p806.py (exit 0, c8/results/p805_p806.json).
+% SOURCE: c6/h/notes/H_CERT_P6.md:45-48 (X21); c7/gd/notes/P7-05_gd.md (0 -> 0 keys for random ell=0 h).

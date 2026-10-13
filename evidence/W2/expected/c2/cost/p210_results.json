@@ -1,0 +1,894 @@
+{
+ "m": 5,
+ "q": 32,
+ "N": 1024,
+ "ring": "GR(4,5)=Z4[t]/(t^5+t^2+1)",
+ "code": "bits0-4 digit0, bits5-9 digit1",
+ "H_p_Fq": {
+  "p_exponents": [
+   1,
+   2,
+   3,
+   9,
+   10,
+   18,
+   24
+  ],
+  "p_prime": [
+   0,
+   2,
+   8
+  ],
+  "d0_plus_p_prime": [
+   4,
+   8
+  ],
+  "H_p_exponents": [
+   1,
+   2,
+   3,
+   5,
+   10,
+   18,
+   24,
+   36,
+   40
+  ],
+  "H_p_coeffs_all_one": true,
+  "deg_H_p": 40,
+  "deg_ge_q": true,
+  "H_p_values_eq_p_on_Fq": true,
+  "formal_derivative_H_p": [
+   0,
+   2,
+   4
+  ],
+  "H_p_prime_eq_d0": true,
+  "red_H_p_eq_p": true,
+  "d0_zeros_on_Fq": [],
+  "d0_fibre_sizes": [
+   0,
+   2
+  ]
+ },
+ "lift_definitions": {
+  "H_A_sigma_coefficient_lift": {
+   "Z4_coeffs": {
+    "1": 1,
+    "2": 1,
+    "3": 1,
+    "5": 1,
+    "10": 1,
+    "18": 1,
+    "24": 1,
+    "36": 1,
+    "40": 1
+   },
+   "rule": "each F_q coefficient c -> sigma(c), t-coefficients = bits of c, digit 1 = 0"
+  },
+  "H_B_formula_lift": {
+   "Z4_coeffs": {
+    "1": 1,
+    "2": 1,
+    "3": 1,
+    "5": 3,
+    "10": 1,
+    "18": 1,
+    "24": 1,
+    "36": 1,
+    "40": 1
+   },
+   "rule": "sigma(p) + (X^q - X) sigma(d0 + p') multiplied out in Z4[X]"
+  },
+  "difference_H_A_minus_H_B": "2 X^5"
+ },
+ "theta": 2,
+ "P1theta_consts_sigma": [
+  2,
+  4,
+  16,
+  13,
+  27
+ ],
+ "ring_cost_per_Sbox": {
+  "P53_natural": {
+   "mu": 1,
+   "s": 4,
+   "kappa": 0,
+   "alpha": 5,
+   "formula_equals_table": true
+  },
+  "H_A": {
+   "mu": 3,
+   "s": 5,
+   "kappa": 0,
+   "alpha": 9,
+   "formula_equals_table": true
+  },
+  "H_B": {
+   "mu": 2,
+   "s": 5,
+   "kappa": 0,
+   "alpha": 8,
+   "formula_equals_table": true
+  },
+  "D5": {
+   "mu": 1,
+   "s": 2,
+   "kappa": 1,
+   "alpha": 2,
+   "formula_equals_table": true
+  },
+  "P1theta_fact": {
+   "mu": 2,
+   "s": 4,
+   "kappa": 5,
+   "alpha": 7,
+   "formula_equals_table": false
+  },
+  "P1theta_sigma": {
+   "mu": 2,
+   "s": 4,
+   "kappa": 5,
+   "alpha": 10,
+   "source": "C1 COST_MODEL.md count (upper bound, not re-derived here; the factored formula evaluates a DIFFERENT lift = P1theta_fact)"
+  }
+ },
+ "INV1024_chain": {
+  "verified_all_1024": true,
+  "ring_model": "4 F_1024 multiplications + 9 Frobenius squarings (F_2-linear); not a GR(4,5) polynomial",
+  "bit_schoolbook": {
+   "AND": 400,
+   "XOR": 469,
+   "NOT": 0,
+   "chain": "b2=b1^2*b1, b4=b2^(2^2)*b2, b8=b4^(2^4)*b4, b9=b8^2*x, inv=b9^2: 4 mult, squarings as 3x(k=1), 1x(k=2), 1x(k=4) linear maps",
+   "F1024_mult_schoolbook": {
+    "AND": 100,
+    "XOR": 101
+   },
+   "multisquare_xor": {
+    "1": 6,
+    "2": 14,
+    "4": 33
+   },
+   "karatsuba_one_level_AND": 300,
+   "karatsuba_note": "3 products of 5x5 (25 AND each); XOR not counted"
+  },
+  "F32_mult_schoolbook": {
+   "AND": 25,
+   "XOR": 25
+  }
+ },
+ "sboxes": {
+  "P53_natural": {
+   "bijective_on_R": true,
+   "table_sha256_int64": "e7355ba82671a3a95d1c319512603fc0cea52a60f0fcda928119a09b36bca222",
+   "residue_function_of_a_only": true,
+   "residue_perm": true,
+   "residue_DU": 2,
+   "residue_alg_degree": 2,
+   "high_digit_eq_h_xor_d_b": true,
+   "d_poly_Fq": {
+    "0": 1,
+    "2": 1,
+    "8": 1
+   },
+   "d_hypothesisH": {
+    "affine": true,
+    "nonvanishing": true,
+    "fibre_sizes": [
+     0,
+     2
+    ],
+    "ker_K": [
+     0,
+     1
+    ],
+    "eps": 1,
+    "eps_notin_ImK": true,
+    "omega": 2
+   },
+   "bit_structured": {
+    "AND": 50,
+    "XOR": 140,
+    "NOT": 1,
+    "a_part": {
+     "AND": 25,
+     "XOR": 110,
+     "NOT": 1,
+     "alg_degree": 4
+    },
+    "F32_product": {
+     "AND": 25,
+     "XOR": 25
+    },
+    "combine_xor": 5
+   },
+   "bit_full_ANF": {
+    "AND": 45,
+    "XOR": 158,
+    "NOT": 0,
+    "alg_degree": 4
+   },
+   "ring_DU_count": 64,
+   "DU_count_J_o_S": 32,
+   "EDP_times_N_withJ_t0..6": [
+    "64",
+    "6",
+    "185/128",
+    "8393/8192",
+    "1051701/1048576",
+    "67181035/67108864",
+    "8598407615/8589934592"
+   ],
+   "EDP_times_N_withJ_float": [
+    64.0,
+    6.0,
+    1.4453125,
+    1.0245361328125,
+    1.0029802322387695,
+    1.0010754317045212,
+    1.000986389699392
+   ]
+  },
+  "H_A": {
+   "bijective_on_R": true,
+   "table_sha256_int64": "27fe9e3dffde21d16f63ae249eb56933ae1c598346557b8460c4d7ff653d59c9",
+   "residue_function_of_a_only": true,
+   "residue_perm": true,
+   "residue_DU": 2,
+   "residue_alg_degree": 2,
+   "high_digit_eq_h_xor_d_b": true,
+   "d_poly_Fq": {
+    "0": 1,
+    "2": 1,
+    "4": 1
+   },
+   "d_hypothesisH": {
+    "affine": true,
+    "nonvanishing": true,
+    "fibre_sizes": [
+     0,
+     2
+    ],
+    "ker_K": [
+     0,
+     1
+    ],
+    "eps": 1,
+    "eps_notin_ImK": true,
+    "omega": 2
+   },
+   "bit_structured": {
+    "AND": 49,
+    "XOR": 126,
+    "NOT": 1,
+    "a_part": {
+     "AND": 24,
+     "XOR": 96,
+     "NOT": 1,
+     "alg_degree": 4
+    },
+    "F32_product": {
+     "AND": 25,
+     "XOR": 25
+    },
+    "combine_xor": 5
+   },
+   "bit_full_ANF": {
+    "AND": 44,
+    "XOR": 143,
+    "NOT": 0,
+    "alg_degree": 4
+   },
+   "ring_DU_count": 64,
+   "DU_count_J_o_S": 32,
+   "EDP_times_N_withJ_t0..6": [
+    "64",
+    "6",
+    "185/128",
+    "8385/8192",
+    "1051515/1048576",
+    "16794953/16777216",
+    "8598393611/8589934592"
+   ],
+   "EDP_times_N_withJ_float": [
+    64.0,
+    6.0,
+    1.4453125,
+    1.0235595703125,
+    1.002802848815918,
+    1.001057207584381,
+    1.0009847594192252
+   ]
+  },
+  "H_B": {
+   "bijective_on_R": true,
+   "table_sha256_int64": "e659fdc27f3a12d2377c0be39cd4e95386c696958bede875b49943541a50a9da",
+   "residue_function_of_a_only": true,
+   "residue_perm": true,
+   "residue_DU": 2,
+   "residue_alg_degree": 2,
+   "high_digit_eq_h_xor_d_b": true,
+   "d_poly_Fq": {
+    "0": 1,
+    "2": 1,
+    "4": 1
+   },
+   "d_hypothesisH": {
+    "affine": true,
+    "nonvanishing": true,
+    "fibre_sizes": [
+     0,
+     2
+    ],
+    "ker_K": [
+     0,
+     1
+    ],
+    "eps": 1,
+    "eps_notin_ImK": true,
+    "omega": 2
+   },
+   "bit_structured": {
+    "AND": 49,
+    "XOR": 135,
+    "NOT": 1,
+    "a_part": {
+     "AND": 24,
+     "XOR": 105,
+     "NOT": 1,
+     "alg_degree": 4
+    },
+    "F32_product": {
+     "AND": 25,
+     "XOR": 25
+    },
+    "combine_xor": 5
+   },
+   "bit_full_ANF": {
+    "AND": 44,
+    "XOR": 152,
+    "NOT": 0,
+    "alg_degree": 4
+   },
+   "ring_DU_count": 64,
+   "DU_count_J_o_S": 32,
+   "EDP_times_N_withJ_t0..6": [
+    "64",
+    "6",
+    "169/128",
+    "8327/8192",
+    "1050863/1048576",
+    "67179005/67108864",
+    "8598380473/8589934592"
+   ],
+   "EDP_times_N_withJ_float": [
+    64.0,
+    6.0,
+    1.3203125,
+    1.0164794921875,
+    1.002181053161621,
+    1.0010451823472977,
+    1.000983229954727
+   ]
+  },
+  "P53_h0": {
+   "bijective_on_R": true,
+   "table_sha256_int64": "41a806fe63dd4b38ea1895f9a36ac11777ac015aca2715fb612af24db0dbe315",
+   "residue_function_of_a_only": true,
+   "residue_perm": true,
+   "residue_DU": 2,
+   "residue_alg_degree": 2,
+   "high_digit_eq_h_xor_d_b": true,
+   "d_poly_Fq": {
+    "0": 1,
+    "2": 1,
+    "8": 1
+   },
+   "d_hypothesisH": {
+    "affine": true,
+    "nonvanishing": true,
+    "fibre_sizes": [
+     0,
+     2
+    ],
+    "ker_K": [
+     0,
+     1
+    ],
+    "eps": 1,
+    "eps_notin_ImK": true,
+    "omega": 2
+   },
+   "bit_structured": {
+    "AND": 35,
+    "XOR": 70,
+    "NOT": 1,
+    "a_part": {
+     "AND": 10,
+     "XOR": 40,
+     "NOT": 1,
+     "alg_degree": 2
+    },
+    "F32_product": {
+     "AND": 25,
+     "XOR": 25
+    },
+    "combine_xor": 5
+   },
+   "bit_full_ANF": {
+    "AND": 30,
+    "XOR": 83,
+    "NOT": 0,
+    "alg_degree": 2
+   },
+   "ring_DU_count": 64,
+   "DU_count_J_o_S": 32,
+   "EDP_times_N_withJ_t0..6": [
+    "64",
+    "22",
+    "311/128",
+    "11843/8192",
+    "1080939/1048576",
+    "16952497/16777216",
+    "8603756859/8589934592"
+   ],
+   "EDP_times_N_withJ_float": [
+    64.0,
+    22.0,
+    2.4296875,
+    1.4456787109375,
+    1.0308637619018555,
+    1.0104475617408752,
+    1.0016091236611828
+   ]
+  },
+  "D5": {
+   "bijective_on_R": true,
+   "table_sha256_int64": "0f897754bf5b6dc93fc6eca4b45c6c0d8b540efacaa9617864e13c928c116e25",
+   "residue_function_of_a_only": true,
+   "residue_perm": true,
+   "residue_DU": 4,
+   "residue_alg_degree": 2,
+   "high_digit_eq_h_xor_d_b": true,
+   "d_poly_Fq": {
+    "0": 1,
+    "2": 1,
+    "4": 1
+   },
+   "d_hypothesisH": {
+    "affine": true,
+    "nonvanishing": true,
+    "fibre_sizes": [
+     0,
+     2
+    ],
+    "ker_K": [
+     0,
+     1
+    ],
+    "eps": 1,
+    "eps_notin_ImK": true,
+    "omega": 2
+   },
+   "bit_structured": {
+    "AND": 49,
+    "XOR": 134,
+    "NOT": 1,
+    "a_part": {
+     "AND": 24,
+     "XOR": 104,
+     "NOT": 1,
+     "alg_degree": 4
+    },
+    "F32_product": {
+     "AND": 25,
+     "XOR": 25
+    },
+    "combine_xor": 5
+   },
+   "bit_full_ANF": {
+    "AND": 44,
+    "XOR": 151,
+    "NOT": 0,
+    "alg_degree": 4
+   },
+   "ring_DU_count": 64,
+   "DU_count_J_o_S": 32,
+   "EDP_times_N_withJ_t0..6": [
+    "64",
+    "6",
+    "317/256",
+    "2075/2048",
+    "2100415/2097152",
+    "33588263/33554432",
+    "17196689849/17179869184"
+   ],
+   "EDP_times_N_withJ_float": [
+    64.0,
+    6.0,
+    1.23828125,
+    1.01318359375,
+    1.0015559196472168,
+    1.0010082423686981,
+    1.000979091564659
+   ]
+  },
+  "P1theta_sigma": {
+   "bijective_on_R": true,
+   "table_sha256_int64": "c2f15a14252ed9478446e5eb5e6121f577dd1b8803a2e3357ce77fa55fa73ff0",
+   "residue_function_of_a_only": true,
+   "residue_perm": true,
+   "residue_DU": 2,
+   "residue_alg_degree": 2,
+   "high_digit_eq_h_xor_d_b": true,
+   "d_poly_Fq": {
+    "0": 2,
+    "2": 2,
+    "4": 2
+   },
+   "d_hypothesisH": {
+    "affine": true,
+    "nonvanishing": true,
+    "fibre_sizes": [
+     0,
+     2
+    ],
+    "ker_K": [
+     0,
+     1
+    ],
+    "eps": 2,
+    "eps_notin_ImK": true,
+    "omega": 2
+   },
+   "bit_structured": {
+    "AND": 50,
+    "XOR": 140,
+    "NOT": 1,
+    "a_part": {
+     "AND": 25,
+     "XOR": 110,
+     "NOT": 1,
+     "alg_degree": 4
+    },
+    "F32_product": {
+     "AND": 25,
+     "XOR": 25
+    },
+    "combine_xor": 5
+   },
+   "bit_full_ANF": {
+    "AND": 45,
+    "XOR": 155,
+    "NOT": 0,
+    "alg_degree": 4
+   },
+   "ring_DU_count": 64,
+   "DU_count_J_o_S": 32,
+   "EDP_times_N_withJ_t0..6": [
+    "64",
+    "6",
+    "311/256",
+    "8289/8192",
+    "262555/262144",
+    "33588121/33554432",
+    "537396567/536870912"
+   ],
+   "EDP_times_N_withJ_float": [
+    64.0,
+    6.0,
+    1.21484375,
+    1.0118408203125,
+    1.0015678405761719,
+    1.001004010438919,
+    1.000979108735919
+   ]
+  },
+  "INV1024": {
+   "bijective_on_R": true,
+   "table_sha256_int64": "b84a6ceb1677ea7b0ae11ecdef0e2b84aa94e6f1846b814027799fc16a01167e",
+   "bit_full_ANF": {
+    "AND": 1010,
+    "XOR": 5034,
+    "NOT": 0,
+    "alg_degree": 9
+   },
+   "ring_DU_count": 8,
+   "DU_count_J_o_S": 8,
+   "EDP_times_N_withJ_t0..6": [
+    "8",
+    "293/256",
+    "131779/131072",
+    "537461195/536870912",
+    "275147760097/274877906944",
+    "563500314922927/562949953421312",
+    "1154048509385442697/1152921504606846976"
+   ],
+   "EDP_times_N_withJ_float": [
+    8.0,
+    1.14453125,
+    1.0053939819335938,
+    1.0010994877666235,
+    1.0009817200516409,
+    1.0009776384175364,
+    1.0009775208234841
+   ]
+  },
+  "RANDOM": {
+   "bijective_on_R": true,
+   "table_sha256_int64": "d86d09aecbbf151d5ac2c7401e36cd180e89f6a9e7d0087d5c42a6d1f2052649",
+   "bit_full_ANF": {
+    "AND": 1011,
+    "XOR": 5081,
+    "NOT": 6,
+    "alg_degree": 9
+   },
+   "ring_DU_count": 8,
+   "DU_count_J_o_S": 8,
+   "EDP_times_N_withJ_t0..6": [
+    "8",
+    "299/256",
+    "1054431/1048576",
+    "67184209/67108864",
+    "275147845893/274877906944",
+    "563500327753277/562949953421312",
+    "72128031928480855/72057594037927936"
+   ],
+   "EDP_times_N_withJ_float": [
+    8.0,
+    1.16796875,
+    1.0055837631225586,
+    1.0011227279901505,
+    1.0009820321756706,
+    1.0009776612088164,
+    1.0009775220987234
+   ]
+  },
+  "P1theta_fact": {
+   "bijective_on_R": true,
+   "table_sha256_int64": "c2f15a14252ed9478446e5eb5e6121f577dd1b8803a2e3357ce77fa55fa73ff0",
+   "residue_function_of_a_only": true,
+   "residue_perm": true,
+   "residue_DU": 2,
+   "residue_alg_degree": 2,
+   "high_digit_eq_h_xor_d_b": true,
+   "d_poly_Fq": {
+    "0": 2,
+    "2": 2,
+    "4": 2
+   },
+   "d_hypothesisH": {
+    "affine": true,
+    "nonvanishing": true,
+    "fibre_sizes": [
+     0,
+     2
+    ],
+    "ker_K": [
+     0,
+     1
+    ],
+    "eps": 2,
+    "eps_notin_ImK": true,
+    "omega": 2
+   },
+   "bit_structured": {
+    "AND": 50,
+    "XOR": 140,
+    "NOT": 1,
+    "a_part": {
+     "AND": 25,
+     "XOR": 110,
+     "NOT": 1,
+     "alg_degree": 4
+    },
+    "F32_product": {
+     "AND": 25,
+     "XOR": 25
+    },
+    "combine_xor": 5
+   },
+   "bit_full_ANF": {
+    "AND": 45,
+    "XOR": 155,
+    "NOT": 0,
+    "alg_degree": 4
+   },
+   "ring_DU_count": 64,
+   "DU_count_J_o_S": 32,
+   "EDP_times_N_withJ_t0..6": [
+    "64",
+    "6",
+    "311/256",
+    "8289/8192",
+    "262555/262144",
+    "33588121/33554432",
+    "537396567/536870912"
+   ],
+   "EDP_times_N_withJ_float": [
+    64.0,
+    6.0,
+    1.21484375,
+    1.0118408203125,
+    1.0015678405761719,
+    1.001004010438919,
+    1.000979108735919
+   ]
+  }
+ },
+ "bit_key_add": {
+  "AND": 5,
+  "XOR": 15,
+  "NOT": 0,
+  "source": "c1/code/codes.py add(): lo = a^c, hi = x_hi^y_hi^(a&c)"
+ },
+ "mixers": {
+  "MDS_alt_2x2": {
+   "ring": {
+    "kappa": 1,
+    "alpha": 2
+   },
+   "bit": {
+    "AND": 11,
+    "XOR": 35,
+    "NOT": 0
+   },
+   "codes": [
+    [
+     1,
+     1
+    ],
+    [
+     1,
+     2
+    ]
+   ]
+  },
+  "M2_2x2": {
+   "ring": {
+    "kappa": 4,
+    "alpha": 2
+   },
+   "bit": {
+    "AND": 47,
+    "XOR": 207,
+    "NOT": 0
+   },
+   "codes": [
+    [
+     618,
+     716
+    ],
+    [
+     716,
+     422
+    ]
+   ]
+  },
+  "L_C_4x4": {
+   "ring": {
+    "kappa": 15,
+    "alpha": 12
+   },
+   "bit": {
+    "AND": 159,
+    "XOR": 723,
+    "NOT": 0
+   },
+   "codes": [
+    [
+     9,
+     12,
+     14,
+     4
+    ],
+    [
+     12,
+     9,
+     23,
+     25
+    ],
+    [
+     14,
+     23,
+     9,
+     16
+    ],
+    [
+     1,
+     18,
+     28,
+     7
+    ]
+   ]
+  }
+ },
+ "const_mult_bit": {
+  "2": {
+   "AND": 1,
+   "XOR": 5,
+   "NOT": 0,
+   "alg_degree": 2
+  },
+  "618": {
+   "AND": 8,
+   "XOR": 35,
+   "NOT": 0,
+   "alg_degree": 2
+  },
+  "716": {
+   "AND": 10,
+   "XOR": 52,
+   "NOT": 0,
+   "alg_degree": 2
+  },
+  "422": {
+   "AND": 9,
+   "XOR": 38,
+   "NOT": 0,
+   "alg_degree": 2
+  },
+  "9": {
+   "AND": 2,
+   "XOR": 9,
+   "NOT": 0,
+   "alg_degree": 2
+  },
+  "12": {
+   "AND": 10,
+   "XOR": 47,
+   "NOT": 0,
+   "alg_degree": 2
+  },
+  "14": {
+   "AND": 10,
+   "XOR": 67,
+   "NOT": 0,
+   "alg_degree": 2
+  },
+  "4": {
+   "AND": 2,
+   "XOR": 10,
+   "NOT": 0,
+   "alg_degree": 2
+  },
+  "23": {
+   "AND": 8,
+   "XOR": 38,
+   "NOT": 0,
+   "alg_degree": 2
+  },
+  "25": {
+   "AND": 9,
+   "XOR": 45,
+   "NOT": 0,
+   "alg_degree": 2
+  },
+  "16": {
+   "AND": 5,
+   "XOR": 23,
+   "NOT": 0,
+   "alg_degree": 2
+  },
+  "18": {
+   "AND": 1,
+   "XOR": 7,
+   "NOT": 0,
+   "alg_degree": 2
+  },
+  "28": {
+   "AND": 10,
+   "XOR": 70,
+   "NOT": 0,
+   "alg_degree": 2
+  },
+  "7": {
+   "AND": 10,
+   "XOR": 57,
+   "NOT": 0,
+   "alg_degree": 2
+  }
+ }
+}

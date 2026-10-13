@@ -1,0 +1,42 @@
+evidence_path	sha256	bytes	private_source	role
+c8/r1/code/gcore.py	a1ef410add3c8963493c93e3ae5d6d8da7362df7e3a396d75a8afaf73d91a8fb	6665	w/c8/r1/code/gcore.py	code
+c8/r1/code/t1_verify.py	7d85433c1870ce2a9b6715f5b77160584ed8a8a482d263bc3af929f0dbabffb9	1588	w/c8/r1/code/t1_verify.py	code
+c8/r1/code/t2_analyze.py	7b99c74a601e2f76be5095a7f4d0631ad2a0401948c088dc4ecab7c7a73133b5	8004	w/c8/r1/code/t2_analyze.py	code
+c8/r1/code/t3_extra.py	9afe61bd52e87d27f925d36ea36fa8439f414c5ff6a5352702c0ebf8452e330a	11054	w/c8/r1/code/t3_extra.py	code
+c8/r1/audit_code/acore.py	18c9c251fcdba8b39bb45780e152877b69774b76d3f3aaa16b13752090f9cd6a	5975	w/c8/r1/audit_code/acore.py	code
+c8/r1/audit_code/a_main.py	3bfc61e180ad5488f6a30cf7cec35a82c596b7df7b28631e221a7f25f9308f4a	6489	w/c8/r1/audit_code/a_main.py	code
+c8/r1/audit_code/a_msurvey.py	e9c2b428c594c10faed273fcd0c26b5103c75a0af02166bde2b0eb50fa5eae76	3437	w/c8/r1/audit_code/a_msurvey.py	code
+c8/r1/audit_code/a_adv.py	3a502a40675171f8b1d72e21771697783366178a2620da38ab5a5d61991f22ea	7224	w/c8/r1/audit_code/a_adv.py	code
+expected/c8/r1/results/t1_verify.log	b526b6e1dc347a8fe2279915d02c4b84bcc538841eee9342085fe54421fcab65	1958	w/c8/r1/results/t1_verify.log	expected
+expected/c8/r1/results/t1_verify.json	c459aea7e38b3eb40b5c9c63588769e58ed9765436c4dd13c4554968ca4b0982	2430	w/c8/r1/results/t1_verify.json	expected
+expected/c8/r1/results/t2_m3.log	77821b8c2007c4e9af1e34fb306af09a390c09b1171853abd26266ef2d680566	17623	w/c8/r1/results/t2_m3.log	expected
+expected/c8/r1/results/t2_m3.json	f2bd413d7f0e9876b5734abb0ab8062d884bb8fb2e38b45d12a82dcdcdecd3ff	23274	w/c8/r1/results/t2_m3.json	expected
+expected/c8/r1/results/t2_m5.log	8f258cc14c8d1c71bb9fec8614c6092329d2ca2de0811aed21254b3524317747	19318	w/c8/r1/results/t2_m5.log	expected
+expected/c8/r1/results/t2_m5.json	6532ad07f41a6c41b8abfb4dc4e462235e6b6360688808aadf2a82e2a5f8d230	26903	w/c8/r1/results/t2_m5.json	expected
+expected/c8/r1/results/t3_msurvey.log	fd9c3f6116b53917ba2c8c7eb2dfe2098a5db03745c1d7abe55364f6e043c7ba	720	w/c8/r1/results/t3_msurvey.log	expected
+expected/c8/r1/results/t3_msurvey.json	2eb38a6eb11e19ee064e642960b0a3571b3e6da9fa5391916cd3e52f3fbf40f7	10033	w/c8/r1/results/t3_msurvey.json	expected
+expected/c8/r1/results/t3_adv.log	3b31d713e5768a3a01eafdf376307859e3531a86ad36694efd7c96ee2bce66c3	191	w/c8/r1/results/t3_adv.log	expected
+expected/c8/r1/results/t3_adv.json	de1695bcc83fff3ba4b713488d6a8cb97c867ecfb99cbe17862b606703d01e96	1829	w/c8/r1/results/t3_adv.json	expected
+expected/c8/r1/results/t3_m7.log	6478fa0b44c64ec3d21262a33b62e4da0be6f23f4447a62824366865b04c3791	2377	w/c8/r1/results/t3_m7.log	expected
+expected/c8/r1/results/t3_m7.json	6320dfc08847930c4219b47069ada98678b096606f9dcd0fc284511f2e39cae4	2691	w/c8/r1/results/t3_m7.json	expected
+expected/c8/r1/results/commands.json (WITHHELD: contains a build-host path; not compared by rep.sh)	7a277d57b9c43365e794c448a664cffb9aaf9cca4c24960d733ec00631b9f18f	1561	w/c8/r1/results/commands.json	withheld
+expected/c8/r1/audit_results/a_main_m3.log	fdb55f779651f280a8916f8c792c86b202562b1aa09865fb519db87de7cbd645	9659	w/c8/r1/audit_results/a_main_m3.log	expected
+expected/c8/r1/audit_results/a_main_m3.json	b8aefd6ec37e3a3828ced49c126759f3758e89033f4340f892b51d7063dc9b30	10686	w/c8/r1/audit_results/a_main_m3.json	expected
+expected/c8/r1/audit_results/a_main_m5.log	e4aa1bf968e1323ee03d7b23817ef1d1abb154ec3810a1f23847293249aa3b21	12932	w/c8/r1/audit_results/a_main_m5.log	expected
+expected/c8/r1/audit_results/a_main_m5.json	f4345dc191eef09323f81d92053e6059d7f33f3a9c2fce8141700f5065ebb671	14277	w/c8/r1/audit_results/a_main_m5.json	expected
+expected/c8/r1/audit_results/a_main_m5.time	52004ba5ac53e682b08a1cd76c229bb3a167681c11abc7a33b36bfd14dfb6a87	45	w/c8/r1/audit_results/a_main_m5.time	expected
+expected/c8/r1/audit_results/a_msurvey.log	81ec5215dca1fc7d32016c3dd3981b6993454869e2156e7e458cf955c7435156	7919	w/c8/r1/audit_results/a_msurvey.log	expected
+expected/c8/r1/audit_results/a_msurvey.json	aaefaceb2cf8003b1f73b644a267853bba1b2788e8f044cb1fbb94337172a8b6	19652	w/c8/r1/audit_results/a_msurvey.json	expected
+expected/c8/r1/audit_results/a_adv_m3.log	7a914f76d35f8aaf8d060aa37b0c77244349ae7937576b37e74e397db44ab0db	9270	w/c8/r1/audit_results/a_adv_m3.log	expected
+expected/c8/r1/audit_results/a_adv_m3.json	8817f02bead68840e0083b08f46346a5d283609f7caba71b932fda1d8731149f	17624	w/c8/r1/audit_results/a_adv_m3.json	expected
+expected/c8/r1/audit_results/a_adv_m5.log	32fd67d6483833419287c74222d8a563261f2aecebc92399551f74a248d6ddef	943	w/c8/r1/audit_results/a_adv_m5.log	expected
+expected/c8/r1/audit_results/a_adv_m5.json	7a43707a741dab840909b5f3a0217bd99acf85c4ea1681038e6f46a39fb1a2d2	2728	w/c8/r1/audit_results/a_adv_m5.json	expected
+expected/c8/r1/audit_results/a_adv_m5.time	a16f0c0a6037222a7f2ae7e5ec4385711d0ad270e05fe316c1a22d70d6d6e7ea	43	w/c8/r1/audit_results/a_adv_m5.time	expected
+expected/c8/r1/audit_results/a_adv_m5_long.log	30335a6643ac639c7429569730c613791d63614e6977df770d89032d3b90ca87	943	w/c8/r1/audit_results/a_adv_m5_long.log	expected
+expected/c8/r1/audit_results/a_adv_m5_long.json	9423f3da7f99ff8c1325c84794529c8a25c12bd0ad8d1a3a8f80f08c64b2ec52	6344	w/c8/r1/audit_results/a_adv_m5_long.json	expected
+expected/c8/r1/audit_results/a_adv_m5_long.time	a51ee627b09ab566095627613a2afbbc59070a71124e9125af7347f1740f9d05	46	w/c8/r1/audit_results/a_adv_m5_long.time	expected
+expected/c8/r1/audit_results/a_adv_m5pd.log	8e2c9852a26973f28fb8641f5a4cb7809ccef03249471208f24eba0a57755b00	1249	w/c8/r1/audit_results/a_adv_m5pd.log	expected
+expected/c8/r1/audit_results/a_adv_m5pd.json	27c7157ec0cc9d764dee06cabf7c01f67c9863ab2ec871d6d13f63e26fb0c435	1394	w/c8/r1/audit_results/a_adv_m5pd.json	expected
+expected/c8/r1/audit_results/a_adv_m5_run1_exit1.log (WITHHELD: contains a build-host path; not compared by rep.sh)	37fb46ed50201b806c9c2ee08f2f455b27046ba0799fcdce688ed8598c426bc9	260	w/c8/r1/audit_results/a_adv_m5_run1_exit1.log	withheld
+README.md	c466479e4d1d2fb71d2873bb49b83c89259bf4c5df16747ee559249125041d5d	2567	NEW (written for the evidence set)	new
+rep.sh	9f8aa4cbd559c6dabbdabf693e54bba1bcce6c6c9968af4c742d651d33d26b1d	1078	NEW (written for the evidence set)	new

@@ -1,0 +1,24 @@
+evidence_path	sha256	bytes	private_source	role
+c1/code/t303_oracle.py	a3d1536b7f22c39296580e6dca07218344bad42c08b72ccae611cd141e3192c3	4293	w/c1/code/t303_oracle.py	code
+c1/code/ringlib.py	9beae7ea942f9a7b7f1f950615a49bf26332d957e94eb764e6cd1c6fee8ee898	5844	w/c1/code/ringlib.py	code
+c1/code/codes.py	22d0272e92151fcf67a706166cc9c4a3b74ba264bd09c6e3d77e6a07c028388c	946	w/c1/code/codes.py	code
+c1/code/t311a_rowmax.py	9e8dc09d1de98ecdf47e6031c8b01bae9943e33823abe903a2b1cc00dd5a9e6f	4223	w/c1/code/t311a_rowmax.py	code
+c1/code/t305_classes.py	39ec438866eee1bb80aec1f01ca40cccfc3dce538fbc8ad7f3aba759525782e6	4359	w/c1/code/t305_classes.py	code
+c3/a1/code/a1_lifts.py	806b3ec46084de8295587912457431d271507a2775f6fc0aa3a1b6acfded4f71	6283	w/c3/a1/code/a1_lifts.py	code
+c3/a1/code/a1_gpair.py	23d7f633a78f32099d124aebe92699cbfbdad94a3f5de89b247628b4e1793afb	3539	w/c3/a1/code/a1_gpair.py	code
+c5/a1/code/a1c5_ue.py	c89da44e9553fcba98be82aedc2f19d3d136e4ebd72b848078e090ce8d1e5cfe	7962	w/c5/a1/code/a1c5_ue.py	code
+c5/a1/code/a1c5_lib.py	2e0e5f3b67bddea2ef5c67f9582a071c6cbb79be5bf2086ea35a6aed8c128364	6624	w/c5/a1/code/a1c5_lib.py	code
+expected/c5/a1/logs/a1c5_ue_m5.log	4f9be3445781a4b2bef96d3d58367e7720bf5f217dbddc11aec422a743669e4d	7685	w/c5/a1/logs/a1c5_ue_m5.log	expected
+expected/c5/a1/logs/a1c5_ue_m5.exit	418a5c17f33c70e99b0cc0a07fce69191489cfedc94164bfa903785777c5bd4b	7	w/c5/a1/logs/a1c5_ue_m5.exit	expected
+expected/c5/a1/logs/a1c5_ue_m7.log	9bf4a1845dbc398a241e85c7075312c7d81480ccb59ec38d16110a1b054bd84e	6031	w/c5/a1/logs/a1c5_ue_m7.log	expected
+expected/c5/a1/logs/a1c5_ue_m7.exit	418a5c17f33c70e99b0cc0a07fce69191489cfedc94164bfa903785777c5bd4b	7	w/c5/a1/logs/a1c5_ue_m7.exit	expected
+expected/c5/a1/results/a1c5_ue_m5.json	e7d4603a66d5ff5d78991fa7ee17d2ac3a70bd3dfeb7747df877c20639e820b7	9747	w/c5/a1/results/a1c5_ue_m5.json	expected
+expected/c5/a1/results/a1c5_ue_m7.json	2e8f8fbd2510086116a41c151c79ec72d6af3f96f250c06fcadd40e4f529718c	7544	w/c5/a1/results/a1c5_ue_m7.json	expected
+expected/c3/a1/logs/a1_lifts.log	a7dcc7d7d0f1ead00ca73af4d471709d777b80c220f1ea4fa9270e5ba8bb120a	116	w/c3/a1/logs/a1_lifts.log	expected
+expected/c3/a1/logs/a1_gpair_m5.log	652ebe1efde3fd59fd047c19e9027ee5f582c9733ed7098d3349e506cc8f3a40	433	w/c3/a1/logs/a1_gpair_m5.log	expected
+expected/c3/a1/results/a1_lifts.json	5912401d39113928cbfedbd1af7c0d3218248ea90ac5f5addfe38e98f737ac68	13924	w/c3/a1/results/a1_lifts.json	expected
+expected/c3/a1/results/a1_gpair_m5.json	52c255ecd577bd02665c558b2f3becfd7be128b8cf8f5a7c6fa7d034008711a7	568	w/c3/a1/results/a1_gpair_m5.json	expected
+expected/c1/logs/run_all/t303.log	2c9c9d485b42ac2ee7931fd9844cf1e62f8550f5a7ba1aedab5daf8ccecd22c6	487	w/c1/logs/run_all/t303.log	expected
+expected/c1/logs/run_all/t311a.log	165f055104304f3100180bbff22f46e50ff5486afce3562691289c607e371f8b	337	w/c1/logs/run_all/t311a.log	expected
+README.md	e9a78b5a2bb210f53ab945589ac170d936bfffd208aba977a766f46b65d158ad	2052	NEW (written for the evidence set)	new
+rep.sh	a0ff69ab01f9cf6608e7d11d0762c767a9e6260ac3f8a7546267fdb24c235ee5	878	NEW (written for the evidence set)	new

@@ -1,0 +1,40 @@
+{
+ "m": 5,
+ "q": 32,
+ "rho": 1,
+ "cases": [
+  {
+   "u": 2,
+   "v": 0,
+   "t": 0,
+   "s": 31,
+   "count": 16,
+   "q_half": 16,
+   "count_ge_q_half": true,
+   "row_max_count": 16,
+   "pair_xor_h_independent": true
+  },
+  {
+   "u": 3,
+   "v": 5,
+   "t": 7,
+   "s": 31,
+   "count": 18,
+   "q_half": 16,
+   "count_ge_q_half": true,
+   "row_max_count": 18,
+   "pair_xor_h_independent": true
+  },
+  {
+   "u": 10,
+   "v": 27,
+   "t": 9,
+   "s": 31,
+   "count": 16,
+   "q_half": 16,
+   "count_ge_q_half": true,
+   "row_max_count": 16,
+   "pair_xor_h_independent": true
+  }
+ ]
+}

@@ -1,0 +1,5 @@
+5 False {'AND': 75, 'XOR': 93, 'NOT': 1, 'IN': 10, 'CONST0': 0} {'c5/pd/data/F_PD_h0_m5.npy': True, 'c4/pd/data/F_pd_inv_m5.npy': True} [6, 6, 8, 8, 9]
+5 True {'AND': 75, 'XOR': 98, 'NOT': 1, 'IN': 10, 'CONST0': 0} {'c5/pd/data/F_PD_hX3_m5.npy': True, 'gpt_input/extracted_P5/ResidueAPN_P4_C4_Reviewed_P5_20261011/evidence/auditor_PD_inverse_hX3_m5.npy': True} [7, 7, 9, 9, 10]
+7 False {'AND': 196, 'XOR': 224, 'NOT': 1, 'IN': 14, 'CONST0': 1} {'c5/pd/data/F_PD_h0_m7.npy': True} [7, 1, 1, 1, 8, 8, 8]
+7 True {'AND': 196, 'XOR': 231, 'NOT': 1, 'IN': 14, 'CONST0': 1} {'c5/pd/data/F_PD_hX3_m7.npy': True} [8, 2, 2, 2, 9, 9, 9]
+DELTA m5 {'AND': 0, 'XOR': 5, 'NOT': 0} m7 {'AND': 0, 'XOR': 7, 'NOT': 0} DONE 0.0

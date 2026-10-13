@@ -1,0 +1,58 @@
+ApnCipher/Bridge.lean:58:0: warning: automatically included section variable(s) unused in theorem `ApnCipherC8.S2_apply`:
+  [Fintype G]
+  [DecidableEq G]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype G] [DecidableEq G] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ApnCipher/Bridge.lean:67:0: warning: automatically included section variable(s) unused in theorem `ApnCipherC8.S2w_apply`:
+  [Fintype G]
+  [DecidableEq G]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [Fintype G] [DecidableEq G] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ApnCipher/Bridge.lean:72:0: warning: automatically included section variable(s) unused in theorem `ApnCipherC8.Bg_conj`:
+  [AddCommGroup G]
+  [Fintype G]
+  [DecidableEq G]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [AddCommGroup G] [Fintype G] [DecidableEq G] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ApnCipher/Bridge.lean:77:0: warning: automatically included section variable(s) unused in theorem `ApnCipherC8.Fg_conj`:
+  [AddCommGroup G]
+  [Fintype G]
+  [DecidableEq G]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [AddCommGroup G] [Fintype G] [DecidableEq G] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ApnCipher/Bridge.lean:88:27: warning: This simp argument is unused:
+  mem_coe
+
+Hint: Omit it from the simp argument list.
+  simp only [coe_filter, mem_c̵o̵e̵,̵ ̵m̵e̵m̵_̵filter, mem_univ, true_and, Set.mem_setOf_eq] at hx ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ApnCipher/Bridge.lean:88:36: warning: This simp argument is unused:
+  mem_filter
+
+Hint: Omit it from the simp argument list.
+  simp only [coe_filter, mem_coe, mem_f̵i̵l̵t̵e̵r̵,̵ ̵m̵e̵m̵_̵univ, true_and, Set.mem_setOf_eq] at hx ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ApnCipher/Bridge.lean:91:27: warning: This simp argument is unused:
+  mem_coe
+
+Hint: Omit it from the simp argument list.
+  simp only [coe_filter, mem_c̵o̵e̵,̵ ̵m̵e̵m̵_̵filter, mem_univ, true_and, Set.mem_setOf_eq] at hy ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+ApnCipher/Bridge.lean:91:36: warning: This simp argument is unused:
+  mem_filter
+
+Hint: Omit it from the simp argument list.
+  simp only [coe_filter, mem_coe, mem_f̵i̵l̵t̵e̵r̵,̵ ̵m̵e̵m̵_̵univ, true_and, Set.mem_setOf_eq] at hy ⊢
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`

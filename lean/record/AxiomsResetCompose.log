@@ -1,0 +1,4 @@
+'ApnCipherC4.sum_reset_ddt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ApnCipherC4.col_sum_mixer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ApnCipherC4.suffix_avg_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ApnCipherC4.four_layer_le' depends on axioms: [propext, Classical.choice, Quot.sound]

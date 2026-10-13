@@ -1,0 +1,11 @@
+ApnCipher/Transport_v2.lean:90:0: warning: automatically included section variable(s) unused in theorem `ApnCipherC7.avgDP_pd_le`:
+  [DecidableEq F]
+consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
+  omit [DecidableEq F] in theorem ...
+
+Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
+ApnCipher/Transport_v2.lean:91:5: warning: Variable name `hφ` is not explicitly referenced.
+
+The binding can be removed (if unused) or named `_` (if used implicitly).
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
